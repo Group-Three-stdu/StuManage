@@ -15,6 +15,7 @@
             <asp:ListItem Value="ljr">梁俊荣</asp:ListItem>
             <asp:ListItem Value="zs">张三</asp:ListItem>
         </asp:DropDownList>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><%--注释--%>
     </div>
     </form>
 </body>
