@@ -1,0 +1,137 @@
+﻿*
+{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    font-family:@Adobe 黑体 Std R;
+    }
+
+.login-pic{
+    width:45%;
+    height:250px;
+    background:white;
+    float:left;
+    margin-top:0px;
+    opacity:0.8;
+    font-size:35px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+}
+.login-form {
+    width: 50%;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    animation: change 5s;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.txtb
+{
+    position:relative;
+    margin:10px 50%;
+    width:40%;
+    }
+.txtb .input
+{
+    border:1px solid #666;
+    border-radius:5px;
+    height:30px;
+    font-size:14px;
+    color:#333;
+    border-width:1px;
+    width:70%;
+    background:none;
+    }
+.input3
+{
+    margin:0px 0;
+    border:1px solid #666;
+    border-radius:5px;
+    height:30px;
+    font-size:14px;
+    color:#333;
+    border-width:1px;
+    width:12%;
+    background:none;
+    }
+.code
+{
+    width:40%;
+    height:35px;
+    text-align:center;
+    background:white;
+    color:#666;
+    margin-bottom:10px;
+    margin-top:1px;
+    border-radius:5px;
+    float:left;
+    line-height:35px;
+    }    
+
+.logbtn
+{
+    margin-top:-12%;
+    margin-left:50%;
+    border-radius:5px;
+    float:left;
+    display:block;
+    width:10%;
+    height:30px;
+    border:none;
+    background:linear-gradient(120deg,#3498db,#3498db);
+    color:#fff;
+    cursor:pointer;
+    transition:.5s;
+    }
+.logbtn2
+{
+    margin-top:-12%;
+    border-radius:5px;
+    float:right;
+    display:block;
+    width:10%;
+    height:30px;
+    border:none;
+    background:linear-gradient(120deg,#3498db,#3498db);
+    color:#fff;
+    cursor:pointer;
+    transition:.5s;
+    margin-right:14%;
+    }
+.input2
+{
+    width:50%;
+    height:35px;
+    border-radius:5px;
+    border-width:1px;
+    display:left;
+    position:relative;
+    top:-48px;
+    left:46%;
+    padding-left:10px;
+    }
+    
+.logbtn:hover
+{
+    background-position:right;
+    }
+.bottom
+{
+    display:block;
+    
+    margin-top:100px;
+    }
+#v_container{
+    width:12%;
+    height:32px;
+    background-color:;
+    float:right;
+    margin-right:14%;
+    margin-top:0px;
+    border-radius:5px;
+    
+}
