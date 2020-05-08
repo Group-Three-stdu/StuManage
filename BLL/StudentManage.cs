@@ -7,7 +7,7 @@ using DAL;
 
 namespace BLL
 {
-    //学生
+    //学生管理。。
     public class StudentManage
     {
         //通过学号查询学生
