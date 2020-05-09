@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <title>添加课程</title>
     <style>
     .body
@@ -58,19 +59,19 @@
     <div>
         <div class="box">
             <div class="lable">课程编号：</div>
-            <asp:TextBox ID="txt_pwd" runat="server" class="input"></asp:TextBox>
+            <asp:TextBox ID="txt_pwd" runat="server" class="input form-control"></asp:TextBox>
             <br />
             <div class="lable">课程名：</div>
-            <asp:TextBox ID="txt_newpwd" runat="server" class="input"></asp:TextBox>
+            <asp:TextBox ID="txt_newpwd" runat="server" class="input form-control"></asp:TextBox>
             <br />
             <div class="lable">课程学分：</div>
-            <asp:TextBox ID="txt_renewpwd" runat="server" class="input"></asp:TextBox>
+            <asp:TextBox ID="txt_renewpwd" runat="server" class="input form-control"></asp:TextBox>
             <br />
             <div class="lable">学时数：</div>
-            <asp:TextBox ID="TextBox1" runat="server" class="input"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" class="input form-control"></asp:TextBox>
             <br />
             <div class="lable">课程性质：</div>
-            <asp:DropDownList ID="ddl_coursexingzhi" CssClass="input" runat="server">
+            <asp:DropDownList ID="ddl_coursexingzhi" CssClass="input form-control" runat="server">
                 <asp:ListItem Value="bixiu">必修</asp:ListItem>
                 <asp:ListItem Value="xuanxiu">选修</asp:ListItem>
             </asp:DropDownList>

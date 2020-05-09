@@ -97,7 +97,7 @@
                             </a>
                         </li>
                         <li>
-                            <a id="A3" href="" runat="server" target="right">
+                            <a id="A3" href="~/course/lookcourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看课程
                             </a>

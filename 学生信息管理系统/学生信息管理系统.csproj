@@ -96,6 +96,7 @@
   <ItemGroup>
     <Content Include="course\addcourse.aspx" />
     <Content Include="course\lookcourse.aspx" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />

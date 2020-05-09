@@ -100,6 +100,7 @@
                                  </td>
                     <th>学院</th><td colspan="2">
                         <asp:TextBox ID="txt_xueyuan" runat="server" CssClass="input" Text="" BorderWidth="0" ReadOnly="false"></asp:TextBox>
+                        <%--<asp:DropDownList ID="ddlcollege" CssClass="input" runat="server"></asp:DropDownList>--%>
                                </td>
                 </tr>
                 <tr>
