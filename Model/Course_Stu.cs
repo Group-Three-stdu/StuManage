@@ -14,5 +14,6 @@ namespace Model
         public string CourseName { set; get; }
         public string Season { set; get; }
         public string Time { set; get; }
+        public string Status { set; get; }
     }
 }

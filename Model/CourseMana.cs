@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Model
 {
-    public class CourseMana
+    public class CourseMana : CourseMes
     {
-        public string CourseId { set; get; }
-        public int TeaId { set; get; }
         public string Season { set; get; }
         public string Time { set; get; }
         public string CourseAdd { set; get; }
