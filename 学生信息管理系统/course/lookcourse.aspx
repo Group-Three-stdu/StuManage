@@ -61,7 +61,6 @@
             <asp:Button ID="btn_search" CssClass="btn_size btn btn-success" runat="server" Text="查询" />
         </div>
         <div class="content">
-
             <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
                     <table class="table table-striped table-hover text-center">
