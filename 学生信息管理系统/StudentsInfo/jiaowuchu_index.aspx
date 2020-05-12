@@ -91,9 +91,9 @@
                      <div><i class="iconfont icon-kecheng"></i>课程信息</div>
                     <ul class="sub">
                         <li>
-                            <a id="A2" href="~/course/addcourse.aspx" runat="server" target="right">
+                            <a id="A2" href="~/course/reviewcourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                添加课程
+                                审核课程
                             </a>
                         </li>
                         <li>

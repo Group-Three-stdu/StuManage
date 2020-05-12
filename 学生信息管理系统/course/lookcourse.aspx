@@ -61,32 +61,32 @@
             <asp:Button ID="btn_search" CssClass="btn_size btn btn-success" runat="server" Text="查询" />
         </div>
         <div class="content">
-            <table class="table table-striped table-hover text-center">
-                <tr class="table-bordered table-condensed info">
-                    <td width="10%" class="table-bordered">课程编号</td>
-                    <td class="table-bordered">课程名</td>
-                    <td class="table-bordered">学分</td>
-                    <td class="table-bordered">学时数</td>
-                    <td class="table-bordered">课程性质</td>
-                    <td class="table-bordered">操作</td>
-                </tr>
-                <tr class="table-responsive table-bordered table-condensed">
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered"> 123</td>
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered">123</td>
-                </tr>
-                <tr class="table-responsive table-bordered table-condensed">
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered"> 123</td>
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered">123</td>
-                    <td class="table-bordered">123</td>
-                </tr>
-            </table>
+            <asp:Repeater ID="Repeater1" runat="server">
+                <HeaderTemplate>
+                    <table class="table table-striped table-hover text-center">
+                        <tr class="table-bordered table-condensed info">
+                            <td width="10%" class="table-bordered">课程编号</td>
+                            <td class="table-bordered">开课学期</td>
+                            <td class="table-bordered">课程时间</td>
+                            <td class="table-bordered">上课地点</td>
+                            <td width="10%" class="table-bordered">平时成绩占比</td>
+                            <td width="10%" class="table-bordered">期末成绩占比</td>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr class="table-responsive table-bordered table-condensed">
+                        <td class="table-bordered"><%# Eval("CourseID")%></td>
+                        <td class="table-bordered"><%# Eval("Season")%></td>
+                        <td class="table-bordered"><%# Eval("Time")%></td>
+                        <td class="table-bordered"><%# Eval("CourseAdd")%></td>
+                        <td class="table-bordered"><%# Eval("MatchRatio")%></td>
+                        <td class="table-bordered"><%# Eval("ClassRatio")%></td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
         </div>
     </form>
 </body>

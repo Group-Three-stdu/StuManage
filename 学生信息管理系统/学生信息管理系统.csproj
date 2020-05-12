@@ -96,6 +96,8 @@
   <ItemGroup>
     <Content Include="course\addcourse.aspx" />
     <Content Include="course\lookcourse.aspx" />
+    <Content Include="course\paike.aspx" />
+    <Content Include="course\reviewcourse.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
@@ -158,6 +160,20 @@
     </Compile>
     <Compile Include="course\lookcourse.aspx.designer.cs">
       <DependentUpon>lookcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course\paike.aspx.cs">
+      <DependentUpon>paike.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\paike.aspx.designer.cs">
+      <DependentUpon>paike.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course\reviewcourse.aspx.cs">
+      <DependentUpon>reviewcourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\reviewcourse.aspx.designer.cs">
+      <DependentUpon>reviewcourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

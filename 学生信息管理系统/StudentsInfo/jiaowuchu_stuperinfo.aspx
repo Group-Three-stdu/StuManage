@@ -77,14 +77,14 @@
                     <table style="margin-top:15px;" class="table table-striped table-hover text-center">
                         <tbody>
                             <tr class="table-bordered table-condensed info">
-                              <th class="table-bordered" style="text-align:center;" >学号</th>
-                              <th class="table-bordered" style="text-align:center;" >姓名</th>
-                              <th class="table-bordered" style="text-align:center;" >性别</th>
-                              <th class="table-bordered" style="text-align:center;" >学院编号</th>
-                              <th class="table-bordered" style="text-align:center;" >专业编号</th>
-                              <th class="table-bordered" style="text-align:center;" >班级</th>
-                              <th class="table-bordered" style="text-align:center;" >手机号</th>
-                              <th class="table-bordered" style="text-align:center;" >操作</th>
+                              <th class="table-bordered" style="text-align:center;">学号</th>
+                              <th class="table-bordered" style="text-align:center;">姓名</th>
+                              <th class="table-bordered" style="text-align:center;">性别</th>
+                              <th class="table-bordered" style="text-align:center;">学院编号</th>
+                              <th class="table-bordered" style="text-align:center;">专业编号</th>
+                              <th class="table-bordered" style="text-align:center;">班级</th>
+                              <th class="table-bordered" style="text-align:center;">手机号</th>
+                              <th class="table-bordered" style="text-align:center;">操作</th>
                             </tr>
                 </HeaderTemplate>
                 <FooterTemplate>
