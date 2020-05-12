@@ -14,5 +14,6 @@ namespace Model
         public int CourseNum { set; get; }
         public string courseproperty { set; get; }
         public string SStatus { set; get; }
+        public string CollegeName { set; get; }
     }
 }

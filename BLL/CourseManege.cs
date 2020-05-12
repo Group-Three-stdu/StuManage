@@ -68,5 +68,26 @@ namespace BLL
         {
             return new CourseService().checkCourseN(CourseId);
         }
+
+        /// <summary>
+        /// 查询所有课程（选课）
+        /// </summary>
+        /// <returns></returns>
+        public List<CourseMana> queryAllCourse()
+        {
+            return new CourseService().queryAllCourse();
+        }
+
+        /// <summary>
+        /// 查询自己选择的课程
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <returns></returns>
+        public List<CourseMana> queryMyCourse(int StuId)
+        {
+            return new CourseService().queryCourseByStuId(StuId);
+        }
+
+
     }
 }

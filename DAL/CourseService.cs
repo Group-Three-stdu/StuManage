@@ -53,13 +53,14 @@ namespace DAL
         /// <returns></returns>
         public int addCourse(CourseMes course)
         {
-            string sql = "insert into CourseMes (CourseName,Xuefen,CourseNum,courseproperty) Values (@CourseName,@Xuefen,@courseproperty)";
+            string sql = "insert into CourseMes (CourseName,CollegeName,Xuefen,CourseNum,courseproperty) Values (@CourseName,@CollegeName,@Xuefen,@courseproperty)";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseName",course.CourseName),
                 new SqlParameter("@Xuefen",course.Xuefen),
                 new SqlParameter("@courseproperty",course.courseproperty),
-                new SqlParameter("@CourseNum",course.CourseNum)
+                new SqlParameter("@CourseNum",course.CourseNum),
+                new SqlParameter("@CollegeName",course.CollegeName)
             };
             return new Helper.SQLHelper().update(sql, param, false);
         }
@@ -68,7 +69,7 @@ namespace DAL
         //通过课程编号查看课程信息，
         public CourseMes queryCourseById(int courseId)
         {
-            string sql = "select CourseName,Xuefen,CourseNum,courseproperty,college from CourseMes where CourseID=@CourseId";
+            string sql = "select CourseName,Xuefen,CourseNum,courseproperty,CollegeName from CourseMes where CourseID=@CourseId";
             SqlParameter[] param = new SqlParameter[]
            {
                 new SqlParameter("@CourseId",courseId),
@@ -83,7 +84,8 @@ namespace DAL
                     CourseName = result["CourseName"].ToString(),
                     Xuefen = float.Parse(result["Xuefen"].ToString()),
                     CourseNum = Convert.ToInt32(result["CourseNum"]),
-                    courseproperty = result["courseproperty"].ToString()
+                    courseproperty = result["courseproperty"].ToString(),
+                    CollegeName = result["CollegeName"].ToString()
                 };
             }
             return course;
@@ -151,6 +153,62 @@ namespace DAL
                     Xuefen = float.Parse(result["Xuefen"].ToString()),
                     CourseNum = Convert.ToInt32(result["CourseNum"]),
                     courseproperty = result["courseproperty"].ToString()
+                });
+            }
+            return courselist;
+        }
+
+        /// <summary>
+        /// 查询所有可选课程
+        /// </summary>
+        /// <returns></returns>
+        public List<CourseMana> queryAllCourse()
+        {
+            string sql = "select CourseId,CourseName,TeaName,Xuefen,courseproperty,Season,CollegeName from course2 where SStatus='Y'";
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
+            List<CourseMana> courselist = new List<CourseMana>();
+            while (result.Read())
+            {
+                courselist.Add(new CourseMana()
+                {
+                    CourseID = Convert.ToInt32(result["CourseID"]),
+                    CourseName = result["CourseName"].ToString(),
+                    Xuefen = float.Parse(result["Xuefen"].ToString()),
+                    TeaName = result["TeaName"].ToString(),
+                    courseproperty = result["courseproperty"].ToString(),
+                    Season=result["Season"].ToString(),
+                    CollegeName = result["CollegeName"].ToString ()
+                });
+            }
+            return courselist;
+        }
+
+        /// <summary>
+        /// 按学号查询课程
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <returns></returns>
+        public List<CourseMana> queryCourseByStuId(int StuId)
+        {
+            string sql = "select Selected_courseid,CourseName,TeaName,Xuefen,courseproperty,Season,CollegeName,CourseAdd from course1 where StuId=@StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql,param, false);
+            List<CourseMana> courselist = new List<CourseMana>();
+            while (result.Read())
+            {
+                courselist.Add(new CourseMana()
+                {
+                    Selected_courseid = result["Selected_courseid"].ToString(),
+                    CourseName = result["CourseName"].ToString(),
+                    Xuefen = float.Parse(result["Xuefen"].ToString()),
+                    TeaName = result["TeaName"].ToString(),
+                    courseproperty = result["courseproperty"].ToString(),
+                    Season = result["Season"].ToString(),
+                    CollegeName = result["CollegeName"].ToString(),
+                    CourseAdd=result["CourseAdd"].ToString()
                 });
             }
             return courselist;
