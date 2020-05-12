@@ -91,13 +91,13 @@
                      <div><i class="iconfont icon-kecheng"></i>课程信息</div>
                     <ul class="sub">
                         <li>
-                            <a id="A2" href="" runat="server" target="right">
+                            <a id="A2" href="~/course/addcourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 添加课程
                             </a>
                         </li>
                         <li>
-                            <a id="A3" href="" runat="server" target="right">
+                            <a id="A3" href="~/course/lookcourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看课程
                             </a>
