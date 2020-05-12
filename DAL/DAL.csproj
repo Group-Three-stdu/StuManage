@@ -99,10 +99,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CourseService.cs" />
     <Compile Include="Helper\SQLHelper.cs" />
     <Compile Include="LoginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="queryService.cs" />
+    <Compile Include="queryStudentService.cs" />
     <Compile Include="StudentService.cs" />
   </ItemGroup>
   <ItemGroup>

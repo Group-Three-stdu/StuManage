@@ -15,7 +15,7 @@ namespace BLL
         /// <returns></returns>
         public List<College> queryAllCol()
         {
-            return new queryService().queryAllCollege();
+            return new queryStudentService().queryAllCollege();
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace BLL
         /// <returns>该学院的所有专业</returns>
         public List<Major> querAllMaj(string collegeId)
         {
-            return new queryService().queryAllMajor(collegeId);
+            return new queryStudentService().queryAllMajor(collegeId);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace BLL
         /// <returns></returns>
         public List<Class> querAllCla(string collegeId,string majorId)
         {
-            return new queryService().queryAllClass(collegeId, majorId);
+            return new queryStudentService().queryAllClass(collegeId, majorId);
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Data;
 
 namespace DAL
 {
-    public class queryService
+    public class queryStudentService
     {
         /// <summary>
         /// 查询学院信息
