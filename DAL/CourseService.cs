@@ -53,7 +53,7 @@ namespace DAL
         /// <returns></returns>
         public int addCourse(CourseMes course)
         {
-            string sql = "insert into CourseMes (CourseName,CollegeName,Xuefen,CourseNum,courseproperty) Values (@CourseName,@CollegeName,@Xuefen,@courseproperty)";
+            string sql = "insert into CoursesMes (CourseName,CollegeName,Xuefen,CourseNum,courseproperty) Values (@CourseName,@CollegeName,@Xuefen,@CourseNum,@courseproperty)";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseName",course.CourseName),
@@ -69,7 +69,7 @@ namespace DAL
         //通过课程编号查看课程信息，
         public CourseMes queryCourseById(int courseId)
         {
-            string sql = "select CourseName,Xuefen,CourseNum,courseproperty,CollegeName from CourseMes where CourseID=@CourseId";
+            string sql = "select CourseName,Xuefen,CourseNum,courseproperty,CollegeName from CoursesMes where CourseID=@CourseId";
             SqlParameter[] param = new SqlParameter[]
            {
                 new SqlParameter("@CourseId",courseId),
@@ -94,7 +94,7 @@ namespace DAL
         //通过审核
         public int checkCourseY(int courseId)
         {
-            string sql = "update CourseMes set SStatus='Y' where CourseID=@CourseId";
+            string sql = "update CoursesMes set SStatus='Y' where CourseID=@CourseId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseId",courseId),
@@ -106,7 +106,7 @@ namespace DAL
         //向CourseMana中插入数据
         public int addCoursetoMana(CourseMes course,CourseMana courseExt)
         {
-            string sql = "insert into CourseMana (CourseId,TeaId,Season,Time,CourseAdd" +
+            string sql = "insert into CoursesMana (CourseId,TeaId,Season,Time,CourseAdd" +
                 "values (@CourseId,@TeaId,@Season,@Time,@CourseAdd)";
             SqlParameter[] param = new SqlParameter[]
             {
@@ -141,7 +141,7 @@ namespace DAL
         /// <returns></returns>
         public List<CourseMes> showUncheck()
         {
-            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,college from CourseMes where SStatus='W'";
+            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,college from CoursesMes where SStatus='W'";
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
             List<CourseMes> courselist = new List<CourseMes>();
             while (result.Read())
