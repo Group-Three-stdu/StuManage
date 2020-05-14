@@ -53,7 +53,7 @@ namespace DAL
         /// <returns></returns>
         public int addCourse(CourseMes course)
         {
-            string sql = "insert into CoursesMes (CourseName,CollegeName,Xuefen,CourseNum,courseproperty) Values (@CourseName,@CollegeName,@CourseNum,@Xuefen,@courseproperty)";
+            string sql = "insert into CoursesMes (CourseName,CollegeName,Xuefen,CourseNum,courseproperty) Values (@CourseName,@CollegeName,@Xuefen,@CourseNum,@courseproperty)";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseName",course.CourseName),
