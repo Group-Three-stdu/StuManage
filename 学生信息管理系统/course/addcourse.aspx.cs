@@ -18,7 +18,7 @@ namespace 学生信息管理系统.course
 
         protected void btn_save_Click(object sender, EventArgs e)
         {
-            
+           
             CourseMes course = new CourseMes();
             CourseManege bll = new CourseManege();
             //course.CourseID= Convert.ToInt32(Request.Form["txt_id"]);
