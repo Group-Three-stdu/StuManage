@@ -58,7 +58,7 @@ namespace 学生信息管理系统.course
             }
             else
             {
-                Response.Write("<script>alert('失败');</script>");
+                Response.Write("<script>alert('成功');</script>");
             }
         }
     }

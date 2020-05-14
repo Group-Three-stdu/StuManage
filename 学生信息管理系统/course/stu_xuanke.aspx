@@ -34,8 +34,8 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">
-  <div class="col-md-12">
-      <h3><asp:Literal ID="StuId" runat="server"></asp:Literal><asp:Literal ID="StuName" runat="server"></asp:Literal>，当前选课学期：2020年夏</h3></div>
+  <%--<div class="col-md-12">
+      <h4><asp:Literal ID="StuId" runat="server"></asp:Literal><asp:Literal ID="StuName" runat="server"></asp:Literal>，当前选课学期：2020年夏</h4></div>--%>
   <div class="col-md-12  auto-style1  "style="text-align:center; line-height:65px">
       
       <span class="auto-style2">课程</span>：<asp:DropDownList ID="DropDownList1" runat="server" Height="36px" style="margin-top: 0px">
@@ -66,7 +66,8 @@
       </asp:DropDownList>
 
                 &nbsp;
-      <button type="button" class="auto-style3">确认查询</button>
+      <asp:Button ID="Button1" class="auto-style3" runat="server" Text="确认查询" OnClick="Button1_Click" />
+      
 
                 </div>
 </div>
