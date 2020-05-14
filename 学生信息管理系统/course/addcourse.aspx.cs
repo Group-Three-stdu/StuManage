@@ -28,6 +28,7 @@ namespace 学生信息管理系统.course
             course.courseproperty = Request.Form["ddl_coursexingzhi"];
             course.CourseNum= Convert.ToInt32(Request.Form["txt_number"]);
             //course.SStatus= Request.Form["txt_zhuangtai"];
+            course.TeaId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
             course.CollegeName= Request.Form["ddl_college"];
             if (bll.AddCourseByTea(course) == 1)
             {
