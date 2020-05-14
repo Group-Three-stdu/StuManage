@@ -5,7 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <title>教务处审核课程</title>
     <style>
         .box{
@@ -25,10 +30,36 @@
         .content{
             margin-top:20px;
         }
+        .btn{
+            height:25px;
+            padding-top:2px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <asp:TextBox ID="txt_season" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_time" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_add" runat="server"></asp:TextBox>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <div class="box">
             <asp:Button ID="Button1" runat="server" CssClass="button btn-info" Text="查看全部课程" OnClick="Button1_Click" />
             <asp:Button ID="Button2" runat="server" CssClass="btn-danger button " Text="查看未通过审核课程" OnClick="Button2_Click" />
@@ -36,7 +67,7 @@
         </div>
         <div class="content">
 
-            <asp:Repeater ID="Repeater1" runat="server">
+            <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
                 <HeaderTemplate>
                     <table class="table table-striped table-hover text-center">
                         <tr class="table-bordered table-condensed info">
@@ -47,7 +78,7 @@
                         <td class="table-bordered">课程性质</td>
 <%--                        <td class="table-bordered">开课学院</td>
                         <td class="table-bordered">状态</td>--%>
-                        <td class="table-bordered">操作</td>
+                        <td class="table-bordered" width="15%">操作</td>
                 </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -60,9 +91,9 @@
 <%--                        <td class="table-bordered"><%# Eval("college")%></td>
                         <td class="table-bordered"><%# Eval("zhuangtai")%></td>--%>
                         <td class="table-bordered">
-                            <asp:LinkButton ID="LinkButton1" runat="server">通过</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton1" CommandName="past" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" runat="server">通过</asp:LinkButton>
                             &nbsp;
-                            <asp:LinkButton ID="LinkButton2" runat="server">不通过</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton2" CommandName="nopast" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" runat="server">不通过</asp:LinkButton>
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -71,6 +102,7 @@
                 </FooterTemplate>
             </asp:Repeater>
         </div>
+        
     </form>
 </body>
 </html>
