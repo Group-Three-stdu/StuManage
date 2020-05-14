@@ -1,10 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="teacher_index.aspx.cs" Inherits="学生信息管理系统.StudentsInfo.teacher_index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="teacherindex.aspx.cs" Inherits="学生信息管理系统.StudentsInfo.teacherindex" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>教师登陆主页</title>
+<title>教师登陆主页</title>
     <link href="../css/StyleSheet.css" rel="stylesheet" type="text/css" />
     <link href="//at.alicdn.com/t/font_1678369_bfuewyh33xd.css" rel="stylesheet" type="text/css" />
     <script src="../js/jquery.min.js"></script>
@@ -98,7 +97,7 @@
                      <div><i class="iconfont icon-kecheng"></i>课程信息</div>
                     <ul class="sub">
                         <li>
-                            <a id="A2" href="" runat="server" target="right">
+                            <a id="A2" href="~/course/addcourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 课程管理
                             </a>

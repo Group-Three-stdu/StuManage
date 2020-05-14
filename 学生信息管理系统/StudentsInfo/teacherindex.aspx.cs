@@ -4,11 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Model;
 
 namespace 学生信息管理系统.StudentsInfo
 {
-    public partial class teacher_index : System.Web.UI.Page
+    public partial class teacherindex : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

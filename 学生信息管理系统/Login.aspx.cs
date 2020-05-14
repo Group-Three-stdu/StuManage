@@ -42,7 +42,7 @@ namespace 学生信息管理系统
                 if (user.type == 3)
                     Literal1.Text = "<script type='text/javascript'>alert('登陆成功');location.href='StudentsInfo/jiaowuchu_index.aspx'</script>";
                 if (user.type == 4)
-                    Literal1.Text = "<script type='text/javascript'>alert('登陆成功');location.href='StudentsInfo/teacher_index.aspx'</script>";
+                    Literal1.Text = "<script type='text/javascript'>alert('登陆成功');location.href='StudentsInfo/teacherindex.aspx'</script>";
             }
 
 

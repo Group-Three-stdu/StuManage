@@ -48,13 +48,14 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                    <asp:TextBox ID="txt_season" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_time" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_add" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_season" placeholder="课程学期" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_time" placeholder="上课时间" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txt_add" placeholder="上课地点" runat="server"></asp:TextBox>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                    <asp:Button ID="Button4" class="btn btn-secondary" data-dismiss="modal" runat="server" Text="关闭" />
+                    <asp:Button ID="btn_save" class="btn btn-primary" OnClick="btn_save_Click" runat="server" Text="保存" />
+                  
                 </div>
               </div>
             </div>
