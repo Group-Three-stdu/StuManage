@@ -141,7 +141,7 @@ namespace DAL
         /// <returns></returns>
         public List<CourseMes> showUncheck()
         {
-            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,college from CoursesMes where SStatus='W'";
+            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,collegeName from CoursesMes where SStatus='W'";
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
             List<CourseMes> courselist = new List<CourseMes>();
             while (result.Read())
@@ -152,7 +152,8 @@ namespace DAL
                     CourseName = result["CourseName"].ToString(),
                     Xuefen = float.Parse(result["Xuefen"].ToString()),
                     CourseNum = Convert.ToInt32(result["CourseNum"]),
-                    courseproperty = result["courseproperty"].ToString()
+                    courseproperty = result["courseproperty"].ToString(),
+                    CollegeName = result["collegeName"].ToString()
                 });
             }
             return courselist;
