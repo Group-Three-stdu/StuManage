@@ -30,8 +30,8 @@
 <body>
     <form id="form1" runat="server">
         <div class="box">
-            <asp:Button ID="Button1" runat="server" CssClass="button btn-info" Text="查看全部课程" />
-            <asp:Button ID="Button2" runat="server" CssClass="btn-danger button " Text="查看未通过审核课程" />
+            <asp:Button ID="Button1" runat="server" CssClass="button btn-info" Text="查看全部课程" OnClick="Button1_Click" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn-danger button " Text="查看未通过审核课程" OnClick="Button2_Click" />
             <asp:Button ID="Button3" runat="server" CssClass="btn-success button" Text="查看已通过审核课程" />
         </div>
         <div class="content">
@@ -45,8 +45,8 @@
                         <td class="table-bordered">学分</td>
                         <td class="table-bordered">学时数</td>
                         <td class="table-bordered">课程性质</td>
-                        <td class="table-bordered">开课学院</td>
-                        <td class="table-bordered">状态</td>
+<%--                        <td class="table-bordered">开课学院</td>
+                        <td class="table-bordered">状态</td>--%>
                         <td class="table-bordered">操作</td>
                 </tr>
                 </HeaderTemplate>
@@ -57,12 +57,12 @@
                         <td class="table-bordered"><%# Eval("Xuefen")%></td>
                         <td class="table-bordered"><%# Eval("CourseNum")%></td>
                         <td class="table-bordered"><%# Eval("courseproperty")%></td>
-                        <td class="table-bordered"><%# Eval("college")%></td>
-                        <td class="table-bordered"><%# Eval("zhuangtai")%></td>
+<%--                        <td class="table-bordered"><%# Eval("college")%></td>
+                        <td class="table-bordered"><%# Eval("zhuangtai")%></td>--%>
                         <td class="table-bordered">
-                            <asp:HyperLink ID="success" runat="server">通过</asp:HyperLink>
+                            <asp:LinkButton ID="LinkButton1" runat="server">通过</asp:LinkButton>
                             &nbsp;
-                            <asp:HyperLink ID="failed" runat="server">不通过</asp:HyperLink>
+                            <asp:LinkButton ID="LinkButton2" runat="server">不通过</asp:LinkButton>
                         </td>
                     </tr>
                 </ItemTemplate>
