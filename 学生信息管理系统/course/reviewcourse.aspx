@@ -31,6 +31,7 @@
             height:25px;
             padding-top:2px;
         }
+        
     </style>
     <script type="text/javascript">
             $(function(){
@@ -68,13 +69,14 @@
         </div>
 
         <div class="box">
-            <asp:Button ID="Button1" runat="server" CssClass="button btn-info" Text="查看全部课程" OnClick="Button1_Click" />
-            <asp:Button ID="Button2" runat="server" CssClass="btn-danger button " Text="查看未通过审核课程" OnClick="Button2_Click" />
-            <asp:Button ID="Button3" runat="server" CssClass="btn-success button" Text="查看已通过审核课程" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn-danger button " Text="查看待审核课程" OnClick="Button2_Click" />
+            <asp:Button ID="Button3" runat="server" CssClass="btn-success button" Text="查看已审核课程" OnClick="Button3_Click" />
         </div>
         <div class="content">
 
-            <asp:Repeater ID="Repeater1" runat="server" >
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <asp:Repeater ID="Repeater1" runat="server" >
                 <HeaderTemplate>
                     <table class="table table-striped table-hover text-center">
                         <tr class="table-bordered table-condensed info">
@@ -83,6 +85,7 @@
                         <td class="table-bordered">学分</td>
                         <td class="table-bordered">学时数</td>
                         <td class="table-bordered">课程性质</td>
+                        <td class="table-bordered">审核状态</td>
 <%--                        <td class="table-bordered">开课学院</td>
                         <td class="table-bordered">状态</td>--%>
                         <td class="table-bordered" width="15%">操作</td>
@@ -95,12 +98,13 @@
                         <td class="table-bordered"><%# Eval("Xuefen")%></td>
                         <td class="table-bordered"><%# Eval("CourseNum")%></td>
                         <td class="table-bordered"><%# Eval("courseproperty")%></td>
+                        <td class="table-bordered"><%# Eval("SStatus")%></td>
 <%--                        <td class="table-bordered"><%# Eval("college")%></td>
                         <td class="table-bordered"><%# Eval("zhuangtai")%></td>--%>
                         <td class="table-bordered">
                         <asp:LinkButton ID="LinkButton1" CommandName="past" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" runat="server" OnClientClick='<%#Eval("CourseID", "values(\"{0}\")")%>' >通过</asp:LinkButton>
                              &nbsp;
-                            <asp:LinkButton ID="LinkButton2" CommandName="nopast" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" runat="server">不通过</asp:LinkButton>
+                            <%--<asp:LinkButton ID="LinkButton2" CommandName="nopast" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" runat="server">不通过</asp:LinkButton>--%>
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -108,6 +112,8 @@
                     </table>
                 </FooterTemplate>
             </asp:Repeater>
+            </div>
+            </nav>
         </div>
         
     </form>
