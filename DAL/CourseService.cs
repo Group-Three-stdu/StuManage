@@ -70,7 +70,7 @@ namespace DAL
         //通过课程编号查看课程信息，
         public CourseMes queryCourseById(int courseId)
         {
-            string sql = "select CourseName,Xuefen,CourseNum,courseproperty,CollegeName from CoursesMes where CourseID=@CourseId";
+            string sql = "select CourseName,Xuefen,CourseNum,courseproperty,CollegeName,TeaId from CoursesMes where CourseID=@CourseId";
             SqlParameter[] param = new SqlParameter[]
            {
                 new SqlParameter("@CourseId",courseId),
@@ -86,7 +86,8 @@ namespace DAL
                     Xuefen = float.Parse(result["Xuefen"].ToString()),
                     CourseNum = Convert.ToInt32(result["CourseNum"]),
                     courseproperty = result["courseproperty"].ToString(),
-                    CollegeName = result["CollegeName"].ToString()
+                    CollegeName = result["CollegeName"].ToString(),
+                    TeaId=Convert.ToInt32(result["TeaId"])
                 };
             }
             return course;
@@ -101,13 +102,13 @@ namespace DAL
                 new SqlParameter("@CourseId",courseId),
             };
             int result1= new Helper.SQLHelper().update(sql, param, false);
-            return 0;
+            return result1;
             }
 
         //向CourseMana中插入数据
         public int addCoursetoMana(CourseMes course,CourseMana courseExt)
         {
-            string sql = "insert into CoursesMana (CourseId,TeaId,Season,Time,CourseAdd" +
+            string sql = "insert into CourseMana (CourseId,TeaId,Season,Time,CourseAdd)" +
                 "values (@CourseId,@TeaId,@Season,@Time,@CourseAdd)";
             SqlParameter[] param = new SqlParameter[]
             {
@@ -115,7 +116,7 @@ namespace DAL
                  new SqlParameter("@TeaId",course.TeaId),
                  new SqlParameter("@Season",courseExt.Season),
                  new SqlParameter("@Time",courseExt.Time),
-                 new SqlParameter("@CourAdd",courseExt.CourseAdd)
+                 new SqlParameter("@CourseAdd",courseExt.CourseAdd)
             };
             return new Helper.SQLHelper().update(sql, param, false);
         }

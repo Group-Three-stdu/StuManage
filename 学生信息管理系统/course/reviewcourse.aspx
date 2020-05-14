@@ -32,10 +32,18 @@
             padding-top:2px;
         }
     </style>
+    <script type="text/javascript">
+            $(function(){
+                $('.modleDailog').modal("hide");
+            });
+            function values(ID){
+                $('#courseId').val(ID);
+            }
+        </script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade modleDailog" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
            <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -45,6 +53,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
+                    <asp:TextBox ID="courseId"  runat="server"></asp:TextBox>
                     <asp:TextBox ID="txt_season" placeholder="课程学期" runat="server"></asp:TextBox>
                     <asp:TextBox ID="txt_time" placeholder="上课时间" runat="server"></asp:TextBox>
                     <asp:TextBox ID="txt_add" placeholder="上课地点" runat="server"></asp:TextBox>
@@ -65,7 +74,7 @@
         </div>
         <div class="content">
 
-            <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+            <asp:Repeater ID="Repeater1" runat="server" >
                 <HeaderTemplate>
                     <table class="table table-striped table-hover text-center">
                         <tr class="table-bordered table-condensed info">
@@ -89,8 +98,8 @@
 <%--                        <td class="table-bordered"><%# Eval("college")%></td>
                         <td class="table-bordered"><%# Eval("zhuangtai")%></td>--%>
                         <td class="table-bordered">
-                            <asp:LinkButton ID="LinkButton1" CommandName="past" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" runat="server">通过</asp:LinkButton>
-                            &nbsp;
+                        <asp:LinkButton ID="LinkButton1" CommandName="past" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" runat="server" OnClientClick='<%#Eval("CourseID", "values(\"{0}\")")%>' >通过</asp:LinkButton>
+                             &nbsp;
                             <asp:LinkButton ID="LinkButton2" CommandName="nopast" CommandArgument='<%# Eval("CourseID")%>' class="btn btn-primary" runat="server">不通过</asp:LinkButton>
                         </td>
                     </tr>

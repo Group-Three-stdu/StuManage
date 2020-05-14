@@ -28,30 +28,31 @@ namespace 学生信息管理系统.course
             Repeater1.DataBind();
         }
         //对课程进行审批
-        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
-        {
-            CourseManege bll = new CourseManege();
-            int id = Convert.ToInt32(e.CommandArgument);
-            if (e.CommandName.Equals("past"))
-            {
-                //bll.checkCourseToY(id,);
-            }
-            else if (e.CommandName.Equals("nopast"))
-            {
-                bll.checkCourseToN(id);
-            }
-        }
+        //protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        //{
+        //    CourseManege bll = new CourseManege();
+        //    int id = Convert.ToInt32(e.CommandArgument);
+        //    if (e.CommandName.Equals("past"))
+        //    {
+        //        //bll.checkCourseToY(id,);
+        //    }
+        //    else if (e.CommandName.Equals("nopast"))
+        //    {
+        //        bll.checkCourseToN(id);
+        //    }
+        //}
+
         //添加到课程信息表中
         protected void btn_save_Click(object sender, EventArgs e)
         {
             
-            CourseMes cour = new CourseMes();
+            int CourseId = Convert.ToInt32(Request.Form["courseId"]);
             CourseMana course = new CourseMana();
             CourseManege bll = new CourseManege();
             course.Season = Request.Form["txt_season"];
             course.Time = Request.Form["txt_time"];
             course.CourseAdd = Request.Form["txt_add"];
-            if(bll.checkCourseToY(cour.CourseID, course)==1)
+            if(bll.checkCourseToY(CourseId, course)==1)
             {
                 Response.Write("<script>alert('审核课程成功');</script>");
             }
