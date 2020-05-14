@@ -9,7 +9,7 @@ namespace Model
     {
         public string Selected_courseid { set; get; }
         public int StuId { set; get; }
-        public string CourseId { set; get; }
+        public int CourseId { set; get; }
         public int TeaId { set; get; }
         public string CourseName { set; get; }
         public string Season { set; get; }

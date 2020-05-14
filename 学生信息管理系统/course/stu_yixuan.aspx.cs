@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Model;
+using BLL;
 
 namespace 学生信息管理系统.StudentsInfo
 {
@@ -15,5 +16,7 @@ namespace 学生信息管理系统.StudentsInfo
             StuId.Text = ((Model.Login)Session["CurrentUser"]).UserName.ToString();
             StuName.Text= ((Model.Login)Session["CurrentUser"]).StuName.ToString();
         }
+
+       
     }
 }

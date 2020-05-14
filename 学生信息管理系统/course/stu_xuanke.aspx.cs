@@ -23,5 +23,16 @@ namespace 学生信息管理系统.StudentsInfo
             Repeater1.DataSource = bll.queryAllCourse();
             Repeater1.DataBind();
         }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            int StuId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
+            int CourseId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
+            int result = new CourseManege().chooseCourse(CourseId, StuId);
+            if (result > 0)
+                Itamsg.Text = "<script>alert('添加成功！')</script>";
+            else
+                Itamsg.Text = "<script>alert('添加失败！')</script>";
+        }
     }
 }

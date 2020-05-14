@@ -97,5 +97,30 @@ namespace BLL
             return new CourseService().showChecked();
         }
 
+        public int chooseCourse(int CourseId,int StuId)
+        {
+
+            Course_Stu course = new Course_Stu();
+            CourseMes course1 = new CourseService().queryCourseById(CourseId);
+            CourseMana course2 = new CourseService().selectCourseById(CourseId);
+            course.StuId = StuId;
+            course.CourseId = course1.CourseID;
+            course.TeaId = course1.TeaId;
+            course.CourseName = course1.CourseName;
+            course.Season = course2.Season;
+            course.Time = course2.Time;
+            return new CourseService().chooseCourse(course);
+        }
+
+        /// <summary>
+        /// 查看已选课程
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <returns></returns>
+        public List<Course_Stu> showSelectCourse(int StuId)
+        {
+            return new CourseService().showSelectedCourse(StuId);
+        }
+
     }
 }

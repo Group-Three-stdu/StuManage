@@ -93,6 +93,30 @@ namespace DAL
             return course;
         }
 
+        //通过课程编号查看选课信息
+        public CourseMana selectCourseById(int courseId)
+        {
+            string sql = "select CourseId,TeaId,Season,Time,CourseAdd from CourseMana where CourseID=@CourseId";
+            SqlParameter[] param = new SqlParameter[]
+           {
+                new SqlParameter("@CourseId",courseId),
+           };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            CourseMana course = null;
+            while (result.Read())
+            {
+                course = new CourseMana()
+                {
+                    CourseID = courseId,
+                    Time=result["Time"].ToString(),
+                    Season = result["Season"].ToString(),
+                    CourseAdd = result["CourseAdd"].ToString(),
+                    TeaId = Convert.ToInt32(result["TeaId"])
+                };
+            }
+            return course;
+        }
+
         //通过审核
         public int checkCourseY(int courseId)
         {
@@ -241,5 +265,50 @@ namespace DAL
             }
             return courselist;
         }
+
+        /// <summary>
+        /// 学生选择课程
+        /// </summary>
+        /// <param name="course"></param>
+        /// <returns></returns>
+        public int chooseCourse(Course_Stu course)
+        {
+            string sql = "insert into Courses_Stu (StuId,CourseId,CourseName,Season,Time,TeaId) Values (@StuId,@CourseId,@CourseName,@Season,@Time,@TeaId)";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",course.StuId),
+                new SqlParameter("@CourseId",course.CourseId),
+                new SqlParameter("@CourseName",course.CourseName),
+                new SqlParameter("@Season",course.Season),
+                new SqlParameter("@Time",course.Time),
+                new SqlParameter("@TeaId",course.TeaId)
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
+
+        //查看已选课程
+        public List<Course_Stu> showSelectedCourse(int StuId)
+        {
+            string sql = "select CourseId,CourseName,Season,Time,TeaId from Courses_Stu where StuId = @StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql,param, false);
+            List<Course_Stu> courselist = new List<Course_Stu>();
+            while (result.Read())
+            {
+                courselist.Add(new Course_Stu()
+                {
+                    CourseId = Convert.ToInt32(result["CourseId"]),
+                    CourseName = result["CourseName"].ToString(),
+                    Season = result["Season"].ToString(),
+                    Time = result["Time"].ToString(),
+                    TeaId = Convert.ToInt32(result["TeaId"])
+                });
+            }
+            return courselist;
+        
+    }
     }
 }

@@ -108,8 +108,8 @@
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("CollegeName")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
-                            
-                
+                            <asp:LinkButton ID="btnAdd" CommandArgument='<%#Eval("CourseId")%>'   OnClick="btnAdd_Click"
+                                         runat="server">添加</asp:LinkButton>
                         </td>
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;">
                             </td>
@@ -118,6 +118,7 @@
             </asp:Repeater>
  
 </div>
+        <asp:Literal ID="Itamsg" runat="server"></asp:Literal>
     </form>
 </body>
 </html>

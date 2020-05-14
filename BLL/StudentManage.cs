@@ -65,5 +65,7 @@ namespace BLL
         {
             return new StudentService().AddStudent(stu);
         }
+
+
     }
 }
