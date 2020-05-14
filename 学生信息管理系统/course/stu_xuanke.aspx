@@ -106,10 +106,10 @@
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("Season")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
-                            <%# Eval("college")%></td>
+                            <%# Eval("CollegeName")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
-                            <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#Eval("StuId","~/StudentsInfo/look_StudentInfo.aspx?StuId={0}") %>'
-                runat="server" ForeColor="Blue">选课</asp:HyperLink>
+                            
+                
                         </td>
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;">
                             </td>

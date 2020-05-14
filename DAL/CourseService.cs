@@ -168,7 +168,7 @@ namespace DAL
         /// <returns></returns>
         public List<CourseMana> queryAllCourse()
         {
-            string sql = "select CourseId,CourseName,TeaName,Xuefen,courseproperty,Season,CollegeName from course2 where SStatus='Y'";
+            string sql = "select CourseId,CourseName,TeaName,Xuefen,courseproperty,Season,CollegeName from V_xuanke where SStatus='Y'";
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
             List<CourseMana> courselist = new List<CourseMana>();
             while (result.Read())
