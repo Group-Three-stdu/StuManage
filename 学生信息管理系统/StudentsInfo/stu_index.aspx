@@ -98,13 +98,13 @@
                      <div><i class="iconfont icon-kecheng"></i>课程信息</div>
                     <ul class="sub">
                         <li>
-                            <a id="A2" href="" runat="server" target="right">
+                            <a id="A2" href="~/course/stu_xuanke.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 网上选课
                             </a>
                         </li>
                         <li>
-                            <a id="A3" href="" runat="server" target="right">
+                            <a id="A3" href="~/course/stu_yixuan.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 已选课程
                             </a>

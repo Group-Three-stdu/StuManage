@@ -98,6 +98,8 @@
     <Content Include="course\lookcourse.aspx" />
     <Content Include="course\paike.aspx" />
     <Content Include="course\reviewcourse.aspx" />
+    <Content Include="course\stu_xuanke.aspx" />
+    <Content Include="course\stu_yixuan.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
@@ -175,6 +177,20 @@
     </Compile>
     <Compile Include="course\reviewcourse.aspx.designer.cs">
       <DependentUpon>reviewcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course\stu_xuanke.aspx.cs">
+      <DependentUpon>stu_xuanke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\stu_xuanke.aspx.designer.cs">
+      <DependentUpon>stu_xuanke.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course\stu_yixuan.aspx.cs">
+      <DependentUpon>stu_yixuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\stu_yixuan.aspx.designer.cs">
+      <DependentUpon>stu_yixuan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
