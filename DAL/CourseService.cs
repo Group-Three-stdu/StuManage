@@ -216,5 +216,30 @@ namespace DAL
             }
             return courselist;
         }
+
+
+        /// <summary>
+        /// 查看通过审核的课程
+        /// </summary>
+        /// <returns></returns>
+        public List<CourseMes> showChecked()
+        {
+            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,collegeName from CoursesMes where SStatus='Y'";
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
+            List<CourseMes> courselist = new List<CourseMes>();
+            while (result.Read())
+            {
+                courselist.Add(new CourseMes()
+                {
+                    CourseID = Convert.ToInt32(result["CourseID"]),
+                    CourseName = result["CourseName"].ToString(),
+                    Xuefen = float.Parse(result["Xuefen"].ToString()),
+                    CourseNum = Convert.ToInt32(result["CourseNum"]),
+                    courseproperty = result["courseproperty"].ToString(),
+                    CollegeName = result["collegeName"].ToString()
+                });
+            }
+            return courselist;
+        }
     }
 }

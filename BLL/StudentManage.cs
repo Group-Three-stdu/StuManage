@@ -42,9 +42,16 @@ namespace BLL
             return new StudentService().queryStuByName(Name);
         }
 
-        //删除学生
+        /// <summary>
+        /// 删除学生
+        /// </summary>
+        /// <param name="StuId">学号</param>
+        /// <returns>-1，删除失败，该学生有未完成的课程,1删除成功</returns>
         public int DeleteStudentById(int StuId)
         {
+            int result = new StudentService().queryCourseByStuId(StuId);
+            if (result > 0)
+                return -1;
             return new StudentService().DleteStudent(StuId);
         }
 

@@ -330,5 +330,16 @@ namespace DAL
             int result = new Helper.SQLHelper().update(sql, param, false);
             return result;
         }
+
+        public int queryCourseByStuId(int StuId)
+        {
+            string sql = "select count(*) from Courses_Stu where StuId=@StuId and Status='N' ";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            int result = Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+            return result;
+        }
     }
 }

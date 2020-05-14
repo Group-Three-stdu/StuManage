@@ -88,6 +88,14 @@ namespace BLL
             return new CourseService().queryCourseByStuId(StuId);
         }
 
+        /// <summary>
+        /// 显示所有通过审核的课程
+        /// </summary>
+        /// <returns></returns>
+        public List<CourseMes> showChecked()
+        {
+            return new CourseService().showChecked();
+        }
 
     }
 }
