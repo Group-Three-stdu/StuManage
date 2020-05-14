@@ -22,40 +22,22 @@ namespace 学生信息管理系统.course {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_pwd 控件。
+        /// txt_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_pwd;
+        protected global::System.Web.UI.WebControls.TextBox txt_name;
         
         /// <summary>
-        /// txt_newpwd 控件。
+        /// txt_xuefen 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_newpwd;
-        
-        /// <summary>
-        /// txt_renewpwd 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_renewpwd;
-        
-        /// <summary>
-        /// TextBox1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txt_xuefen;
         
         /// <summary>
         /// ddl_coursexingzhi 控件。
@@ -67,12 +49,30 @@ namespace 学生信息管理系统.course {
         protected global::System.Web.UI.WebControls.DropDownList ddl_coursexingzhi;
         
         /// <summary>
-        /// btn_alterpass 控件。
+        /// txt_number 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_alterpass;
+        protected global::System.Web.UI.WebControls.TextBox txt_number;
+        
+        /// <summary>
+        /// ddl_college 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddl_college;
+        
+        /// <summary>
+        /// btn_save 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_save;
     }
 }

@@ -16,7 +16,7 @@
     .box
     {
         width:100%;
-        height:500px;
+        height:700px;
         margin-top:10px;
         border:1px solid #ccc;
         }
@@ -58,26 +58,40 @@
     <form id="form1" runat="server">
     <div>
         <div class="box">
-            <div class="lable">课程编号：</div>
-            <asp:TextBox ID="txt_pwd" runat="server" class="input form-control"></asp:TextBox>
-            <br />
+            <%--<div class="lable">课程编号：</div>
+            <asp:TextBox ID="txt_id" runat="server" class="input form-control"></asp:TextBox>
+            <br />--%>
             <div class="lable">课程名：</div>
-            <asp:TextBox ID="txt_newpwd" runat="server" class="input form-control"></asp:TextBox>
+            <asp:TextBox ID="txt_name" runat="server" class="input form-control"></asp:TextBox>
             <br />
+            <%--<div class="lable">教师编号：</div>
+            <asp:TextBox ID="txt_tid" runat="server" class="input form-control"></asp:TextBox>
+            <br />--%>
             <div class="lable">课程学分：</div>
-            <asp:TextBox ID="txt_renewpwd" runat="server" class="input form-control"></asp:TextBox>
-            <br />
-            <div class="lable">学时数：</div>
-            <asp:TextBox ID="TextBox1" runat="server" class="input form-control"></asp:TextBox>
+            <asp:TextBox ID="txt_xuefen" runat="server" class="input form-control"></asp:TextBox>
             <br />
             <div class="lable">课程性质：</div>
             <asp:DropDownList ID="ddl_coursexingzhi" CssClass="input form-control" runat="server">
                 <asp:ListItem Value="bixiu">必修</asp:ListItem>
                 <asp:ListItem Value="xuanxiu">选修</asp:ListItem>
             </asp:DropDownList>
-            
             <br />
-            <asp:Button ID="btn_alterpass" class="btn" runat="server" Text="保存" />
+            <div class="lable">学时数：</div>
+            <asp:TextBox ID="txt_number" runat="server" class="input form-control"></asp:TextBox>
+            <br />
+            
+
+            <%--<div class="lable">状态：</div>
+            <asp:TextBox ID="txt_zhuangtai" runat="server" ReadOnly="true" Text="未审核" class="input form-control"></asp:TextBox>
+            <br />--%>
+
+            <div class="lable">学院：</div>
+            <asp:DropDownList ID="ddl_college" CssClass="input form-control" runat="server">
+                <asp:ListItem Value="xinxi">信息学院</asp:ListItem>
+                <asp:ListItem Value="wenfa">文法学院</asp:ListItem>
+            </asp:DropDownList>
+            <br />
+            <asp:Button ID="btn_save" class="btn" runat="server" Text="保存" OnClick="btn_save_Click" />
         </div>
     </div>
     </form>
