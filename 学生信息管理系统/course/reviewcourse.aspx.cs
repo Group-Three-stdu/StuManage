@@ -26,6 +26,7 @@ namespace 学生信息管理系统.course
             CourseManege bll = new CourseManege();
             Repeater1.DataSource = bll.showUncheck();
             Repeater1.DataBind();
+            
         }
         //对课程进行审批
         //protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
@@ -60,6 +61,13 @@ namespace 学生信息管理系统.course
             {
                 Response.Write("<script>alert('成功');</script>");
             }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            CourseManege bll = new CourseManege();
+            Repeater1.DataSource = bll.showChecked();
+            Repeater1.DataBind();
         }
     }
     }

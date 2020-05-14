@@ -72,8 +72,8 @@
             <br />
             <div class="lable">课程性质：</div>
             <asp:DropDownList ID="ddl_coursexingzhi" CssClass="input form-control" runat="server">
-                <asp:ListItem Value="bixiu">必修</asp:ListItem>
-                <asp:ListItem Value="xuanxiu">选修</asp:ListItem>
+                <asp:ListItem Value="必修">必修</asp:ListItem>
+                <asp:ListItem Value="选修">选修</asp:ListItem>
             </asp:DropDownList>
             <br />
             <div class="lable">学时数：</div>
@@ -89,6 +89,12 @@
             <asp:DropDownList ID="ddl_college" CssClass="input form-control" runat="server">
                 <asp:ListItem Value="xinxi">信息学院</asp:ListItem>
                 <asp:ListItem Value="wenfa">文法学院</asp:ListItem>
+                <asp:ListItem Value="wenfa">土木学院</asp:ListItem>
+                <asp:ListItem Value="wenfa">经管学院</asp:ListItem>
+                <asp:ListItem Value="wenfa">机械学院</asp:ListItem>
+                <asp:ListItem Value="wenfa">外语学院</asp:ListItem>
+                <asp:ListItem Value="wenfa">数理学院</asp:ListItem>
+                <asp:ListItem Value="wenfa">继续教育学院</asp:ListItem>
             </asp:DropDownList>
             <br />
             <asp:Button ID="btn_save" class="btn" runat="server" Text="保存" OnClick="btn_save_Click" />

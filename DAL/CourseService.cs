@@ -143,7 +143,7 @@ namespace DAL
         /// <returns></returns>
         public List<CourseMes> showUncheck()
         {
-            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,collegeName from CoursesMes where SStatus='W'";
+            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,collegeName,SStatus from CoursesMes where SStatus='W'";
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
             List<CourseMes> courselist = new List<CourseMes>();
             while (result.Read())
@@ -155,7 +155,8 @@ namespace DAL
                     Xuefen = float.Parse(result["Xuefen"].ToString()),
                     CourseNum = Convert.ToInt32(result["CourseNum"]),
                     courseproperty = result["courseproperty"].ToString(),
-                    CollegeName = result["collegeName"].ToString()
+                    CollegeName = result["collegeName"].ToString(),
+                    SStatus = result["SStatus"].ToString()
                 });
             }
             return courselist;
@@ -224,7 +225,7 @@ namespace DAL
         /// <returns></returns>
         public List<CourseMes> showChecked()
         {
-            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,collegeName from CoursesMes where SStatus='Y'";
+            string sql = "select CourseId,CourseName,Xuefen,CourseNum,courseproperty,collegeName,SStatus from CoursesMes where SStatus='Y'";
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
             List<CourseMes> courselist = new List<CourseMes>();
             while (result.Read())
@@ -236,10 +237,12 @@ namespace DAL
                     Xuefen = float.Parse(result["Xuefen"].ToString()),
                     CourseNum = Convert.ToInt32(result["CourseNum"]),
                     courseproperty = result["courseproperty"].ToString(),
-                    CollegeName = result["collegeName"].ToString()
+                    CollegeName = result["collegeName"].ToString(),
+                    SStatus=result["SStatus"].ToString()
                 });
             }
             return courselist;
         }
+         
     }
 }
