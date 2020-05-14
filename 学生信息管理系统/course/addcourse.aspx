@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="addcourse.aspx.cs" Inherits="学生信息管理系统.course.addcourse" %>
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -85,12 +83,12 @@
             <asp:TextBox ID="txt_zhuangtai" runat="server" ReadOnly="true" Text="未审核" class="input form-control"></asp:TextBox>
             <br />--%>
 
-            <div class="lable">学院：</div>
+            <%--<div class="lable">学院：</div>
             <asp:DropDownList ID="ddl_college" CssClass="input form-control" runat="server">
                 <asp:ListItem Value="xinxi">信息学院</asp:ListItem>
                 <asp:ListItem Value="wenfa">文法学院</asp:ListItem>
             </asp:DropDownList>
-            <br />
+            <br />--%>
             <asp:Button ID="btn_save" class="btn" runat="server" Text="保存" OnClick="btn_save_Click" />
         </div>
     </div>

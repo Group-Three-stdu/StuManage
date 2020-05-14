@@ -21,14 +21,14 @@ namespace 学生信息管理系统.course
            
             CourseMes course = new CourseMes();
             CourseManege bll = new CourseManege();
-            //course.CourseID= Convert.ToInt32(Request.Form["txt_id"]);
+            //course.CourseID = Convert.ToInt32(Request.Form["txt_id"]);
             course.CourseName= Request.Form["txt_name"];
             //course.TeaId= Convert.ToInt32(Request.Form["txt_tid"]);
             course.Xuefen= Convert.ToSingle(Request.Form["txt_xuefen"]);
             course.courseproperty = Request.Form["ddl_coursexingzhi"];
             course.CourseNum= Convert.ToInt32(Request.Form["number"]);
             //course.SStatus= Request.Form["txt_zhuangtai"];
-            course.CollegeName= Request.Form["ddl_college"];
+            //course.CollegeName = Request.Form["ddl_college"];
             if (bll.AddCourseByTea(course) == 1)
             {
                 Response.Write("<script>alert('添加成功');</script>");
