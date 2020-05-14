@@ -27,5 +27,19 @@ namespace 学生信息管理系统.course
             Repeater1.DataSource = bll.showUncheck();
             Repeater1.DataBind();
         }
+        //对课程进行审批
+        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            CourseManege bll = new CourseManege();
+            int id = Convert.ToInt32(e.CommandArgument);
+            if(e.CommandName.Equals("past"))
+            {
+                bll.checkCourseToY(id,);
+            }
+            else if (e.CommandName.Equals("nopast"))
+            {
+                bll.checkCourseToN(id);
+            }
+            }
+        }
     }
-}
