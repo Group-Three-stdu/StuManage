@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
+   
     <title>教务处审核课程</title>
     <style>
         .box{
@@ -60,7 +61,7 @@
 <%--                        <td class="table-bordered"><%# Eval("college")%></td>
                         <td class="table-bordered"><%# Eval("zhuangtai")%></td>--%>
                         <td class="table-bordered">
-                            <asp:LinkButton ID="LinkButton1" runat="server">通过</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">通过</asp:LinkButton>
                             &nbsp;
                             <asp:LinkButton ID="LinkButton2" runat="server">不通过</asp:LinkButton>
                         </td>
@@ -71,6 +72,26 @@
                 </FooterTemplate>
             </asp:Repeater>
         </div>
+        <%--模态框--%>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+  </div>
+</div>
     </form>
 </body>
 </html>
