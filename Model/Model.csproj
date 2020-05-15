@@ -98,15 +98,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="Answer_Stu.cs" />
     <Compile Include="Class.cs" />
     <Compile Include="College.cs" />
     <Compile Include="CourseMana.cs" />
     <Compile Include="CourseMes.cs" />
     <Compile Include="Course_Stu.cs" />
+    <Compile Include="Homework.cs" />
+    <Compile Include="KQ.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Major.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Score.cs" />
     <Compile Include="Students.cs" />
+    <Compile Include="Teacher.cs" />
+    <Compile Include="XTGG.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
