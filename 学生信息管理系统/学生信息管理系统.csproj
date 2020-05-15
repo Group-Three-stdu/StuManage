@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CKFinder">
+      <HintPath>..\..\..\网络资源设计与开发\zuoyegonggao\zuoyegonggao\resource\ckfinder\bin\Debug\CKFinder.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -104,6 +107,8 @@
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="homework\zuoye_chakan.aspx" />
+    <Content Include="homework\zuoye_tijiao.aspx" />
     <Content Include="image\bgschool.jpg" />
     <Content Include="image\demobg.jpg" />
     <Content Include="image\loginbg.jpg" />
@@ -194,6 +199,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="homework\zuoye_chakan.aspx.cs">
+      <DependentUpon>zuoye_chakan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\zuoye_chakan.aspx.designer.cs">
+      <DependentUpon>zuoye_chakan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\zuoye_tijiao.aspx.cs">
+      <DependentUpon>zuoye_tijiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\zuoye_tijiao.aspx.designer.cs">
+      <DependentUpon>zuoye_tijiao.aspx</DependentUpon>
     </Compile>
     <Compile Include="login2.aspx.cs">
       <DependentUpon>login2.aspx</DependentUpon>
@@ -303,6 +322,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="resource\ckeditor\" />
+    <Folder Include="resource\My97DatePicker\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">

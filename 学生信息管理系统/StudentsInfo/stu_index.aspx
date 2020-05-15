@@ -147,7 +147,7 @@
                             </a>
                         </li>
                         <li>
-                            <a id="A8" href="" runat="server" target="right">
+                            <a id="A8" href="~/homework/zuoye_tijiao.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 提交作业
                             </a>
