@@ -87,14 +87,14 @@
 
             <div class="lable">学院：</div>
             <asp:DropDownList ID="ddl_college" CssClass="input form-control" runat="server">
-                <asp:ListItem Value="xinxi">信息学院</asp:ListItem>
-                <asp:ListItem Value="wenfa">文法学院</asp:ListItem>
-                <asp:ListItem Value="wenfa">土木学院</asp:ListItem>
-                <asp:ListItem Value="wenfa">经管学院</asp:ListItem>
-                <asp:ListItem Value="wenfa">机械学院</asp:ListItem>
-                <asp:ListItem Value="wenfa">外语学院</asp:ListItem>
-                <asp:ListItem Value="wenfa">数理学院</asp:ListItem>
-                <asp:ListItem Value="wenfa">继续教育学院</asp:ListItem>
+                <asp:ListItem Value="信息学院">信息学院</asp:ListItem>
+                <asp:ListItem Value="文法学院">文法学院</asp:ListItem>
+                <asp:ListItem Value="土木学院">土木学院</asp:ListItem>
+                <asp:ListItem Value="经管学院">经管学院</asp:ListItem>
+                <asp:ListItem Value="机械学院">机械学院</asp:ListItem>
+                <asp:ListItem Value="外语学院">外语学院</asp:ListItem>
+                <asp:ListItem Value="数理学院">数理学院</asp:ListItem>
+                <asp:ListItem Value="继续教育学院">继续教育学院</asp:ListItem>
             </asp:DropDownList>
             <br />
             <asp:Button ID="btn_save" class="btn" runat="server" Text="保存" OnClick="btn_save_Click" />
