@@ -81,8 +81,8 @@ namespace BLL
         /// <summary>
         /// 查询自己选择的课程
         /// </summary>
-        /// <param name="StuId"></param>
-        /// <returns></returns>
+        /// <param name="StuId">学生学号</param>
+        /// <returns>课程集合 </returns>
         public List<CourseMana> queryMyCourse(int StuId)
         {
             return new CourseService().queryCourseByStuId(StuId);
@@ -91,12 +91,18 @@ namespace BLL
         /// <summary>
         /// 显示所有通过审核的课程
         /// </summary>
-        /// <returns></returns>
+        /// <returns>课程集合</returns>
         public List<CourseMes> showChecked()
         {
             return new CourseService().showChecked();
         }
 
+        /// <summary>
+        /// 学生选课
+        /// </summary>
+        /// <param name="CourseId">被选课程Id</param>
+        /// <param name="StuId">学生Id</param>
+        /// <returns>1 成功 </returns>
         public int chooseCourse(int CourseId,int StuId)
         {
 
