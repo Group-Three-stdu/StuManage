@@ -13,14 +13,16 @@ namespace 学生信息管理系统.StudentsInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //StuId.Text = ((Model.Login)Session["CurrentUser"]).UserName.ToString();
-            //StuName.Text = ((Model.Login)Session["CurrentUser"]).StuName.ToString();
+            CourseManege bll = new CourseManege();
+            Repeater1.DataSource = bll.queryAllCourse();
+            Repeater1.DataBind();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            CourseManege bll = new CourseManege();
-            Repeater1.DataSource = bll.queryAllCourse();
+            string name = TextBox1.Text.Trim().ToString();
+            List < CourseMana > courselist = new CourseManege().queryCourseByName(name);
+            Repeater1.DataSource = courselist;
             Repeater1.DataBind();
         }
 

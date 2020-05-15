@@ -122,5 +122,15 @@ namespace BLL
             return new CourseService().showSelectedCourse(StuId);
         }
 
+        /// <summary>
+        /// 按姓名模糊查询
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
+        public List<CourseMana> queryCourseByName(string Name)
+        {
+            return new CourseService().queryCourseByName(Name);
+        }
+
     }
 }

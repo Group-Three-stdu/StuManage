@@ -310,5 +310,28 @@ namespace DAL
             return courselist;
         
     }
+
+
+        //按姓名模糊查找
+        public List<CourseMana> queryCourseByName(string Name)
+        {
+            string sql = "select CourseId,CourseName,TeaName,Xuefen,courseproperty,Season,CollegeName from V_xuanke where CourseName LIKE '%"+Name+"%'";
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql,false);
+            List<CourseMana> courselist = new List<CourseMana>();
+            while (result.Read())
+            {
+                courselist.Add(new CourseMana()
+                {
+                    CourseID = Convert.ToInt32(result["CourseID"]),
+                    CourseName = result["CourseName"].ToString(),
+                    Xuefen = float.Parse(result["Xuefen"].ToString()),
+                    TeaName = result["TeaName"].ToString(),
+                    courseproperty = result["courseproperty"].ToString(),
+                    Season = result["Season"].ToString(),
+                    CollegeName = result["CollegeName"].ToString()
+                });
+            }
+            return courselist;
+        }
     }
 }
