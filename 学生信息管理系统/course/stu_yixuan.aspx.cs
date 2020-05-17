@@ -13,10 +13,16 @@ namespace 学生信息管理系统.StudentsInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            StuId.Text = ((Model.Login)Session["CurrentUser"]).UserName.ToString();
-            StuName.Text= ((Model.Login)Session["CurrentUser"]).StuName.ToString();
+            //StuId.Text = ((Model.Login)Session["CurrentUser"]).UserName.ToString();
+            //StuName.Text= ((Model.Login)Session["CurrentUser"]).StuName.ToString();
         }
 
-       
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            int stuid= Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
+            CourseManege bll = new CourseManege();
+            Repeater1.DataSource = bll.showSelectCourse(stuid);
+            Repeater1.DataBind();
+        }
     }
 }

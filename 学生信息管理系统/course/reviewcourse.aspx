@@ -85,7 +85,7 @@
                         <td class="table-bordered">学分</td>
                         <td class="table-bordered">学时数</td>
                         <td class="table-bordered">课程性质</td>
-                        <td class="table-bordered">审核状态</td>
+                        <%--<td class="table-bordered">审核状态</td>--%>
 <%--                        <td class="table-bordered">开课学院</td>
                         <td class="table-bordered">状态</td>--%>
                         <td class="table-bordered" width="15%">操作</td>
@@ -98,7 +98,7 @@
                         <td class="table-bordered"><%# Eval("Xuefen")%></td>
                         <td class="table-bordered"><%# Eval("CourseNum")%></td>
                         <td class="table-bordered"><%# Eval("courseproperty")%></td>
-                        <td class="table-bordered"><%# Eval("SStatus")%></td>
+                        <%--<td class="table-bordered"><%# Eval("SStatus")%></td>--%>
 <%--                        <td class="table-bordered"><%# Eval("college")%></td>
                         <td class="table-bordered"><%# Eval("zhuangtai")%></td>--%>
                         <td class="table-bordered">

@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
     <div>
         <div class="col-md-12">
-      <h4 class="bg-warning">操作提示：<asp:Literal ID="StuId" runat="server"></asp:Literal><asp:Literal ID="StuName" runat="server"></asp:Literal>的选课，如有问题请与教务部门联系<asp:Button ID="Button1" runat="server" BackColor="#9999FF" Font-Bold="True" ForeColor="White" Height="35px" Text="查看已选课程" Width="150px" Font-Size="Smaller"  />
+      <h4 class="bg-warning">操作提示：<asp:Literal ID="StuId" runat="server"></asp:Literal><asp:Literal ID="StuName" runat="server"></asp:Literal>的选课，如有问题请与教务部门联系<asp:Button ID="Button1" runat="server" BackColor="#9999FF" Font-Bold="True" ForeColor="White" Height="35px" Text="查看已选课程" Width="150px" Font-Size="Smaller" OnClick="Button1_Click"  />
             </h4>           
             
         </div>
@@ -66,11 +66,7 @@
                     </tr>
                 </ItemTemplate>
             </asp:Repeater>
-        
-    
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:yixuan_connection %>" SelectCommand="SELECT [Selected_courseid], [CourseName], [Season], [CollegeName], [Xuefen], [TeaName], [CourseAdd], [courseproperty] FROM [V_yixuan]"></asp:SqlDataSource>
-        
-    
     </div>
     </form>
 </body>
