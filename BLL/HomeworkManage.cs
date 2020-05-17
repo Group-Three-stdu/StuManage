@@ -18,5 +18,25 @@ namespace BLL
         {
             return new HomeworkService().queryHKByStuId(CourseId);
         }
+
+        /// <summary>
+        /// 查看作业详情
+        /// </summary>
+        /// <param name="HwId"></param>
+        /// <returns></returns>
+        public Homework ShowHwDetail(int HwId)
+        {
+            return new HomeworkService().queryHkByHkId(HwId);
+        }
+
+        /// <summary>
+        /// 学生提交作业
+        /// </summary>
+        /// <param name="ans"></param>
+        /// <returns></returns>
+        public int SubmitHw(Answer_Stu ans)
+        {
+            return new HomeworkService().SubmitHw(ans);
+        }
     }
 }

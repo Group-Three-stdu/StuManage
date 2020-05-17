@@ -48,7 +48,7 @@
 
             <div class="style2" style="height: 51px;  ">
                 <asp:Button ID="Button2" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#3cf;" Text="查看" Width="82px" BorderStyle="None" 
-                    CommandArgument='<%#Eval("CourseId")%>' OnClick="Button2_Click"  />
+                    CommandArgument='<%#Eval("HwId")%>' OnClick="Button2_Click"  />
             </div>   
         </div> 
                 </ItemTemplate>

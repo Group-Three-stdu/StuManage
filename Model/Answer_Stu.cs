@@ -5,12 +5,14 @@ using System.Text;
 
 namespace Model
 {
-    class Answer_Stu
+    public class Answer_Stu
     {
         public int StuId { set; get; }
-        public string HwId { set; get; }
+        public int HwId { set; get; }
         public string Answer { set; get; }
         public string Grade { set; get; }
         public  string Resist { set; get; }
+        public DateTime Time { set; get; }
+        public string HwState { set; get; }
     }
 }

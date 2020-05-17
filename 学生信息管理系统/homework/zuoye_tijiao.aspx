@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="zuoye_tijiao.aspx.cs" Inherits="学生信息管理系统.homework.zuoye_tijiao" EnableEventValidation="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="zuoye_tijiao.aspx.cs" Inherits="学生信息管理系统.homework.zuoye_tijiao" validateRequest="false"    %>
 
 <!DOCTYPE html>
 
@@ -7,42 +7,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script type="text/javascript" src="../../resource/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="../../resource/My97DatePicker/WdatePicker.js"></script>    
-    <script type="text/javascript" src="ckfinder/ckfinder.js"></script>
+
     <title></title>
     <style type="text/css">
         .auto-style1 {
             font-size: large;
         }
-        .auto-style2 {
-            font-size: x-large;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
-         <div class="col-md-12  auto-style1  "style="text-align:center; line-height:65px; background-color: #C8C5F5;">
-             <span class="auto-style1">选择课程</span>：<asp:DropDownList ID="DropDownList1" runat="server" Height="32px">
-            <asp:ListItem>机械设计</asp:ListItem>
-            <asp:ListItem>古典诗文名篇选读</asp:ListItem>
-            <asp:ListItem>数据库原理</asp:ListItem>
-        </asp:DropDownList>
-        
-             选择未提交作业<span class="auto-style2">：</span><asp:DropDownList ID="DropDownList2" runat="server" Height="31px">
-                 <asp:ListItem>作业一</asp:ListItem>
-                 <asp:ListItem>作业二</asp:ListItem>
-                 <asp:ListItem>作业三</asp:ListItem>
-                 <asp:ListItem>作业四</asp:ListItem>
-             </asp:DropDownList>
-        
-        提交日期：<asp:TextBox ID="TextBox2" runat="server" Width="282px" OnClick="WdatePicker()" Height="27px"></asp:TextBox>
-             </div>   
-             <br>
-             </br>
-      
-         <span class="auto-style1">作业内容：</span><br/>
-      <textarea name="editor1" id="editor1" rows="10" cols="80" runat="server">
+         <div class="col-md-12  auto-style1 " style=" line-height:65px; background-color: #C8C5F5;">
+           <div>
+               <h1><asp:Literal ID="HwHead" runat="server"></asp:Literal></h1>         
+               <h3><asp:Literal ID="HwContent" runat="server"></asp:Literal></h3>  
+               <span style="margin:5px 20px;">开始时间：<asp:Literal ID="StartTime" runat="server"></asp:Literal></span>
+               <span style="margin:5px 20px;">截止时间：<asp:Literal ID="EndTime" runat="server"></asp:Literal></span>                   
+           </div>
+         </div>
+
+         <span class="auto-style1">你的答案：</span><br/>
+      <asp:TextBox name="editor1" id="editor1" rows="10" cols="80" runat="server" Height="203px" TextMode="MultiLine" Width="1062px">
                 This is my homework.
-            </textarea>
+            </asp:TextBox>
             <script>
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.

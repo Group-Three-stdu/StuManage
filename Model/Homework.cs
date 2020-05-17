@@ -7,7 +7,7 @@ namespace Model
 {
     public class Homework
     {
-        public string HwId { set; get; }
+        public int HwId { set; get; }
         public DateTime StartTime { set; get; }
         public DateTime EndTime { set; get; }
         public string HwContent { set; get; }
