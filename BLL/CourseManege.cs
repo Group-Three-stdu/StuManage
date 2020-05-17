@@ -138,5 +138,14 @@ namespace BLL
             return new CourseService().queryCourseByName(Name);
         }
 
+        /// <summary>
+        /// 查询课程的信息
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <returns></returns>
+        public List<CourseMana> queryAllCourseByStuId(int StuId)
+        {
+            return new CourseService().queryCourseInfoByStuId(StuId);
+        }
     }
 }

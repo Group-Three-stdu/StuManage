@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="zuoye_chakan.aspx.cs" Inherits="学生信息管理系统.homework.zuoye_chakan" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="zuoye_chakan.aspx.cs" Inherits="学生信息管理系统.homework.zuoye_chakan" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -32,28 +32,26 @@
 <body>
     <form id="form1" runat="server">        
     <div>               
-        <asp:DataList ID="DataList1" runat="server" RepeatColumns="3" style="margin-right: 546px" Width="1175px">
+       <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
             <ItemTemplate>
-                <div class="style1">
-                    <a runat="server" href="~/homework/zuoye_tijiao.aspx">
-                    作业（一）<br />
+                <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4" >
                     
-                    <span>开始时间：</span><span style:"width=80px"> <%# Eval("StuId")%></span>
-                    <br />
-                    <span>截止时间：</span><span style:"width=80px"> <%# Eval("StuId")%></span>                    
-                    <br />
-                    <span>批阅状态：</span><span style:"width=80px"> <%# Eval("StuId")%></span>                    
-                    <br />
+                    <h1><span style=""> <%# Eval("HwHead")%></span></h1>
+                    <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
+                        <div style="margin-right:20px; margin-top:10px;">
+                            <div style:"width:80px">开始时间： <%# Eval("StartTime")%></div> 
+                            <div style:"width:80px">截止时间： <%# Eval("EndTime")%>                  
+                               
+                        </div>
+                    </div>             
             <br />                    
 
-            <div class="style2" style="height: 51px; ">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                <asp:Button ID="Button2" runat="server" Font-Bold="False" Font-Names="苹方 中等" Font-Size="Medium" ForeColor="White" Height="38px" style="text-align: right" Text="编辑" Width="82px" BackColor="#E1B1F8" BorderStyle="None" />
-                </div>   
-
+            <div class="style2" style="height: 51px;  ">
+                <asp:Button ID="Button2" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#3cf;" Text="查看" Width="82px" BorderStyle="None" 
+                    CommandArgument='<%#Eval("CourseId")%>' OnClick="Button2_Click"  />
+            </div>   
         </div> 
                 </ItemTemplate>
-
         </asp:DataList>
         
     </div>     

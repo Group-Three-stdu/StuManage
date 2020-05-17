@@ -99,6 +99,7 @@
   <ItemGroup>
     <Content Include="course\addcourse.aspx" />
     <Content Include="course\lookcourse.aspx" />
+    <Content Include="course\MyCourse.aspx" />
     <Content Include="course\paike.aspx" />
     <Content Include="course\reviewcourse.aspx" />
     <Content Include="course\stu_xuanke.aspx" />
@@ -168,6 +169,13 @@
     </Compile>
     <Compile Include="course\lookcourse.aspx.designer.cs">
       <DependentUpon>lookcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course\MyCourse.aspx.cs">
+      <DependentUpon>MyCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\MyCourse.aspx.designer.cs">
+      <DependentUpon>MyCourse.aspx</DependentUpon>
     </Compile>
     <Compile Include="course\paike.aspx.cs">
       <DependentUpon>paike.aspx</DependentUpon>

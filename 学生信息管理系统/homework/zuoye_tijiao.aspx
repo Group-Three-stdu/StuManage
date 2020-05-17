@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="zuoye_tijiao.aspx.cs" Inherits="学生信息管理系统.homework.zuoye_tijiao" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="zuoye_tijiao.aspx.cs" Inherits="学生信息管理系统.homework.zuoye_tijiao" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
