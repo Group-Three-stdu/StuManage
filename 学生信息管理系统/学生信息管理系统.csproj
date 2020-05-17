@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CKFinder">
+      <HintPath>..\..\..\网络资源设计与开发\zuoyegonggao\zuoyegonggao\resource\ckfinder\bin\Debug\CKFinder.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -96,6 +99,7 @@
   <ItemGroup>
     <Content Include="course\addcourse.aspx" />
     <Content Include="course\lookcourse.aspx" />
+    <Content Include="course\MyCourse.aspx" />
     <Content Include="course\paike.aspx" />
     <Content Include="course\reviewcourse.aspx" />
     <Content Include="course\stu_xuanke.aspx" />
@@ -104,6 +108,8 @@
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="homework\zuoye_chakan.aspx" />
+    <Content Include="homework\zuoye_tijiao.aspx" />
     <Content Include="image\bgschool.jpg" />
     <Content Include="image\demobg.jpg" />
     <Content Include="image\loginbg.jpg" />
@@ -111,7 +117,6 @@
     <Content Include="image\school.jpg" />
     <Content Include="js\code.js" />
     <Content Include="login2.aspx" />
-    <Content Include="qiandao\stu_qiandao.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
@@ -132,6 +137,22 @@
     <Content Include="StudentsInfo\teacherindex.aspx" />
     <Content Include="StudentsInfo\xueshengchu_index.aspx" />
     <Content Include="StudentsInfo\xueshengchu_stupersonnalinformation.aspx" />
+    <Content Include="resource\ckeditor\CHANGES.md" />
+    <Content Include="resource\ckeditor\LICENSE.md" />
+    <Content Include="resource\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="resource\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="resource\ckeditor\plugins\scayt\README.md" />
+    <Content Include="resource\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="resource\ckeditor\plugins\wsc\README.md" />
+    <Content Include="resource\ckeditor\README.md" />
+    <Content Include="resource\ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="resource\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="resource\ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="resource\ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="resource\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="resource\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="resource\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="resource\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,6 +186,13 @@
     <Compile Include="course\lookcourse.aspx.designer.cs">
       <DependentUpon>lookcourse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="course\MyCourse.aspx.cs">
+      <DependentUpon>MyCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\MyCourse.aspx.designer.cs">
+      <DependentUpon>MyCourse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="course\paike.aspx.cs">
       <DependentUpon>paike.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +223,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="homework\zuoye_chakan.aspx.cs">
+      <DependentUpon>zuoye_chakan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\zuoye_chakan.aspx.designer.cs">
+      <DependentUpon>zuoye_chakan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\zuoye_tijiao.aspx.cs">
+      <DependentUpon>zuoye_tijiao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\zuoye_tijiao.aspx.designer.cs">
+      <DependentUpon>zuoye_tijiao.aspx</DependentUpon>
     </Compile>
     <Compile Include="login2.aspx.cs">
       <DependentUpon>login2.aspx</DependentUpon>

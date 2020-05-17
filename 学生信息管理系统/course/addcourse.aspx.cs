@@ -17,7 +17,7 @@ namespace 学生信息管理系统.course
         }
 
         protected void btn_save_Click(object sender, EventArgs e)
-        {
+                   {
            
             CourseMes course = new CourseMes();
             CourseManege bll = new CourseManege();

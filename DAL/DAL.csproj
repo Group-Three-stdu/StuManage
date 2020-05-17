@@ -101,6 +101,7 @@
   <ItemGroup>
     <Compile Include="CourseService.cs" />
     <Compile Include="Helper\SQLHelper.cs" />
+    <Compile Include="HomeworkService.cs" />
     <Compile Include="LoginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="queryStudentService.cs" />
