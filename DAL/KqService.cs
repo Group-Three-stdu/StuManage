@@ -47,5 +47,43 @@ namespace DAL
             };
             return new Helper.SQLHelper().update(sql,param,false);
         }
+
+        //判断是否已经签到过，返回0表示未签到
+        public int IsAttend(int StuId,int KQId)
+        {
+            string sql = "select count(*) from qiandao where StuId = @StuId and KQId = @KQId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@KQId",KQId),
+            };
+            object result = new Helper.SQLHelper().QuerySingleResult(sql, param, false);
+            return Convert.ToInt32(result);
+        }
+
+
+        //完成签到
+        public int AddKqRecord(int StuId,int KQId, DateTime time)
+        {
+            string sql = "insert into qiandao (StuId,KQId,time) values (@StuId,@KQId,@time)";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@KQId",KQId),
+                new SqlParameter("@time",time)
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
+
+        //增加签到人数
+        public int UpdateStuNum(int KqId)
+        {
+            string sql = " update KQ set StuNum = StuNum+1 where KQId = @KqId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@KqId",KqId)
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
     }
 }

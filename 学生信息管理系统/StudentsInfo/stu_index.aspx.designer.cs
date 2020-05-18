@@ -112,15 +112,6 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A5;
         
         /// <summary>
-        /// A6 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A6;
-        
-        /// <summary>
         /// A7 控件。
         /// </summary>
         /// <remarks>
@@ -128,15 +119,6 @@ namespace 学生信息管理系统.StudentsInfo {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A7;
-        
-        /// <summary>
-        /// A8 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A8;
         
         /// <summary>
         /// A9 控件。

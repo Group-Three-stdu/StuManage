@@ -110,7 +110,7 @@
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
     <Content Include="homework\TeaLookHw.aspx" />
-    <Content Include="homework\zuoye_chakan.aspx" />
+    <Content Include="homework\StuCourseDeatils.aspx" />
     <Content Include="homework\zuoye_tijiao.aspx" />
     <Content Include="homework\CourseDetails.aspx" />
     <Content Include="image\bgschool.jpg" />
@@ -243,12 +243,12 @@
     <Compile Include="homework\TeaLookHw.aspx.designer.cs">
       <DependentUpon>TeaLookHw.aspx</DependentUpon>
     </Compile>
-    <Compile Include="homework\zuoye_chakan.aspx.cs">
-      <DependentUpon>zuoye_chakan.aspx</DependentUpon>
+    <Compile Include="homework\StuCourseDeatils.aspx.cs">
+      <DependentUpon>StuCourseDeatils.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="homework\zuoye_chakan.aspx.designer.cs">
-      <DependentUpon>zuoye_chakan.aspx</DependentUpon>
+    <Compile Include="homework\StuCourseDeatils.aspx.designer.cs">
+      <DependentUpon>StuCourseDeatils.aspx</DependentUpon>
     </Compile>
     <Compile Include="homework\zuoye_tijiao.aspx.cs">
       <DependentUpon>zuoye_tijiao.aspx</DependentUpon>

@@ -54,7 +54,7 @@
             学号：<asp:TextBox ID="txt_StuId" runat="server" class="input"></asp:TextBox>
             <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询" OnClick="btn_searchStuId_Click" />
         </div>
-        <div class="content">
+            <div class="content">
              <table>
                  <tr>
                      <th>学号</th>

@@ -135,21 +135,9 @@
                 <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>教学日常</div>
                     <ul class="sub">
                         <li>
-                            <a id="A6" href="" runat="server" target="right">
-                                <i class="iconfont icon-wenjuantiaocha"></i>
-                                出勤信息
-                            </a>
-                        </li>
-                        <li>
                             <a id="A7" href="~/course/Mycourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                查看作业
-                            </a>
-                        </li>
-                        <li>
-                            <a id="A8" href="~/homework/zuoye_tijiao.aspx" runat="server" target="right">
-                                <i class="iconfont icon-wenjuantiaocha"></i>
-                                提交作业
+                                课程中心
                             </a>
                         </li>
                         <li>

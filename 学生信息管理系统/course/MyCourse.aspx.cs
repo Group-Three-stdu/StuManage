@@ -22,7 +22,7 @@ namespace 学生信息管理系统.course
         protected void Button2_Click(object sender, EventArgs e)
         {
             int CourseId = Convert.ToInt32(((Button)sender).CommandArgument);
-            Response.Redirect("~/homework/zuoye_chakan.aspx/?CourseId=" + CourseId);
+            Response.Redirect("~/homework/StuCourseDeatils.aspx/?CourseId=" + CourseId);
         }
     }
 }

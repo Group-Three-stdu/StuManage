@@ -28,5 +28,23 @@ namespace BLL
         {
             return new KqService().publishAttendance(kq);
         }
+
+        /// <summary>
+        /// 学生完成签到
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <param name="KQId"></param>
+        /// <param name="time"></param>
+        /// <returns>返回1表示签到成功，返回-1表示已经签到</returns>
+        public int AddKqRecord(int StuId, int KQId, DateTime time)
+        {
+            int result1 = new KqService().IsAttend(StuId, KQId);
+            if (result1 != 0)
+                return -1;
+            int result2 = new KqService().AddKqRecord(StuId, KQId, time);
+            if (result2 <= 0)
+                return 0;
+            return new KqService().UpdateStuNum(KQId);
+        }
     }
 }
