@@ -36,7 +36,10 @@ namespace 学生信息管理系统.homework
                 Answer = editor1.Text
             };
             int result = new HomeworkManage().SubmitHw(ans);
-            Response.Write("<script>window.alert('作业已提交！');</script>");
+            if(result>0)
+                Response.Write("<script>window.alert('作业已提交！');</script>");
+            else
+                Response.Write("<script>window.alert('提交失败！');</script>");
         }
     }
 }

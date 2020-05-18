@@ -147,5 +147,25 @@ namespace BLL
         {
             return new CourseService().queryCourseInfoByStuId(StuId);
         }
+
+        /// <summary>
+        /// 查询教师的课程
+        /// </summary>
+        /// <param name="TeaId"></param>
+        /// <returns></returns>
+        public List<CourseMes> queryTeaCourse(int TeaId)
+        {
+            return new CourseService().queryCourseInfoByTeaId(TeaId);
+        }
+
+        /// <summary>
+        /// 查询某一课程的所有班级
+        /// </summary>
+        /// <param name="CourseId">被查询课程的编号</param>
+        /// <returns>班级集合</returns>
+        public List<Class> queryClassByCourseId(int CourseId)
+        {
+            return new CourseService().queryClassByCourseId(CourseId);
+        }
     }
 }

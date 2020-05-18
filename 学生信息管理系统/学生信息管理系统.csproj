@@ -104,12 +104,15 @@
     <Content Include="course\reviewcourse.aspx" />
     <Content Include="course\stu_xuanke.aspx" />
     <Content Include="course\stu_yixuan.aspx" />
+    <Content Include="course\TeaCourses.aspx" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\zuoye_chakan.aspx" />
     <Content Include="homework\zuoye_tijiao.aspx" />
+    <Content Include="homework\CourseDetails.aspx" />
     <Content Include="image\bgschool.jpg" />
     <Content Include="image\demobg.jpg" />
     <Content Include="image\loginbg.jpg" />
@@ -221,8 +224,22 @@
     <Compile Include="course\stu_yixuan.aspx.designer.cs">
       <DependentUpon>stu_yixuan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="course\TeaCourses.aspx.cs">
+      <DependentUpon>TeaCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\TeaCourses.aspx.designer.cs">
+      <DependentUpon>TeaCourses.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="homework\TeaLookHw.aspx.cs">
+      <DependentUpon>TeaLookHw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\TeaLookHw.aspx.designer.cs">
+      <DependentUpon>TeaLookHw.aspx</DependentUpon>
     </Compile>
     <Compile Include="homework\zuoye_chakan.aspx.cs">
       <DependentUpon>zuoye_chakan.aspx</DependentUpon>
@@ -237,6 +254,13 @@
     </Compile>
     <Compile Include="homework\zuoye_tijiao.aspx.designer.cs">
       <DependentUpon>zuoye_tijiao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\CourseDetails.aspx.cs">
+      <DependentUpon>CourseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\CourseDetails.aspx.designer.cs">
+      <DependentUpon>CourseDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="login2.aspx.cs">
       <DependentUpon>login2.aspx</DependentUpon>

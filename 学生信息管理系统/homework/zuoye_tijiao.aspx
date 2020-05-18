@@ -39,7 +39,7 @@
                 });
             </script>
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="确认提交" BackColor="#8E9CDD" Font-Bold="True" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="52px" Width="93px" />
+        <asp:Button ID="Button1" runat="server" OnClientClick="return confirm('确认提交么？提交后无法修改，请谨慎决定！')"  OnClick="Button1_Click" Text="确认提交" BackColor="#8E9CDD" Font-Bold="True" Font-Names="Arial Black" Font-Size="Medium" ForeColor="White" Height="52px" Width="93px" />
     </form>
 </body>
 </html>
