@@ -120,6 +120,8 @@
     <Content Include="image\school.jpg" />
     <Content Include="js\code.js" />
     <Content Include="login2.aspx" />
+    <Content Include="qiandao\fabu_qiandao.aspx" />
+    <Content Include="qiandao\stu_qiandao.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
@@ -268,6 +270,13 @@
     </Compile>
     <Compile Include="login2.aspx.designer.cs">
       <DependentUpon>login2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qiandao\fabu_qiandao.aspx.cs">
+      <DependentUpon>fabu_qiandao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qiandao\fabu_qiandao.aspx.designer.cs">
+      <DependentUpon>fabu_qiandao.aspx</DependentUpon>
     </Compile>
     <Compile Include="qiandao\stu_qiandao.aspx.cs">
       <DependentUpon>stu_qiandao.aspx</DependentUpon>

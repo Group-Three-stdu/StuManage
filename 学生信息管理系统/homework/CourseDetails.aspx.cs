@@ -9,7 +9,7 @@ using BLL;
 
 namespace 学生信息管理系统.homework
 {
-    public partial class zuoye_xiangqing : System.Web.UI.Page
+    public partial class CourseDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,9 +21,17 @@ namespace 学生信息管理系统.homework
                 ClassId = Class.ClassId;
                 ddlclass.Items.Add(ClassId);
             }
+            foreach (Class Class in clalist)
+            {
+                ClassId = Class.ClassId;
+                DropDownList1.Items.Add(ClassId);
+            }
             List<Students> stulist = new StudentManage().queryStudentByCourseId(CourseId);
             DataList1.DataSource = stulist;
             DataList1.DataBind();
+            List<KQ> KqList = new KqManage().queryAllKq(CourseId);
+            DataList3.DataSource = KqList;
+            DataList3.DataBind();
         }
 
         protected void btn_searchstu_Click(object sender, EventArgs e)
@@ -37,6 +45,17 @@ namespace 学生信息管理系统.homework
         protected void btn_searchStuId_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void fabu_qiandao_click(object sender, EventArgs e)
+        {
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            Response.Redirect("~/qiandao/fabu_qiandao.aspx?CourseId="+ CourseId);
         }
     }
 }

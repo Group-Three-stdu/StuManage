@@ -30,6 +30,31 @@
     </style>
 </head>
 <body>
+    <script type="text/javascript">
+        function GG() {
+            document.getElementById('GG').style.display = "block";
+            document.getElementById('HwInfo').style.display = "none";
+            document.getElementById('KqInfo').style.display = "none";
+        }
+        function HwInfo() {
+            document.getElementById('GG').style.display = "none";
+            document.getElementById('HwInfo').style.display = "block";
+            document.getElementById('KqInfo').style.display = "none";
+        }
+        function KqInfo() {
+            document.getElementById('GG').style.display = "none";
+            document.getElementById('HwInfo').style.display = "none";
+            document.getElementById('KqInfo').style.display = "block";
+        }
+    </script>
+    
+        <div class="box" >
+            <button id="Button0"  onclick="GG()" >课程公告</button>
+            <button id="Button1"  onclick="StuInfo()" >查看学生信息</button>
+            <button id="Button2"  onclick="HwInfo()" >查看作业情况</button>
+            <button id="Button3"  onclick="KqInfo()" >查看考勤情况</button>
+        </div>
+    <hr />
     <form id="form1" runat="server">        
     <div>               
        <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
