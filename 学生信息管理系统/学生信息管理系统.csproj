@@ -117,6 +117,7 @@
     <Content Include="image\school.jpg" />
     <Content Include="js\code.js" />
     <Content Include="login2.aspx" />
+    <Content Include="qiandao\stu_qiandao.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
