@@ -5,7 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <title></title>
+    <style>
+        .btn{
+            width:10%;
+            height:24px;
+            padding-top:2px;
+        }
+    </style>
 </head>
 <body>
     <script type="text/javascript">
@@ -36,10 +44,10 @@
     </script>
     
         <div class="box" >
-            <button id="Button0"  onclick="GG()" >课程公告</button>
-            <button id="Button1"  onclick="StuInfo()" >查看学生信息</button>
-            <button id="Button2"  onclick="HwInfo()" >查看作业情况</button>
-            <button id="Button3"  onclick="KqInfo()" >查看考勤情况</button>
+            <button id="Button0" class="btn btn-info"  onclick="GG()" >课程公告</button>
+            <button id="Button1" class="btn btn-info"  onclick="StuInfo()" >查看学生信息</button>
+            <button id="Button2" class="btn btn-info"  onclick="HwInfo()" >查看作业情况</button>
+            <button id="Button3" class="btn btn-info"  onclick="KqInfo()" >查看考勤情况</button>
         </div>
     <hr />
     <form id="form1" runat="server">
