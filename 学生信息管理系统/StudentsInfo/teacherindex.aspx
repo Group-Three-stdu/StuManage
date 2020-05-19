@@ -133,22 +133,11 @@
           
                 <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>教学日常</div>
                     <ul class="sub">
+                                               
                         <li>
-                            <a id="A6" href="" runat="server" target="right">
+                            <a id="A8" href="~/course/TeaCourses.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                考勤信息
-                            </a>
-                        </li>
-                        <li>
-                            <a id="A7" href="" runat="server" target="right">
-                                <i class="iconfont icon-wenjuantiaocha"></i>
-                                发布作业
-                            </a>
-                        </li>
-                        <li>
-                            <a id="A8" href="" runat="server" target="right">
-                                <i class="iconfont icon-wenjuantiaocha"></i>
-                                查看作业
+                                教学信息
                             </a>
                         </li>
                         <li>

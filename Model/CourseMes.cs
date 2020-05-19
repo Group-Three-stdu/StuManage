@@ -15,5 +15,8 @@ namespace Model
         public string courseproperty { set; get; }
         public string SStatus { set; get; }
         public string CollegeName { set; get; }
+
+        //仅在教师查看课程中使用，表中无该字段
+        public string Time { set; get; }
     }
 }

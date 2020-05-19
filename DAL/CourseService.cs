@@ -358,5 +358,51 @@ namespace DAL
             }
             return courselist;
         }
+
+        //查询教师的所有课程
+        public List<CourseMes> queryCourseInfoByTeaId(int TeaId)
+        {
+            string sql = "SELECT CourseID, courseproperty, Xuefen, CourseName, CollegeName,Time FROM V_course2 where TeaId=@TeaId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@TeaId",TeaId)
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<CourseMes> courselist = new List<CourseMes>();
+            while (result.Read())
+            {
+                courselist.Add(new CourseMes()
+                {
+                    CourseID = Convert.ToInt32(result["CourseID"]),
+                    CourseName = result["CourseName"].ToString(),
+                    Xuefen = float.Parse(result["Xuefen"].ToString()),
+                    courseproperty = result["courseproperty"].ToString(),
+                    CollegeName = result["CollegeName"].ToString(),
+                    Time = result["Time"].ToString()
+                });
+            }
+            return courselist;
+        }
+
+        //查询该课程的所有班级
+        public List<Model.Class> queryClassByCourseId(int CourseId)
+        {
+            string sql = "select ClassId from V_CourseTea where CourseId=@CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId)
+            };
+            List<Model.Class> classList = new List<Model.Class>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                classList.Add(new Model.Class()
+                {
+                    ClassId = result["ClassId"].ToString()
+                });
+            }
+            return classList;
+        }
+
     }
 }

@@ -7,9 +7,10 @@ using System.Web.UI.WebControls;
 using Model;
 using BLL;
 
+
 namespace 学生信息管理系统.homework
 {
-    public partial class zuoye_chakan : System.Web.UI.Page
+    public partial class TeaLookHw : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,8 +22,9 @@ namespace 学生信息管理系统.homework
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             int HwId = Convert.ToInt32(((Button)sender).CommandArgument);
-            Response.Redirect("~/homework/zuoye_tijiao.aspx/?HwId=" + HwId);
+            Response.Redirect("~/homework/zuoye_xiangqing.aspx/?HwId=" + HwId+"&CourseId="+CourseId);
         }
     }
 }

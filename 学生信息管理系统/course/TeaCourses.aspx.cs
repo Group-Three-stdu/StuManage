@@ -9,12 +9,12 @@ using BLL;
 
 namespace 学生信息管理系统.course
 {
-    public partial class MyCourse : System.Web.UI.Page
+    public partial class TeaCourses : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int StuId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
-            List<CourseMana> courseList = new CourseManege().queryAllCourseByStuId(StuId);
+            int TeaId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
+            List<CourseMes> courseList = new CourseManege().queryTeaCourse(TeaId);
             DataList1.DataSource = courseList;
             DataList1.DataBind();
         }
@@ -22,7 +22,7 @@ namespace 学生信息管理系统.course
         protected void Button2_Click(object sender, EventArgs e)
         {
             int CourseId = Convert.ToInt32(((Button)sender).CommandArgument);
-            Response.Redirect("~/homework/StuCourseDeatils.aspx/?CourseId=" + CourseId);
+            Response.Redirect("~/homework/CourseDetails.aspx/?CourseId=" + CourseId);
         }
     }
 }

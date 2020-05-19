@@ -49,7 +49,7 @@ namespace 学生信息管理系统
                 List<Class> clalist = new queryManage().querAllCla(" ", " ");
                 foreach (Class c in clalist)
                 {
-                    classid = c.ClassId;
+                    classid = c.ClassId.ToString();
                     ddlclass.Items.Add(classid);
                 }
             }

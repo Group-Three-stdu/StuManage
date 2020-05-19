@@ -30,6 +30,13 @@ namespace BLL
         {
             return new StudentService().queryStuByMajor(Major);
         }
+
+        //查询某一课程的所有学生
+        public List<Students> queryStudentByCourseId(int courseId)
+        {
+            return new StudentService().queryStudentByCourseId(courseId);
+        }
+
         //综合查询
         public List<Students> QueryStu(int StuId, string StuName, string ClassId, string College, string Major)
         {
@@ -60,12 +67,17 @@ namespace BLL
         {
             return new StudentService().UpdateStudent(stu);
         }
+
         //增加学生信息
         public int InsertStudent(Students stu)
         {
             return new StudentService().AddStudent(stu);
         }
 
-
+        //教师模糊查询某门课的学生信息
+        public List<Students> TeaqueryStudentByStuName(string Name)
+        {
+            return new StudentService().TeaqueryStudentByStuName(Name);
+        }
     }
 }

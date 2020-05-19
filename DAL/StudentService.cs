@@ -47,6 +47,33 @@ namespace DAL
         }
 
         /// <summary>
+        /// 查询某一课程的所有学生
+        /// </summary>
+        /// <param name="courseId"></param>
+        /// <returns></returns>
+        public List<Students> queryStudentByCourseId(int CourseId)
+        {
+            string sql = "select StuId,StuName,ClassId,StuPhoneNum from V_CourseTea where CourseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId)
+            };
+            List<Students> stuList = new List<Students>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param,false);
+            while (result.Read())
+            {
+                stuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    ClassId = result["ClassId"].ToString(),
+                    StuPhoneNum = result["StuPhoneNum"].ToString()
+                });
+            }
+            return stuList;
+        }
+
+        /// <summary>
         /// 综合查询
         /// </summary>
         /// <param name="StuId"></param>
@@ -340,6 +367,25 @@ namespace DAL
             };
             int result = Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
             return result;
+        }
+
+        //教师按姓名模糊查询某门课程的学生
+        public List<Students> TeaqueryStudentByStuName(string Name)
+        {
+            string sql = "select StuId,StuName,ClassId,StuPhoneNum from Students where StuName Like  '%" + Name + "%'";
+            List<Students> stuList = new List<Students>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
+            while (result.Read())
+            {
+                stuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    ClassId = result["ClassId"].ToString(),
+                    StuPhoneNum = result["StuPhoneNum"].ToString()
+                });
+            }
+            return stuList;
         }
     }
 }

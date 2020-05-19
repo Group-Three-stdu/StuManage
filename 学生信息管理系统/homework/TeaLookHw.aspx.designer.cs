@@ -10,7 +10,7 @@
 namespace 学生信息管理系统.homework {
     
     
-    public partial class zuoye_chakan {
+    public partial class TeaLookHw {
         
         /// <summary>
         /// form1 控件。
