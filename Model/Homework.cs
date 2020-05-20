@@ -13,5 +13,6 @@ namespace Model
         public string HwContent { set; get; }
         public int CourseId { set; get; }
         public string HwHead { set; get; }
+        public int FinishNum { set; get; }
     }
 }

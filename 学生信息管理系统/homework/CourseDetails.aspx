@@ -86,14 +86,13 @@
             <asp:DataList ID="DataList2" runat="server" RepeatColumns="3">
             <ItemTemplate>
                 <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4" >
-                    <h1><span style=""> 1</span></h1>
-                    <%--<%# Eval("HwHead")%>--%>
+                    <h1><span style=""> <%# Eval("HwHead")%></span></h1>
                     <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
                         <div style="margin-right:20px; margin-top:10px;">
-                            <div style:"width:80px">开始时间： 1</div> 
-                            <div style:"width:80px">截止时间： 1 </div>
-                            <div style:"width:80px">应交人数： 1</div> 
-                            <div style:"width:80px">实交人数： 1 </div>
+                            <div style:"width:80px">开始时间： <%# Eval("StartTime")%></div> 
+                            <div style:"width:80px">截止时间： <%# Eval("EndTime")%></div>
+                            <div style:"width:80px">应交人数： <%=StuNum%></div> 
+                            <div style:"width:80px">实交人数： <%# Eval("FinishNum")%></div>
                         </div>             
                     <div class="style2" style="height: 51px;  ">
                         <asp:Button ID="Button2" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#3cf;" Text="作业详情" Width="82px" BorderStyle="None" 

@@ -11,9 +11,11 @@ namespace 学生信息管理系统.homework
 {
     public partial class CourseDetails : System.Web.UI.Page
     {
+        public int StuNum = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            StuNum = new CourseManege().QueryStuNum(CourseId);
             List<Model.Class> clalist = new CourseManege().queryClassByCourseId(CourseId);
             string ClassId;
             foreach (Class Class in clalist)
@@ -29,6 +31,9 @@ namespace 学生信息管理系统.homework
             List<Students> stulist = new StudentManage().queryStudentByCourseId(CourseId);
             DataList1.DataSource = stulist;
             DataList1.DataBind();
+            List<Homework> HwList = new HomeworkManage().queryAllHKByTea(CourseId);
+            DataList2.DataSource = HwList;
+            DataList2.DataBind();
             List<KQ> KqList = new KqManage().queryAllKq(CourseId);
             DataList3.DataSource = KqList;
             DataList3.DataBind();

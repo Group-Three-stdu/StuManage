@@ -36,7 +36,15 @@ namespace BLL
         /// <returns></returns>
         public int SubmitHw(Answer_Stu ans)
         {
-            return new HomeworkService().SubmitHw(ans);
+            int result = new HomeworkService().SubmitHw(ans);
+            if (result > 0)
+                return new HomeworkService().alterFinishNum(ans.HwId);
+            return result;
+        }
+
+        public List<Homework> queryAllHKByTea(int CourseId)
+        {
+            return new HomeworkService().queryAllHKByTea(CourseId);
         }
     }
 }
