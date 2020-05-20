@@ -167,5 +167,27 @@ namespace BLL
         {
             return new CourseService().queryClassByCourseId(CourseId);
         }
+
+        /// <summary>
+        /// 增加课程的考试计分信息
+        /// </summary>
+        /// <param name="CourseId"></param>
+        /// <param name="MatchRatio"></param>
+        /// <param name="ClassRatio"></param>
+        /// <returns></returns>
+        public int AddRatio(int CourseId, float MatchRatio, float ClassRatio)
+        {
+            return new CourseService().AddRatio(CourseId, MatchRatio, ClassRatio);
+        }
+
+        /// <summary>
+        /// 查询某门课程的总人数
+        /// </summary>
+        /// <param name="courseId"></param>
+        /// <returns></returns>
+        public int QueryStuNum(int courseId)
+        {
+            return new CourseService().QueryStuNum(courseId);
+        }
     }
 }
