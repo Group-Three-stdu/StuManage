@@ -51,38 +51,43 @@
         </div>
     <hr />
     <form id="form1" runat="server">
-        <div id="GG"></div>
+        <div id="GG">
+
+
+        </div>
         <div id="StuInfo" style="display:none;">
              <div class="top">          
                 班级：<asp:DropDownList ID="ddlclass" class="select" runat="server" >
-                <asp:ListItem>请选择</asp:ListItem>
-            </asp:DropDownList>
-            姓名：<asp:TextBox ID="txt_name" runat="server" class="input"></asp:TextBox>
-            <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询" OnClick="btn_searchstu_Click" />
-            学号：<asp:TextBox ID="txt_StuId" runat="server" class="input"></asp:TextBox>
-            <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询" OnClick="btn_searchStuId_Click" />
-        </div>
-            <div class="content">
-             <table>
-                 <tr>
-                     <th>学号</th>
-                     <th>姓名</th>
-                     <th>班级</th>
-                     <th>联系方式</th>
-                 </tr>
-                     <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
-                      <ItemTemplate>
-                          <tr>
-                         <td><%# Eval("StuId")%></td>
-                         <td><%# Eval("StuName")%></td>
-                         <td><%# Eval("ClassId")%></td>
-                         <td><%# Eval("StuPhoneNum")%></td> </tr>
-                     </ItemTemplate>
-                    </asp:DataList>
-                 </table>
+                            <asp:ListItem>请选择</asp:ListItem>
+                        </asp:DropDownList>
+                姓名：<asp:TextBox ID="txt_name" runat="server" class="input"></asp:TextBox>
+                <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询" OnClick="btn_searchstu_Click" />
+                学号：<asp:TextBox ID="txt_StuId" runat="server" class="input"></asp:TextBox>
+                <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询" OnClick="btn_searchStuId_Click" />
+                 
             </div>
+            <div class="content">
+                 <table>
+                     <tr>
+                         <th>学号</th>
+                         <th>姓名</th>
+                         <th>班级</th>
+                         <th>联系方式</th>
+                     </tr>
+                         <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
+                          <ItemTemplate>
+                              <tr>
+                             <td><%# Eval("StuId")%></td>
+                             <td><%# Eval("StuName")%></td>
+                             <td><%# Eval("ClassId")%></td>
+                             <td><%# Eval("StuPhoneNum")%></td> </tr>
+                         </ItemTemplate>
+                        </asp:DataList>
+                     </table>
+                </div>
         </div>
         <div id ="HwInfo" style="display:none;">
+            <asp:Button ID="btn_fabu_zuoye" runat="server" Text="发布作业" OnClick="btn_fabu_zuoye_Click" /><br />
             <asp:DataList ID="DataList2" runat="server" RepeatColumns="3">
             <ItemTemplate>
                 <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4" >
@@ -99,8 +104,8 @@
                                 CommandArgument='1' OnClick="Button2_Click"  />
                     </div>   
                 </div> 
-        </ItemTemplate>
-        </asp:DataList>
+            </ItemTemplate>
+            </asp:DataList>
         </div>
         <div id ="KqInfo" style="display:none;">
              <div class="top">          

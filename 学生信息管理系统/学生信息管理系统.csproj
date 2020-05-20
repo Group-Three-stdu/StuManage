@@ -109,6 +109,7 @@
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
     <Content Include="homework\zuoye_tijiao.aspx" />
@@ -119,9 +120,35 @@
     <Content Include="image\login_bg.jpg" />
     <Content Include="image\school.jpg" />
     <Content Include="js\code.js" />
+    <Content Include="js\My97DatePicker\calendar.js" />
+    <Content Include="js\My97DatePicker\config.js" />
+    <Content Include="js\My97DatePicker\lang\en.js" />
+    <Content Include="js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="js\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="js\My97DatePicker\WdatePicker.js" />
+    <Content Include="js\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="js\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="js\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="js\My97DatePicker\开发包\readme.txt" />
+    <Content Include="js\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="js\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="js\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="js\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="js\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="js\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="login2.aspx" />
     <Content Include="qiandao\fabu_qiandao.aspx" />
     <Content Include="qiandao\stu_qiandao.aspx" />
+    <Content Include="resource\ckeditor\ckeditor.js" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder.dll" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder.pdb" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder_FileEditor.dll" />
@@ -892,6 +919,13 @@
     </Compile>
     <Compile Include="Handler\setRatio.ashx.cs">
       <DependentUpon>setRatio.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\fabu_zuoye.aspx.cs">
+      <DependentUpon>fabu_zuoye.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\fabu_zuoye.aspx.designer.cs">
+      <DependentUpon>fabu_zuoye.aspx</DependentUpon>
     </Compile>
     <Compile Include="homework\TeaLookHw.aspx.cs">
       <DependentUpon>TeaLookHw.aspx</DependentUpon>

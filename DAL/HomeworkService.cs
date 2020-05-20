@@ -93,7 +93,7 @@ namespace DAL
         /// <returns></returns>
         public int alterFinishNum( int HwId)
         {
-            string sql = "update Homework set FinishNum = @FinishNum where HwId = @HwId";
+            string sql = "update Homework set FinishNum = FinishNum+1 where HwId = @HwId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter ("@HwId",HwId)
@@ -127,6 +127,25 @@ namespace DAL
                 });
             }
             return hklist;
+        }
+
+        /// <summary>
+        /// 教师发布作业
+        /// </summary>
+        /// <param name="hw"></param>
+        /// <returns></returns>
+        public int fabuHw(Homework hw)
+        {
+            string sql = "insert into homework (StartTime,EndTime,HwContent,CourseId,HwHead) values (@StartTime,@EndTime,@HwContent,@CourseId,@HwHead)";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StartTime",hw.StartTime),
+                new SqlParameter("@EndTime",hw.EndTime),
+                new SqlParameter("@HwContent",hw.HwContent),
+                new SqlParameter("@CourseId",hw.CourseId),
+                new SqlParameter("@HwHead",hw.HwHead),
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
         }
     }
 }

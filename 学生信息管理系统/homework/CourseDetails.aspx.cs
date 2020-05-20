@@ -51,16 +51,22 @@ namespace 学生信息管理系统.homework
         {
 
         }
-
+        //查看作业详情
         protected void Button2_Click(object sender, EventArgs e)
         {
 
         }
-
+        //发布签到
         protected void fabu_qiandao_click(object sender, EventArgs e)
         {
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             Response.Redirect("~/qiandao/fabu_qiandao.aspx?CourseId="+ CourseId);
+        }
+        //发布作业
+        protected void btn_fabu_zuoye_Click(object sender, EventArgs e)
+        {
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            Response.Redirect("~/homework/fabu_zuoye.aspx?CourseId=" + CourseId);
         }
     }
 }
