@@ -35,7 +35,12 @@ namespace 学生信息管理系统.homework
             DateTime time = DateTime.Now;
             int result = new KqManage().AddKqRecord(StuId, KQId, time);
             if(result==1)
+            {
                 Response.Write("<script>window.alert('签到成功！');</script>");
+                //Label lb = DataList2.Items[0].FindControl("Label1") as Label;
+                //lb.Text = "已签到";
+            }
+                
             if(result!=1)
                 Response.Write("<script>window.alert('请勿重复签到！');</script>");
         }

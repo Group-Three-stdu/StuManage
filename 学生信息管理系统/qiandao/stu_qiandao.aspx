@@ -80,6 +80,9 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>
+       <%-- <div class="button">
+                        <asp:Button ID="btn_qiandao" runat="server" CssClass="inbutton btn btn-info" Text="签到" OnClick="btn_qiandao_Click" />
+                    </div>--%>
     </form>
 </body>
 </html>
