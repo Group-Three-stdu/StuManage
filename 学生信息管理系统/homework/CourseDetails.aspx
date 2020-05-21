@@ -118,22 +118,33 @@
             <asp:Button ID="Button5" runat="server" class="btn" Text="查询" />
             <asp:Button ID="fabu_qiandao" runat="server" Text="发布签到" OnClick="fabu_qiandao_click" />
         </div>
-        <div class="content">
-             <table>
-                 <tr>
-                     <th>序号</th>
-                     <th>开始时间</th>
-                     <th>结束时间</th>
-                     <th>签到人数</th>
-                 </tr>
-                     <asp:DataList ID="DataList3" runat="server" RepeatColumns="3">
+        <div class="content">     
+                    
+                  <asp:DataList ID="DataList3" runat="server" RepeatColumns="3">
+                      <HeaderTemplate>
+                        <table style="margin-top:15px;" class="table table-striped table-hover text-center">
+                         
+                        <tr class="table-bordered table-condensed info">
+                         <th class="table-bordered" style="text-align:center;">序号</th>
+                         <th class="table-bordered" style="text-align:center;">开始时间</th>
+                         <th class="table-bordered" style="text-align:center;">结束时间</th>
+                         <th class="table-bordered" style="text-align:center;">签到人数</th>
+                       </tr>
+                        </HeaderTemplate>
+                 
                       <ItemTemplate>
                           <tr>
-                         <td><%# Eval("KQXh")%></td>
-                         <td><%# Eval("KqTime")%></td>
-                         <td><%# Eval("EndTime")%></td>
-                         <td><%# Eval("StuNum")%></td> </tr>
+                         <td class="table-bordered" style="text-align:center;">
+                             <%# Eval("KQXh")%></td>
+                         <td class="table-bordered" style="text-align:center;">
+                             <%# Eval("KqTime")%></td>
+                         <td class="table-bordered" style="text-align:center;">
+                             <%# Eval("EndTime")%></td>
+                         <td class="table-bordered" style="text-align:center;">
+                             <%# Eval("StuNum")%></td> 
+                          </tr>
                      </ItemTemplate>
+                   
                     </asp:DataList>
                  </table>
             </div>
