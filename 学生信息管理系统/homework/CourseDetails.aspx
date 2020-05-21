@@ -52,7 +52,7 @@
     <hr />
     <form id="form1" runat="server">
         <div id="GG">
-
+             
 
         </div>
         <div id="StuInfo" style="display:none;">
@@ -66,24 +66,29 @@
                 <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询" OnClick="btn_searchStuId_Click" />
                  
             </div>
-            <div class="content">
-                 <table>
-                     <tr>
-                         <th>学号</th>
-                         <th>姓名</th>
-                         <th>班级</th>
-                         <th>联系方式</th>
-                     </tr>
-                         <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
-                          <ItemTemplate>
-                              <tr>
+             <div>
+              <asp:Repeater ID="Repeater1" runat="server">
+                <HeaderTemplate>
+                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                        <tr class="table-bordered table-condensed info text-center"  >
+                             <th style="text-align:center">学号</th>
+                            <th style="text-align:center">姓名</th>
+                            <th style="text-align:center">班级</th>
+                            <th style="text-align:center">联系方式</th>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr class="table-responsive table-bordered table-condensed">
                              <td><%# Eval("StuId")%></td>
                              <td><%# Eval("StuName")%></td>
                              <td><%# Eval("ClassId")%></td>
-                             <td><%# Eval("StuPhoneNum")%></td> </tr>
-                         </ItemTemplate>
-                        </asp:DataList>
-                     </table>
+                             <td><%# Eval("StuPhoneNum")%></td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
                 </div>
         </div>
         <div id ="HwInfo" style="display:none;">
@@ -119,23 +124,28 @@
             <asp:Button ID="fabu_qiandao" runat="server" Text="发布签到" OnClick="fabu_qiandao_click" />
         </div>
         <div class="content">
-             <table>
-                 <tr>
-                     <th>序号</th>
-                     <th>开始时间</th>
-                     <th>结束时间</th>
-                     <th>签到人数</th>
-                 </tr>
-                     <asp:DataList ID="DataList3" runat="server" RepeatColumns="3">
-                      <ItemTemplate>
-                          <tr>
-                         <td><%# Eval("KQXh")%></td>
-                         <td><%# Eval("KqTime")%></td>
-                         <td><%# Eval("EndTime")%></td>
-                         <td><%# Eval("StuNum")%></td> </tr>
-                     </ItemTemplate>
-                    </asp:DataList>
-                 </table>
+            <asp:Repeater ID="Repeater2" runat="server">
+                <HeaderTemplate>
+                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                        <tr class="table-bordered table-condensed info text-center"  >
+                            <th style="text-align:center">序号</th>
+                            <th style="text-align:center">开始时间</th>
+                            <th style="text-align:center">结束时间</th>
+                            <th style="text-align:center">签到人数</th>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr class="table-responsive table-bordered table-condensed">
+                            <td><%# Eval("KQXh")%></td>
+                            <td><%# Eval("KqTime")%></td>
+                            <td><%# Eval("EndTime")%></td>
+                            <td><%# Eval("StuNum")%></td> 
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
             </div>
         </div>
     </form>

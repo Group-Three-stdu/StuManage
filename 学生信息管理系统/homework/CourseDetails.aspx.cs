@@ -29,22 +29,22 @@ namespace 学生信息管理系统.homework
                 DropDownList1.Items.Add(ClassId);
             }
             List<Students> stulist = new StudentManage().queryStudentByCourseId(CourseId);
-            DataList1.DataSource = stulist;
-            DataList1.DataBind();
+            Repeater1.DataSource = stulist;
+            Repeater1.DataBind();
             List<Homework> HwList = new HomeworkManage().queryAllHKByTea(CourseId);
             DataList2.DataSource = HwList;
             DataList2.DataBind();
             List<KQ> KqList = new KqManage().queryAllKq(CourseId);
-            DataList3.DataSource = KqList;
-            DataList3.DataBind();
+            Repeater2.DataSource = KqList;
+            Repeater2.DataBind();
         }
 
         protected void btn_searchstu_Click(object sender, EventArgs e)
         {
             string StuName = txt_name.Text.Trim().ToString();
             List<Students> stulist = new StudentManage().TeaqueryStudentByStuName(StuName);
-            DataList1.DataSource = stulist;
-            DataList1.DataBind();
+            Repeater1.DataSource = stulist;
+            Repeater1.DataBind();
         }
 
         protected void btn_searchStuId_Click(object sender, EventArgs e)

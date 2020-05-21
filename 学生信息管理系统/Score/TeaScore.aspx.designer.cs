@@ -103,13 +103,13 @@ namespace 学生信息管理系统.Score {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// DataList1 控件。
+        /// Repeater1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
         
         /// <summary>
         /// Button2 控件。

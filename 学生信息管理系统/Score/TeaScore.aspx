@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="../js/jquery.js"></script>
     <title></title>
-  
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <style type="text/css">
         .auto-style1 {
             height: 18px;
@@ -33,29 +33,33 @@
                期末成绩占比：<asp:TextBox ID="TextBox2" ClientID="matchratio" runat="server" AutoPostBack="True" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
                 <asp:Button ID="Button1" runat="server" Text="确定"  OnClick="Button1_Click" />
             </div>
-            <table>
-                 <tr>
-                     <th class="auto-style1">学号</th>
-                     <th class="auto-style1">姓名</th>
-                     <th class="auto-style1">班级</th>
-                     <th class="auto-style1">考试成绩</th>
-                     <th class="auto-style1">平时成绩</th>
-                     <th class="auto-style1">期末成绩</th>
-                 </tr>
-                     <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
-                      <ItemTemplate>
-                          <tr>
-                             <td><asp:Literal ID="StuId" runat="server" Text='<%# Eval("StuId")%>'></asp:Literal></td>
+            <asp:Repeater ID="Repeater1" runat="server">
+                <HeaderTemplate>
+                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                        <tr class="table-bordered table-condensed info text-center"  >
+                            <th class="auto-style1 text-center">学号</th>
+                            <th class="auto-style1 text-center">姓名</th>
+                            <th class="auto-style1 text-center">班级</th>
+                            <th class="auto-style1 text-center">考试成绩</th>
+                            <th class="auto-style1 text-center">平时成绩</th>
+                            <th class="auto-style1 text-center">期末成绩</th>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr class="table-responsive table-bordered table-condensed">
+                            <td><asp:Literal ID="StuId" runat="server" Text='<%# Eval("StuId")%>'></asp:Literal></td>
                              <td><asp:Literal ID="StuName" runat="server" Text='<%# Eval("StuName")%>'></asp:Literal></td>
                              <td><asp:Literal ID="ClassId" runat="server" Text='<%# Eval("ClassId")%>'></asp:Literal></td>
-                             <td><asp:TextBox ID="matchScore" runat="server" Text="0"></asp:TextBox></td>
-                             <td><asp:TextBox ID="classScore" runat="server" Text="0"></asp:TextBox></td>    
-                             <td><asp:TextBox ID="AllScore" runat="server" Text="0"></asp:TextBox></td>
-                          </tr>
-                     </ItemTemplate>
-                    </asp:DataList>
-                 </table>
-             <asp:Button ID="Button2" runat="server" Text="提交" OnClick="Button2_Click" />
+                             <td><asp:TextBox ID="matchScore" runat="server"></asp:TextBox></td>
+                             <td><asp:TextBox ID="classScore" runat="server"></asp:TextBox></td>    
+                             <td><asp:TextBox ID="AllScore" runat="server"></asp:TextBox></td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
+            <asp:Button ID="Button2" runat="server" Text="提交" OnClick="Button2_Click" />
             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
         </div>
     </form>

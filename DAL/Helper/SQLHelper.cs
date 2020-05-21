@@ -191,7 +191,7 @@ namespace DAL.Helper
         #region 写入日志
         // protected void writeLog(string errorMsg)
         //{
-        // FileStream fs = new FileStream("D:/ASP.NET文件/仓库信息系统管理日志/ProjectLog.log", FileMode.Append);
+        // FileStream fs = new FileStream("D:/ASP.NET文件/学生信息系统管理日志/ProjectLog.log", FileMode.Append);
         //StreamWriter sw = new StreamWriter(fs);
         //sw.WriteLine(DateTime.Now.ToString() + "  " + errorMsg);
         //sw.Close();
