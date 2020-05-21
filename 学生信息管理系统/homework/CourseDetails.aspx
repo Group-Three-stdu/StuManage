@@ -162,6 +162,7 @@
                             <th style="text-align:center">开始时间</th>
                             <th style="text-align:center">结束时间</th>
                             <th style="text-align:center">签到人数</th>
+                            <th style="text-align:center">操作</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -169,7 +170,9 @@
                             <td><%# Eval("KQXh")%></td>
                             <td><%# Eval("KqTime")%></td>
                             <td><%# Eval("EndTime")%></td>
-                            <td><%# Eval("StuNum")%></td> 
+                            <td><%# Eval("StuNum")%></td>
+                             <td><asp:LinkButton ID="btnDel" CommandArgument='<%#Eval("KQId")%>'  OnClick="btnDetail_Click"
+                runat="server">详情</asp:LinkButton></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

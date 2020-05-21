@@ -21,5 +21,8 @@ namespace Model
         public string StuState { set; get; }
         public string Punish { set; get; }
         public string PoliticalStatus { set; get; }
+
+        //临时使用，数据库中没有该字段
+        public DateTime Time { set; get; }
     }
 }

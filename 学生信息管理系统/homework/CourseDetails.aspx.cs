@@ -88,5 +88,12 @@ namespace 学生信息管理系统.homework
             else
                 Response.Write("<script>window.alert('删除失败！');</script>");
         }
+        //签到详情
+        protected void btnDetail_Click(object sender, EventArgs e)
+        {
+            int KQId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            Response.Redirect("~/qiandao/kqDetails.aspx?CourseId=" + CourseId+"&KQId="+KQId);
+        }
     }
 }

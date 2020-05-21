@@ -80,6 +80,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\NPOI2.4.1\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\..\NPOI2.4.1\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\..\NPOI2.4.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\..\NPOI2.4.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -148,6 +160,7 @@
     <Content Include="js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="login2.aspx" />
     <Content Include="qiandao\fabu_qiandao.aspx" />
+    <Content Include="qiandao\kqDetails.aspx" />
     <Content Include="qiandao\stu_qiandao.aspx" />
     <Content Include="resource\ckeditor\ckeditor.js" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder.dll" />
@@ -977,6 +990,13 @@
     </Compile>
     <Compile Include="qiandao\fabu_qiandao.aspx.designer.cs">
       <DependentUpon>fabu_qiandao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qiandao\kqDetails.aspx.cs">
+      <DependentUpon>kqDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qiandao\kqDetails.aspx.designer.cs">
+      <DependentUpon>kqDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="qiandao\stu_qiandao.aspx.cs">
       <DependentUpon>stu_qiandao.aspx</DependentUpon>
