@@ -362,7 +362,7 @@ namespace DAL
         //查询教师的所有课程
         public List<CourseMes> queryCourseInfoByTeaId(int TeaId)
         {
-            string sql = "SELECT CourseID, courseproperty, Xuefen, CourseName, CollegeName,Time FROM V_course2 where TeaId=@TeaId";
+            string sql = "SELECT CourseID, courseproperty, Xuefen, CourseName, CollegeName,Time FROM V_TeaCourse where TeaId=@TeaId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@TeaId",TeaId)
@@ -404,5 +404,28 @@ namespace DAL
             return classList;
         }
 
+        //增加课程成绩占比
+        public int AddRatio(int CourseId,float MatchRatio, float ClassRatio)
+        {
+            string sql = "update CourseMana set MatchRatio = @MatchRatio ,ClassRatio = @ClassRatio where CourseId=@CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@MatchRatio",MatchRatio),
+                new SqlParameter("@ClassRatio",ClassRatio),
+                new SqlParameter("@CourseId",CourseId)
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
+
+        //查询某一课程学生的人数
+        public int QueryStuNum(int courseId)
+        {
+            string sql = "select count(DISTINCT StuId) as stuNum from Courses_Stu where CourseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@courseId",courseId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql,param,false));
+        }
     }
 }

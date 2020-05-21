@@ -99,11 +99,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CourseManege.cs" />
+    <Compile Include="GGManage.cs" />
     <Compile Include="HomeworkManage.cs" />
     <Compile Include="KqManage.cs" />
     <Compile Include="LoginManage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="queryManage.cs" />
+    <Compile Include="ScoreManage.cs" />
     <Compile Include="StudentManage.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -109,6 +109,8 @@
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="GG\fabu_gg.aspx" />
+    <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
     <Content Include="homework\zuoye_tijiao.aspx" />
@@ -117,9 +119,41 @@
     <Content Include="image\demobg.jpg" />
     <Content Include="image\loginbg.jpg" />
     <Content Include="image\login_bg.jpg" />
+    <Content Include="image\logo.jpg" />
+    <Content Include="image\logo_bott.png" />
+    <Content Include="image\logo_bottom.png" />
+    <Content Include="image\logo_right.png" />
     <Content Include="image\school.jpg" />
     <Content Include="js\code.js" />
+    <Content Include="js\My97DatePicker\calendar.js" />
+    <Content Include="js\My97DatePicker\config.js" />
+    <Content Include="js\My97DatePicker\lang\en.js" />
+    <Content Include="js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="js\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="js\My97DatePicker\WdatePicker.js" />
+    <Content Include="js\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="js\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="js\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="js\My97DatePicker\开发包\readme.txt" />
+    <Content Include="js\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="js\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="js\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="js\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="js\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="js\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="login2.aspx" />
+    <Content Include="qiandao\fabu_qiandao.aspx" />
+    <Content Include="qiandao\stu_qiandao.aspx" />
+    <Content Include="resource\ckeditor\ckeditor.js" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder.dll" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder.pdb" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder_FileEditor.dll" />
@@ -135,6 +169,12 @@
     <Content Include="resource\ckfinder\bin\Release\CKFinder_ImageResize.pdb" />
     <Content Include="resource\ckfinder\bin\Release\CKFinder_Watermark.dll" />
     <Content Include="resource\ckfinder\bin\Release\CKFinder_Watermark.pdb" />
+    <Content Include="resource\ckfinder\changelog.txt" />
+    <Content Include="resource\ckfinder\ckfinder.html" />
+    <Content Include="resource\ckfinder\ckfinder.js" />
+    <Content Include="resource\ckfinder\ckfinder_v1.js" />
+    <Content Include="resource\ckfinder\config.ascx" />
+    <Content Include="resource\ckfinder\config.js" />
     <Content Include="resource\ckfinder\core\connector\aspx\connector.aspx" />
     <Content Include="resource\ckfinder\core\connector\aspx\lang\bg.xml" />
     <Content Include="resource\ckfinder\core\connector\aspx\lang\ca.xml" />
@@ -450,6 +490,7 @@
     <Content Include="resource\ckfinder\help\pl\files\suggestions.html" />
     <Content Include="resource\ckfinder\help\pl\files\toc.html" />
     <Content Include="resource\ckfinder\help\pl\index.html" />
+    <Content Include="resource\ckfinder\install.txt" />
     <Content Include="resource\ckfinder\lang\bg.js" />
     <Content Include="resource\ckfinder\lang\ca.js" />
     <Content Include="resource\ckfinder\lang\cs.js" />
@@ -491,6 +532,7 @@
     <Content Include="resource\ckfinder\lang\zh-cn.js" />
     <Content Include="resource\ckfinder\lang\zh-tw.js" />
     <Content Include="resource\ckfinder\lang\_translationstatus.txt" />
+    <Content Include="resource\ckfinder\license.txt" />
     <Content Include="resource\ckfinder\plugins\dummy\lang\en.js" />
     <Content Include="resource\ckfinder\plugins\dummy\lang\pl.js" />
     <Content Include="resource\ckfinder\plugins\dummy\plugin.js" />
@@ -756,6 +798,10 @@
     <Content Include="resource\ckfinder\skins\v1\richcombo.css" />
     <Content Include="resource\ckfinder\skins\v1\skin.js" />
     <Content Include="resource\ckfinder\skins\v1\uipanel.css" />
+    <Content Include="resource\ckfinder\translations.txt" />
+    <Content Include="Score\jiaowuchu_lookscore.aspx" />
+    <Content Include="Score\TeaCourse.aspx" />
+    <Content Include="Score\TeaScore.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
@@ -798,6 +844,7 @@
     <Content Include="resource\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="resource\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="resource\ckfinder\userfiles\.htaccess" />
+    <Content Include="Handler\setRatio.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -873,8 +920,25 @@
     <Compile Include="course\TeaCourses.aspx.designer.cs">
       <DependentUpon>TeaCourses.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GG\fabu_gg.aspx.cs">
+      <DependentUpon>fabu_gg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GG\fabu_gg.aspx.designer.cs">
+      <DependentUpon>fabu_gg.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\setRatio.ashx.cs">
+      <DependentUpon>setRatio.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\fabu_zuoye.aspx.cs">
+      <DependentUpon>fabu_zuoye.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\fabu_zuoye.aspx.designer.cs">
+      <DependentUpon>fabu_zuoye.aspx</DependentUpon>
     </Compile>
     <Compile Include="homework\TeaLookHw.aspx.cs">
       <DependentUpon>TeaLookHw.aspx</DependentUpon>
@@ -924,6 +988,27 @@
     </Compile>
     <Compile Include="qiandao\stu_qiandao.aspx.designer.cs">
       <DependentUpon>stu_qiandao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\jiaowuchu_lookscore.aspx.cs">
+      <DependentUpon>jiaowuchu_lookscore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\jiaowuchu_lookscore.aspx.designer.cs">
+      <DependentUpon>jiaowuchu_lookscore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\TeaCourse.aspx.cs">
+      <DependentUpon>TeaCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\TeaCourse.aspx.designer.cs">
+      <DependentUpon>TeaCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\TeaScore.aspx.cs">
+      <DependentUpon>TeaScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\TeaScore.aspx.designer.cs">
+      <DependentUpon>TeaScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\alter_StudentInfo.aspx.cs">
       <DependentUpon>alter_StudentInfo.aspx</DependentUpon>

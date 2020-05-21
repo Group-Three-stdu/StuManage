@@ -36,7 +36,30 @@ namespace BLL
         /// <returns></returns>
         public int SubmitHw(Answer_Stu ans)
         {
-            return new HomeworkService().SubmitHw(ans);
+            int result = new HomeworkService().SubmitHw(ans);
+            if (result > 0)
+                return new HomeworkService().alterFinishNum(ans.HwId);
+            return result;
+        }
+
+        /// <summary>
+        /// 教师查看课程的所有作业
+        /// </summary>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public List<Homework> queryAllHKByTea(int CourseId)
+        {
+            return new HomeworkService().queryAllHKByTea(CourseId);
+        }
+
+        /// <summary>
+        /// 教师发布作业
+        /// </summary>
+        /// <param name="hw"></param>
+        /// <returns></returns>
+        public int fabuHw(Homework hw)
+        {
+            return new HomeworkService().fabuHw(hw);
         }
     }
 }
