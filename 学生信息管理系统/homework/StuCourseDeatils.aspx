@@ -20,11 +20,16 @@
             margin-left: 5%;
             margin-top:30px;
             height: 155px;
-            width: 90%;
+            width: 100%;
         }
         .style2 {
             background-color: #A3C2E2;
             width:100%;
+            margin-top:10px;
+        }
+        
+        #form1 {
+            height: 10px;
         }
         
     </style>
@@ -53,13 +58,13 @@
             <button id="Button2"  onclick="HwInfo()" >查看作业信息</button>
             <button id="Button3"  onclick="KqInfo()" >查看考勤信息</button>
         </div>
-    <hr />
+    <hr style="height: 0px" />
     <form id="form1" runat="server">       
         <div id="GG" style="display:none;">课程公告</div>
         <div  id="HwInfo" style="display:none;">               
            <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
                 <ItemTemplate>
-                    <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4" >
+                    <div  style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4" >  
                         <h1><span style=""> <%# Eval("HwHead")%></span></h1>
                         <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
                             <div style="margin-right:20px; margin-top:10px;">
@@ -70,9 +75,9 @@
                         </div>             
                 <br />                    
 
-                <div class="style2" style="height: 51px;  ">
+                <div class="style2" style="height: 50px;  ">
                     <asp:Button ID="Button2" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#3cf;" Text="查看" Width="82px" BorderStyle="None" 
-                        CommandArgument='<%#Eval("HwId")%>' OnClick="Button2_Click"  />
+                        CommandArgument='<%#Eval("HwId")%>' OnClick="Button2_Click"  BackColor="#D7AEFF" />
                 </div>   
             </div> 
                     </ItemTemplate>
