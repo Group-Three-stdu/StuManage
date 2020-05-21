@@ -70,7 +70,7 @@
            <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
                 <ItemTemplate>
                     
-                    <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4" >
+                    <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4;margin-left:10px;" >
                         <h1><span style=""> <%# Eval("HwHead")%></span></h1>
                         <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
                             <div style="margin-right:20px; margin-top:10px;">
