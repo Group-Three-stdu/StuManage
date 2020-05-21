@@ -94,7 +94,7 @@
                 <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询" OnClick="btn_searchstu_Click" />
                 学号：<asp:TextBox ID="txt_StuId" runat="server" class="input"></asp:TextBox>
                 <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询" OnClick="btn_searchStuId_Click" />
-                 
+                 <asp:Button ID="ToExcel" runat="server" Text="导出到excel" OnClick="ToExcel_Click" />
             </div>
              <div>
               <asp:Repeater ID="Repeater1" runat="server">

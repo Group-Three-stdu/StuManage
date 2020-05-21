@@ -858,6 +858,7 @@
     <Content Include="resource\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="resource\ckfinder\userfiles\.htaccess" />
     <Content Include="Handler\setRatio.ashx" />
+    <Content Include="Handler\TeaToExcel.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -945,6 +946,9 @@
     </Compile>
     <Compile Include="Handler\setRatio.ashx.cs">
       <DependentUpon>setRatio.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\TeaToExcel.ashx.cs">
+      <DependentUpon>TeaToExcel.ashx</DependentUpon>
     </Compile>
     <Compile Include="homework\fabu_zuoye.aspx.cs">
       <DependentUpon>fabu_zuoye.aspx</DependentUpon>

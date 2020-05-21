@@ -95,5 +95,12 @@ namespace 学生信息管理系统.homework
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             Response.Redirect("~/qiandao/kqDetails.aspx?CourseId=" + CourseId+"&KQId="+KQId);
         }
+
+        protected void ToExcel_Click(object sender, EventArgs e)
+        {
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            string CourseName = (new CourseManege().queryCourseById(CourseId)).CourseName;
+            Response.Redirect("~/Handler/TeaToExcel.ashx?CourseId=" + CourseId + "&CourseName=" + CourseName);
+        }
     }
 }
