@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CourseManege.cs" />
+    <Compile Include="GGManage.cs" />
     <Compile Include="HomeworkManage.cs" />
     <Compile Include="KqManage.cs" />
     <Compile Include="LoginManage.cs" />

@@ -7,9 +7,9 @@ using System.Web.UI.WebControls;
 using Model;
 using BLL;
 
-namespace 学生信息管理系统.homework
+namespace 学生信息管理系统.GG
 {
-    public partial class fabu_zuoye : System.Web.UI.Page
+    public partial class fabu_gg : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,15 +18,15 @@ namespace 学生信息管理系统.homework
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
-            Homework hw = new Homework()
+            JXGG gg = new JXGG()
             {
-                StartTime = DateTime.Now,
-                EndTime = Convert.ToDateTime(EndTime.Text),
+                TeaId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName),
+                Time = DateTime.Now,
                 CourseId = Convert.ToInt32(Request.Params["CourseId"]),
-                HwHead = HwHead.Text.Trim().ToString(),
-                HwContent = editor1.Text
+                GGHead = GGHead.Text.Trim().ToString(),
+                GGContent = editor1.Text
             };
-            int result = new HomeworkManage().fabuHw(hw);
+            int result = new GGManage().fabuGG(gg);
             if (result > 0)
                 Literal1.Text = "<script type='text/javascript'>alert('作业发布成功！');location.href='~/StudentsInfo/teacherindex.aspx'</script>";
             else

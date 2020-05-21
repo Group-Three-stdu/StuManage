@@ -106,6 +106,7 @@
     <Compile Include="CourseMes.cs" />
     <Compile Include="Course_Stu.cs" />
     <Compile Include="Homework.cs" />
+    <Compile Include="JXGG.cs" />
     <Compile Include="KQ.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Major.cs" />

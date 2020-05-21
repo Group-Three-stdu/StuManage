@@ -20,6 +20,9 @@ namespace 学生信息管理系统.homework
             List<KQ> KqList = new KqManage().queryAllKq(CourseId);
             DataList2.DataSource = KqList;
             DataList2.DataBind();
+            List<JXGG> gglist = new GGManage().LookJXGG(CourseId);
+            Repeater3.DataSource = gglist;
+            Repeater3.DataBind();
         }
 
         protected void Button2_Click(object sender, EventArgs e)

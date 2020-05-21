@@ -52,8 +52,38 @@
     <hr />
     <form id="form1" runat="server">
         <div id="GG">
-             
-
+            <div>
+                <asp:Button ID="fabu_GG" runat="server" Text="发布公告" OnClick="fabu_GG_Click" />
+            </div>
+             <div>
+              <asp:Repeater ID="Repeater3" runat="server">
+                <HeaderTemplate>
+                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                        <tr class="table-bordered table-condensed info text-center"  >
+                             <th style="text-align:center">序号</th>
+                            <th style="text-align:center">标题</th>
+                            <th style="text-align:center">内容</th>
+                            <th style="text-align:center">发布人</th>
+                            <th style="text-align:center">发布时间</th>
+                            <th style="text-align:center">操作</th>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr class="table-responsive table-bordered table-condensed">
+                             <td><%# Eval("xh")%></td>
+                             <td><%# Eval("GGHead")%></td>
+                             <td><%# Eval("GGContent")%></td>
+                             <td><%# Eval("TeaName")%></td>
+                            <td><%# Eval("Time")%></td>
+                             <td><asp:LinkButton ID="btnDel" CommandArgument='<%#Eval("Id")%>' OnClientClick="return confirm('确认删除该记录么？')"  OnClick="btnDel_Click"
+                runat="server">删除公告</asp:LinkButton></td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
+                </div>
         </div>
         <div id="StuInfo" style="display:none;">
              <div class="top">          

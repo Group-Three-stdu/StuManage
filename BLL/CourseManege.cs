@@ -189,5 +189,15 @@ namespace BLL
         {
             return new CourseService().QueryStuNum(courseId);
         }
+
+        /// <summary>
+        /// 查询课程信息
+        /// </summary>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public CourseMes queryCourseById(int CourseId)
+        {
+            return new CourseService().queryCourseById(CourseId);
+        }
     }
 }
