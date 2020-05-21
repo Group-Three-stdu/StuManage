@@ -387,7 +387,7 @@ namespace DAL
         //查询该课程的所有班级
         public List<Model.Class> queryClassByCourseId(int CourseId)
         {
-            string sql = "select ClassId from V_CourseTea where CourseId=@CourseId";
+            string sql = "select distinct ClassId from V_CourseTea where CourseId=@CourseId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseId",CourseId)

@@ -51,6 +51,9 @@
         </div>
     <hr />
     <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true">
+
+        </asp:ScriptManager>
         <div id="GG">
             <div>
                 <asp:Button ID="fabu_GG" runat="server" Text="发布公告" OnClick="fabu_GG_Click" />
@@ -85,9 +88,11 @@
             </asp:Repeater>
                 </div>
         </div>
-        <div id="StuInfo" style="display:none;">
+        <div id="StuInfo" style="display:none;" >
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True">
+            <ContentTemplate>
              <div class="top">          
-                班级：<asp:DropDownList ID="ddlclass" class="select" runat="server" >
+                班级：<asp:DropDownList ID="ddlclass" class="select" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlclass_SelectedIndexChanged" >
                             <asp:ListItem>请选择</asp:ListItem>
                         </asp:DropDownList>
                 姓名：<asp:TextBox ID="txt_name" runat="server" class="input"></asp:TextBox>
@@ -120,7 +125,9 @@
                 </FooterTemplate>
             </asp:Repeater>
                 </div>
-        </div>
+                </ContentTemplate>
+        </asp:UpdatePanel>
+         </div>
         <div id ="HwInfo" style="display:none;">
             <asp:Button ID="btn_fabu_zuoye" runat="server" Text="发布作业" OnClick="btn_fabu_zuoye_Click" /><br />
             <asp:DataList ID="DataList2" runat="server" RepeatColumns="3">
@@ -144,13 +151,13 @@
         </div>
         <div id ="KqInfo" style="display:none;">
              <div class="top">          
-                班级：<asp:DropDownList ID="DropDownList1" class="select" runat="server" >
+               <%--  班级：<asp:DropDownList ID="DropDownList1" class="select" runat="server" >
                 <asp:ListItem>请选择</asp:ListItem>
-            </asp:DropDownList>
-            姓名：<asp:TextBox ID="TextBox1" runat="server" class="input"></asp:TextBox>
-            <asp:Button ID="Button4" runat="server" class="btn" Text="查询"  />
-            学号：<asp:TextBox ID="TextBox2" runat="server" class="input"></asp:TextBox>
-            <asp:Button ID="Button5" runat="server" class="btn" Text="查询" />
+                </asp:DropDownList>
+                姓名：<asp:TextBox ID="TextBox1" runat="server" class="input"></asp:TextBox>
+                <asp:Button ID="Button4" runat="server" class="btn" Text="查询"  />
+                学号：<asp:TextBox ID="TextBox2" runat="server" class="input"></asp:TextBox>
+                <asp:Button ID="Button5" runat="server" class="btn" Text="查询" />--%>
             <asp:Button ID="fabu_qiandao" runat="server" Text="发布签到" OnClick="fabu_qiandao_click" />
         </div>
         <div class="content">

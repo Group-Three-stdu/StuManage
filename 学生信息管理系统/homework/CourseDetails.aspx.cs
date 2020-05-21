@@ -14,45 +14,47 @@ namespace 学生信息管理系统.homework
         public int StuNum = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
-            StuNum = new CourseManege().QueryStuNum(CourseId);
-            List<Model.Class> clalist = new CourseManege().queryClassByCourseId(CourseId);
-            string ClassId;
-            foreach (Class Class in clalist)
+            if (!IsPostBack)
             {
-                ClassId = Class.ClassId;
-                ddlclass.Items.Add(ClassId);
+                int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+                StuNum = new CourseManege().QueryStuNum(CourseId);
+                List<Model.Class> clalist = new CourseManege().queryClassByCourseId(CourseId);
+                string ClassId;
+                foreach (Class Class in clalist)
+                {
+                    ClassId = Class.ClassId;
+                    ddlclass.Items.Add(ClassId);
+                }
+                List<Students> stulist = new StudentManage().queryStudentByCourseId(CourseId);
+                Repeater1.DataSource = stulist;
+                Repeater1.DataBind();
+                List<Homework> HwList = new HomeworkManage().queryAllHKByTea(CourseId);
+                DataList2.DataSource = HwList;
+                DataList2.DataBind();
+                List<KQ> KqList = new KqManage().queryAllKq(CourseId);
+                Repeater2.DataSource = KqList;
+                Repeater2.DataBind();
+                List<JXGG> gglist = new GGManage().LookJXGG(CourseId);
+                Repeater3.DataSource = gglist;
+                Repeater3.DataBind();
             }
-            foreach (Class Class in clalist)
-            {
-                ClassId = Class.ClassId;
-                DropDownList1.Items.Add(ClassId);
-            }
-            List<Students> stulist = new StudentManage().queryStudentByCourseId(CourseId);
-            Repeater1.DataSource = stulist;
-            Repeater1.DataBind();
-            List<Homework> HwList = new HomeworkManage().queryAllHKByTea(CourseId);
-            DataList2.DataSource = HwList;
-            DataList2.DataBind();
-            List<KQ> KqList = new KqManage().queryAllKq(CourseId);
-            Repeater2.DataSource = KqList;
-            Repeater2.DataBind();
-            List<JXGG> gglist = new GGManage().LookJXGG(CourseId);
-            Repeater3.DataSource = gglist;
-            Repeater3.DataBind();
         }
-
+        //通过姓名模糊查询
         protected void btn_searchstu_Click(object sender, EventArgs e)
         {
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             string StuName = txt_name.Text.Trim().ToString();
-            List<Students> stulist = new StudentManage().TeaqueryStudentByStuName(StuName);
+            List<Students> stulist = new StudentManage().TeaqueryStudentByStuName(StuName, CourseId);
             Repeater1.DataSource = stulist;
             Repeater1.DataBind();
         }
-
+        //通过学号查学生
         protected void btn_searchStuId_Click(object sender, EventArgs e)
         {
-
+            int StuId = Convert.ToInt32(txt_StuId.Text.Trim());
+            List<Students> stulist = new StudentManage().TeaqueryStudentByStuId(StuId);
+            Repeater1.DataSource = stulist;
+            Repeater1.DataBind();
         }
         //查看作业详情
         protected void Button2_Click(object sender, EventArgs e)
@@ -64,7 +66,7 @@ namespace 学生信息管理系统.homework
         {
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             string CourseName = (new CourseManege().queryCourseById(CourseId)).CourseName;
-            Response.Redirect("~/qiandao/fabu_qiandao.aspx?CourseId="+ CourseId+"&CourseName="+ CourseName);
+            Response.Redirect("~/qiandao/fabu_qiandao.aspx?CourseId=" + CourseId + "&CourseName=" + CourseName);
         }
         //发布作业
         protected void btn_fabu_zuoye_Click(object sender, EventArgs e)
@@ -93,14 +95,32 @@ namespace 学生信息管理系统.homework
         {
             int KQId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
-            Response.Redirect("~/qiandao/kqDetails.aspx?CourseId=" + CourseId+"&KQId="+KQId);
+            Response.Redirect("~/qiandao/kqDetails.aspx?CourseId=" + CourseId + "&KQId=" + KQId);
         }
-
+        //导出excel
         protected void ToExcel_Click(object sender, EventArgs e)
         {
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             string CourseName = (new CourseManege().queryCourseById(CourseId)).CourseName;
             Response.Redirect("~/Handler/TeaToExcel.ashx?CourseId=" + CourseId + "&CourseName=" + CourseName);
+        }
+
+
+        protected void ddlclass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string ClassId = ddlclass.SelectedItem.Text.Trim();
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            if (ClassId == "请选择")
+            {
+                List<Students> stulist = new StudentManage().queryStudentByCourseId(CourseId);
+                Repeater1.DataSource = stulist;
+                Repeater1.DataBind();
+            }else
+            {
+                List<Students> stuList = new StudentManage().TeaqueryStudentByClassId(CourseId, ClassId);
+                Repeater1.DataSource = stuList;
+                Repeater1.DataBind();
+            } 
         }
     }
 }
