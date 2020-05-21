@@ -109,6 +109,7 @@
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="GG\fabu_gg.aspx" />
     <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
@@ -913,6 +914,13 @@
     </Compile>
     <Compile Include="course\TeaCourses.aspx.designer.cs">
       <DependentUpon>TeaCourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GG\fabu_gg.aspx.cs">
+      <DependentUpon>fabu_gg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GG\fabu_gg.aspx.designer.cs">
+      <DependentUpon>fabu_gg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

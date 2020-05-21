@@ -65,12 +65,40 @@
         </div>
     <hr />
     <form id="form1" runat="server">       
-        <div id="GG" style="display:none;">课程公告</div>
-        <div  id="HwInfo" style="display:none;">               
+        <div id="GG">
+             <div>
+              <asp:Repeater ID="Repeater3" runat="server">
+                <HeaderTemplate>
+                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                        <tr class="table-bordered table-condensed info text-center"  >
+                             <th style="text-align:center">序号</th>
+                            <th style="text-align:center">标题</th>
+                            <th style="text-align:center">内容</th>
+                            <th style="text-align:center">发布人</th>
+                            <th style="text-align:center">发布时间</th>
+                        </tr>
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <tr class="table-responsive table-bordered table-condensed">
+                             <td><%# Eval("Id")%></td>
+                             <td><%# Eval("GGHead")%></td>
+                             <td><%# Eval("GGContent")%></td>
+                             <td><%# Eval("TeaName")%></td>
+                            <td><%# Eval("Time")%></td>
+                    </tr>
+                </ItemTemplate>
+                <FooterTemplate>
+                    </table>
+                </FooterTemplate>
+            </asp:Repeater>
+                </div>
+        </div>
+        <div  id="HwInfo" style="display:none;">      
+            <div >     
            <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
                 <ItemTemplate>
                     
-                    <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4" >
+                    <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4;margin:5px" >
                         <h1><span style=""> <%# Eval("HwHead")%></span></h1>
                         <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
                             <div style="margin-right:20px; margin-top:10px;">
@@ -86,6 +114,7 @@
                     </div>
                     </ItemTemplate>
             </asp:DataList>
+                </div>    
         </div>     
         <div  id="KqInfo"  style="display:none;">               
        <asp:DataList ID="DataList2" runat="server" RepeatColumns="3">
