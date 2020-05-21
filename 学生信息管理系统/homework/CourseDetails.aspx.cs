@@ -72,11 +72,21 @@ namespace 学生信息管理系统.homework
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             Response.Redirect("~/homework/fabu_zuoye.aspx?CourseId=" + CourseId);
         }
-
+        //发布公告
         protected void fabu_GG_Click(object sender, EventArgs e)
         {
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
             Response.Redirect("~/GG/fabu_gg.aspx?CourseId=" + CourseId);
+        }
+        //删除公告
+        protected void btnDel_Click(object sender, EventArgs e)
+        {
+            int GGId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
+            int result = new GGManage().DelGG(GGId);
+            if (result > 0)
+                Response.Write("<script>window.alert('公告已删除！');</script>");
+            else
+                Response.Write("<script>window.alert('删除失败！');</script>");
         }
     }
 }

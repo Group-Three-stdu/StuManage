@@ -15,9 +15,16 @@ namespace BLL
             return new GGService().LookJXGG(CourseId);
         }
 
+        //发布公告
         public int fabuGG(JXGG gg)
         {
             return new GGService().fabuGG(gg);
+        }
+
+        //删除公告
+        public int DelGG(int GGId)
+        {
+            return new GGService().DelGG(GGId);
         }
     }
 }

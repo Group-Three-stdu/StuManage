@@ -13,7 +13,7 @@ namespace DAL
         //查看公告
         public List<JXGG> LookJXGG (int CourseId)
         {
-            string sql = "select  Row_Number() over(order by ID) as id ,GGHead,GGContent,TeaId,Time,TeaName from V_LookJXGG where CourseId = @CourseId";
+            string sql = "select  Row_Number() over(order by ID) as xh ,Id ,GGHead,GGContent,TeaId,Time,TeaName from V_LookJXGG where CourseId = @CourseId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseId", CourseId)
@@ -24,6 +24,7 @@ namespace DAL
             {
                 gglist.Add(new JXGG()
                 {
+                    xh=Convert.ToInt32(result["xh"]),
                     Id = Convert.ToInt32(result["id"]),
                     GGHead = result["GGHead"].ToString(),
                     GGContent = result["GGContent"].ToString(),
@@ -48,6 +49,17 @@ namespace DAL
                 new SqlParameter("@CourseId",gg.CourseId),
             };
             return new Helper.SQLHelper().update(sql, param, false);
+        }
+
+        //删除公告
+        public int DelGG(int GGId)
+        {
+            string sql = "delete from JXGG where ID = @GGId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter ("@GGId",GGId)
+            };
+            return new Helper.SQLHelper().update(sql, param,false);
         }
     }
 }

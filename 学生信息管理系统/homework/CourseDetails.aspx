@@ -65,15 +65,18 @@
                             <th style="text-align:center">内容</th>
                             <th style="text-align:center">发布人</th>
                             <th style="text-align:center">发布时间</th>
+                            <th style="text-align:center">操作</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr class="table-responsive table-bordered table-condensed">
-                             <td><%# Eval("Id")%></td>
+                             <td><%# Eval("xh")%></td>
                              <td><%# Eval("GGHead")%></td>
                              <td><%# Eval("GGContent")%></td>
                              <td><%# Eval("TeaName")%></td>
                             <td><%# Eval("Time")%></td>
+                             <td><asp:LinkButton ID="btnDel" CommandArgument='<%#Eval("Id")%>' OnClientClick="return confirm('确认删除该记录么？')"  OnClick="btnDel_Click"
+                runat="server">删除公告</asp:LinkButton></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>
