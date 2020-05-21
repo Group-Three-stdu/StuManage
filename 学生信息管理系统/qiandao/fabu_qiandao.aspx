@@ -37,24 +37,60 @@
             margin-top:-20px;
             background-color:white;
         }
+        .style1 {
+            font-family: 华文宋体;
+            text-align: left;
+            float: left;
+            border-width: 3px;
+            border:2px solid #A3C2E2;
+            padding: 2px;
+            margin-left: 5%;
+            margin-top:30px;
+            height: 155px;
+            width: 400px;
+        }
+       
+        ..style1 {
+            width: 1100px;
+        }
+       
+        .auto-style2 {
+            font-family: 楷体;
+            font-size: x-large;
+        }
+        .auto-style3 {
+            font-family: 楷体;
+            font-size: large;
+        }
+        .srow {
+            text-align: center;
+        }
+       
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="box">
-        <div class="srow">
-            <span>课程名：</span><asp:Label CssClass="lb" ID="Label2" runat="server" Text="">python</asp:Label>
+    <div>
+        <div style="width:430px; background-color:#ACDCE4; height: 176px;">
+            <span class="auto-style2">课程名：</span><asp:Label  ID="Label2" runat="server" Text="" style="font-size: large; font-family: 楷体">python</asp:Label>
+            <br />
+            <br />
+            <span class="auto-style2">设置签到时间</span>：<asp:TextBox ID="TextBox1" runat="server" Width="85px" Height="30px"></asp:TextBox><span class="auto-style3">分钟</span>
+            
+            
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="发布" OnClick="Button1_Click" BackColor="#ECD4EC" BorderColor="White" BorderStyle="Ridge" CssClass="srow" Width="143px" Font-Names="楷体" Font-Size="X-Large" />
         </div>
         <br />
-       设置签到时间：<asp:TextBox ID="TextBox1" runat="server" Width="50px"></asp:TextBox>分钟
-       <div>
-           <br />
-            <br />
-            
-        &nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="发布" OnClick="Button1_Click" BackColor="Red" BorderColor="Yellow" BorderStyle="Ridge" CssClass="srow" Width="143px" />
+       
+       
     </div>
-    </div>
+    
         
     </form>
 </body>

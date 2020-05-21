@@ -131,6 +131,10 @@
     <Content Include="image\demobg.jpg" />
     <Content Include="image\loginbg.jpg" />
     <Content Include="image\login_bg.jpg" />
+    <Content Include="image\logo.jpg" />
+    <Content Include="image\logo_bott.png" />
+    <Content Include="image\logo_bottom.png" />
+    <Content Include="image\logo_right.png" />
     <Content Include="image\school.jpg" />
     <Content Include="js\code.js" />
     <Content Include="js\My97DatePicker\calendar.js" />
