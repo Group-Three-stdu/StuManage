@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseDetails.aspx.cs" Inherits="学生信息管理系统.homework.CourseDetails" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseDetails.aspx.cs" Inherits="学生信息管理系统.homework.CourseDetails" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -132,7 +132,7 @@
             <asp:Button ID="btn_fabu_zuoye" runat="server" Text="发布作业" OnClick="btn_fabu_zuoye_Click" /><br />
             <asp:DataList ID="DataList2" runat="server" RepeatColumns="3">
             <ItemTemplate>
-                <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4" >
+                <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4;margin:5px;" >
                     <h1><span style=""> <%# Eval("HwHead")%></span></h1>
                     <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
                         <div style="margin-right:20px; margin-top:10px;">
@@ -143,7 +143,7 @@
                         </div>             
                     <div class="style2" style="height: 51px;  ">
                         <asp:Button ID="Button2" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#3cf;" Text="作业详情" Width="82px" BorderStyle="None" 
-                                CommandArgument='1' OnClick="Button2_Click"  />
+                                CommandArgument='<%# Eval("HwId")%>' OnClick="Button2_Click"  />
                     </div>   
                 </div> 
             </ItemTemplate>

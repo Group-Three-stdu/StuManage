@@ -59,7 +59,9 @@ namespace 学生信息管理系统.homework
         //查看作业详情
         protected void Button2_Click(object sender, EventArgs e)
         {
-
+            int HwId = Convert.ToInt32(((Button)sender).CommandArgument);
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            Response.Redirect("~/homework/HwDetails.aspx?CourseId=" + CourseId + "&HwId=" + HwId);
         }
         //发布签到
         protected void fabu_qiandao_click(object sender, EventArgs e)

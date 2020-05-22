@@ -91,7 +91,7 @@ namespace DAL
         /// </summary>
         /// <param name="HwId"></param>
         /// <returns></returns>
-        public int alterFinishNum( int HwId)
+        public int alterFinishNum(int HwId)
         {
             string sql = "update Homework set FinishNum = FinishNum+1 where HwId = @HwId";
             SqlParameter[] param = new SqlParameter[]
@@ -146,6 +146,64 @@ namespace DAL
                 new SqlParameter("@HwHead",hw.HwHead),
             };
             return new Helper.SQLHelper().update(sql, param, false);
+        }
+
+        /// <summary>
+        /// 查询未提交作业的学生学号
+        /// </summary>
+        /// <param name="HwId"></param>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public List<Students> queryUnsubmitStuId(int HwId, int CourseId)
+        {
+            string sql = "select distinct StuId from Courses_Stu  where StuId not in (select distinct StuId from Answer_Stu where HwId=@HwId ) and CourseId=@CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@HwId",HwId),
+                new SqlParameter("@CourseId",CourseId)
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<Students> StuList = new List<Students>();
+            while (result.Read())
+            {
+                StuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"])
+                });
+            }
+            return StuList;
+        }
+
+        /// <summary>
+        /// 查询已提交作业的学生信息
+        /// </summary>
+        /// <param name="HwId"></param>
+        /// <returns></returns>
+        public List<Answer_Stu> querySubmitedStu(int HwId)
+        {
+            string sql = "select StuId,StuName,Answer,Grade,Resist,Time,ClassId,HwState,HwId from V_SubmitHw  where  HwId=@HwId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@HwId",HwId),
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<Answer_Stu> StuList = new List<Answer_Stu>();
+            while (result.Read())
+            {
+                StuList.Add(new Answer_Stu()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    Answer = result["Answer"].ToString(),
+                    Grade = result["Grade"].ToString(),
+                    Resist = result["Resist"].ToString(),
+                    Time = Convert.ToDateTime(result["Time"]),
+                    ClassId = result["ClassId"].ToString(),
+                    HwState = result["HwState"].ToString(),
+                    HwId = Convert.ToInt32(result["HwId"])
+                });
+            }
+            return StuList;
         }
     }
 }

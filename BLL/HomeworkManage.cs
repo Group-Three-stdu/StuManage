@@ -61,5 +61,27 @@ namespace BLL
         {
             return new HomeworkService().fabuHw(hw);
         }
+
+        public List<Answer_Stu> querySubmitedStu(int HwId)
+        {
+            return new HomeworkService().querySubmitedStu(HwId);
+        }
+
+        /// <summary>
+        /// 查询未提交作业的学生信息
+        /// </summary>
+        /// <param name="HwId"></param>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public List<Students> queryUnsubmitStuId(int HwId, int CourseId)
+        {
+            List<Students> stuIdList = new HomeworkService().queryUnsubmitStuId(HwId, CourseId);
+            List<Students> stuList = new List<Students>();
+            foreach (Students stu in stuIdList)
+            {
+                stuList.Add(new StudentService().queryStuById(stu.StuId));
+            }
+            return stuList;
+        }
     }
 }
