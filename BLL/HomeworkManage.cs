@@ -35,7 +35,10 @@ namespace BLL
         /// <param name="ans"></param>
         /// <returns></returns>
         public int SubmitHw(Answer_Stu ans)
-        {
+        { 
+            int res = new HomeworkService().queryHasSubmited(ans.StuId, ans.HwId);
+            if (res > 0)
+                return -1;
             int result = new HomeworkService().SubmitHw(ans);
             if (result > 0)
                 return new HomeworkService().alterFinishNum(ans.HwId);

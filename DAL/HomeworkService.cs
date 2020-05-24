@@ -260,5 +260,17 @@ namespace DAL
           };
             return new Helper.SQLHelper().update(sql, param, false);
         }
+
+        //查询学生是否已经提交过作业
+        public int queryHasSubmited(int StuId,int HwId)
+        {
+            string sql = "select count(*) from Answer_Stu  where StuId=@StuId and HwId = @HwId ";
+            SqlParameter[] param = new SqlParameter[]
+          {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@HwId",HwId)
+          };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
     }
 }
