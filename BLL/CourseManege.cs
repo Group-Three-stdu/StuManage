@@ -199,5 +199,15 @@ namespace BLL
         {
             return new CourseService().queryCourseById(CourseId);
         }
+
+        /// <summary>
+        /// 查询该学生所有的学期
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <returns></returns>
+        public List<CourseMana> querySeason(int StuId)
+        {
+            return new CourseService().querySeason(StuId);
+        }
     }
 }

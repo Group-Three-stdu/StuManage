@@ -427,5 +427,25 @@ namespace DAL
             };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql,param,false));
         }
+        
+        //查询所有学期
+        public List<CourseMana> querySeason (int StuId)
+        {
+            string sql = "select distinct Season from Courses_Stu where StuId=@StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<CourseMana> SeasonList = new List<CourseMana>();
+            while (res.Read())
+            {
+                SeasonList.Add(new CourseMana()
+                {
+                    Season = res["Season"].ToString()
+                });
+            }
+            return SeasonList;
+        }
     }
 }

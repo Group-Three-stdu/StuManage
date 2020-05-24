@@ -117,7 +117,7 @@
                      <div><i class="iconfont icon-yihupaixu"></i>成绩信息</div>
                         <ul class="sub">
                             <li>
-                            <a id="A4" href="" runat="server" target="right">
+                            <a id="A4" href="~/Score/StuScore.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查询成绩
                             </a>

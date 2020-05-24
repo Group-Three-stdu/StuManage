@@ -36,5 +36,37 @@ namespace DAL
             };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
         }
+
+        //学生查看成绩
+        public List<Score> queryScore(int StuId)
+        {
+            string sql = "SELECT   StuId, CourseId, ClassScore, MatchScore, FinalScore, SCID, CourseName, Xuefen, CourseNum, courseproperty, CollegeName, TeaId, TeaName from V_StuScore where StuId = @StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            List<Score> sclist = new List<Score>();
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (res.Read())
+            {
+                sclist.Add(new Score()
+                {
+                    StuId = Convert.ToInt32(res["StuId"]),
+                    CourseId = Convert.ToInt32(res["CourseId"]),
+                    SCID = Convert.ToInt32(res["SCID"]),
+                    CourseNum = Convert.ToInt32(res["CourseNum"]),
+                    TeaId = Convert.ToInt32(res["TeaId"]),
+                    ClassScore = float.Parse(res["ClassScore"].ToString()),
+                    MatchScore = float.Parse(res["MatchScore"].ToString()),
+                    FinalScore = float.Parse(res["FinalScore"].ToString()),
+                    Xuefen = float.Parse(res["Xuefen"].ToString()),
+                    CourseName = res["CourseName"].ToString(),
+                    courseproperty = res["courseproperty"].ToString(),
+                    CollegeName = res["CollegeName"].ToString(),
+                    TeaName = res["TeaName"].ToString(),
+                });
+            }
+            return sclist;
+        }
     }
 }

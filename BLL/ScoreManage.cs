@@ -29,5 +29,15 @@ namespace BLL
         {
             return new ScoreService().queryCouseScoreNum(CourseId);
         }
+
+        /// <summary>
+        /// 学生查看成绩
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <returns></returns>
+        public List<Score> queryScore(int StuId)
+        {
+            return new ScoreService().queryScore(StuId);
+        }
     }
 }

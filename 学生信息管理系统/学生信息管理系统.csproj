@@ -815,6 +815,7 @@
     <Content Include="resource\ckfinder\skins\v1\uipanel.css" />
     <Content Include="resource\ckfinder\translations.txt" />
     <Content Include="Score\jiaowuchu_lookscore.aspx" />
+    <Content Include="Score\StuScore.aspx" />
     <Content Include="Score\TeaCourse.aspx" />
     <Content Include="Score\TeaScore.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
@@ -1035,6 +1036,13 @@
     </Compile>
     <Compile Include="Score\jiaowuchu_lookscore.aspx.designer.cs">
       <DependentUpon>jiaowuchu_lookscore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\StuScore.aspx.cs">
+      <DependentUpon>StuScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\StuScore.aspx.designer.cs">
+      <DependentUpon>StuScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="Score\TeaCourse.aspx.cs">
       <DependentUpon>TeaCourse.aspx</DependentUpon>
