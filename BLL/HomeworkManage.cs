@@ -83,5 +83,32 @@ namespace BLL
             }
             return stuList;
         }
+
+        /// <summary>
+        /// 查询学生的答案
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <param name="HwId"></param>
+        /// <returns></returns>
+        public Answer_Stu queryStuAnsByStuId(int StuId, int HwId)
+        {
+            return new HomeworkService().queryStuAnsByStuId(StuId, HwId);
+        }
+
+        /// <summary>
+        /// 教师批阅作业
+        /// </summary>
+        /// <param name="Grade"></param>
+        /// <param name="Resist"></param>
+        /// <param name="StuId"></param>
+        /// <param name="HwId"></param>
+        /// <returns></returns>
+        public int TeaCheckAns(string Grade, string Resist, int StuId, int HwId)
+        {
+            int result = new HomeworkService().TeaCheckAns(Grade,Resist,StuId, HwId);
+            if (result > 0)
+                return new HomeworkService().TeaChangeAnsSta(StuId, HwId);
+            else return 0;
+        }
     }
 }

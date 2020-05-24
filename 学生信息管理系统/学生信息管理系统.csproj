@@ -123,6 +123,7 @@
     <Content Include="css\StyleSheet.css" />
     <Content Include="GG\fabu_gg.aspx" />
     <Content Include="homework\fabu_zuoye.aspx" />
+    <Content Include="homework\HwCheck.aspx" />
     <Content Include="homework\HwDetails.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
@@ -957,6 +958,13 @@
     </Compile>
     <Compile Include="homework\fabu_zuoye.aspx.designer.cs">
       <DependentUpon>fabu_zuoye.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\HwCheck.aspx.cs">
+      <DependentUpon>HwCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\HwCheck.aspx.designer.cs">
+      <DependentUpon>HwCheck.aspx</DependentUpon>
     </Compile>
     <Compile Include="homework\HwDetails.aspx.cs">
       <DependentUpon>HwDetails.aspx</DependentUpon>

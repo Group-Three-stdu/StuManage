@@ -59,7 +59,7 @@
                              <td><%# Eval("ClassId")%></td>
                              <td><%# Eval("Time")%></td>
                              <td>0</td>
-                            <td><asp:LinkButton ID="btnDel" CommandArgument='<%#Eval("StuId")%>'  runat="server">详情</asp:LinkButton></td>
+                            <td><asp:LinkButton ID="btnLook" CommandArgument='<%#Eval("StuId")%>'  runat="server" OnClick="btnLook_Click">详情</asp:LinkButton></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

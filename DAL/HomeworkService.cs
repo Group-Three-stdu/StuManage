@@ -205,5 +205,60 @@ namespace DAL
             }
             return StuList;
         }
+
+        /// <summary>
+        /// 查看学生作业
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <param name="HwId"></param>
+        /// <returns></returns>
+        public Answer_Stu queryStuAnsByStuId(int StuId,int HwId)
+        {
+            string sql = "select StuId,HwId,Answer,Grade,Resist,Time,HwState from Answer_Stu where StuId=@StuId and HwId = @HwId ";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@HwId",HwId)
+            };
+            Answer_Stu ans = new Answer_Stu();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                ans.StuId = Convert.ToInt32(result["StuId"]);
+                ans.HwId = Convert.ToInt32(result["HwId"]);
+                ans.Answer = result["Answer"].ToString();
+                ans.Grade = result["Grade"].ToString();
+                ans.Resist = result["Resist"].ToString();
+                ans.Time = Convert.ToDateTime(result["Time"]);
+                ans.HwState = result["HwState"].ToString();
+            }
+            return ans;
+        }
+
+        //插入教师的评语
+        public int TeaCheckAns(string Grade,string Resist,int StuId,int HwId)
+        {
+            string sql = "update Answer_Stu set Grade=@Grade, Resist=@Resist where StuId=@StuId and HwId = @HwId ";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@Grade",Grade),
+                new SqlParameter("@Resist",Resist),
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@HwId",HwId)
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
+
+        //将作业状态改成已批阅
+        public int TeaChangeAnsSta(int StuId, int HwId)
+        {
+            string sql = "update Answer_Stu set HwState='F'  where StuId=@StuId and HwId = @HwId ";
+            SqlParameter[] param = new SqlParameter[]
+          {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@HwId",HwId)
+          };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
     }
 }
