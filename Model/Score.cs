@@ -16,5 +16,6 @@ namespace Model
         //数据库中没有一下字段，仅在此类中储存信息
         public int TeaId { set; get; }
         public string TeaName { set; get; }
+        public string Season { set; get; }
     }
 }

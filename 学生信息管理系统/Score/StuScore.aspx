@@ -15,7 +15,7 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True">
             <ContentTemplate>
                  <div class="top">          
-                学期：<asp:DropDownList ID="ddlseason" class="select" runat="server" AutoPostBack="True" >
+                学期：<asp:DropDownList ID="ddlseason" class="select" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlseason_SelectedIndexChanged" >
                             <asp:ListItem>请选择</asp:ListItem>
                         </asp:DropDownList>
                 课程名：<asp:TextBox ID="txt_name" runat="server" class="input"></asp:TextBox>
@@ -25,7 +25,7 @@
             <div>
               <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:90%">
                         <tr class="table-bordered table-condensed info text-center"  >
                             <th style="text-align:center">课程名</th>
                             <th style="text-align:center">学院</th>
@@ -33,6 +33,7 @@
                             <th style="text-align:center">教师</th>
                             <th style="text-align:center">性质</th>
                             <th style="text-align:center">学分</th>
+                            <th style="text-align:center">学期</th>
                             <th style="text-align:center">考试成绩</th>
                             <th style="text-align:center">平时成绩</th>
                             <th style="text-align:center">最终成绩</th>
@@ -46,6 +47,7 @@
                             <td><%# Eval("TeaName")%></td>
                             <td><%# Eval("courseproperty")%></td>
                             <td><%# Eval("Xuefen")%></td>
+                            <td><%# Eval("Season")%></td>
                             <td><%# Eval("MatchScore")%></td>
                             <td><%# Eval("CourseNum")%></td>
                             <td><%# Eval("FinalScore")%></td>

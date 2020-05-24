@@ -40,7 +40,7 @@ namespace DAL
         //学生查看成绩
         public List<Score> queryScore(int StuId)
         {
-            string sql = "SELECT   StuId, CourseId, ClassScore, MatchScore, FinalScore, SCID, CourseName, Xuefen, CourseNum, courseproperty, CollegeName, TeaId, TeaName from V_StuScore where StuId = @StuId";
+            string sql = "SELECT   StuId, CourseId, ClassScore, MatchScore, FinalScore, SCID, CourseName, Xuefen, CourseNum, courseproperty, CollegeName, TeaId, TeaName,Season from V_StuScore where StuId = @StuId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@StuId",StuId)
@@ -64,6 +64,107 @@ namespace DAL
                     courseproperty = res["courseproperty"].ToString(),
                     CollegeName = res["CollegeName"].ToString(),
                     TeaName = res["TeaName"].ToString(),
+                    Season = res["Season"].ToString()
+                });
+            }
+            return sclist;
+        }
+        //根据学期查询分数
+        public List<Score> queryScoreBySea(int StuId, string Season)
+        {
+            string sql = "SELECT   StuId, CourseId, ClassScore, MatchScore, FinalScore, SCID, CourseName, Xuefen, CourseNum, courseproperty, CollegeName, TeaId, TeaName,Season from V_StuScore where StuId = @StuId and Season = @Season";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@Season",Season)
+            };
+            List<Score> sclist = new List<Score>();
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (res.Read())
+            {
+                sclist.Add(new Score()
+                {
+                    StuId = Convert.ToInt32(res["StuId"]),
+                    CourseId = Convert.ToInt32(res["CourseId"]),
+                    SCID = Convert.ToInt32(res["SCID"]),
+                    CourseNum = Convert.ToInt32(res["CourseNum"]),
+                    TeaId = Convert.ToInt32(res["TeaId"]),
+                    ClassScore = float.Parse(res["ClassScore"].ToString()),
+                    MatchScore = float.Parse(res["MatchScore"].ToString()),
+                    FinalScore = float.Parse(res["FinalScore"].ToString()),
+                    Xuefen = float.Parse(res["Xuefen"].ToString()),
+                    CourseName = res["CourseName"].ToString(),
+                    courseproperty = res["courseproperty"].ToString(),
+                    CollegeName = res["CollegeName"].ToString(),
+                    TeaName = res["TeaName"].ToString(),
+                    Season = res["Season"].ToString()
+                });
+            }
+            return sclist;
+        }
+
+        //根据课程名模糊查询分数
+        public List<Score> queryScoreBySeaByName(int StuId, string name)
+        {
+            string sql = "SELECT   StuId, CourseId, ClassScore, MatchScore, FinalScore, SCID, CourseName, Xuefen, CourseNum, courseproperty, CollegeName, TeaId, TeaName,Season from V_StuScore where StuId = @StuId and CourseName Like  '%" + name + "%'";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            List<Score> sclist = new List<Score>();
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (res.Read())
+            {
+                sclist.Add(new Score()
+                {
+                    StuId = Convert.ToInt32(res["StuId"]),
+                    CourseId = Convert.ToInt32(res["CourseId"]),
+                    SCID = Convert.ToInt32(res["SCID"]),
+                    CourseNum = Convert.ToInt32(res["CourseNum"]),
+                    TeaId = Convert.ToInt32(res["TeaId"]),
+                    ClassScore = float.Parse(res["ClassScore"].ToString()),
+                    MatchScore = float.Parse(res["MatchScore"].ToString()),
+                    FinalScore = float.Parse(res["FinalScore"].ToString()),
+                    Xuefen = float.Parse(res["Xuefen"].ToString()),
+                    CourseName = res["CourseName"].ToString(),
+                    courseproperty = res["courseproperty"].ToString(),
+                    CollegeName = res["CollegeName"].ToString(),
+                    TeaName = res["TeaName"].ToString(),
+                    Season = res["Season"].ToString()
+                });
+            }
+            return sclist;
+        }
+
+        //根据课程名和学期模糊查询分数
+        public List<Score> queryScoreBySeaByName(int StuId, string Season,string name)
+        {
+            string sql = "SELECT   StuId, CourseId, ClassScore, MatchScore, FinalScore, SCID, CourseName, Xuefen, CourseNum, courseproperty, CollegeName, TeaId, TeaName,Season from V_StuScore where StuId = @StuId and Season = @Season and CourseName Like  '%" + name + "%'";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@Season",Season)
+            };
+            List<Score> sclist = new List<Score>();
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (res.Read())
+            {
+                sclist.Add(new Score()
+                {
+                    StuId = Convert.ToInt32(res["StuId"]),
+                    CourseId = Convert.ToInt32(res["CourseId"]),
+                    SCID = Convert.ToInt32(res["SCID"]),
+                    CourseNum = Convert.ToInt32(res["CourseNum"]),
+                    TeaId = Convert.ToInt32(res["TeaId"]),
+                    ClassScore = float.Parse(res["ClassScore"].ToString()),
+                    MatchScore = float.Parse(res["MatchScore"].ToString()),
+                    FinalScore = float.Parse(res["FinalScore"].ToString()),
+                    Xuefen = float.Parse(res["Xuefen"].ToString()),
+                    CourseName = res["CourseName"].ToString(),
+                    courseproperty = res["courseproperty"].ToString(),
+                    CollegeName = res["CollegeName"].ToString(),
+                    TeaName = res["TeaName"].ToString(),
+                    Season = res["Season"].ToString()
                 });
             }
             return sclist;
