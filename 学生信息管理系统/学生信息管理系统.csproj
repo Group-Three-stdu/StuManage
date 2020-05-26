@@ -832,6 +832,8 @@
     <Content Include="Score\TeaScore.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
+    <Content Include="StudentsInfo\college_index.aspx" />
+    <Content Include="StudentsInfo\college_lookstu.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_stuperinfo.aspx" />
@@ -1083,6 +1085,20 @@
     </Compile>
     <Compile Include="StudentsInfo\alter_stuperinfo.aspx.designer.cs">
       <DependentUpon>alter_stuperinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\college_index.aspx.cs">
+      <DependentUpon>college_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\college_index.aspx.designer.cs">
+      <DependentUpon>college_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\college_lookstu.aspx.cs">
+      <DependentUpon>college_lookstu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\college_lookstu.aspx.designer.cs">
+      <DependentUpon>college_lookstu.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
