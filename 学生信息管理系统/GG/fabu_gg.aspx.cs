@@ -28,7 +28,10 @@ namespace 学生信息管理系统.GG
             };
             int result = new GGManage().fabuGG(gg);
             if (result > 0)
-                Literal1.Text = "<script type='text/javascript'>alert('作业发布成功！');location.href='~/StudentsInfo/teacherindex.aspx'</script>";
+            {
+                Literal1.Text = "<script type='text/javascript'>alert('公告发布成功！');</script>";
+                btn_submit.Enabled = false;
+            }
             else
                 Literal1.Text = "<script type='text/javascript'>alert('作业发布失败！');</script>";
         }

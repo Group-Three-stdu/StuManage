@@ -75,9 +75,21 @@ namespace BLL
         }
 
         //教师模糊查询某门课的学生信息
-        public List<Students> TeaqueryStudentByStuName(string Name)
+        public List<Students> TeaqueryStudentByStuName(string Name,int CourseId)
         {
-            return new StudentService().TeaqueryStudentByStuName(Name);
+            return new StudentService().TeaqueryStudentByStuName(Name, CourseId);
+        }
+
+        //教师按学号查询某门课程的学生
+        public List<Students> TeaqueryStudentByStuId(int StuId)
+        {
+            return new StudentService().TeaqueryStudentByStuId(StuId);
+        }
+
+        //教师查询某门课程某个班的所有学生
+        public List<Students> TeaqueryStudentByClassId(int CourseId,string ClassId)
+        {
+            return new StudentService().TeaqueryStudentByClassId(CourseId ,ClassId);
         }
     }
 }

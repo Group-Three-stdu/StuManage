@@ -44,8 +44,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.6\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="CKFinder">
       <HintPath>..\..\..\网络资源设计与开发\zuoyegonggao\zuoyegonggao\resource\ckfinder\bin\Debug\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -80,6 +88,22 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -111,6 +135,8 @@
     <Content Include="css\StyleSheet.css" />
     <Content Include="GG\fabu_gg.aspx" />
     <Content Include="homework\fabu_zuoye.aspx" />
+    <Content Include="homework\HwCheck.aspx" />
+    <Content Include="homework\HwDetails.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
     <Content Include="homework\zuoye_tijiao.aspx" />
@@ -152,6 +178,7 @@
     <Content Include="js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="login2.aspx" />
     <Content Include="qiandao\fabu_qiandao.aspx" />
+    <Content Include="qiandao\kqDetails.aspx" />
     <Content Include="qiandao\stu_qiandao.aspx" />
     <Content Include="resource\ckeditor\ckeditor.js" />
     <Content Include="resource\ckfinder\bin\Debug\CKFinder.dll" />
@@ -800,12 +827,15 @@
     <Content Include="resource\ckfinder\skins\v1\uipanel.css" />
     <Content Include="resource\ckfinder\translations.txt" />
     <Content Include="Score\jiaowuchu_lookscore.aspx" />
+    <Content Include="Score\StuScore.aspx" />
     <Content Include="Score\TeaCourse.aspx" />
     <Content Include="Score\Tea_look_score.aspx" />
     <Content Include="Score\TeaScore.aspx" />
     <Content Include="Score\Tea_look_score1.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
+    <Content Include="StudentsInfo\college_index.aspx" />
+    <Content Include="StudentsInfo\college_lookstu.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_stuperinfo.aspx" />
@@ -847,6 +877,7 @@
     <Content Include="resource\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="resource\ckfinder\userfiles\.htaccess" />
     <Content Include="Handler\setRatio.ashx" />
+    <Content Include="Handler\TeaToExcel.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -935,12 +966,29 @@
     <Compile Include="Handler\setRatio.ashx.cs">
       <DependentUpon>setRatio.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\TeaToExcel.ashx.cs">
+      <DependentUpon>TeaToExcel.ashx</DependentUpon>
+    </Compile>
     <Compile Include="homework\fabu_zuoye.aspx.cs">
       <DependentUpon>fabu_zuoye.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="homework\fabu_zuoye.aspx.designer.cs">
       <DependentUpon>fabu_zuoye.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\HwCheck.aspx.cs">
+      <DependentUpon>HwCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\HwCheck.aspx.designer.cs">
+      <DependentUpon>HwCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\HwDetails.aspx.cs">
+      <DependentUpon>HwDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\HwDetails.aspx.designer.cs">
+      <DependentUpon>HwDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="homework\TeaLookHw.aspx.cs">
       <DependentUpon>TeaLookHw.aspx</DependentUpon>
@@ -984,6 +1032,13 @@
     <Compile Include="qiandao\fabu_qiandao.aspx.designer.cs">
       <DependentUpon>fabu_qiandao.aspx</DependentUpon>
     </Compile>
+    <Compile Include="qiandao\kqDetails.aspx.cs">
+      <DependentUpon>kqDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qiandao\kqDetails.aspx.designer.cs">
+      <DependentUpon>kqDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="qiandao\stu_qiandao.aspx.cs">
       <DependentUpon>stu_qiandao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -997,6 +1052,13 @@
     </Compile>
     <Compile Include="Score\jiaowuchu_lookscore.aspx.designer.cs">
       <DependentUpon>jiaowuchu_lookscore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\StuScore.aspx.cs">
+      <DependentUpon>StuScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\StuScore.aspx.designer.cs">
+      <DependentUpon>StuScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="Score\TeaCourse.aspx.cs">
       <DependentUpon>TeaCourse.aspx</DependentUpon>
@@ -1039,6 +1101,20 @@
     </Compile>
     <Compile Include="StudentsInfo\alter_stuperinfo.aspx.designer.cs">
       <DependentUpon>alter_stuperinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\college_index.aspx.cs">
+      <DependentUpon>college_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\college_index.aspx.designer.cs">
+      <DependentUpon>college_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\college_lookstu.aspx.cs">
+      <DependentUpon>college_lookstu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\college_lookstu.aspx.designer.cs">
+      <DependentUpon>college_lookstu.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

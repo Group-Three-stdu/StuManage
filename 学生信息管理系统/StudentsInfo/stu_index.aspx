@@ -84,13 +84,13 @@
                                 学籍信息
                             </a>
                         </li>
-                        <li>
-                            <%--<asp:LinkButton ID="LinkButton2" runat="server">个人荣誉</asp:LinkButton>--%>
+                        <%--<li>
+                            
                             <a id="A1" href="" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 个人荣誉
                             </a>
-                        </li>
+                        </li>--%>
                     </ul>
                 </li>
           
@@ -117,22 +117,22 @@
                      <div><i class="iconfont icon-yihupaixu"></i>成绩信息</div>
                         <ul class="sub">
                             <li>
-                            <a id="A4" href="" runat="server" target="right">
+                            <a id="A4" href="~/Score/StuScore.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查询成绩
                             </a>
                             </li>
-                            <li>
+                            <%--<li>
                                 <a id="A5" href="" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 等级考试
                             </a>
-                            </li>
+                            </li>--%>
                         
                         </ul>
                 </li>
           
-                <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>教学日常</div>
+                <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>我的课程</div>
                     <ul class="sub">
                         <li>
                             <a id="A7" href="~/course/Mycourse.aspx" runat="server" target="right">
@@ -140,12 +140,12 @@
                                 课程中心
                             </a>
                         </li>
-                        <li>
+                        <%--<li>
                             <a id="A9" href="" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看公告
                             </a>
-                        </li>
+                        </li>--%>
                     </ul>
                 </li>
          

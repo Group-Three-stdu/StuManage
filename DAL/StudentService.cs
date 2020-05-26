@@ -74,6 +74,34 @@ namespace DAL
         }
 
         /// <summary>
+        /// 根据班级，课程编号查询学生
+        /// </summary>
+        /// <param name="classId"></param>
+        /// <returns></returns>
+        public List<Students> TeaqueryStudentByClassId(int CourseId ,string ClassId)
+        {
+            string sql = "select StuId,StuName,ClassId,StuPhoneNum from V_CourseTea where CourseId = @CourseId and ClassId = @ClassId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId),
+                new SqlParameter("@ClassId",ClassId)
+            };
+            List<Students> stuList = new List<Students>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                stuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    ClassId = result["ClassId"].ToString(),
+                    StuPhoneNum = result["StuPhoneNum"].ToString()
+                });
+            }
+            return stuList;
+        }
+
+        /// <summary>
         /// 综合查询
         /// </summary>
         /// <param name="StuId"></param>
@@ -358,6 +386,7 @@ namespace DAL
             return result;
         }
 
+        //查询学生未完成课程数
         public int queryCourseByStuId(int StuId)
         {
             string sql = "select count(*) from Courses_Stu where StuId=@StuId and Status='N' ";
@@ -370,11 +399,38 @@ namespace DAL
         }
 
         //教师按姓名模糊查询某门课程的学生
-        public List<Students> TeaqueryStudentByStuName(string Name)
+        public List<Students> TeaqueryStudentByStuName(string Name,int CourseId)
         {
-            string sql = "select StuId,StuName,ClassId,StuPhoneNum from Students where StuName Like  '%" + Name + "%'";
+            string sql = "select Students.StuId,StuName,ClassId,StuPhoneNum from Students join Courses_Stu on Students.StuId=Courses_Stu.StuId where CourseId=@CourseId  and StuName Like  '%" + Name + "%'";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId)
+            };
             List<Students> stuList = new List<Students>();
-            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param,false);
+            while (result.Read())
+            {
+                stuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    ClassId = result["ClassId"].ToString(),
+                    StuPhoneNum = result["StuPhoneNum"].ToString()
+                });
+            }
+            return stuList;
+        }
+
+        //教师按学号查询某门课程的学生
+        public List<Students> TeaqueryStudentByStuId(int StuId)
+        {
+            string sql = "select StuId,StuName,ClassId,StuPhoneNum from Students where StuId = @StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            List<Students> stuList = new List<Students>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
             while (result.Read())
             {
                 stuList.Add(new Students()

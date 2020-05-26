@@ -41,7 +41,8 @@ namespace 学生信息管理系统.Score
         protected void btn_searchstu_Click(object sender, EventArgs e)
         {
             string StuName = txt_name.Text.Trim().ToString();
-            List<Students> stulist = new StudentManage().TeaqueryStudentByStuName(StuName);
+            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+            List<Students> stulist = new StudentManage().TeaqueryStudentByStuName(StuName,CourseId);
             Repeater1.DataSource = stulist;
             Repeater1.DataBind();
         }

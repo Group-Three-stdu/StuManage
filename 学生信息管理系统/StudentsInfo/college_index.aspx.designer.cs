@@ -10,7 +10,7 @@
 namespace 学生信息管理系统.StudentsInfo {
     
     
-    public partial class stu_index {
+    public partial class college_index {
         
         /// <summary>
         /// form1 控件。
@@ -20,6 +20,15 @@ namespace 学生信息管理系统.StudentsInfo {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// lbusername 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbusername;
         
         /// <summary>
         /// lb_tuichu 控件。
@@ -49,24 +58,6 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.WebControls.LinkButton lb_index;
         
         /// <summary>
-        /// lb_user 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_user;
-        
-        /// <summary>
-        /// lb_time 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_time;
-        
-        /// <summary>
         /// A2 控件。
         /// </summary>
         /// <remarks>
@@ -83,24 +74,6 @@ namespace 学生信息管理系统.StudentsInfo {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A3;
-        
-        /// <summary>
-        /// A4 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A4;
-        
-        /// <summary>
-        /// A7 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A7;
         
         /// <summary>
         /// A10 控件。

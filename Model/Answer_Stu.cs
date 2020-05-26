@@ -14,5 +14,8 @@ namespace Model
         public  string Resist { set; get; }
         public DateTime Time { set; get; }
         public string HwState { set; get; }
+        //--
+        public string StuName { set; get; }
+        public string ClassId { set; get; }
     }
 }

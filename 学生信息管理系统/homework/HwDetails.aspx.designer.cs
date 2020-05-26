@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace 学生信息管理系统.StudentsInfo {
+namespace 学生信息管理系统.homework {
     
     
-    public partial class stu_index {
+    public partial class HwDetails {
         
         /// <summary>
         /// form1 控件。
@@ -22,102 +22,84 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// lb_tuichu 控件。
+        /// ScriptManager1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lb_tuichu;
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// lb_lianxi 控件。
+        /// UpdatePanel1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lb_lianxi;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// lb_index 控件。
+        /// ddlclass 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lb_index;
+        protected global::System.Web.UI.WebControls.DropDownList ddlclass;
         
         /// <summary>
-        /// lb_user 控件。
+        /// txt_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_user;
+        protected global::System.Web.UI.WebControls.TextBox txt_name;
         
         /// <summary>
-        /// lb_time 控件。
+        /// btn_searchstu 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lb_time;
+        protected global::System.Web.UI.WebControls.Button btn_searchstu;
         
         /// <summary>
-        /// A2 控件。
+        /// txt_StuId 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A2;
+        protected global::System.Web.UI.WebControls.TextBox txt_StuId;
         
         /// <summary>
-        /// A3 控件。
+        /// btn_SearchStuId 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A3;
+        protected global::System.Web.UI.WebControls.Button btn_SearchStuId;
         
         /// <summary>
-        /// A4 控件。
+        /// Repeater1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A4;
+        protected global::System.Web.UI.WebControls.Repeater Repeater1;
         
         /// <summary>
-        /// A7 控件。
+        /// Repeater2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A7;
-        
-        /// <summary>
-        /// A10 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A10;
-        
-        /// <summary>
-        /// A11 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A11;
+        protected global::System.Web.UI.WebControls.Repeater Repeater2;
     }
 }
