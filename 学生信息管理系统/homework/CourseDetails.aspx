@@ -6,6 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../js/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title></title>
     <style>
         .btn{
@@ -42,7 +46,14 @@
             document.getElementById('KqInfo').style.display = "block";
         }
     </script>
-    
+    <script type="text/javascript">
+            $(function(){
+                $('.modleDailog').modal("hide");
+            });
+            function values(ID){
+                $('#ggcontent').html(ID);
+            }
+        </script>
         <div class="box" >
             <button id="Button0" class="btn btn-info"  onclick="GG()" >课程公告</button>
             <button id="Button1" class="btn btn-info"  onclick="StuInfo()" >查看学生信息</button>
@@ -59,13 +70,13 @@
              <div>
               <asp:Repeater ID="Repeater3" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:90%;margin-left:20px;">
                         <tr class="table-bordered table-condensed info text-center"  >
                              <th style="text-align:center">序号</th>
                             <th style="text-align:center">标题</th>
-                            <th style="text-align:center">内容</th>
                             <th style="text-align:center">发布人</th>
                             <th style="text-align:center">发布时间</th>
+                            <th style="text-align:center">详情</th>
                             <th style="text-align:center">操作</th>
                         </tr>
                 </HeaderTemplate>
@@ -73,9 +84,9 @@
                     <tr class="table-responsive table-bordered table-condensed">
                              <td><%# Eval("xh")%></td>
                              <td><%# Eval("GGHead")%></td>
-                             <td><%# Eval("GGContent")%></td>
                              <td><%# Eval("TeaName")%></td>
                             <td><%# Eval("Time")%></td>
+                            <td><asp:LinkButton ID="LinkButton1" CommandName="past" CommandArgument='<%# Eval("GGContent")%>' data-toggle="modal" data-target="#exampleModal" runat="server" OnClientClick='<%#Eval("GGContent", "values(\"{0}\")")%>' >查看详情</asp:LinkButton></td>
                              <td><asp:LinkButton ID="btnDel" CommandArgument='<%#Eval("Id")%>' OnClientClick="return confirm('确认删除该记录么？')"  OnClick="btnDel_Click"
                 runat="server">删除公告</asp:LinkButton></td>
                     </tr>
@@ -85,6 +96,29 @@
                 </FooterTemplate>
             </asp:Repeater>
                 </div>
+      <%--模态框--%>
+             <div class="modal fade modleDailog" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+           <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="exampleModalLabel">公告详情</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p id="ggcontent" style="text-indent:2em;font-size:16px;">
+
+                    </p>    
+                </div>
+                <div class="modal-footer">
+                    <asp:Button ID="Button4" class="btn btn-secondary" data-dismiss="modal" runat="server" Text="关闭" />
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+
         </div>
         <div id="StuInfo" style="display:none;" >
             <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True">
