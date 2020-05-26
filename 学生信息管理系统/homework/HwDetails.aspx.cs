@@ -71,5 +71,11 @@ namespace 学生信息管理系统.homework
             Repeater1.DataBind();
         }
 
+        protected void btnLook_Click(object sender, EventArgs e)
+        {
+            int HwId = Convert.ToInt32(Request.Params["HwId"]);
+            int StuId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
+            Response.Redirect("~/homework/HwCheck.aspx/?HwId=" + HwId + "&StuId=" + StuId);
+        }
     }
 }

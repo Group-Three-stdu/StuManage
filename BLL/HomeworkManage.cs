@@ -35,7 +35,10 @@ namespace BLL
         /// <param name="ans"></param>
         /// <returns></returns>
         public int SubmitHw(Answer_Stu ans)
-        {
+        { 
+            int res = new HomeworkService().queryHasSubmited(ans.StuId, ans.HwId);
+            if (res > 0)
+                return -1;
             int result = new HomeworkService().SubmitHw(ans);
             if (result > 0)
                 return new HomeworkService().alterFinishNum(ans.HwId);
@@ -82,6 +85,33 @@ namespace BLL
                 stuList.Add(new StudentService().queryStuById(stu.StuId));
             }
             return stuList;
+        }
+
+        /// <summary>
+        /// 查询学生的答案
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <param name="HwId"></param>
+        /// <returns></returns>
+        public Answer_Stu queryStuAnsByStuId(int StuId, int HwId)
+        {
+            return new HomeworkService().queryStuAnsByStuId(StuId, HwId);
+        }
+
+        /// <summary>
+        /// 教师批阅作业
+        /// </summary>
+        /// <param name="Grade"></param>
+        /// <param name="Resist"></param>
+        /// <param name="StuId"></param>
+        /// <param name="HwId"></param>
+        /// <returns></returns>
+        public int TeaCheckAns(string Grade, string Resist, int StuId, int HwId)
+        {
+            int result = new HomeworkService().TeaCheckAns(Grade,Resist,StuId, HwId);
+            if (result > 0)
+                return new HomeworkService().TeaChangeAnsSta(StuId, HwId);
+            else return 0;
         }
     }
 }

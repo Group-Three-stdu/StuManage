@@ -135,6 +135,7 @@
     <Content Include="css\StyleSheet.css" />
     <Content Include="GG\fabu_gg.aspx" />
     <Content Include="homework\fabu_zuoye.aspx" />
+    <Content Include="homework\HwCheck.aspx" />
     <Content Include="homework\HwDetails.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
@@ -826,6 +827,7 @@
     <Content Include="resource\ckfinder\skins\v1\uipanel.css" />
     <Content Include="resource\ckfinder\translations.txt" />
     <Content Include="Score\jiaowuchu_lookscore.aspx" />
+    <Content Include="Score\StuScore.aspx" />
     <Content Include="Score\TeaCourse.aspx" />
     <Content Include="Score\TeaScore.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
@@ -970,6 +972,13 @@
     <Compile Include="homework\fabu_zuoye.aspx.designer.cs">
       <DependentUpon>fabu_zuoye.aspx</DependentUpon>
     </Compile>
+    <Compile Include="homework\HwCheck.aspx.cs">
+      <DependentUpon>HwCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\HwCheck.aspx.designer.cs">
+      <DependentUpon>HwCheck.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homework\HwDetails.aspx.cs">
       <DependentUpon>HwDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1039,6 +1048,13 @@
     </Compile>
     <Compile Include="Score\jiaowuchu_lookscore.aspx.designer.cs">
       <DependentUpon>jiaowuchu_lookscore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\StuScore.aspx.cs">
+      <DependentUpon>StuScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\StuScore.aspx.designer.cs">
+      <DependentUpon>StuScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="Score\TeaCourse.aspx.cs">
       <DependentUpon>TeaCourse.aspx</DependentUpon>
