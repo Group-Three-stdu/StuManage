@@ -798,6 +798,8 @@
     <Content Include="Score\TeaScore.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
+    <Content Include="StudentsInfo\guanliyuan_index.aspx" />
+    <Content Include="StudentsInfo\guanliyuan_stuperinfo.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_stuperinfo.aspx" />
@@ -1003,6 +1005,20 @@
     </Compile>
     <Compile Include="StudentsInfo\alter_stuperinfo.aspx.designer.cs">
       <DependentUpon>alter_stuperinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_index.aspx.cs">
+      <DependentUpon>guanliyuan_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_index.aspx.designer.cs">
+      <DependentUpon>guanliyuan_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_stuperinfo.aspx.cs">
+      <DependentUpon>guanliyuan_stuperinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_stuperinfo.aspx.designer.cs">
+      <DependentUpon>guanliyuan_stuperinfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

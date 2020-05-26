@@ -15,9 +15,8 @@
 
         <div class="login-pic" style="border-radius:10px;">
             <br />
-             &nbsp;&nbsp;welcome <br /><br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            学生信息管理系统
+             &nbsp;&nbsp;welcome <br />&nbsp; 学生信息<br />
+&nbsp; 管理系统
             <hr style="height:240px;width:0.5px;margin-left:100%;margin-top:-160px;color:aqua;" />
         </div>
         <div style="background-color:white;height:250px;width:100%;border-radius:10px;">
