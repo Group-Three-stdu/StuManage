@@ -801,7 +801,9 @@
     <Content Include="resource\ckfinder\translations.txt" />
     <Content Include="Score\jiaowuchu_lookscore.aspx" />
     <Content Include="Score\TeaCourse.aspx" />
+    <Content Include="Score\Tea_look_score.aspx" />
     <Content Include="Score\TeaScore.aspx" />
+    <Content Include="Score\Tea_look_score1.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
@@ -1003,12 +1005,26 @@
     <Compile Include="Score\TeaCourse.aspx.designer.cs">
       <DependentUpon>TeaCourse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Score\Tea_look_score.aspx.cs">
+      <DependentUpon>Tea_look_score.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\Tea_look_score.aspx.designer.cs">
+      <DependentUpon>Tea_look_score.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Score\TeaScore.aspx.cs">
       <DependentUpon>TeaScore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Score\TeaScore.aspx.designer.cs">
       <DependentUpon>TeaScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\Tea_look_score1.aspx.cs">
+      <DependentUpon>Tea_look_score1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\Tea_look_score1.aspx.designer.cs">
+      <DependentUpon>Tea_look_score1.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\alter_StudentInfo.aspx.cs">
       <DependentUpon>alter_StudentInfo.aspx</DependentUpon>
