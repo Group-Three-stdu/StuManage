@@ -48,16 +48,33 @@
            <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">课程安排</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                    <asp:TextBox ID="courseId"  runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_season" placeholder="课程学期" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_time" placeholder="上课时间" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txt_add" placeholder="上课地点" runat="server"></asp:TextBox>
+                    课程编号：<asp:TextBox ID="courseId"  runat="server"></asp:TextBox><br /><br />
+                    开课学期：
+                    <asp:DropDownList ID ="season" runat="server">
+                        <asp:ListItem>2020春</asp:ListItem>
+                    </asp:DropDownList><br /><br />
+                    上课时间：
+                    <asp:DropDownList ID="Day" runat="server">
+                        <asp:ListItem>周一</asp:ListItem>
+                        <asp:ListItem>周二</asp:ListItem>
+                        <asp:ListItem>周三</asp:ListItem>
+                        <asp:ListItem>周四</asp:ListItem>
+                        <asp:ListItem>周五</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="Time" runat="server">
+                        <asp:ListItem>一二节</asp:ListItem>
+                        <asp:ListItem>三四节</asp:ListItem>
+                        <asp:ListItem>五六节</asp:ListItem>
+                        <asp:ListItem>七八节</asp:ListItem>
+                        <asp:ListItem>九十节</asp:ListItem>
+                    </asp:DropDownList><br /><br />
+                    上课地点：<asp:TextBox ID="txt_add"  runat="server"></asp:TextBox>
                 </div>
                 <div class="modal-footer">
                     <asp:Button ID="Button4" class="btn btn-secondary" data-dismiss="modal" runat="server" Text="关闭" />

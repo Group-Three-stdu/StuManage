@@ -50,8 +50,8 @@ namespace 学生信息管理系统.course
             int CourseId = Convert.ToInt32(Request.Form["courseId"]);
             CourseMana course = new CourseMana();
             CourseManege bll = new CourseManege();
-            course.Season = Request.Form["txt_season"];
-            course.Time = Request.Form["txt_time"];
+            course.Season = season.SelectedItem.Text.Trim();
+            course.Time = Day.SelectedItem.Text.Trim()+ Time.SelectedItem.Text.Trim();
             course.CourseAdd = Request.Form["txt_add"];
             if(bll.checkCourseToY(CourseId, course)==1)
             {
