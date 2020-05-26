@@ -137,6 +137,8 @@
     <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\HwCheck.aspx" />
     <Content Include="homework\HwDetails.aspx" />
+    <Content Include="homework\lookcheckedHw.aspx" />
+    <Content Include="homework\lookfinishedHw.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
     <Content Include="homework\zuoye_tijiao.aspx" />
@@ -989,6 +991,20 @@
     </Compile>
     <Compile Include="homework\HwDetails.aspx.designer.cs">
       <DependentUpon>HwDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\lookcheckedHw.aspx.cs">
+      <DependentUpon>lookcheckedHw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\lookcheckedHw.aspx.designer.cs">
+      <DependentUpon>lookcheckedHw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\lookfinishedHw.aspx.cs">
+      <DependentUpon>lookfinishedHw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\lookfinishedHw.aspx.designer.cs">
+      <DependentUpon>lookfinishedHw.aspx</DependentUpon>
     </Compile>
     <Compile Include="homework\TeaLookHw.aspx.cs">
       <DependentUpon>TeaLookHw.aspx</DependentUpon>

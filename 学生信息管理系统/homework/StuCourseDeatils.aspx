@@ -67,6 +67,21 @@
             document.getElementById('HwInfo').style.display = "none";
             document.getElementById('KqInfo').style.display = "block";
         }
+        function unfinished() {
+            document.getElementById('unfinished').style.display = "block";
+            document.getElementById('finished').style.display = "none";
+            document.getElementById('checked').style.display = "none";
+        }
+         function finished() {
+            document.getElementById('unfinished').style.display = "none";
+            document.getElementById('finished').style.display = "block";
+            document.getElementById('checked').style.display = "none";
+        }
+        function checked() {
+            document.getElementById('unfinished').style.display = "none";
+            document.getElementById('finished').style.display = "none";
+            document.getElementById('checked').style.display = "block";
+        }
     </script>
     
         <div class="box" >
@@ -126,11 +141,15 @@
             </div>
         </div>
 
-        <div  id="HwInfo" style="display:none;">      
-            <div >     
-           <asp:DataList ID="DataList1" runat="server" RepeatColumns="4">
+        <div  id="HwInfo" style="display:none;">       
+             <div class="box" >
+                <button type="button"  class="btn btn-info"  onclick="unfinished()" >查看未完成作业</button>
+                <button type="button" class="btn btn-info"  onclick="finished()" >查看已完成作业</button>
+                <button type="button" class="btn btn-info"  onclick="checked()" >查看已批阅作业</button>
+            </div>          
+            <div id="unfinished" >
+                <asp:DataList ID="DataList1" runat="server" RepeatColumns="4">
                 <ItemTemplate>
-                    
                     <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4;margin:5px" >
                         <h1><span style=""> <%# Eval("HwHead")%></span></h1>
                         <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
@@ -147,7 +166,47 @@
                     </div>
                     </ItemTemplate>
             </asp:DataList>
+            </div>
+             <div id="finished" style="display:none;">     
+                    <asp:DataList ID="DataList3" runat="server" RepeatColumns="4">
+                        <ItemTemplate>
+                            <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4;margin:5px" >
+                                <h1><span style=""> <%# Eval("HwHead")%></span></h1>
+                                <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
+                                    <div style="margin-right:20px; margin-top:10px;">
+                                        <div style:"width:80px">开始时间： <%# Eval("StartTime")%></div> 
+                                        <div style:"width:80px">截止时间： <%# Eval("EndTime")%></div>                 
+                                    </div>             
+                                    <br />                    
+                                    <div class="style2" style="height: 50px; margin-bottom:0; ">
+                                        <asp:Button ID="finished" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#3cf;" Text="查看" Width="82px" BorderStyle="None" 
+                                            CommandArgument='<%#Eval("HwId")%>' OnClick="finished_Click"  />
+                                    </div>   
+                                </div> 
+                            </div>
+                        </ItemTemplate>
+            </asp:DataList>
                 </div>    
+            <div id="checked" style="display:none;">
+                <asp:DataList ID="DataList4" runat="server" RepeatColumns="4">
+                        <ItemTemplate>
+                            <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:180px;background-color:#F4F4F4;margin:5px" >
+                                <h1><span style=""> <%# Eval("HwHead")%></span></h1>
+                                <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
+                                    <div style="margin-right:20px; margin-top:10px;">
+                                        <div style:"width:80px">开始时间： <%# Eval("StartTime")%></div> 
+                                        <div style:"width:80px">截止时间： <%# Eval("EndTime")%></div>                 
+                                    </div>             
+                                    <br />                    
+                                    <div class="style2" style="height: 50px; margin-bottom:0; ">
+                                        <asp:Button ID="check" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#3cf;" Text="查看" Width="82px" BorderStyle="None" 
+                                            CommandArgument='<%#Eval("HwId")%>' OnClick="check_Click"  />
+                                    </div>   
+                                </div> 
+                            </div>
+                        </ItemTemplate>
+            </asp:DataList>
+            </div>
         </div>     
         <div  id="KqInfo"  style="display:none;">               
        <asp:DataList ID="DataList2" runat="server" RepeatColumns="4">
