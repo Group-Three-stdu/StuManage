@@ -36,7 +36,7 @@
             background-color:#f5f5f5;
             color:#666;
             line-height:50px;
-            border:1px solid yellow;
+            border:1px solid #ccc;
         }
         .btn{
             margin-left:1%;

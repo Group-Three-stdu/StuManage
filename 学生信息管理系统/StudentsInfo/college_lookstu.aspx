@@ -77,7 +77,7 @@
                 <HeaderTemplate>
                     <table style="margin-top:15px;" class="table table-striped table-hover text-center">
                         <tbody>
-                            <tr class="table-bordered table-condensed danger">
+                            <tr class="table-bordered table-condensed info">
                               <th class="table-bordered" style="text-align:center;">学号</th>
                               <th class="table-bordered" style="text-align:center;">姓名</th>
                               <th class="table-bordered" style="text-align:center;">性别</th>

@@ -35,7 +35,7 @@
             background-color:#f5f5f5;
             color:#666;
             line-height:50px;
-            border:1px solid yellow;
+            border:1px solid #ccc;
         }
         .btn{
             margin-left:1%;
@@ -52,8 +52,8 @@
     <form id="form1" runat="server">
     <div>
         <div class="earn">
-            以下为您的个人信息请核实，如有不正确进行修改
-            <a runat="server" target="right" href="alter_stuperinfo.aspx">立即修改</a>
+            以下为学生的个人信息：
+            
             <%--<asp:LinkButton ID="LinkButton1" runat="server">立即联系</asp:LinkButton>--%>
         </div>
         <div class="box">

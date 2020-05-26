@@ -61,7 +61,7 @@
              <div>
               <asp:Repeater ID="Repeater3" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
                         <tr class="table-bordered table-condensed info text-center"  >
                              <th style="text-align:center">序号</th>
                             <th style="text-align:center">标题</th>
@@ -104,7 +104,7 @@
              <div>
               <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
                         <tr class="table-bordered table-condensed info text-center"  >
                              <th style="text-align:center">学号</th>
                             <th style="text-align:center">姓名</th>
@@ -130,7 +130,7 @@
          </div>
         <div id ="HwInfo" style="display:none;">
             <asp:Button ID="btn_fabu_zuoye" runat="server" Text="发布作业" OnClick="btn_fabu_zuoye_Click" /><br />
-            <asp:DataList ID="DataList2" runat="server" RepeatColumns="3">
+            <asp:DataList ID="DataList2" runat="server" RepeatColumns="4">
             <ItemTemplate>
                 <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4;margin:5px;" >
                     <h1><span style=""> <%# Eval("HwHead")%></span></h1>
@@ -163,7 +163,7 @@
         <div class="content">
             <asp:Repeater ID="Repeater2" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
                         <tr class="table-bordered table-condensed info text-center"  >
                             <th style="text-align:center">序号</th>
                             <th style="text-align:center">开始时间</th>

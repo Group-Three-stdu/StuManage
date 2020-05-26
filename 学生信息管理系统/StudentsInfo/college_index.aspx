@@ -73,10 +73,10 @@
             <%--<i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 当前时间：</i>
             <asp:Label ID="lb_time" runat="server" class="lb" Text="54654456"></asp:Label>--%>
         <%--</div>--%>
-        <div class="left-nav" style="background-color:#ffa07a">
-            <div style="color:white" class="title">
+        <div class="left-nav" style="background-color:#f5f5f5">
+            <div style="color:black" class="title">
                 <span class="iconfont icon-xuesheng"></span>
-                <i style="font-style:normal;font-weight:800;color:white;font-size:16px;">学生信息管理系统</i>
+                <i style="font-style:normal;font-weight:800;color:#666;font-size:16px;">学生信息管理系统</i>
             </div>
             <ul class="menu">
                 <%--<li class="one">
@@ -92,7 +92,7 @@
                 </li>--%>
           
                 <li class="one">
-                     <div style="color:white"><i class="iconfont icon-kecheng"></i>学生信息</div>
+                     <div style="color:#666"><i class="iconfont icon-kecheng"></i>学生信息</div>
                     <ul class="sub">
                         <li>
                             <a id="A2" href="college_lookstu.aspx" runat="server" target="right">
@@ -140,7 +140,7 @@
                     </ul>
                 </li>--%>
          
-                <li class="one"><div style="color:white"><i class="iconfont icon-yonghuguanli"></i>系统设置</div>
+                <li class="one"><div style="color:#666"><i class="iconfont icon-yonghuguanli"></i>系统设置</div>
                     <ul class="sub">
                         <li>
                             <a id="A10" href="stu_alterpwd.aspx" runat="server" target="right">

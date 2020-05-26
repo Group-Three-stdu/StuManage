@@ -69,7 +69,7 @@
             <%--<i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 当前时间：</i>
             <asp:Label ID="lb_time" runat="server" class="lb" Text="54654456"></asp:Label>--%>
         </div>
-        <div class="left-nav" style="background-color:#ccffff">
+        <div class="left-nav" style="background-color:#f5f5f5">
             <div class="title">
                 <span class="iconfont icon-xuesheng"></span>
                 <i style="font-style:normal;font-weight:800;color:#666;font-size:16px;">学生信息管理系统</i>
