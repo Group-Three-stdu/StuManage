@@ -42,7 +42,7 @@
              <div>
               <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
                         <tr class="table-bordered table-condensed info text-center"  >
                              <th style="text-align:center">学号</th>
                             <th style="text-align:center">姓名</th>
@@ -74,7 +74,7 @@
             <div>
               <asp:Repeater ID="Repeater2" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
                         <tr class="table-bordered table-condensed info text-center"  >
                              <th style="text-align:center">学号</th>
                             <th style="text-align:center">姓名</th>
