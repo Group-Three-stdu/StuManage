@@ -272,5 +272,17 @@ namespace DAL
           };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
         }
+
+        //查询学生的作业情况
+        public int queryStuHwNum(int StuId,int CourseId)
+        {
+            string sql = "select count(*) as HwNum from V_Hw where StuId = @StuId and CourseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@CourseId",CourseId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
     }
 }

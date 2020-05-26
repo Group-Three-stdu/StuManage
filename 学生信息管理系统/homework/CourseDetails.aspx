@@ -54,6 +54,9 @@
                 $('#ggcontent').html(ID);
             }
         </script>
+    <div id="courseinfo">
+        <h3><asp:Literal ID="coursename" runat="server"></asp:Literal></h3>
+    </div>
         <div class="box" >
             <button id="Button0" class="btn btn-info"  onclick="GG()" >课程公告</button>
             <button id="Button1" class="btn btn-info"  onclick="StuInfo()" >查看学生信息</button>
@@ -101,7 +104,7 @@
            <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title" id="exampleModalLabel">公告详情</h4>
+                  <h4 class="modal-title" style="display:inline-block;" id="exampleModalLabel">公告详情</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -113,7 +116,6 @@
                 </div>
                 <div class="modal-footer">
                     <asp:Button ID="Button4" class="btn btn-secondary" data-dismiss="modal" runat="server" Text="关闭" />
-                  
                 </div>
               </div>
             </div>
@@ -136,12 +138,14 @@
              <div>
               <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:90%">
                         <tr class="table-bordered table-condensed info text-center"  >
                              <th style="text-align:center">学号</th>
                             <th style="text-align:center">姓名</th>
                             <th style="text-align:center">班级</th>
                             <th style="text-align:center">联系方式</th>
+                            <th style="text-align:center">作业情况</th>
+                            <th style="text-align:center">考勤情况</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -150,6 +154,8 @@
                              <td><%# Eval("StuName")%></td>
                              <td><%# Eval("ClassId")%></td>
                              <td><%# Eval("StuPhoneNum")%></td>
+                             <td>已提交：<%# Eval("HwNum")%></td>
+                             <td>已提交：<%# Eval("KqNum")%></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

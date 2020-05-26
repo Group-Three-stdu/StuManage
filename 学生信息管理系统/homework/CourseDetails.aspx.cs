@@ -18,6 +18,7 @@ namespace 学生信息管理系统.homework
             {
                 int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
                 StuNum = new CourseManege().QueryStuNum(CourseId);
+                coursename.Text = (new CourseManege().queryCourseById(CourseId)).CourseName;
                 List<Model.Class> clalist = new CourseManege().queryClassByCourseId(CourseId);
                 string ClassId;
                 foreach (Class Class in clalist)
@@ -26,6 +27,11 @@ namespace 学生信息管理系统.homework
                     ddlclass.Items.Add(ClassId);
                 }
                 List<Students> stulist = new StudentManage().queryStudentByCourseId(CourseId);
+                foreach(Students stu in stulist)
+                {
+                    stu.KqNum = new KqManage().queryStuKqNum(stu.StuId, CourseId);
+                    stu.HwNum = new HomeworkManage().queryStuHwNum(stu.StuId, CourseId);
+                }
                 Repeater1.DataSource = stulist;
                 Repeater1.DataBind();
                 List<Homework> HwList = new HomeworkManage().queryAllHKByTea(CourseId);

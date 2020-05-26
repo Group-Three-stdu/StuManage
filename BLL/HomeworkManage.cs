@@ -113,5 +113,16 @@ namespace BLL
                 return new HomeworkService().TeaChangeAnsSta(StuId, HwId);
             else return 0;
         }
+
+        /// <summary>
+        /// 查询学生的作业情况
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public int queryStuHwNum(int StuId, int CourseId)
+        {
+            return new HomeworkService().queryStuHwNum(StuId, CourseId);
+        }
     }
 }
