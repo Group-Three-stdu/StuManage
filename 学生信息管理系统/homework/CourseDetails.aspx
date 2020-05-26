@@ -51,9 +51,7 @@
         </div>
     <hr />
     <form id="form1" runat="server">
-            <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true">
-
-        </asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true"></asp:ScriptManager>
         <div id="GG">
             <div>
                 <asp:Button ID="fabu_GG" runat="server" Text="发布公告" OnClick="fabu_GG_Click" />

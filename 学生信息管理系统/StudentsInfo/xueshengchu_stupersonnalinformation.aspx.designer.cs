@@ -22,6 +22,15 @@ namespace 学生信息管理系统 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// ScriptManager1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
         /// ddlxueyuan 控件。
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace 学生信息管理系统 {
         protected global::System.Web.UI.WebControls.TextBox txt_name;
         
         /// <summary>
+        /// txt_id 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_id;
+        
+        /// <summary>
         /// btn_searchstu 控件。
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace 学生信息管理系统 {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_searchstu;
+        
+        /// <summary>
+        /// UpdatePanel1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
         /// Repeater1 控件。
