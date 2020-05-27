@@ -42,6 +42,7 @@ namespace 学生信息管理系统.homework
                 Response.Write("<script>window.alert('签到成功！');</script>");
                 //Label lb = DataList2.Items[0].FindControl("Label1") as Label;
                 //lb.Text = "已签到";
+                
             }
                 
             if(result!=1)

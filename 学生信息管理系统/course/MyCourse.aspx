@@ -23,7 +23,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:DataList ID="DataList1" runat="server" RepeatColumns="3">
+        <asp:DataList ID="DataList1" runat="server" RepeatColumns="4">
             <ItemTemplate>
                 <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:192px;background-color:#F4F4F4;margin-left:10px;" >
                     <h1><span style=""> <%# Eval("CourseName")%></span></h1>
