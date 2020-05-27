@@ -15,17 +15,17 @@
     <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True">
             <ContentTemplate>
                  <div class="top">          
-                学期：<asp:DropDownList ID="ddlseason" class="select" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlseason_SelectedIndexChanged" >
+                学期：<asp:DropDownList ID="ddlseason" class="select" Width="20%" style="display:inline-block" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlseason_SelectedIndexChanged" >
                             <asp:ListItem>请选择</asp:ListItem>
                         </asp:DropDownList>
-                课程名：<asp:TextBox ID="txt_name" runat="server" class="input"></asp:TextBox>
-                <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询" OnClick="btn_searchstu_Click" />              
-                 <asp:Button ID="ToExcel" runat="server" Text="导出到excel"/>
+                课程名：<asp:TextBox ID="txt_name" style="display:inline-block" runat="server" CssClass="form-control" Width="20%" class="input"></asp:TextBox>
+                <asp:Button ID="btn_searchstu" runat="server" class="btn btn-info" Text="查询" OnClick="btn_searchstu_Click" />              
+                 <asp:Button ID="ToExcel" CssClass="btn btn-info" runat="server" Text="导出到excel"/>
             </div>
             <div>
               <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:90%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
                         <tr class="table-bordered table-condensed info text-center"  >
                             <th style="text-align:center">课程名</th>
                             <th style="text-align:center">学院</th>

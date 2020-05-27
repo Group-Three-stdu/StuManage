@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -28,7 +29,7 @@
             最终成绩：<asp:TextBox ID="new_FinalScore" runat="server" ReadOnly="true"></asp:TextBox><br />
         </div>
         <div class="btn">
-            <asp:Button ID="btn_change" runat="server" Text="确认修改" OnClick="btn_change_Click"/>&nbsp; &nbsp; &nbsp; &nbsp;
+            <asp:Button ID="btn_change" CssClass="btn btn-info" runat="server" Text="确认修改" OnClick="btn_change_Click"/>&nbsp; &nbsp; &nbsp; &nbsp;
             <asp:Button ID="btn_back" runat="server" Text="返回" />
         </div>
     </div>
