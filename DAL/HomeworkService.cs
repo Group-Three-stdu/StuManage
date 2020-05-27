@@ -40,6 +40,37 @@ namespace DAL
         }
 
         /// <summary>
+        /// 查看未完成的作业
+        /// </summary>
+        /// <param name="CourseId"></param>
+        /// <param name="StuId"></param>
+        /// <returns></returns>
+        public List<Homework> queryUnfinishedHw(int CourseId,int StuId)
+        {
+            string sql = "select HwId,StartTime,EndTime,HwContent,CourseId,HwHead from Homework where CourseId = @CourseId and HwId  not in (Select distinct HwId from V_Hw where StuId = @StuId )";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId),
+                new SqlParameter("@StuId",StuId)
+            };
+            List<Homework> hklist = new List<Homework>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                hklist.Add(new Homework()
+                {
+                    HwId = Convert.ToInt32(result["HwId"]),
+                    StartTime = Convert.ToDateTime(result["StartTime"]),
+                    EndTime = Convert.ToDateTime(result["EndTime"]),
+                    HwContent = result["HwContent"].ToString(),
+                    CourseId = CourseId,
+                    HwHead = result["HwHead"].ToString()
+                });
+            }
+            return hklist;
+        }
+
+        /// <summary>
         /// 查看作业细节
         /// </summary>
         /// <param name="HwId"></param>
@@ -271,6 +302,70 @@ namespace DAL
                 new SqlParameter("@HwId",HwId)
           };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
+
+        //查询学生的作业情况
+        public int queryStuHwNum(int StuId,int CourseId)
+        {
+            string sql = "select count(*) as HwNum from V_Hw where StuId = @StuId and CourseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@CourseId",CourseId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
+
+        // 查询已完成但未审批的作业
+        public List<Homework> queryfinishedHw(int CourseId, int StuId)
+        {
+            string sql = "select Homework.HwId,StartTime,EndTime,HwContent,CourseId,HwHead,Answer,Time from Homework join Answer_Stu on Homework.HwId = Answer_Stu.HwId where HwState = 'W' and CourseId = @CourseId and StuId = @StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId),
+                new SqlParameter("@StuId",StuId)
+            };
+            List<Homework> hklist = new List<Homework>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                hklist.Add(new Homework()
+                {
+                    HwId = Convert.ToInt32(result["HwId"]),
+                    StartTime = Convert.ToDateTime(result["StartTime"]),
+                    EndTime = Convert.ToDateTime(result["EndTime"]),
+                    HwContent = result["HwContent"].ToString(),
+                    CourseId = CourseId,
+                    HwHead = result["HwHead"].ToString()
+                });
+            }
+            return hklist;
+        }
+
+        // 查询已未审批的作业
+        public List<Homework> querycheckedHw(int CourseId, int StuId)
+        {
+            string sql = "select Homework.HwId,StartTime,EndTime,HwContent,CourseId,HwHead,Answer,Time from Homework join Answer_Stu on Homework.HwId = Answer_Stu.HwId where HwState = 'F' and CourseId = @CourseId and StuId = @StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId),
+                new SqlParameter("@StuId",StuId)
+            };
+            List<Homework> hklist = new List<Homework>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                hklist.Add(new Homework()
+                {
+                    HwId = Convert.ToInt32(result["HwId"]),
+                    StartTime = Convert.ToDateTime(result["StartTime"]),
+                    EndTime = Convert.ToDateTime(result["EndTime"]),
+                    HwContent = result["HwContent"].ToString(),
+                    CourseId = CourseId,
+                    HwHead = result["HwHead"].ToString()
+                });
+            }
+            return hklist;
         }
     }
 }

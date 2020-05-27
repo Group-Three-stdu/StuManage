@@ -127,5 +127,17 @@ namespace DAL
             }
             return StuList;
         }
+
+        //查看学生某门课考勤情况
+        public int queryStuKqNum(int StuId,int CourseId)
+        {
+            string sql = "select count(*) as KqNum from V_kq where StuId = @StuId and CourseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@CourseId",CourseId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
     }
 }

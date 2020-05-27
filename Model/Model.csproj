@@ -136,6 +136,7 @@
     <Compile Include="Major.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Score.cs" />
+    <Compile Include="ScoreExt.cs" />
     <Compile Include="Students.cs" />
     <Compile Include="Teacher.cs" />
     <Compile Include="XTGG.cs" />

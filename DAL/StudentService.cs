@@ -116,15 +116,15 @@ namespace DAL
                " from Students join XY on Students.College=XY.College " +
                 " join ZY on Students.Major=ZY.Major where 1=1";
             if (StuId != 0)
-                sql += " and StuId=" +StuId;
+                sql += " and StuId LIKE '%" + StuId + "%'";
             if (StuName != "")
-                sql += " and StuName='" + StuName + "'";
+                sql += " and StuName  LIKE '%" + StuName + "%'";
             if (ClassId != "")
-                sql += " and ClassId='" + ClassId + "'";
+                sql += " and Students.ClassId='" + ClassId + "'";
             if(College!="")
-                sql += " and College='" + College + "'";
+                sql += " and Students.College='" + College + "'";
             if(Major!="")
-                sql += " and Major='" + Major + "'";
+                sql += " and Students.Major='" + Major + "'";
             List<Students> stulist = new List<Students>();
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql,  false);
             while (result.Read())
@@ -198,7 +198,7 @@ namespace DAL
         {
             string sql = "select StuId,StuName, StuSex, StuBirth, StuNoId, StuPhoneNum, StuAdd, ClassId, StuHonor, Students.Major, Students.College,StuState,Punish,PoliticalStatus, CollegeName,MajorName" +
                " from Students join XY on Students.College=XY.College " +
-                " join ZY on Students.Major=ZY.Major where CollegeName=@College";
+                " join ZY on Students.Major=ZY.Major where Students.College=@College";
             List<Students> stulist = new List<Students>();
             SqlParameter[] param = new SqlParameter[]
             {

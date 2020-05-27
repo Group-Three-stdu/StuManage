@@ -74,5 +74,15 @@ namespace BLL
         {
             return new KqService().queryCheckedStu(KQId);
         }
+        /// <summary>
+        /// 查看考勤次数
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public int queryStuKqNum(int StuId, int CourseId)
+        {
+            return new KqService().queryStuKqNum(StuId, CourseId);
+        }
     }
 }

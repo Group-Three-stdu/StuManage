@@ -20,7 +20,7 @@ namespace BLL
         {
             return new StudentService().queryStuByClassId(classId);
         }
-        //通过学院编号查询信息
+        //通过学院名称查询信息
         public List<Students> QueryStuByCollege(string College)
         {
             return new StudentService().queryStuByCollege(College);

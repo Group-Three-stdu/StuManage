@@ -6,26 +6,32 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <script src="../js/jquery.min.js"></script>
 </head>
 <body>
+    <script>
+    </script>
     <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true"></asp:ScriptManager>
     <div>
         <div class="top">
-            学院：<asp:DropDownList ID="ddlxueyuan" class="select" runat="server">
+            学院：<asp:DropDownList ID="ddlxueyuan" class="select" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlxueyuan_SelectedIndexChanged">
                 <asp:ListItem>请选择</asp:ListItem>
             </asp:DropDownList>
             
-            专业：<asp:DropDownList ID="ddlmajor" class="select" runat="server" >
+            专业：<asp:DropDownList ID="ddlmajor" class="select" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlmajor_SelectedIndexChanged" >
                 <asp:ListItem>请选择</asp:ListItem>
             </asp:DropDownList>
             
-            班级：<asp:DropDownList ID="ddlclass" class="select" runat="server" >
+            班级：<asp:DropDownList ID="ddlclass" class="select" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlclass_SelectedIndexChanged" >
                 <asp:ListItem>请选择</asp:ListItem>
             </asp:DropDownList>
             姓名：<asp:TextBox ID="txt_name" runat="server" class="input" placeholder="学号或姓名"></asp:TextBox>
+            学号：<asp:TextBox ID="txt_id" runat="server"></asp:TextBox>
             <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询" OnClick="btn_searchstu_Click" />
-
-        </div>
+            </div>     
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" ChildrenAsTriggers="True">
+        <ContentTemplate>
                 <div class="content">
             <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
@@ -66,6 +72,8 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
+        </ContentTemplate>
+        </asp:UpdatePanel>
     </div>
     </form>
 </body>

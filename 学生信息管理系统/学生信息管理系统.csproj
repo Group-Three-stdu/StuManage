@@ -137,6 +137,8 @@
     <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\HwCheck.aspx" />
     <Content Include="homework\HwDetails.aspx" />
+    <Content Include="homework\lookcheckedHw.aspx" />
+    <Content Include="homework\lookfinishedHw.aspx" />
     <Content Include="homework\TeaLookHw.aspx" />
     <Content Include="homework\StuCourseDeatils.aspx" />
     <Content Include="homework\zuoye_tijiao.aspx" />
@@ -826,10 +828,13 @@
     <Content Include="resource\ckfinder\skins\v1\skin.js" />
     <Content Include="resource\ckfinder\skins\v1\uipanel.css" />
     <Content Include="resource\ckfinder\translations.txt" />
+    <Content Include="Score\ChangeScore.aspx" />
     <Content Include="Score\jiaowuchu_lookscore.aspx" />
     <Content Include="Score\StuScore.aspx" />
     <Content Include="Score\TeaCourse.aspx" />
+    <Content Include="Score\Tea_look_score.aspx" />
     <Content Include="Score\TeaScore.aspx" />
+    <Content Include="Score\Tea_look_score1.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\college_index.aspx" />
@@ -988,6 +993,20 @@
     <Compile Include="homework\HwDetails.aspx.designer.cs">
       <DependentUpon>HwDetails.aspx</DependentUpon>
     </Compile>
+    <Compile Include="homework\lookcheckedHw.aspx.cs">
+      <DependentUpon>lookcheckedHw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\lookcheckedHw.aspx.designer.cs">
+      <DependentUpon>lookcheckedHw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="homework\lookfinishedHw.aspx.cs">
+      <DependentUpon>lookfinishedHw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homework\lookfinishedHw.aspx.designer.cs">
+      <DependentUpon>lookfinishedHw.aspx</DependentUpon>
+    </Compile>
     <Compile Include="homework\TeaLookHw.aspx.cs">
       <DependentUpon>TeaLookHw.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1044,6 +1063,13 @@
     <Compile Include="qiandao\stu_qiandao.aspx.designer.cs">
       <DependentUpon>stu_qiandao.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Score\ChangeScore.aspx.cs">
+      <DependentUpon>ChangeScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\ChangeScore.aspx.designer.cs">
+      <DependentUpon>ChangeScore.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Score\jiaowuchu_lookscore.aspx.cs">
       <DependentUpon>jiaowuchu_lookscore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1065,12 +1091,26 @@
     <Compile Include="Score\TeaCourse.aspx.designer.cs">
       <DependentUpon>TeaCourse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Score\Tea_look_score.aspx.cs">
+      <DependentUpon>Tea_look_score.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\Tea_look_score.aspx.designer.cs">
+      <DependentUpon>Tea_look_score.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Score\TeaScore.aspx.cs">
       <DependentUpon>TeaScore.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Score\TeaScore.aspx.designer.cs">
       <DependentUpon>TeaScore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Score\Tea_look_score1.aspx.cs">
+      <DependentUpon>Tea_look_score1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Score\Tea_look_score1.aspx.designer.cs">
+      <DependentUpon>Tea_look_score1.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\alter_StudentInfo.aspx.cs">
       <DependentUpon>alter_StudentInfo.aspx</DependentUpon>

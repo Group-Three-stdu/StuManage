@@ -13,13 +13,25 @@ namespace 学生信息管理系统.homework
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int StuId = ((Model.Login)Session["CurrentUser"]).UserName;
             int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
-            List<Homework> hkList = new HomeworkManage().ShowStuHK(CourseId);
-            DataList1.DataSource = hkList;
+            //绑定未完成作业
+            List<Homework> ufhkList = new HomeworkManage().queryUnfinishedHw(CourseId,StuId);
+            DataList1.DataSource = ufhkList;
             DataList1.DataBind();
+            //绑定已完成作业
+            List<Homework> fhkList = new HomeworkManage().queryfinishedHw(CourseId, StuId);
+            DataList3.DataSource = fhkList;
+            DataList3.DataBind();
+            //绑定已审批作业
+            List<Homework> chkList = new HomeworkManage().queryfinishedHw(CourseId, StuId);
+            DataList4.DataSource = chkList;
+            DataList4.DataBind();
+            //绑定考勤
             List<KQ> KqList = new KqManage().queryAllKq(CourseId);
             DataList2.DataSource = KqList;
             DataList2.DataBind();
+            //绑定公告
             List<JXGG> gglist = new GGManage().LookJXGG(CourseId);
             Repeater3.DataSource = gglist;
             Repeater3.DataBind();
@@ -47,6 +59,21 @@ namespace 学生信息管理系统.homework
                 
             if(result!=1)
                 Response.Write("<script>window.alert('请勿重复签到！');</script>");
+        }
+
+        //已完成作业查看
+        protected void finished_Click(object sender, EventArgs e)
+        {
+            int HwId = Convert.ToInt32(((Button)sender).CommandArgument);
+            int StuId = ((Model.Login)Session["CurrentUser"]).UserName;
+            Response.Redirect("~/homework/lookfinishedHw.aspx/?HwId=" + HwId+"&StuId="+StuId);
+        }
+        //查看已批阅作业
+        protected void check_Click(object sender, EventArgs e)
+        {
+            int HwId = Convert.ToInt32(((Button)sender).CommandArgument);
+            int StuId = ((Model.Login)Session["CurrentUser"]).UserName;
+            Response.Redirect("~/homework/lookcheckedHw.aspx/?HwId=" + HwId + "&StuId=" + StuId);
         }
     }
 }
