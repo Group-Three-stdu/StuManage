@@ -839,6 +839,13 @@
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\college_index.aspx" />
     <Content Include="StudentsInfo\college_lookstu.aspx" />
+    <Content Include="StudentsInfo\guanliyuan_index.aspx" />
+    <Content Include="StudentsInfo\guanliyuan_stuperinfo.aspx" />
+    <Content Include="StudentsInfo\guanliyuan_teacher.aspx" />
+    <Content Include="StudentsInfo\guanliyuan_xueshengchu.aspx" />
+    <Content Include="StudentsInfo\guanli_bangongshi.aspx" />
+    <Content Include="StudentsInfo\guanli_jiaowuchu.aspx" />
+    <Content Include="StudentsInfo\guanli_sys.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_stuperinfo.aspx" />
@@ -1139,6 +1146,55 @@
     </Compile>
     <Compile Include="StudentsInfo\college_lookstu.aspx.designer.cs">
       <DependentUpon>college_lookstu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_index.aspx.cs">
+      <DependentUpon>guanliyuan_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_index.aspx.designer.cs">
+      <DependentUpon>guanliyuan_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_stuperinfo.aspx.cs">
+      <DependentUpon>guanliyuan_stuperinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_stuperinfo.aspx.designer.cs">
+      <DependentUpon>guanliyuan_stuperinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_teacher.aspx.cs">
+      <DependentUpon>guanliyuan_teacher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_teacher.aspx.designer.cs">
+      <DependentUpon>guanliyuan_teacher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_xueshengchu.aspx.cs">
+      <DependentUpon>guanliyuan_xueshengchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanliyuan_xueshengchu.aspx.designer.cs">
+      <DependentUpon>guanliyuan_xueshengchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanli_bangongshi.aspx.cs">
+      <DependentUpon>guanli_bangongshi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanli_bangongshi.aspx.designer.cs">
+      <DependentUpon>guanli_bangongshi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanli_jiaowuchu.aspx.cs">
+      <DependentUpon>guanli_jiaowuchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanli_jiaowuchu.aspx.designer.cs">
+      <DependentUpon>guanli_jiaowuchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\guanli_sys.aspx.cs">
+      <DependentUpon>guanli_sys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\guanli_sys.aspx.designer.cs">
+      <DependentUpon>guanli_sys.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

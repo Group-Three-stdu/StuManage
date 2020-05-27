@@ -45,6 +45,8 @@ namespace 学生信息管理系统
                     Literal1.Text = "<script type='text/javascript'>alert('登陆成功');location.href='StudentsInfo/teacherindex.aspx'</script>";
                 if (user.type == 5)
                     Literal1.Text = "<script type='text/javascript'>alert('登陆成功');location.href='StudentsInfo/college_index.aspx'</script>";
+                if (user.type == 6)
+                    Literal1.Text = "<script type='text/javascript'>alert('登陆成功');location.href='StudentsInfo/Guanliyuan_index.aspx'</script>";
             }
 
 
