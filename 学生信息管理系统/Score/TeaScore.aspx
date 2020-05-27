@@ -18,24 +18,24 @@
 <body>
     <form id="form1" runat="server">
         <div class="top">          
-                班级：<asp:DropDownList ID="ddlclass" class="select" runat="server" >
+                班级：<asp:DropDownList ID="ddlclass" CssClass="form-control" Width="10%" Height="25px" style="display:inline-block;padding-top:0px" class="select" runat="server" >
                 <asp:ListItem>请选择</asp:ListItem>
             </asp:DropDownList>
-            姓名：<asp:TextBox ID="txt_name" runat="server" class="input"></asp:TextBox>
-            <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询" OnClick="btn_searchstu_Click" />
-            学号：<asp:TextBox ID="txt_StuId" runat="server" class="input"></asp:TextBox>
-            <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询"  />
+            姓名：<asp:TextBox ID="txt_name" CssClass="form-control" Width="10%" Height="25px" style="display:inline-block;padding-top:0px" runat="server" class="input"></asp:TextBox>
+            <asp:Button ID="btn_searchstu" runat="server" Height="25px" class="btn btn-info" Text="查询" OnClick="btn_searchstu_Click" />
+            学号：<asp:TextBox ID="txt_StuId" CssClass="form-control" Width="10%" Height="25px" style="display:inline-block;padding-top:0px" runat="server" class="input"></asp:TextBox>
+            <asp:Button ID="btn_SearchStuId" runat="server" Height="25px" class="btn btn-info" Text="查询"  />
         </div>
         <div class="content">
             <div>
                 学生总数：<asp:Label ID="StuNum" runat="server" Text="Label"></asp:Label>
-               平时成绩占比：<asp:TextBox ID="TextBox1" ClientID="classratio" runat="server" OnTextChanged="TextBox1_TextChanged" AutoPostBack="True"></asp:TextBox>
-               期末成绩占比：<asp:TextBox ID="TextBox2" ClientID="matchratio" runat="server" AutoPostBack="True" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" Text="确定"  OnClick="Button1_Click" />
+               平时成绩占比：<asp:TextBox ID="TextBox1" CssClass="form-control" Width="10%" Height="25px" style="display:inline-block;padding-top:0px" ClientID="classratio" runat="server" OnTextChanged="TextBox1_TextChanged" AutoPostBack="True"></asp:TextBox>
+               期末成绩占比：<asp:TextBox ID="TextBox2" CssClass="form-control" Width="10%" Height="25px" style="display:inline-block;padding-top:0px" ClientID="matchratio" runat="server" AutoPostBack="True" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+                <asp:Button ID="Button1" CssClass="btn btn-info" runat="server" Height="25px" Text="确定"  OnClick="Button1_Click" />
             </div>
             <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:70%">
+                    <table class="table table-striped table-hover text-center col-8" style="width:100%">
                         <tr class="table-bordered table-condensed info text-center"  >
                             <th class="auto-style1 text-center">学号</th>
                             <th class="auto-style1 text-center">姓名</th>
@@ -59,7 +59,7 @@
                     </table>
                 </FooterTemplate>
             </asp:Repeater>
-            <asp:Button ID="Button2" runat="server" Text="提交" OnClick="Button2_Click" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn btn-info" Text="提交" OnClick="Button2_Click" />
             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
         </div>
     </form>
