@@ -37,25 +37,28 @@
     <div>
  
     </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="UserName,StuId" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="编号" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" Height="232px" Width="698px">
             <Columns>
-                <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" ReadOnly="True" />
-                <asp:BoundField DataField="PassWord" HeaderText="PassWord" SortExpression="PassWord" />
-                <asp:BoundField DataField="StuName" HeaderText="StuName" SortExpression="StuName" />
-                <asp:BoundField DataField="StuPhoneNum" HeaderText="StuPhoneNum" SortExpression="StuPhoneNum" />
-                <asp:BoundField DataField="StuId" HeaderText="StuId" ReadOnly="True" SortExpression="StuId" />
+                <asp:BoundField DataField="编号" HeaderText="编号" SortExpression="编号" ReadOnly="True" />
+                <asp:BoundField DataField="密码" HeaderText="密码" SortExpression="密码" />
+                <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />
+                <asp:BoundField DataField="电话" HeaderText="电话" SortExpression="电话" />
             </Columns>
+            <FooterStyle BackColor="White" ForeColor="#000066" />
+            <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+            <RowStyle ForeColor="#000066" />
+            <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#007DBB" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#00547E" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StulnfoConnectionString4 %>" SelectCommand="SELECT * FROM [guanlistudent]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="UserName,StuId" DataSourceID="SqlDataSource1">
-            <Columns>
-                <asp:BoundField DataField="UserName" HeaderText="UserName" ReadOnly="True" SortExpression="UserName" />
-                <asp:BoundField DataField="PassWord" HeaderText="PassWord" SortExpression="PassWord" />
-                <asp:BoundField DataField="StuName" HeaderText="StuName" SortExpression="StuName" />
-                <asp:BoundField DataField="StuPhoneNum" HeaderText="StuPhoneNum" SortExpression="StuPhoneNum" />
-                <asp:BoundField DataField="StuId" HeaderText="StuId" ReadOnly="True" SortExpression="StuId" />
-            </Columns>
-        </asp:GridView>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

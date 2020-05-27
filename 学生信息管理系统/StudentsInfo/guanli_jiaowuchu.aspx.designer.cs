@@ -10,7 +10,7 @@
 namespace 学生信息管理系统.StudentsInfo {
     
     
-    public partial class gunaliyuan_stuinfo {
+    public partial class guanli_jiaowuchu {
         
         /// <summary>
         /// form1 控件。

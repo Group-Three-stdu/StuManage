@@ -78,7 +78,37 @@
                         <li>
                             <a href="guanliyuan_stuperinfo.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                查看用户信息
+                                查看学生信息
+                            </a>
+                        </li>
+                         <li>
+                            <a href="guanliyuan_teacher.aspx" runat="server" target="right">
+                                <i class="iconfont icon-wenjuantiaocha"></i>
+                                查看老师信息
+                            </a>
+                        </li>
+                         <li>
+                            <a href="guanli_bangongshi.aspx" runat="server" target="right">
+                                <i class="iconfont icon-wenjuantiaocha"></i>
+                                查看办公室
+                            </a>
+                        </li>
+                        <li>
+                            <a href="guanliyuan_xueshengchu.aspx" runat="server" target="right">
+                                <i class="iconfont icon-wenjuantiaocha"></i>
+                                查看学生处
+                            </a>
+                        </li>
+                        <li>
+                            <a href="guanli_jiaowuchu.aspx" runat="server" target="right">
+                                <i class="iconfont icon-wenjuantiaocha"></i>
+                                查看教务处
+                            </a>
+                        </li>
+                        <li>
+                            <a href="guanli_sys.aspx" runat="server" target="right">
+                                <i class="iconfont icon-wenjuantiaocha"></i>
+                                查看系统管理员
                             </a>
                         </li>
                     </ul>
