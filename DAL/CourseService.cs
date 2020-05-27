@@ -387,7 +387,7 @@ namespace DAL
         //查询该课程的所有班级
         public List<Model.Class> queryClassByCourseId(int CourseId)
         {
-            string sql = "select ClassId from V_CourseTea where CourseId=@CourseId";
+            string sql = "select distinct ClassId from V_CourseTea where CourseId=@CourseId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseId",CourseId)
@@ -426,6 +426,26 @@ namespace DAL
                 new SqlParameter("@courseId",courseId)
             };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql,param,false));
+        }
+        
+        //查询所有学期
+        public List<CourseMana> querySeason (int StuId)
+        {
+            string sql = "select distinct Season from Courses_Stu where StuId=@StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<CourseMana> SeasonList = new List<CourseMana>();
+            while (res.Read())
+            {
+                SeasonList.Add(new CourseMana()
+                {
+                    Season = res["Season"].ToString()
+                });
+            }
+            return SeasonList;
         }
     }
 }

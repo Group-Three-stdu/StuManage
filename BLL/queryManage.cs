@@ -23,9 +23,9 @@ namespace BLL
         /// </summary>
         /// <param name="collegeId">需要查询的学院的ID</param>
         /// <returns>该学院的所有专业</returns>
-        public List<Major> querAllMaj(string collegeId)
+        public List<Major> querAllMaj(string college)
         {
-            return new queryStudentService().queryAllMajor(collegeId);
+            return new queryStudentService().queryAllMajor(college);
         }
 
         /// <summary>

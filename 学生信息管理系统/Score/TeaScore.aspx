@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TeaScore.aspx.cs" Inherits="学生信息管理系统.Score.TeaScore" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tea_shuru_Score.aspx.cs" Inherits="学生信息管理系统.Score.TeaScore" %>
 
 <!DOCTYPE html>
 

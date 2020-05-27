@@ -122,7 +122,7 @@
                             </a>
                             </li>
                             <li>
-                                <a id="A5" href="" runat="server" target="right">
+                                <a id="A5" href="~/Score/Tea_look_score.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看成绩
                             </a>

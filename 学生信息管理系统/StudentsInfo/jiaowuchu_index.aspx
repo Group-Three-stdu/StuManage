@@ -29,7 +29,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <div class="header" style="background-color:cornflowerblue;">
+        <div class="header" style="background-color:#99cccc;">
             <div class="logo">
                 <img alt="img" runat="server" src="image/touxiang.jpg" />
             </div>
@@ -47,7 +47,7 @@
             <div class="changecolor_menu">
                 <div class="now">
                     <i style="line-height:30px;font-style:normal;font-weight:800;color:#666;">&nbsp;当前主题：</i>
-                    <div class="now_back">
+                    <div class="now_back" style="background-color:#99cccc">
                         
                     </div>
                 </div>
@@ -60,16 +60,16 @@
                 </div>
             </div>
         </div>
-        <div class="header_bottom">
+        <div class="header_bottom" style="background-color:#ccffff;">
         &nbsp;
             <span class="iconfont icon-guanli"></span>
-            <i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 当前用户：</i>
+            <i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 欢迎您：</i>
             <asp:Label ID="lb_user" runat="server" class="lb" Text="123456"></asp:Label>
-            <span class="iconfont icon-shijian"></span>
-            <i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 当前时间：</i>
-            <asp:Label ID="lb_time" runat="server" class="lb" Text="54654456"></asp:Label>
+            <%--<span class="iconfont icon-shijian"></span>--%>
+            <%--<i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 当前时间：</i>
+            <asp:Label ID="lb_time" runat="server" class="lb" Text="54654456"></asp:Label>--%>
         </div>
-        <div class="left-nav">
+        <div class="left-nav" style="background-color:#f5f5f5">
             <div class="title">
                 <span class="iconfont icon-xuesheng"></span>
                 <i style="font-style:normal;font-weight:800;color:#666;font-size:16px;">学生信息管理系统</i>

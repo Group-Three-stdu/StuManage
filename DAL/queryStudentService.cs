@@ -35,12 +35,12 @@ namespace DAL
         /// </summary>
         /// <param name="collegeId">学院ID</param>
         /// <returns>该学院的所有专业</returns>
-        public List<Major> queryAllMajor(string collegeId)
+        public List<Major> queryAllMajor(string collegeid)
         {
             string sql = "select major,MajorName,College from ZY where 1=1";
             List<Major> majlist = new List<Major>();
-            if (collegeId != " ")
-                sql += " and college='" + collegeId + "'";
+            if (collegeid != " ")
+                sql += " and College='" + collegeid + "'";
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql,  false);
             while (result.Read())
             {
@@ -58,17 +58,17 @@ namespace DAL
         /// <summary>
         /// 查询班级
         /// </summary>
-        /// <param name="collegeId"></param>
+        /// <param name="college"></param>
         /// <param name="majorId"></param>
         /// <returns></returns>
-        public List<Class> queryAllClass(string collegeId,string majorId)
+        public List<Class> queryAllClass(string college,string majorId)
         {
             string sql = "select classId,Major,college from Class where 1=1";
             List<Class > clalist = new List<Class>();
-            if (collegeId != " ")
-                sql += " and collegeId='" + collegeId + "'";
+            if (college != " ")
+                sql += " and college='" + college + "'";
             if(majorId!=" ")
-                sql+=" and majorId='"+majorId+"'";
+                sql+=" and major='"+majorId+"'";
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, false);
             while (result.Read())
             {

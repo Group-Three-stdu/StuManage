@@ -61,7 +61,6 @@ namespace DAL
             return Convert.ToInt32(result);
         }
 
-
         //完成签到
         public int AddKqRecord(int StuId,int KQId, DateTime time)
         {
@@ -84,6 +83,61 @@ namespace DAL
                 new SqlParameter("@KqId",KqId)
             };
             return new Helper.SQLHelper().update(sql, param, false);
+        }
+
+        //查询未签到学生的学号
+        public List<Students> queryUnCheckStuId(int KQId, int CourseId)
+        {
+            string sql = "select distinct StuId from Courses_Stu where StuId not in (select distinct StuId from qiandao where KQId = @KQId )and courseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@KQId",KQId),
+                new SqlParameter("@CourseId",CourseId)
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<Students> StuList = new List<Students>();
+            while (result.Read())
+            {
+                StuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"])
+                });
+            }
+            return StuList;
+        }
+
+        //查询已签到的学生学号姓名
+        public List<Students> queryCheckedStu(int KQId)
+        {
+            string sql = "select qiandao.StuId,StuName,Time from qiandao join Students on qiandao.StuId = Students.StuId where KQId = @KQId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@KQId",KQId)
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<Students> StuList = new List<Students>();
+            while (result.Read())
+            {
+                StuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    Time = Convert.ToDateTime(result["Time"])
+                });
+            }
+            return StuList;
+        }
+
+        //查看学生某门课考勤情况
+        public int queryStuKqNum(int StuId,int CourseId)
+        {
+            string sql = "select count(*) as KqNum from V_kq where StuId = @StuId and CourseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@CourseId",CourseId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
         }
     }
 }

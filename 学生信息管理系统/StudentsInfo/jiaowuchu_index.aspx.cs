@@ -12,7 +12,7 @@ namespace 学生信息管理系统.StudentsInfo
         protected void Page_Load(object sender, EventArgs e)
         {
             lb_user.Text = ((Model.Login)Session["CurrentUser"]).StuName.ToString();
-            lb_time.Text = DateTime.Now.ToString();
+            //lb_time.Text = DateTime.Now.ToString();
         }
     }
 }

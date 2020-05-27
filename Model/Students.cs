@@ -21,5 +21,10 @@ namespace Model
         public string StuState { set; get; }
         public string Punish { set; get; }
         public string PoliticalStatus { set; get; }
+
+        //临时使用，数据库中没有该字段
+        public DateTime Time { set; get; }//提交时间
+        public int HwNum { set; get; }//作业情况
+        public int KqNum { set; get; }//考勤情况
     }
 }

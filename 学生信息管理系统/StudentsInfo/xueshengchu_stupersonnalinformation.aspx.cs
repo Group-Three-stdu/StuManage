@@ -17,41 +17,28 @@ namespace 学生信息管理系统
             if (!IsPostBack)
             {
                 //获取学院列表
-
-                string id = "";
-                string name;
                 List<College> colList = new queryManage().queryAllCol();
-                foreach (College a in colList)
-                {
-                    //ddlxueyuan.DataSource = new queryManage().queryAllCol();
-                    //ddlxueyuan.DataBind();
-                    ddlxueyuan.Items.Add(a.collegeName);
-                    //queryManage bll = new queryManage();
-                    //ddlxueyuan.DataSource = bll.queryAllCol();
-                    //ddlxueyuan.DataTextField = a.collegeName;
-                    //ddlxueyuan.DataValueField = a.collegeId;
-                    //ddlxueyuan.DataBind();
-                }
-
+                ddlxueyuan.DataSource = colList;
+                ddlxueyuan.DataTextField = "collegeName";
+                ddlxueyuan.DataValueField = "collegeId";
+                ddlxueyuan.DataBind();
+                ddlxueyuan.Items.Insert(0, new ListItem("请选择", ""));
                 //获取专业列表
-                string majorid = "";
-                string majorname;
                 List<Major> majlist = new queryManage().querAllMaj(" ");
-                foreach (Major m in majlist)
-                {
-                    majorid = m.majorId;
-                    majorname = m.majorName;
-                    ddlmajor.Items.Add(majorname);
-                }
-
+                ddlmajor.DataSource = majlist;
+                ddlmajor.DataTextField = "majorName";
+                ddlmajor.DataValueField = "majorId";
+                ddlmajor.DataBind();
+                ddlmajor.Items.Insert(0, new ListItem("请选择", ""));
                 //班级列表
-                string classid;
                 List<Class> clalist = new queryManage().querAllCla(" ", " ");
-                foreach (Class c in clalist)
-                {
-                    classid = c.ClassId.ToString();
-                    ddlclass.Items.Add(classid);
-                }
+                ddlclass.DataSource = clalist;
+                ddlclass.DataTextField = "ClassId";
+                ddlclass.DataBind();
+                ddlclass.Items.Insert(0, new ListItem("请选择", ""));
+
+                Repeater1.DataSource = new StudentManage().QueryStu(0, "", "", "","");
+                Repeater1.DataBind();
             }
         }
 
@@ -59,32 +46,64 @@ namespace 学生信息管理系统
         {
             string name = txt_name.Text.Trim();
             StudentManage bll = new StudentManage();
-            if (name == "")
-            {
-                if ((ddlxueyuan.SelectedItem.Text != "" && ddlxueyuan.SelectedItem.Text != "请选择"))
-                {
-                    string college = Request.Form["ddlxueyuan"];
-                    Repeater1.DataSource = bll.QueryStuByCollege(college);
-                    Repeater1.DataBind();
-                }
-                else if (ddlmajor.SelectedItem.Text != " " && ddlmajor.SelectedItem.Text != "请选择")
-                {
-                    string major = Request.Form["ddlmajor"];
-                    Repeater1.DataSource = bll.QueryStuByMajor(major);
-                    Repeater1.DataBind();
-                }
-                else if (ddlclass.SelectedValue != " ")
-                {
-                    string classid = Request.Form["ddlclass"];
-                    Repeater1.DataSource = bll.QueryStuByClassId(classid);
-                    Repeater1.DataBind();
-                }
-            }
-            else
-            {
-                Repeater1.DataSource = bll.QueryStuByName(name);
-                Repeater1.DataBind();
-            }
+            int StuId = 0;
+            if (txt_id.Text.Trim() != "")
+                StuId = Convert.ToInt32(txt_id.Text.Trim());
+            string collegeId = ddlxueyuan.SelectedValue.Trim().ToString();
+            string majorId = ddlmajor.SelectedValue.Trim().ToString();
+            string classId = ddlclass.SelectedValue.Trim().ToString();
+            Repeater1.DataSource = new StudentManage().QueryStu(StuId,name,classId ,collegeId, majorId);
+            Repeater1.DataBind();
+
+        }
+        //学院下拉框改变
+        protected void ddlxueyuan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string college =ddlxueyuan.SelectedItem.Value.Trim().ToString();
+            string collegeId = ddlxueyuan.SelectedValue.Trim().ToString();
+            List<Students> stuList = new StudentManage().QueryStu(0,"","",college,"");
+            Repeater1.DataSource = stuList;
+            Repeater1.DataBind();
+            //专业下拉框联动
+            List<Major> majlist = new queryManage().querAllMaj(collegeId);
+            ddlmajor.DataSource = majlist;
+            ddlmajor.DataTextField = "majorName";
+            ddlmajor.DataValueField = "majorId";
+            ddlmajor.DataBind();
+            ddlmajor.Items.Insert(0, new ListItem("请选择", ""));
+            //班级下拉框联动
+            List<Class> clalist = new queryManage().querAllCla(collegeId, " ");
+            ddlclass.DataSource = clalist;
+            ddlclass.DataTextField = "ClassId";
+            ddlclass.DataBind();
+            ddlclass.Items.Insert(0, new ListItem("请选择", ""));
+        }
+        //专业下拉框改变
+        protected void ddlmajor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string college = ddlxueyuan.SelectedItem.Value.Trim().ToString();
+            string collegeId = ddlxueyuan.SelectedValue.Trim().ToString();
+            string majorId = ddlmajor.SelectedValue.Trim().ToString();
+            List<Students> stuList = new StudentManage().QueryStu(0, "", "", college, majorId);
+            Repeater1.DataSource = stuList;
+            Repeater1.DataBind();
+            //班级下拉框联动
+            List<Class> clalist = new queryManage().querAllCla(collegeId, majorId);
+            ddlclass.DataSource = clalist;
+            ddlclass.DataTextField = "ClassId";
+            ddlclass.DataBind();
+            ddlclass.Items.Insert(0, new ListItem("请选择", ""));
+        }
+        //班级下拉框改变
+        protected void ddlclass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string college = ddlxueyuan.SelectedItem.Value.Trim().ToString();
+            string collegeId = ddlxueyuan.SelectedValue.Trim().ToString();
+            string majorId = ddlmajor.SelectedValue.Trim().ToString();
+            string classId = ddlclass.SelectedValue.Trim().ToString();
+            List<Students> stuList = new StudentManage().QueryStu(0, "", classId, college, majorId);
+            Repeater1.DataSource = stuList;
+            Repeater1.DataBind();
         }
     }
 }

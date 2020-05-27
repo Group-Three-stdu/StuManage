@@ -14,10 +14,14 @@
     <div>
 
         <div class="login-pic" style="border-radius:10px;">
+            <img runat="server" src="~/image/logo.jpg" style="width:20%;height:65px;border-radius:10px;"/>
+            <img runat="server" src="~/image/logo_right.png" style="width:70%;height:65px;margin-left:-6%;"/>
             <br />
-             &nbsp;&nbsp;welcome <br />&nbsp; 学生信息<br />
-&nbsp; 管理系统
-            <hr style="height:240px;width:0.5px;margin-left:100%;margin-top:-160px;color:aqua;" />
+            <img runat="server" src="~/image/logo_bottom.png" style="width:100%;height:120px;"/>
+             <%--&nbsp;&nbsp;welcome <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            学生信息管理系统--%>
+            <hr style="height:240px;width:0.5px;margin-left:100%;margin-top:-190px;color:aqua;" />
         </div>
         <div style="background-color:white;height:250px;width:100%;border-radius:10px;">
             <br />

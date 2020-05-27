@@ -46,5 +46,43 @@ namespace BLL
                 return 0;
             return new KqService().UpdateStuNum(KQId);
         }
+
+
+        /// <summary>
+        ///查看未签到学生的信息
+        /// </summary>
+        /// <param name="KQId"></param>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public List<Students> queryUncheckStu(int KQId, int CourseId)
+        {
+            List<Students> stuIdList = new KqService().queryUnCheckStuId(KQId, CourseId);
+            List<Students> stuList = new List<Students>();
+            foreach (Students stu in stuIdList)
+            {
+                stuList.Add(new StudentService().queryStuById(stu.StuId));
+            }
+            return stuList;
+        }
+
+        /// <summary>
+        /// 查询已签到的学生学号姓名
+        /// </summary>
+        /// <param name="KQId"></param>
+        /// <returns></returns>
+        public List<Students> queryCheckedStu(int KQId)
+        {
+            return new KqService().queryCheckedStu(KQId);
+        }
+        /// <summary>
+        /// 查看考勤次数
+        /// </summary>
+        /// <param name="StuId"></param>
+        /// <param name="CourseId"></param>
+        /// <returns></returns>
+        public int queryStuKqNum(int StuId, int CourseId)
+        {
+            return new KqService().queryStuKqNum(StuId, CourseId);
+        }
     }
 }
