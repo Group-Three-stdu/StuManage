@@ -1,30 +1,31 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="学生信息管理系统.StudentsInfo.index1"  EnableEventValidation="false"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>主页</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <script src="../js/jquery.min.js"></script>
-     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<script type="text/javascript" src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .box
+        {
+            width:100%;
+            height:60px;
+            background-color:White;
+            border:1px solid #ccc;
+            box-shadow: 2px -2px 3px #ccc;
+            line-height:16px;
+            text-align:center;
+            font-family:@Adobe 黑体 Std R;
+            }
+    </style>
 </head>
 <body>
-    <script type="text/javascript">
-            $(function(){
-                $('.modleDailog').modal("hide");
-            });
-            
-            function show(ID) {
-                $('#ggcontent').html(ID);
-            }
-        </script>
     <form id="form1" runat="server">
-         <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true"></asp:ScriptManager>
     <div>
+        <div class="box">
             <div>
               <asp:Repeater ID="Repeater1" runat="server">
                 <HeaderTemplate>
@@ -41,10 +42,10 @@
                     <tr class="table-responsive table-bordered table-condensed">
                              <td><%# Eval("xh")%></td>
                              <td><%# Eval("GGHead")%></td>
-                             <td><%# Eval("GGauthor")%></td>
-                            <td><%# Eval("GGdateTime")%></td>
-                        <td><asp:LinkButton ID="LinkButton2" CommandName="past" CommandArgument='<%# Eval("GGcontent")%>' data-toggle="modal" data-target="#exampleModal" runat="server" 
-                            OnClientClick='<%#Eval("GGcontent", "show(\"{0}\")")%>' >查看详情</asp:LinkButton></td>
+                             <td><%# Eval("TeaName")%></td>
+                            <td><%# Eval("Time")%></td>
+                            <td><asp:LinkButton ID="LinkButton1" CommandName="past" CommandArgument='<%# Eval("GGContent")%>' data-toggle="modal" data-target="#exampleModal" runat="server"
+                                 OnClientClick='<%#Eval("GGContent", "values(\"{0}\")")%>' >查看详情</asp:LinkButton></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>
@@ -74,6 +75,7 @@
             </div>
         </div>
         </div>
+    </div>
     </form>
 </body>
 </html>

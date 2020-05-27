@@ -122,6 +122,12 @@
                                 公告发布
                             </a>
                         </li>
+                         <li>
+                            <a id="A1" href="~/GG/guanli_gg.aspx" runat="server" target="right">
+                                <i class="iconfont icon-wenjuantiaocha"></i>
+                                公告管理
+                            </a>
+                        </li>
                     </ul>
                 </li>
          

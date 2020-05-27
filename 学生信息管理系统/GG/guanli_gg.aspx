@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="学生信息管理系统.StudentsInfo.index1"  EnableEventValidation="false"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="guanli_gg.aspx.cs" Inherits="学生信息管理系统.GG.guanli_gg" %>
 
 <!DOCTYPE html>
 
@@ -35,6 +35,7 @@
                             <th style="text-align:center">发布人</th>
                             <th style="text-align:center">发布时间</th>
                             <th style="text-align:center">详情</th>
+                            <th style="text-align:center">操作</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -45,6 +46,8 @@
                             <td><%# Eval("GGdateTime")%></td>
                         <td><asp:LinkButton ID="LinkButton2" CommandName="past" CommandArgument='<%# Eval("GGcontent")%>' data-toggle="modal" data-target="#exampleModal" runat="server" 
                             OnClientClick='<%#Eval("GGcontent", "show(\"{0}\")")%>' >查看详情</asp:LinkButton></td>
+                         <td><asp:LinkButton ID="btnDel" CommandArgument='<%#Eval("GGId")%>' OnClientClick="return confirm('确认删除该记录么？')"  OnClick="btnDel_Click"
+                runat="server">删除公告</asp:LinkButton></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>
@@ -77,3 +80,4 @@
     </form>
 </body>
 </html>
+
