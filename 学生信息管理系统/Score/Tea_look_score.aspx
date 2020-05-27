@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tea_look_score.aspx.cs" Inherits="学生信息管理系统.Score.Tea_look_score1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Tea_look_score.aspx.cs" Inherits="学生信息管理系统.Score.Tea_look_score1" enableEventValidation="false" %>
 
 <!DOCTYPE html>
 
