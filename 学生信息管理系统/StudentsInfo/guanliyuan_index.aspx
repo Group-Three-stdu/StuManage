@@ -75,40 +75,40 @@
                 <li class="one">
                 <div>用户信息</div>
                     <ul class="sub">
-                        <li>
+                        <li style="text-align:left; margin-left:10px;">
                             <a href="guanliyuan_stuperinfo.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看学生信息
                             </a>
                         </li>
-                         <li>
+                         <li style="text-align:left; margin-left:10px;">
                             <a href="guanliyuan_teacher.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看老师信息
                             </a>
                         </li>
-                         <li>
+                         <li style="text-align:left; margin-left:10px;">
                             <a href="guanli_bangongshi.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                查看办公室
+                                查看办公室信息
                             </a>
                         </li>
-                        <li>
+                        <li style="text-align:left; margin-left:10px;">
                             <a href="guanliyuan_xueshengchu.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                查看学生处
+                                查看学生处信息
                             </a>
                         </li>
-                        <li>
+                        <li style="text-align:left; margin-left:10px;">
                             <a href="guanli_jiaowuchu.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                查看教务处
+                                查看教务处信息
                             </a>
                         </li>
-                        <li>
+                        <li style="text-align:left; margin-left:10px;">
                             <a href="guanli_sys.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                查看系统管理员
+                                查看系统管理员信息
                             </a>
                         </li>
                     </ul>
@@ -117,7 +117,7 @@
                 <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>公告管理</div>
                     <ul class="sub">
                         <li>
-                            <a id="A9" href="" runat="server" target="right">
+                            <a id="A9" href="~/GG/fabu_xtgg.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 公告发布
                             </a>

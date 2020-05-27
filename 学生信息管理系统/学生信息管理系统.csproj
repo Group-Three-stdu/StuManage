@@ -134,6 +134,7 @@
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
     <Content Include="GG\fabu_gg.aspx" />
+    <Content Include="GG\fabu_xtgg.aspx" />
     <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\HwCheck.aspx" />
     <Content Include="homework\HwDetails.aspx" />
@@ -969,6 +970,13 @@
     </Compile>
     <Compile Include="GG\fabu_gg.aspx.designer.cs">
       <DependentUpon>fabu_gg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GG\fabu_xtgg.aspx.cs">
+      <DependentUpon>fabu_xtgg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GG\fabu_xtgg.aspx.designer.cs">
+      <DependentUpon>fabu_xtgg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

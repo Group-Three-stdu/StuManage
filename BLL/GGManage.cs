@@ -26,5 +26,11 @@ namespace BLL
         {
             return new GGService().DelGG(GGId);
         }
+
+        //发布公告
+        public int fabuXTGG(XTGG gg)
+        {
+            return new GGService().fabuXTGG(gg);
+        }
     }
 }

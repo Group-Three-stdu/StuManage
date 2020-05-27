@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class XTGG
+    public class XTGG
     {
         public int GGId { set; get; }
         public string GGHead { set; get; }

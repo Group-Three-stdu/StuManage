@@ -61,5 +61,19 @@ namespace DAL
             };
             return new Helper.SQLHelper().update(sql, param,false);
         }
+
+        //发布系统公告
+        public int fabuXTGG(XTGG gg)
+        {
+            string sql = "insert into XTGG (GGHead,GGcontent,GGauthor,GGdateTime) values (@GGHead,@GGcontent,@GGauthor,@GGdateTime) ";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@GGHead",gg.GGHead),
+                new SqlParameter("@GGContent",gg.GGcontent),
+                new SqlParameter("@GGauthor",gg.GGauthor),
+                new SqlParameter("@GGdateTime",gg.GGdateTime)
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
     }
 }
