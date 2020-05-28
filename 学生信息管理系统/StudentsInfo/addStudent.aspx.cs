@@ -55,15 +55,20 @@ namespace 学生信息管理系统.StudentsInfo
             string Major = ddlmajor.SelectedValue;
             string ClassId = ddlclass.SelectedValue;
             string ps = StuPS.Text;
-
-            int StuId = Convert.ToInt32(Id.Text.Trim());
-            //string id = Id.Text;
-            if(Id.Text==null|| StuSex==null||StuBirth==null||
-                Punish==null||Punish==null||StuHonor==null||StuPhoneNum==null||
-                StuNoId==null||StuState==null||StuAdd==null||PoliticalStatus==null||
-                College == null || Major == null || ClassId == null || ps == null)
+            if (Id.Text.Trim() == "")
             {
                 ltaMsg.Text = "<script type='text/javascript'>alert('请把学生信息填写完整！')</script>";
+                return;
+            }
+            int StuId = Convert.ToInt32(Id.Text.Trim());
+            //string id = Id.Text;
+            if(Id.Text==""|| StuSex==""||StuBirth==""||
+                StuHonor==""||StuPhoneNum==""||
+                StuNoId==""||StuAdd==""||PoliticalStatus==""||
+                College == "" || Major == "" || ClassId == "")
+            {
+                ltaMsg.Text = "<script type='text/javascript'>alert('请把学生信息填写完整！')</script>";
+                return;
             }
             else
             {
