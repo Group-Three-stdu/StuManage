@@ -190,7 +190,6 @@
     <Content Include="js\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
     <Content Include="js\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
     <Content Include="js\My97DatePicker\开发包\skin\whyGreen\img.gif" />
-    <Content Include="login2.aspx" />
     <Content Include="qiandao\fabu_qiandao.aspx" />
     <Content Include="qiandao\kqDetails.aspx" />
     <Content Include="qiandao\stu_qiandao.aspx" />
@@ -860,7 +859,6 @@
     <Content Include="StudentsInfo\guanli_bangongshi.aspx" />
     <Content Include="StudentsInfo\guanli_jiaowuchu.aspx" />
     <Content Include="StudentsInfo\guanli_sys.aspx" />
-    <Content Include="StudentsInfo\index副本.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_stuperinfo.aspx" />
@@ -1086,13 +1084,6 @@
     <Compile Include="homework\CourseDetails.aspx.designer.cs">
       <DependentUpon>CourseDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="login2.aspx.cs">
-      <DependentUpon>login2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="login2.aspx.designer.cs">
-      <DependentUpon>login2.aspx</DependentUpon>
-    </Compile>
     <Compile Include="qiandao\fabu_qiandao.aspx.cs">
       <DependentUpon>fabu_qiandao.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1253,10 +1244,6 @@
     </Compile>
     <Compile Include="StudentsInfo\guanli_sys.aspx.designer.cs">
       <DependentUpon>guanli_sys.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="StudentsInfo\index副本.aspx.cs">
-      <DependentUpon>index副本.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="StudentsInfo\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

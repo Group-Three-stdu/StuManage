@@ -11,52 +11,36 @@
 <body style="background-image:url(image/loginbg.jpg);background-size:100%;">
     
    <form id="form1" class="login-form" runat="server">
-    <div>
+    <div style="padding-top:40px;">
 
         <div class="login-pic" style="border-radius:10px;">
-            <img runat="server" src="~/image/logo.jpg" style="width:20%;height:65px;border-radius:10px;"/>
-            <img runat="server" src="~/image/logo_right.png" style="width:70%;height:65px;margin-left:-6%;"/>
+            <img runat="server" src="~/image/logo1.png" style="width:26%;border-radius:10px;"/>
+            <img runat="server" src="~/image/logo_right.png" style="width:75%;height:80px;margin-left:-12%;margin-bottom:15px;"/>
             <br />
-            <img runat="server" src="~/image/logo_bottom.png" style="width:100%;height:120px;"/>
-             <%--&nbsp;&nbsp;welcome <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            学生信息管理系统--%>
-            <hr style="height:240px;width:0.5px;margin-left:100%;margin-top:-190px;color:aqua;" />
+            <img runat="server" src="~/image/logo_bott.png" style="width:100%;height:120px; margin-top:20px;"/>
+
+            <div style="height:300px;width:1px;margin-left:100%;margin-top:-270px;background-color:black"></div>
         </div>
-        <div style="background-color:white;height:250px;width:100%;border-radius:10px;">
+        <div style="height:300px;width:100%;border-radius:10px;">
             <br />
-            <div class="txtb">
+            <div class="txtb" style="margin-top:20px;">
             用户名：<asp:TextBox ID="txt_username" class="input" placeholder="Username" runat="server"></asp:TextBox>
-            
-            <%--<span data-placehoder="Username" runat="server"></span>--%>
-            
         </div>
-        <div class="txtb">
+            <div class="txtb" style="margin-top:20px;margin-bottom:20px;">
             密&nbsp;&nbsp;&nbsp;码：<asp:TextBox ID="txt_password" class="input" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
            <%-- <span data-placehoder="Password" runat="server"></span>--%>
         </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        验证码：<asp:TextBox ID="intxt_code" CssClass="input3" placeholder="验证码" runat="server"></asp:TextBox>
-        <div id="v_container">
+        <div class="txtb">
+            验证码：<asp:TextBox ID="intxt_code" width="120px" CssClass="input3" placeholder="验证码" runat="server"></asp:TextBox>
+            <div id="v_container" style="width:100px;">
 
         </div>
-        <%--<asp:DropDownList ID="ddl_loginid" class="drop" runat="server">
-            <asp:ListItem Value="student">学生</asp:ListItem>
-            <asp:ListItem Value="teacher">教师</asp:ListItem>
-            <asp:ListItem Value="teaching">教学秘书</asp:ListItem>
-            <asp:ListItem Value="helper_stu">学生处</asp:ListItem>
-            <asp:ListItem Value="academy">学院办公室</asp:ListItem>
-            <asp:ListItem Value="admin">系统管理员</asp:ListItem>
-        </asp:DropDownList>--%>
-
-        <%--<div id="check-code" style="overflow: hidden;">
-            <asp:TextBox ID="data_code"   runat="server" class="code"  BorderWidth="0"></asp:TextBox>
-	        <%--<div class="code" id="data_code"></div>--%>
-        <%--<asp:TextBox ID="txt_code" runat="server" class="input2"></asp:TextBox>--%>
-
-        <asp:Button ID="btn_login" runat="server" class="logbtn" Text="登录" OnClientClick="yanzheng()"
-            onclick="btn_login_Click"  />
-       <asp:Button ID="reset" runat="server" CssClass="logbtn2" Text="重置" />
+        </div>
+            <div style="position:relative;top:80px;">
+                <asp:Button ID="btn_login" runat="server" class="logbtn" Text="登录" OnClientClick="yanzheng()"
+                    onclick="btn_login_Click"  />
+                <asp:Button ID="reset" runat="server" CssClass="logbtn2" Text="重置" />
+            </div>
         </div>
         
         <asp:Literal ID="Literal1" runat="server"></asp:Literal>

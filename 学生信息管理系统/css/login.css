@@ -9,7 +9,6 @@
 .login-pic{
     width:45%;
     height:250px;
-    background:white;
     float:left;
     margin-top:0px;
     opacity:0.8;
@@ -18,14 +17,13 @@
     color:black;
 }
 .login-form {
-    width: 50%;
-    background-color: white;
+    width: 60%;
     position: absolute;
     left: 50%;
     top: 45%;
     transform: translate(-50%,-50%);
     animation: change 5s;
-    opacity: 0.8;
+    background-color: rgba(255,255,255,0.8);
     border-radius: 10px;
 }
 
@@ -63,7 +61,6 @@
     width:40%;
     height:35px;
     text-align:center;
-    background:white;
     color:#666;
     margin-bottom:10px;
     margin-top:1px;
