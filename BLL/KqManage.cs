@@ -41,6 +41,11 @@ namespace BLL
             int result1 = new KqService().IsAttend(StuId, KQId);
             if (result1 != 0)
                 return -1;
+            //判断是否超时
+            DateTime nowtime = DateTime.Now;
+            DateTime EndTime = new KqService().queryEndTime(KQId);
+            if (DateTime.Compare(nowtime, EndTime) > 0)
+                return -2;
             int result2 = new KqService().AddKqRecord(StuId, KQId, time);
             if (result2 <= 0)
                 return 0;
