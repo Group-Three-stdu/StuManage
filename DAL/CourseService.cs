@@ -28,23 +28,22 @@ namespace DAL
             return 1;
         }
 
-
         /// <summary>
         /// 删除课程
         /// </summary>
         /// <param name="Selected_courseid"></param>
         /// <returns></returns>
-        public int deleteSelectedCourse(string Selected_courseid)
+        public int deleteSelectedCourse(int CourseId,int StuId)
         {
-            string sql = "delete from Courses_Stu where [Selected_courseid]=@Selected_courseid";
+            string sql = "delete from Courses_Stu where CourseId=@CourseId and StuId=@StuId";
             SqlParameter[] param = new SqlParameter[]
             {
-                new SqlParameter("@Selected_courseid",Selected_courseid)
+                new SqlParameter("@CourseId",CourseId),
+                new SqlParameter("@StuId",StuId)
             };
             int result = new Helper.SQLHelper().update(sql, param, false);
             return result;
         }
-
 
         /// <summary>
         /// 增加课程
@@ -65,7 +64,6 @@ namespace DAL
             };
             return new Helper.SQLHelper().update(sql, param, false);
         }
-
 
         //通过课程编号查看课程信息，
         public CourseMes queryCourseById(int courseId)
@@ -240,7 +238,6 @@ namespace DAL
             }
             return courselist;
         }
-
 
         /// <summary>
         /// 查看通过审核的课程
@@ -506,6 +503,32 @@ namespace DAL
                 new SqlParameter("@StuId",StuId)
             };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
+
+        //查询已选学分
+        public float CalPoint(int StuId)
+        {
+            string sql = "select Sum(Xuefen) from V_Xuefen where StuId = @StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            string point = new Helper.SQLHelper().QuerySingleResult(sql, param, false).ToString();
+            if (point == "")
+                return 0;
+            else
+                return float.Parse(point);
+        }
+
+        //查询课程学分
+        public float CalCoursePoint(int CourseId)
+        {
+            string sql = "select Xuefen from CoursesMes where CourseId = @CourseId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId)
+            };
+            return float.Parse(new Helper.SQLHelper().QuerySingleResult(sql, param, false).ToString());
         }
     }
 }

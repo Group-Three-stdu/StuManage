@@ -17,7 +17,7 @@
             </h4>           
             
         </div>
-         <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+         <asp:Repeater ID="Repeater1" runat="server" >
                 <HeaderTemplate>
                     <table width="100%">
                         <tbody>
@@ -57,14 +57,15 @@
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("CourseAdd")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
-         
+                             <asp:LinkButton ID="btn_Del" CommandArgument='<%#Eval("CourseId")%>' OnClientClick="return confirm('确认删除该课程么？')" OnClick="btn_Del_Click"
+                runat="server" ForeColor="Blue">删除</asp:LinkButton>
                         </td>
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;">
                             </td>
                     </tr>
                 </ItemTemplate>
             </asp:Repeater>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:yixuan_connection %>" SelectCommand="SELECT [Selected_courseid], [CourseName], [Season], [CollegeName], [Xuefen], [TeaName], [CourseAdd], [courseproperty] FROM [V_yixuan]"></asp:SqlDataSource>
+    
     </div>
     </form>
 </body>

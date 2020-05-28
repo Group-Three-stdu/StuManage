@@ -15,12 +15,12 @@ namespace BLL
         /// <param name="CourseId">课程编号</param>
         /// <param name="Selected_courseid">选课编号</param>
         /// <returns>1成功，-1必修不可删除 ，0失败</returns>
-        public int DeleteSelectedCourse(int CourseId,string Selected_courseid)
+        public int DeleteSelectedCourse(int CourseId,int StuId)
         {
             int result = new CourseService().queryCouresProperty(CourseId);
             if (result == 0)
                 return -1;
-            return new CourseService().deleteSelectedCourse(Selected_courseid);
+            return new CourseService().deleteSelectedCourse(CourseId,StuId);
         }
 
         /// <summary>
@@ -105,9 +105,15 @@ namespace BLL
         /// <returns>1 成功 </returns>
         public int chooseCourse(int CourseId,int StuId)
         {
+            //判断是否以经选择过
             int res1 = new CourseService().IsExistCourse(CourseId, StuId);
             if (res1 > 0)
                 return -1;
+            //判断学分
+            float mypoint = new CourseService().CalPoint(StuId);
+            float coursepoint = new CourseService().CalCoursePoint(CourseId);
+            if (mypoint+coursepoint > 30.0)
+                return -2;
             Course_Stu course = new Course_Stu();
             CourseMes course1 = new CourseService().queryCourseById(CourseId);
             CourseMana course2 = new CourseService().selectCourseById(CourseId);

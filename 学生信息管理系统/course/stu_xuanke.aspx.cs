@@ -35,6 +35,8 @@ namespace 学生信息管理系统.StudentsInfo
                 Itamsg.Text = "<script>alert('添加成功！')</script>";
             else if (result == -1)
                 Itamsg.Text = "<script>alert('该课程已添加！')</script>";
+            else if (result == -2)
+                Itamsg.Text = "<script>alert('学分超过上限！')</script>";
             else
                 Itamsg.Text = "<script>alert('添加失败！')</script>";
         }
