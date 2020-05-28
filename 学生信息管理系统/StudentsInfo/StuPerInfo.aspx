@@ -8,7 +8,6 @@
             margin:0 auto;
             width:100%;
             height:450px;
-            border:1px solid #ccc;
         }
         table{
             width:100%;
@@ -38,119 +37,85 @@
             line-height:50px;
             border:1px solid #ccc;
         }
-        .btn{
-            margin-left:1%;
-        }
+     
         .btn .lbbtn{
-            width:10%;
-            height:50px;
-            margin-left:1%;
-            line-height:50px;
+            height:30px;
+            line-height:14px;
         }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="../js/jquery.min.js"></script>
 </head>
-<body>
+<body >
+    <script type="text/javascript">
+        function change() {
+            $('#btn_sub').show();
+            $('#btn_alter').hide();
+            $('#Add').css('border', 'solid 1px black');
+            $('#Pho').css('border', 'solid 1px black');
+            $('#Add').removeAttr("readonly");
+            $('#Pho').removeAttr("readonly");
+        }
+    </script>
     <form id="form1" runat="server">
     <div>
-        <div class="earn">
-            以下为您的个人信息请核实，如有不正确进行修改
-            <a runat="server" target="right" href="alter_stuperinfo.aspx">立即修改</a>
-            <%--<asp:LinkButton ID="LinkButton1" runat="server">立即联系</asp:LinkButton>--%>
-        </div>
+        
         <div class="box">
-            <%--<asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
-                <HeaderTemplate>
-                    <table>
-                </HeaderTemplate>
-                <ItemTemplate>
+           
+            <div style="width:96%;"class="m-auto"  >
+                <table id="stuinfo" class="table table-striped ">
                     <tr>
-                            <th colspan="5">XX大学学籍信息表</th>
-                    </tr>
-                    <tr>
-                        <th width="15%">学号</th><td width="25%"><%#Eval("StuId") %></td>
-                        <th width="15%">姓名</th><td width="25%"><%#Eval("StuName") %></td>
-                        <th rowspan="3" colspan="2">照片</th>
-                    </tr>
-                    <tr>
-                        <th>性别</th><td><%#Eval("StuSex") %></td>
-                        <th>出生日期</th><td><%#Eval("StuBirth") %></td>
-                    </tr>
-                    <tr>
-                        <th>身份证号</th><td><%#Eval("StuNoId") %></td>
-                        <th>联系电话</th><td><%#Eval("StuPhoneNum") %></td>
-                    </tr>
-                    <tr>
-                        <th>家庭住址</th><td><%#Eval("StuAdd") %></td>
-                        <th>学院</th><td colspan="2"> <%#Eval("ClassId") %></td>
-                    </tr>
-                    <tr>
-                        <th>专业</th><td><%#Eval("StuHonor") %></td>
-                        <th>班级</th><td colspan="2"><%#Eval("Major") %></td>
-                    </tr>
-                    <tr>
-                        <th>政治面貌</th><td><%#Eval("College") %></td>
-                        <th>状态</th><td colspan="2"><%#Eval("StuState") %></td>
-                    </tr>
-                    <tr>
-                        <th>荣誉</th><td colspan="4"><%#Eval("Punish") %></td>
-                    </tr>
-                    <tr>
-                        <th>惩处</th><td colspan="4"><%#Eval("PoliticalStatus") %></td>
-                    </tr>
-                    <tr>
-                        <th>备注</th><td colspan="4"><%#Eval("StuId") %></td>
-                    </tr>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                    </table>
-                </FooterTemplate>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StulnfoConnectionString %>" SelectCommand="SELECT * FROM [Students]"></asp:SqlDataSource>--%>
-            <table>
-                <tr>
-                    <th colspan="5">XX大学学籍信息表</th>
+                        <th colspan="5">个人信息</th>
                     
-                </tr>
-                <tr>
-                    <th width="15%">学号</th><td width="25%"><asp:Label ID="StuId" runat="server" Text=""></asp:Label></td>
-                    <th width="15%">姓名</th><td width="25%"><asp:Label ID="StuName" runat="server" Text=""></asp:Label></td>
-                    <th rowspan="3" colspan="2">照片</th>
-                </tr>
-                <tr>
-                    <th>性别</th><td><asp:Label ID="StuSex" runat="server" Text=""></asp:Label></td>
-                    <th>出生日期</th><td><asp:Label ID="StuBirth" runat="server" Text=""></asp:Label></td>
-                </tr>
-                <tr>
-                    <th>身份证号</th><td><asp:Label ID="StuIdNo" runat="server" Text=""></asp:Label></td>
-                    <th>联系电话</th><td><asp:Label ID="StuPho" runat="server" Text=""></asp:Label></td>
-                </tr>
-                <tr>
-                    <th>家庭住址</th><td><asp:Label ID="StuAdd" runat="server" Text=""></asp:Label></td>
-                    <th>学院</th><td colspan="2"><asp:Label ID="Col" runat="server" Text=""></asp:Label></td>
-                </tr>
-                <tr>
-                    <th>专业</th><td><asp:Label ID="Major" runat="server" Text=""></asp:Label></td>
-                    <th>班级</th><td colspan="2"><asp:Label ID="Class" runat="server" Text=""></asp:Label></td>
-                </tr>
-                <tr>
-                    <th>政治面貌</th><td><asp:Label ID="poState" runat="server" Text=""></asp:Label></td>
-                    <th>状态</th><td colspan="2"><asp:Label ID="state" runat="server" Text=""></asp:Label></td>
-                </tr>
-                <tr>
-                    <th>荣誉</th><td colspan="4"><asp:Label ID="honor" runat="server" Text=""></asp:Label></td>
-                </tr>
-                <tr>
-                    <th>惩处</th><td colspan="4"><asp:Label ID="pun" runat="server" Text=""></asp:Label></td>
-                </tr>
-                <tr>
-                    <th>备注</th><td colspan="4"><asp:Label ID="PS" runat="server" Text=""></asp:Label></td>
-                </tr>
-            </table>
+                    </tr>
+                    <tr>
+                        <th >学号</th><td ><asp:TextBox ID="Id" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
+                        <th >姓名</th><td><asp:TextBox ID="Name" runat="server" Text="" BorderWidth="0px" ReadOnly="True" Width="80%"></asp:TextBox></td>
+                        <th rowspan="4" colspan="3" style="width:11%">照片</th>
+                    </tr>
+                    <tr>
+                        <th>性别</th><td><asp:TextBox ID="Sex" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
+                        <th>出生日期</th><td><asp:TextBox ID="Birth" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"  Width="80%"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <th>身份证号</th><td><asp:TextBox ID="IdNo" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
+                        <th>联系电话</th><td><asp:TextBox ID="Pho" runat="server" Text="" BorderWidth="0px"   Width="80%"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <th>班级</th><td colspan="1"><asp:TextBox ID="ClassId" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
+                        <th>学院</th><td colspan="1"><asp:TextBox ID="ColName" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"  Width="80%"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <th>专业</th><td><asp:TextBox ID="Maj" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
+                        <th>家庭住址</th><td><asp:TextBox ID="Add" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
+                    
+                    </tr>
+                    <tr>
+                        <th>政治面貌</th><td><asp:TextBox ID="StupoState" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
+                        <th>状态</th><td colspan="2"><asp:TextBox ID="Stustate" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <th>荣誉</th><td colspan="4"><asp:TextBox ID="Stuhonor" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <th>惩处</th><td colspan="4"><asp:TextBox ID="Stupun" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
+                    </tr>
+                    <tr>
+                        <th>备注</th><td colspan="4"><asp:TextBox ID="StuPS" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="btn">
-            <asp:LinkButton ID="LinkButton2" CssClass="lbbtn" runat="server">打印本页</asp:LinkButton>
-            <asp:LinkButton ID="LinkButton3" CssClass="lbbtn" runat="server">打印学籍证明</asp:LinkButton>
+        <div class="btn"style="width:90%;margin-top:60px;">
+             <button type="button" id="btn_alter" class="btn lbbtn btn-success" onclick="change()">修改信息</button>
+            <asp:LinkButton ID="btn_sub" CssClass="lbbtn btn btn-success" style="display:none;" runat="server" OnClick="btn_sub_Click">提交</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton2"  CssClass="lbbtn btn btn-success" style="display:inline-block;" runat="server">打印本页</asp:LinkButton>
+            <asp:LinkButton ID="LinkButton3" CssClass="lbbtn btn btn-success" style="display:inline-block;" runat="server">打印学籍证明</asp:LinkButton>
         </div>
     </div>
+        <div style="display:none">
+            学院编号<asp:Label ID="CollegeID" runat="server" Text=""></asp:Label>专业编号<asp:Label ID="Major" runat="server" Text=""></asp:Label>
+        </div>
     </form>
 </body>
 </html>
