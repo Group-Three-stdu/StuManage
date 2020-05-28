@@ -31,7 +31,7 @@
     <div>
         <div class="header" style="background-color:#99cccc;">
             <div class="logo">
-                <img alt="img" runat="server" src="image/touxiang.jpg" />
+                <img src="../image/school.jpg" style="width:60px;height:60px" />
             </div>
             <div class="title">
                 <a runat="server" href="">学生管理系统</a>
