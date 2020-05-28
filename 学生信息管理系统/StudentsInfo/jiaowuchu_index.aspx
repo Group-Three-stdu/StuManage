@@ -75,17 +75,7 @@
                 <i style="font-style:normal;font-weight:800;color:#666;font-size:16px;">学生信息管理系统</i>
             </div>
             <ul class="menu">
-                <li class="one">
-                <div><i class="iconfont icon-huanzheyilan"></i>学生信息</div>
-                    <ul class="sub">
-                        <li>
-                            <a href="jiaowuchu_stuperinfo.aspx" runat="server" target="right">
-                                <i class="iconfont icon-wenjuantiaocha"></i>
-                                学籍信息
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                
           
                 <li class="one">
                      <div><i class="iconfont icon-kecheng"></i>课程信息</div>

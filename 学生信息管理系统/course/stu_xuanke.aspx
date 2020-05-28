@@ -102,7 +102,7 @@
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("courseproperty")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
-                            <%# Eval("TeaId")%></td>
+                            <%# Eval("TeaName")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("Season")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">

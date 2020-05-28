@@ -202,7 +202,7 @@ namespace DAL
                     TeaName = result["TeaName"].ToString(),
                     courseproperty = result["courseproperty"].ToString(),
                     Season=result["Season"].ToString(),
-                    CollegeName = result["CollegeName"].ToString ()
+                    CollegeName = result["CollegeName"].ToString (),
                 });
             }
             return courselist;
