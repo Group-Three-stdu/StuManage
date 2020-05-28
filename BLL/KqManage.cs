@@ -84,5 +84,11 @@ namespace BLL
         {
             return new KqService().queryStuKqNum(StuId, CourseId);
         }
+
+        //查询学生是否已签到
+        public int HasChecked(int StuId, int KQId)
+        {
+            return new KqService().HasChecked(StuId, KQId);
+        }
     }
 }

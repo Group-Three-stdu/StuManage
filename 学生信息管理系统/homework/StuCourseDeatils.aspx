@@ -220,7 +220,7 @@
                         <div style="margin-right:20px; margin-top:10px; ">
                             <div style:"width:80px">开始时间： <%# Eval("KqTime")%></div> 
                             <div style:"width:80px">截止时间： <%# Eval("EndTime")%></div>
-                            <div style:"width:80px">签到状态： <asp:Label ID="Label1" ForeColor="Red" runat="server" Text="未签到"></asp:Label></div>                 
+                            <div style:"width:80px">签到状态： <%# Eval("state")%></div>                 
                         </div>             
                                            
                         <div class="style2" style="height: 50px;  ">

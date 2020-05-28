@@ -139,5 +139,17 @@ namespace DAL
             };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
         }
+
+        //查询学生是否已签到
+        public int HasChecked(int StuId,int KQId)
+        {
+            string sql = "select count(*) from V_kq where StuId = @StuId and KQId = @KQId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId),
+                new SqlParameter("@KQId",KQId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
     }
 }

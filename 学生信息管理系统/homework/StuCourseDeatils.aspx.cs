@@ -29,6 +29,14 @@ namespace 学生信息管理系统.homework
             DataList4.DataBind();
             //绑定考勤
             List<KQ> KqList = new KqManage().queryAllKq(CourseId);
+            foreach(KQ kq in KqList)
+            {
+                int State = new KqManage().HasChecked(StuId, kq.KQId);
+                if (State > 0)
+                    kq.state = "已签到";
+                else
+                    kq.state = "<span style='color:red;'>未签到<span>";
+            }
             DataList2.DataSource = KqList;
             DataList2.DataBind();
             //绑定公告

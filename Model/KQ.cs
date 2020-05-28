@@ -15,5 +15,6 @@ namespace Model
 
         //仅作排序使用 数据库表中没有此字段
         public int KQXh { get; set; }
+        public string state { set; get; }
     }
 }
