@@ -106,7 +106,7 @@
                     </ul>
                 </li>
            
-                <li class="one">
+                <%--<li class="one">
                      <div><i class="iconfont icon-yihupaixu"></i>成绩信息</div>
                         <ul class="sub">
                             <li>
@@ -123,9 +123,9 @@
                             </li>
                         
                         </ul>
-                </li>
+                </li>--%>
           
-                <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>教学日常</div>
+               <%-- <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>教学日常</div>
                     <ul class="sub">
                         <li>
                             <a id="A9" href="" runat="server" target="right">
@@ -134,7 +134,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>--%>
          
                 <li class="one"><div><i class="iconfont icon-yonghuguanli"></i>系统设置</div>
                     <ul class="sub">

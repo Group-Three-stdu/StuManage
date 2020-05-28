@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <script type="text/javascript" src="../../resource/ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="../../resource/My97DatePicker/WdatePicker.js"></script>
 
@@ -39,10 +40,10 @@
             </script>
     </div>
      <div class="Score">
-         分数：<asp:TextBox ID="Score" runat="server"></asp:TextBox>
+         分数：<asp:TextBox ID="Score" CssClass="form-control" Width="30%" style="display:inline-block" runat="server"></asp:TextBox>
      </div>
     <div>
-        <asp:Button ID="btn_submit" runat="server" Text="确定" OnClick="btn_submit_Click" />
+        <asp:Button ID="btn_submit" CssClass="btn btn-info" runat="server" Text="确定" OnClick="btn_submit_Click" />
     </div>
     </div>
     </form>

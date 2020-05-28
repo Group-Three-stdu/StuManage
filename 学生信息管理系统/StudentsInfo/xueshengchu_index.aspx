@@ -81,10 +81,10 @@
                         <li>
                             <a href="xueshengchu_stupersonnalinformation.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                个人信息
+                                学生信息
                             </a>
                         </li>
-                        <li>
+                       <%-- <li>
                             <a href="#" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 成绩信息
@@ -95,7 +95,7 @@
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 奖惩信息
                             </a>
-                        </li>
+                        </li>--%>
                     </ul>
                 </li>
           
@@ -111,7 +111,7 @@
                        </ul>
                 </li>
            
-                <li class="one">
+                <%--<li class="one">
                      <div><i class="iconfont icon-yihupaixu"></i>修改信息</div>
                         <ul class="sub">
                             <li>
@@ -128,9 +128,9 @@
                             </li>
                         
                         </ul>
-                </li>
+                </li>--%>
           
-                <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>毕业处理</div>
+                <%--<li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>毕业处理</div>
                      <ul class="sub">
                             <li>
                             <a id="A2" href="" runat="server" target="right">
@@ -140,7 +140,7 @@
                             </li>
                          </ul>
                     
-                </li>
+                </li>--%>
          
                 <li class="one"><div><i class="iconfont icon-yonghuguanli"></i>系统设置</div>
                     <ul class="sub">

@@ -67,15 +67,6 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.WebControls.Label lb_time;
         
         /// <summary>
-        /// A1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
-        
-        /// <summary>
         /// A2 控件。
         /// </summary>
         /// <remarks>
@@ -83,15 +74,6 @@ namespace 学生信息管理系统.StudentsInfo {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A2;
-        
-        /// <summary>
-        /// A3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A3;
         
         /// <summary>
         /// A4 控件。
@@ -119,15 +101,6 @@ namespace 学生信息管理系统.StudentsInfo {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor A8;
-        
-        /// <summary>
-        /// A9 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A9;
         
         /// <summary>
         /// A10 控件。

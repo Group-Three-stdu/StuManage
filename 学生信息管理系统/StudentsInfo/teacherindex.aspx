@@ -83,13 +83,7 @@
                                 个人信息
                             </a>
                         </li>
-                        <li>
-                            <%--<asp:LinkButton ID="LinkButton2" runat="server">个人荣誉</asp:LinkButton>--%>
-                            <a id="A1" href="" runat="server" target="right">
-                                <i class="iconfont icon-wenjuantiaocha"></i>
-                                个人荣誉
-                            </a>
-                        </li>
+                        
                     </ul>
                 </li>
           
@@ -99,15 +93,15 @@
                         <li>
                             <a id="A2" href="~/course/addcourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                课程管理
+                                添加课程
                             </a>
                         </li>
-                        <li>
+                        <%--<li>
                             <a id="A3" href="" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看课程资料
                             </a>
-                        </li>
+                        </li>--%>
                         
                     </ul>
                 </li>
@@ -140,12 +134,12 @@
                                 教学信息
                             </a>
                         </li>
-                        <li>
+                        <%--<li>
                             <a id="A9" href="" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 查看公告
                             </a>
-                        </li>
+                        </li>--%>
                     </ul>
                 </li>
          
