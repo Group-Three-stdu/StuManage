@@ -111,11 +111,11 @@ namespace 学生信息管理系统
             int StuId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
             int res = new StudentManage().DeleteStudentById(StuId);
             if (res > 0)
-                Response.Write("<script>alert('删除成功')</script>");
-            else if (res ==-1)
-                Response.Write("<script>alert('该学生有未完成的课程，无法删除')</script>");
+                System.Web.UI.ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "", "alert('删除成功');", true);
+            else if (res == -1)
+                System.Web.UI.ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "", "alert('该学生有未完成的课程无法删除');", true);
             else
-                Response.Write("<script>alert('删除失败')</script>");
+             System.Web.UI.ScriptManager.RegisterStartupScript(UpdatePanel1, this.GetType(), "", "alert('删除失败');", true);
         }
     }
 }

@@ -12,6 +12,7 @@
     <script>
     </script>
     <form id="form1" runat="server">
+               <asp:Literal ID="msg" runat="server"></asp:Literal>
     <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true"></asp:ScriptManager>
     <div>
         <div class="top">
@@ -73,6 +74,7 @@
         </ContentTemplate>
         </asp:UpdatePanel>
     </div>
+        
     </form>
 </body>
 </html>
