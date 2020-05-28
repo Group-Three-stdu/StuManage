@@ -63,8 +63,8 @@
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;">
                             <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#Eval("StuId","~/StudentsInfo/alter_StudentInfo.aspx?StuId={0}") %>'
                 runat="server" ForeColor="Blue">编辑</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink3" NavigateUrl='<%#Eval("StuId","~/StudentsInfo/?StuId={0}") %>'
-                runat="server" ForeColor="Blue">删除</asp:HyperLink>
+                            <asp:LinkButton ID="btn_Del" CommandArgument='<%#Eval("StuId")%>' OnClientClick="return confirm('确认删除该学生么？')" OnClick="btn_Del_Click"
+                runat="server" ForeColor="Blue">删除</asp:LinkButton>
                         </td>
                     </tr>
                 </ItemTemplate>

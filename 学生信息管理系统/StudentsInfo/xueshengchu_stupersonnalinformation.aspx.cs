@@ -105,5 +105,17 @@ namespace 学生信息管理系统
             Repeater1.DataSource = stuList;
             Repeater1.DataBind();
         }
+        //删除学生
+        protected void btn_Del_Click(object sender, EventArgs e)
+        {
+            int StuId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
+            int res = new StudentManage().DeleteStudentById(StuId);
+            if (res > 0)
+                Response.Write("<script>alert('删除成功')</script>");
+            else if (res ==-1)
+                Response.Write("<script>alert('该学生有未完成的课程，无法删除')</script>");
+            else
+                Response.Write("<script>alert('删除失败')</script>");
+        }
     }
 }
