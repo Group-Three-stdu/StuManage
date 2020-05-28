@@ -215,5 +215,11 @@ namespace BLL
         {
             return new CourseService().queryFDYClass(FDYID);
         }
+
+        //查看某一班级的所有课程
+        public List<CourseMana> queryCourseInfoByClassId(string ClassId)
+        {
+            return new CourseService().queryCourseInfoByClassId(ClassId);
+        }
     }
 }

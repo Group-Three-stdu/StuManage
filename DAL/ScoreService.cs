@@ -26,6 +26,37 @@ namespace DAL
             return new Helper.SQLHelper().update(sql, param, false);
         }
 
+        //辅导员查看成绩
+        public List<ScoreExt> queryScorebyFDY(int CourseId, string ClassId)
+        {
+            string sql = "SELECT   CourseId,StuId, StuName, College, ClassScore, MatchScore, FinalScore, ClassId,CourseName, Xuefen, CollegeName from V_tea_score where CourseId = @CourseId and ClassId = @ClassId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId),
+                new SqlParameter("@ClassId",ClassId)
+            };
+            List<ScoreExt> sclist = new List<ScoreExt>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                sclist.Add(new ScoreExt()
+                {
+                    CourseId = Convert.ToInt32(result["CourseId"]),
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    College = result["College"].ToString(),
+                    MatchScore = float.Parse(result["MatchScore"].ToString()),
+                    ClassScore = float.Parse(result["ClassScore"].ToString()),
+                    FinalScore = float.Parse(result["FinalScore"].ToString()),
+                    ClassId = result["ClassId"].ToString(),
+                    CourseName = result["CourseName"].ToString(),
+                    Xuefen = float.Parse(result["Xuefen"].ToString()),
+                    CollegeName = result["CollegeName"].ToString(),
+                });
+            }
+            return sclist;
+        }
+
         //查询某课程的成绩记录条数
         public int queryCouseScoreNum(int CourseId)
         {
@@ -262,7 +293,7 @@ namespace DAL
         }
 
 
-        //教师查看某个学生的成绩(姓名模糊查找）
+        //教师查看某个班级的成绩
         public List<ScoreExt> queryScorebyClassId(int CourseId,string ClassId)
         {
             string sql = "SELECT   CourseId,StuId, StuName, College, ClassScore, MatchScore, FinalScore, ClassId,CourseName, Xuefen, CollegeName from V_tea_score where CourseId = @CourseId and ClassId = @ClassId";

@@ -472,5 +472,28 @@ namespace DAL
             }
             return clalist;
         }
+
+        //查看某一班级的所有课程
+        public List<CourseMana> queryCourseInfoByClassId(string ClassId)
+        {
+            string sql = "SELECT CourseID, CourseName,Season,TeaName FROM V_fudaoyuancourse where ClassID=@ClassId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@ClassId",ClassId)
+            };
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            List<CourseMana> courselist = new List<CourseMana>();
+            while (result.Read())
+            {
+                courselist.Add(new CourseMana()
+                {
+                    CourseID = Convert.ToInt32(result["CourseID"]),
+                    CourseName = result["CourseName"].ToString(),
+                    Season =result["Season"].ToString(),
+                    TeaName = result["TeaName"].ToString()
+                });
+            }
+            return courselist;
+        }
     }
 }

@@ -21,6 +21,17 @@ namespace BLL
         }
 
         /// <summary>
+        /// 辅导员查看成绩
+        /// </summary>
+        /// <param name="courseId"></param>
+        /// <param name="classId"></param>
+        /// <returns></returns>
+        public List<ScoreExt> queryScorebyFDY(int courseId, string classId)
+        {
+            return new ScoreService().queryScorebyFDY(courseId, classId);
+        }
+
+        /// <summary>
         /// 查询某课程的成绩记录条数
         /// </summary>
         /// <param name="CourseId"></param>

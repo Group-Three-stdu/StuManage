@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Class\ClassDetails.aspx" />
+    <Content Include="Class\ClassScore.aspx" />
     <Content Include="course\addcourse.aspx" />
     <Content Include="course\lookcourse.aspx" />
     <Content Include="course\MyCourse.aspx" />
@@ -918,6 +919,13 @@
     </Compile>
     <Compile Include="Class\ClassDetails.aspx.designer.cs">
       <DependentUpon>ClassDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ClassScore.aspx.cs">
+      <DependentUpon>ClassScore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\ClassScore.aspx.designer.cs">
+      <DependentUpon>ClassScore.aspx</DependentUpon>
     </Compile>
     <Compile Include="course\addcourse.aspx.cs">
       <DependentUpon>addcourse.aspx</DependentUpon>

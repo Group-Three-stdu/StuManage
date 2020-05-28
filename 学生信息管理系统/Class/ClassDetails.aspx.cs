@@ -23,6 +23,10 @@ namespace 学生信息管理系统.Class
             }
             Repeater1.DataSource = stulist;
             Repeater1.DataBind();
+
+            List<CourseMana> courseList = new CourseManege().queryCourseInfoByClassId(ClassId);
+            DataList2.DataSource = courseList;
+            DataList2.DataBind();
         }
         //姓名模糊查询
         protected void btn_searchstu_Click(object sender, EventArgs e)
@@ -51,6 +55,13 @@ namespace 学生信息管理系统.Class
             }
             Repeater1.DataSource = stulist;
             Repeater1.DataBind();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            int CourseId = Convert.ToInt32(((Button)sender).CommandArgument);
+            string ClassId = Convert.ToString(Request.Params["ClassId"]);
+            Response.Redirect("~/Class/ClassScore.aspx?CourseId=" + CourseId+"&ClassId="+ClassId);
         }
     }
 }
