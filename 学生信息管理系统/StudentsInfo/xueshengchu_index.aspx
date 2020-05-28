@@ -103,7 +103,7 @@
                      <div><i class="iconfont icon-kecheng"></i>录入信息</div>
                    <ul class="sub">
                             <li>
-                            <a id="A1" href="" runat="server" target="right">
+                            <a id="A1" href="~/StudentsInfo/addStudent.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 录入学生信息
                             </a>

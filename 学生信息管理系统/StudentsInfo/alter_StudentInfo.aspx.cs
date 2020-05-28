@@ -56,7 +56,9 @@ namespace 学生信息管理系统.StudentsInfo
             };
             int res = new StudentManage().UpdateStudentById(stu);
             if (res > 0)
-                Response.Write("<script>alert('修改成功')</script>");
+                Response.Write("<script>alert('增加成功！')</script>");
+            else if(res==-1)
+                Response.Write("<script>alert('学号重复')</script>");
             else
                 Response.Write("<script>alert('修改失败')</script>");
         }

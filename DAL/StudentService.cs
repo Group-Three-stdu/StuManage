@@ -535,5 +535,41 @@ namespace DAL
             }
             return stuList;
         }
+
+        //查询某个学生是否存在
+        public int IsExist(int StuId)
+        {
+            string sql = "select count(*) from Students where StuId = @StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
+
+        //增加学生
+        public int AddStu(Students stu)
+        {
+            string sql = "insert into Students (StuId,StuName, StuSex, StuBirth, StuNoId, StuPhoneNum, StuAdd, ClassId, StuHonor, Students.Major, Students.College,StuState,Punish,PoliticalStatus) " +
+                " Values(@StuId,@StuName, @StuSex, @StuBirth, @StuNoId, @StuPhoneNum, @StuAdd, @ClassId, @StuHonor, @Major, @College,@StuState,@Punish,@PoliticalStatus) ";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",stu.StuId),
+                new SqlParameter("@StuName",stu.StuName),
+                new SqlParameter("@StuSex",stu.StuSex),
+                new SqlParameter("@StuBirth",stu.StuBirth),
+                new SqlParameter("@StuNoId",stu.StuNoId),
+                new SqlParameter("@StuPhoneNum",stu.StuPhoneNum),
+                new SqlParameter("@StuAdd",stu.StuAdd),
+                new SqlParameter("@ClassId",stu.ClassId),
+                new SqlParameter("@StuHonor",stu.StuHonor),
+                new SqlParameter("@Major",stu.Major),
+                new SqlParameter("@College",stu.College),
+                 new SqlParameter("@StuState",stu.StuState),
+                 new SqlParameter("@Punish",stu.Punish),
+                new SqlParameter("@PoliticalStatus",stu.PoliticalStatus),
+            };
+            return new Helper.SQLHelper().update(sql, param, false);
+        }
     }
 }

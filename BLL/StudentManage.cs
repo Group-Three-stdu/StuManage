@@ -30,25 +30,29 @@ namespace BLL
         {
             return new StudentService().queryStuByMajor(Major);
         }
-
         //查询某一课程的所有学生
         public List<Students> queryStudentByCourseId(int courseId)
         {
             return new StudentService().queryStudentByCourseId(courseId);
         }
-
         //综合查询
         public List<Students> QueryStu(int StuId, string StuName, string ClassId, string College, string Major)
         {
             return new StudentService().queryStu(StuId, StuName, ClassId, College, Major);
         }
-
+        //录入学生信息
+        public int AddStudentById(Students stu)
+        {
+            int res1 = new StudentService().IsExist(stu.StuId);
+            if (res1 > 0)
+                return -1;
+            return new StudentService().AddStu(stu);
+        }
         //辅导员姓名模糊查询
         public List<Students> FDYqueryStudentByStuName(string stuName, string classId)
         {
             return new StudentService().FDYqueryStudentByStuName(stuName, classId);
         }
-
         //通过姓名查询
         public List<Students> QueryStuByName(string Name)
         {

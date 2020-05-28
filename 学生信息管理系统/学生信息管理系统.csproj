@@ -840,6 +840,7 @@
     <Content Include="Score\Tea_look_score.aspx" />
     <Content Include="Score\TeaScore.aspx" />
     <Content Include="Score\Tea_look_score1.aspx" />
+    <Content Include="StudentsInfo\addStudent.aspx" />
     <Content Include="StudentsInfo\alter_StudentInfo.aspx" />
     <Content Include="StudentsInfo\alter_stuperinfo.aspx" />
     <Content Include="StudentsInfo\college_index.aspx" />
@@ -1159,6 +1160,13 @@
     </Compile>
     <Compile Include="Score\Tea_look_score1.aspx.designer.cs">
       <DependentUpon>Tea_look_score1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\addStudent.aspx.cs">
+      <DependentUpon>addStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\addStudent.aspx.designer.cs">
+      <DependentUpon>addStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\alter_StudentInfo.aspx.cs">
       <DependentUpon>alter_StudentInfo.aspx</DependentUpon>
