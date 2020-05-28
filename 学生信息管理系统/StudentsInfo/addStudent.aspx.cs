@@ -40,65 +40,92 @@ namespace 学生信息管理系统.StudentsInfo
 
         protected void btn_sub_Click(object sender, EventArgs e)
         {
-            int StuId = Convert.ToInt32(Id.Text.Trim());
-            if (!fulStuImage.HasFile)
-            {
-                ltaMsg.Text = "<script type='text/javascript'>alert('请选择图片!')</script>";
-                return;
-            }
-            //判断文件大小
-            double theMaxphotoSize = Convert.ToDouble(System.Configuration.ConfigurationManager.AppSettings["theMaxphotoSize"]) / 1024;
-            double fileSize = fulStuImage.FileContent.Length / (1024 * 1024);
-            if (fileSize > theMaxphotoSize)
-            {
-                ltaMsg.Text = "<script type='text/javascript'>alert('文件图片不能超过" + theMaxphotoSize + "MB')</script>";
-                return;
-            }
-            //判断文件后缀名
-            string filename = fulStuImage.FileName.ToLower();
-            filename = filename.Substring(filename.LastIndexOf("."));
-            if (filename != ".jpg")
-            {
-                ltaMsg.Text = "<script type='text/javascript'>alert('图片后缀名必须为jpg')</script>";
-                return;
-            }
-            //更改文件名
-            filename = Convert.ToString(StuId + ".jpg");
-            //获取文件路径
-            string filepath = Server.MapPath("~/Image/students");
-            try
-            {
-                fulStuImage.SaveAs(filepath + "/" + filename);
-            }
-            catch (Exception ex)
-            {
-                ltaMsg.Text = "<script type='text/javascript'>alert('头像上传失败： " + ex.Message + "')</script>";
-            }
+            //int StuId = Convert.ToInt32(Id.Text.Trim());
+            string StuName = Name.Text.Trim();
+            string StuSex = Sex.Text.Trim();
+            string StuBirth = Birth.Text.Trim();
+            string Punish = Stupun.Text.Trim();
+            string StuHonor = Stuhonor.Text.Trim();
+            string StuPhoneNum = Pho.Text.Trim();
+            string StuNoId = IdNo.Text.Trim();
+            string StuState = StupoState.Text.Trim();
+            string StuAdd = Add.Text.Trim();
+            string PoliticalStatus = StupoState.Text.Trim();
+            string College = ddlxueyuan.SelectedValue;
+            string Major = ddlmajor.SelectedValue;
+            string ClassId = ddlclass.SelectedValue;
+            string ps = StuPS.Text;
 
-            Students stu = new Students()
+            int StuId = Convert.ToInt32(Id.Text.Trim());
+            //string id = Id.Text;
+            if(Id.Text==null|| StuSex==null||StuBirth==null||
+                Punish==null||Punish==null||StuHonor==null||StuPhoneNum==null||
+                StuNoId==null||StuState==null||StuAdd==null||PoliticalStatus==null||
+                College == null || Major == null || ClassId == null || ps == null)
             {
-                StuId = Convert.ToInt32(Id.Text.Trim()),
-                StuName = Name.Text.Trim(),
-                StuSex = Sex.Text.Trim(),
-                StuBirth = Birth.Text.Trim(),
-                Punish = Stupun.Text.Trim(),
-                StuHonor = Stuhonor.Text.Trim(),
-                StuPhoneNum = Pho.Text.Trim(),
-                StuNoId = IdNo.Text.Trim(),
-                StuState = StupoState.Text.Trim(),
-                StuAdd = Add.Text.Trim(),
-                PoliticalStatus = StupoState.Text.Trim(),
-                College = ddlxueyuan.SelectedValue,
-                Major = ddlmajor.SelectedValue,
-                ClassId = ddlclass.SelectedValue
-            };
-            int res = new StudentManage().AddStudentById(stu);
-            if (res > 0)
-                Response.Write("<script>alert('添加成功')</script>");
-            else if (res == -1)
-                Response.Write("<script>alert('学号重复')</script>");
+                ltaMsg.Text = "<script type='text/javascript'>alert('请把学生信息填写完整！')</script>";
+            }
             else
-                Response.Write("<script>alert('添加失败')</script>");
+            {
+                if (!fulStuImage.HasFile)
+                {
+                    ltaMsg.Text = "<script type='text/javascript'>alert('请选择图片!')</script>";
+                    return;
+                }
+                //判断文件大小
+                double theMaxphotoSize = Convert.ToDouble(System.Configuration.ConfigurationManager.AppSettings["theMaxphotoSize"]) / 1024;
+                double fileSize = fulStuImage.FileContent.Length / (1024 * 1024);
+                if (fileSize > theMaxphotoSize)
+                {
+                    ltaMsg.Text = "<script type='text/javascript'>alert('文件图片不能超过" + theMaxphotoSize + "MB')</script>";
+                    return;
+                }
+                //判断文件后缀名
+                string filename = fulStuImage.FileName.ToLower();
+                filename = filename.Substring(filename.LastIndexOf("."));
+                if (filename != ".jpg")
+                {
+                    ltaMsg.Text = "<script type='text/javascript'>alert('图片后缀名必须为jpg')</script>";
+                    return;
+                }
+                //更改文件名
+                filename = Convert.ToString(StuId + ".jpg");
+                //获取文件路径
+                string filepath = Server.MapPath("~/Image/students");
+                try
+                {
+                    fulStuImage.SaveAs(filepath + "/" + filename);
+                }
+                catch (Exception ex)
+                {
+                    ltaMsg.Text = "<script type='text/javascript'>alert('头像上传失败： " + ex.Message + "')</script>";
+                }
+
+                Students stu = new Students()
+                {
+                    StuId = Convert.ToInt32(Id.Text.Trim()),
+                    StuName = Name.Text.Trim(),
+                    StuSex = Sex.Text.Trim(),
+                    StuBirth = Birth.Text.Trim(),
+                    Punish = Stupun.Text.Trim(),
+                    StuHonor = Stuhonor.Text.Trim(),
+                    StuPhoneNum = Pho.Text.Trim(),
+                    StuNoId = IdNo.Text.Trim(),
+                    StuState = StupoState.Text.Trim(),
+                    StuAdd = Add.Text.Trim(),
+                    PoliticalStatus = StupoState.Text.Trim(),
+                    College = ddlxueyuan.SelectedValue,
+                    Major = ddlmajor.SelectedValue,
+                    ClassId = ddlclass.SelectedValue
+                };
+                int res = new StudentManage().AddStudentById(stu);
+                if (res > 0)
+                    Response.Write("<script>alert('添加成功')</script>");
+                else if (res == -1)
+                    Response.Write("<script>alert('学号重复')</script>");
+                else
+                    Response.Write("<script>alert('添加失败')</script>");
+            }   
         }
 
         protected void ddlmajor_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,7 +162,8 @@ namespace 学生信息管理系统.StudentsInfo
 
         protected void btnUpLoadImage_Click(object sender, EventArgs e)
         {
-
+            
+            
         }
     }
 }
