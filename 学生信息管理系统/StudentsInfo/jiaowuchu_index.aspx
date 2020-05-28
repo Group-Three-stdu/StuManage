@@ -78,7 +78,7 @@
                 
           
                 <li class="one">
-                     <div><i class="iconfont icon-kecheng"></i>课程信息</div>
+                     <div><i class="iconfont icon-kecheng"></i>课程管理</div>
                     <ul class="sub">
                         <li>
                             <a id="A2" href="~/course/reviewcourse.aspx" runat="server" target="right">
