@@ -873,6 +873,7 @@
     </Content>
     <Content Include="StudentsInfo\look_StudentInfo.aspx" />
     <Content Include="StudentsInfo\StuPerInfo.aspx" />
+    <Content Include="StudentsInfo\stu_alterpwd.aspx" />
     <Content Include="StudentsInfo\stu_index.aspx" />
     <Content Include="StudentsInfo\teacherindex.aspx" />
     <Content Include="StudentsInfo\teainfo.aspx" />
@@ -913,7 +914,7 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="StudentsInfo\stu_alterpwd.aspx" />
+    <Content Include="StudentsInfo\1.aspx" />
     <Content Include="StudentsInfo\stu_look_personalinformation.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config">
@@ -1288,9 +1289,16 @@
     <Compile Include="StudentsInfo\StuPerInfo.aspx.designer.cs">
       <DependentUpon>StuPerInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentsInfo\1.aspx.cs">
+      <DependentUpon>1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="StudentsInfo\stu_alterpwd.aspx.cs">
       <DependentUpon>stu_alterpwd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\stu_alterpwd.aspx.designer.cs">
+      <DependentUpon>stu_alterpwd.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\stu_index.aspx.cs">
       <DependentUpon>stu_index.aspx</DependentUpon>

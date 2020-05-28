@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="stu_alterpwd.aspx.cs" Inherits="学生信息管理系统.StudentsInfo.stu_alterpwd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="stu_alterpwd.aspx.cs" Inherits="stu_alterpwd" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -57,17 +57,17 @@
     <div>
         <div class="box">
             <div class="lable">原密码：</div>
-            <asp:TextBox ID="txt_pwd" runat="server" class="input"  TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txt_pwd" runat="server" class="input"></asp:TextBox>
             <br />
             <div class="lable">新密码：</div>
-            <asp:TextBox ID="txt_newpwd" runat="server" class="input"  TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txt_newpwd" runat="server" class="input"></asp:TextBox>
             <br />
             <div class="lable">确认新密码：</div>
-            <asp:TextBox ID="txt_renewpwd"  runat="server" class="input" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txt_renewpwd" runat="server" class="input"></asp:TextBox>
             <asp:CompareValidator
                 ID="CompareValidator1" runat="server" ErrorMessage="两次密码不相同" Font-Strikeout="False" ControlToCompare="txt_newpwd" ControlToValidate="txt_renewpwd" Font-Size="Smaller"></asp:CompareValidator>
             <br />
-            <asp:Button ID="btn_alterpass" class="btn" runat="server" Text="保存" OnClick="btn_alterpass_Click" />
+            <asp:Button ID="btn_alterpass" class="btn" runat="server" Text="保存" />
         </div>
         
     </div>

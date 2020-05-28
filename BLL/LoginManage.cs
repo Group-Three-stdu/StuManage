@@ -15,5 +15,10 @@ namespace BLL
             //调用DAL层的LoginService（）方法
             return new LoginService().UserLogin(user);
         }
+
+        public int AlterPwd(Login user)
+        {
+            return new LoginService().AlterPwd(user);
+        }
     }
 }

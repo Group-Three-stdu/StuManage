@@ -30,5 +30,17 @@ namespace DAL
             }
             return null;
         }
+
+
+        public int AlterPwd(Login user)
+        {
+            string sql = "update Login set PassWord = @PassWord where UserName = @UserName";
+            SqlParameter[] param = new SqlParameter[]{
+                new SqlParameter("@UserName",user.UserName),
+                new SqlParameter("@PassWord",user.PassWord)
+            };
+            int result = new Helper.SQLHelper().update(sql, param, false);
+            return result;
+        }
     }
 }
