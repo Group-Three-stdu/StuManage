@@ -495,5 +495,17 @@ namespace DAL
             }
             return courselist;
         }
+
+        //查询课程是否已经选择过
+        public int IsExistCourse(int CourseId,int StuId)
+        {
+            string sql = "select count(*) from Courses_Stu where CourseId =@CourseId and StuId =@StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@CourseId",CourseId),
+                new SqlParameter("@StuId",StuId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
     }
 }

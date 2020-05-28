@@ -105,7 +105,9 @@ namespace BLL
         /// <returns>1 成功 </returns>
         public int chooseCourse(int CourseId,int StuId)
         {
-
+            int res1 = new CourseService().IsExistCourse(CourseId, StuId);
+            if (res1 > 0)
+                return -1;
             Course_Stu course = new Course_Stu();
             CourseMes course1 = new CourseService().queryCourseById(CourseId);
             CourseMana course2 = new CourseService().selectCourseById(CourseId);

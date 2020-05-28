@@ -52,14 +52,12 @@
                             <%# Eval("TeaName")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("Xuefen")%></td>                 
-                      
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("courseproperty")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("CourseAdd")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
-                            
-                
+         
                         </td>
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;">
                             </td>
