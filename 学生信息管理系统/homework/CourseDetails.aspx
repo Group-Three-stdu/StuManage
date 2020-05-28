@@ -68,12 +68,12 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true"></asp:ScriptManager>
         <div id="GG">
             <div>
-                <asp:Button ID="fabu_GG" runat="server" Text="发布公告" OnClick="fabu_GG_Click" />
+                <asp:Button ID="fabu_GG" CssClass="btn btn-info" runat="server" Text="发布公告" OnClick="fabu_GG_Click" />
             </div>
              <div>
               <asp:Repeater ID="Repeater3" runat="server">
                 <HeaderTemplate>
-                    <table class="table table-striped table-hover text-center col-8" style="width:90%;margin-left:20px;">
+                    <table class="table table-striped table-hover text-center col-8" style="width:90%;margin-left:0px;">
                         <tr class="table-bordered table-condensed info text-center"  >
                              <th style="text-align:center">序号</th>
                             <th style="text-align:center">标题</th>
@@ -167,7 +167,7 @@
         </asp:UpdatePanel>
          </div>
         <div id ="HwInfo" style="display:none;">
-            <asp:Button ID="btn_fabu_zuoye" runat="server" Text="发布作业" OnClick="btn_fabu_zuoye_Click" /><br />
+            <asp:Button ID="btn_fabu_zuoye" CssClass="btn btn-info" runat="server" Text="发布作业" OnClick="btn_fabu_zuoye_Click" /><br />
             <asp:DataList ID="DataList2" runat="server" RepeatColumns="4">
             <ItemTemplate>
                 <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:300px;height:182px;background-color:#F4F4F4;margin:5px;" >
@@ -196,7 +196,7 @@
                 <asp:Button ID="Button4" runat="server" class="btn" Text="查询"  />
                 学号：<asp:TextBox ID="TextBox2" runat="server" class="input"></asp:TextBox>
                 <asp:Button ID="Button5" runat="server" class="btn" Text="查询" />--%>
-            <asp:Button ID="fabu_qiandao" runat="server" Text="发布签到" OnClick="fabu_qiandao_click" />
+            <asp:Button ID="fabu_qiandao" runat="server" CssClass="btn btn-info" Text="发布签到" OnClick="fabu_qiandao_click" />
         </div>
         <div class="content">
             <asp:Repeater ID="Repeater2" runat="server">
