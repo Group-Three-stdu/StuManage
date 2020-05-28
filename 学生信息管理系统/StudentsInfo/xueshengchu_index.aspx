@@ -30,7 +30,7 @@
 <body>
     <form id="form1" runat="server">
      <div>
-        <div class="header">
+        <div class="header" style="background-color:teal">
             <div class="title">
                 <a runat="server" href="">学生管理系统</a>
             </div>
@@ -45,7 +45,7 @@
             <div class="changecolor_menu">
                 <div class="now">
                     <i style="line-height:30px;font-style:normal;font-weight:800;color:#666;">&nbsp;当前主题：</i>
-                    <div class="now_back">
+                    <div class="now_back" style="background-color:teal;">
                         
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="header_bottom">
+        <div class="header_bottom" style="background-color:rgb(240, 255, 255)">
         &nbsp;
             <span class="iconfont icon-guanli"></span>
             <i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 欢迎您：</i>
@@ -67,7 +67,7 @@
             <i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 当前时间：</i>
             <asp:Label ID="lb_time" runat="server" class="lb" Text="54654456"></asp:Label>
         </div>
-        <div class="left-nav">
+        <div class="left-nav" style="background-color:#f5f5f5">
             <div class="title">
                 <span class="iconfont icon-xuesheng"></span>
                 <i style="font-style:normal;font-weight:800;color:#666;font-size:16px;">学生信息管理
@@ -81,10 +81,10 @@
                         <li>
                             <a href="xueshengchu_stupersonnalinformation.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                个人信息
+                                学生信息
                             </a>
                         </li>
-                        <li>
+                       <%-- <li>
                             <a href="#" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 成绩信息
@@ -95,7 +95,7 @@
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 奖惩信息
                             </a>
-                        </li>
+                        </li>--%>
                     </ul>
                 </li>
           
@@ -111,7 +111,7 @@
                        </ul>
                 </li>
            
-                <li class="one">
+                <%--<li class="one">
                      <div><i class="iconfont icon-yihupaixu"></i>修改信息</div>
                         <ul class="sub">
                             <li>
@@ -128,9 +128,9 @@
                             </li>
                         
                         </ul>
-                </li>
+                </li>--%>
           
-                <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>毕业处理</div>
+                <%--<li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>毕业处理</div>
                      <ul class="sub">
                             <li>
                             <a id="A2" href="" runat="server" target="right">
@@ -140,7 +140,7 @@
                             </li>
                          </ul>
                     
-                </li>
+                </li>--%>
          
                 <li class="one"><div><i class="iconfont icon-yonghuguanli"></i>系统设置</div>
                     <ul class="sub">

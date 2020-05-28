@@ -38,16 +38,16 @@
                 <HeaderTemplate>
                     <table width="100%">
                         <tbody>
-                            <tr>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" height="35px" width="400">学号</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="7%">姓名</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="5%">性别</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">学院编号</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">专业编号</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">班级</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">手机号</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">身份证号</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">操作</th>
+                            <tr style ="background-color:teal;">
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" height="35px" width="400">学号</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="7%">姓名</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="5%">性别</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="15%">学院编号</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="15%">专业编号</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="10%">班级</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="10%">手机号</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="15%">身份证号</th>
+                              <th style="text-align:center;background-color:teal;color:white;border-bottom:1px solid #ccc;" width="15%">操作</th>
                             </tr>
                 </HeaderTemplate>
             

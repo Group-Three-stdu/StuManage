@@ -31,7 +31,7 @@
     <div>
         <div class="header" style="background-color:#99cccc;">
             <div class="logo">
-                <img alt="img" runat="server" src="image/touxiang.jpg" />
+                <img src="../image/school.jpg" style="width:60px;height:60px" />
             </div>
             <div class="title">
                 <a runat="server" href="">学生管理系统</a>
@@ -106,7 +106,7 @@
                     </ul>
                 </li>
            
-                <li class="one">
+                <%--<li class="one">
                      <div><i class="iconfont icon-yihupaixu"></i>成绩信息</div>
                         <ul class="sub">
                             <li>
@@ -123,9 +123,9 @@
                             </li>
                         
                         </ul>
-                </li>
+                </li>--%>
           
-                <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>教学日常</div>
+               <%-- <li class="one"><div><i class="iconfont icon-quanyuanxuanjiao"></i>教学日常</div>
                     <ul class="sub">
                         <li>
                             <a id="A9" href="" runat="server" target="right">
@@ -134,7 +134,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>--%>
          
                 <li class="one"><div><i class="iconfont icon-yonghuguanli"></i>系统设置</div>
                     <ul class="sub">
