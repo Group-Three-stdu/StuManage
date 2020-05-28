@@ -20,11 +20,29 @@ namespace BLL
         {
             return new GGService().fabuGG(gg);
         }
+        
+        //查看系统公告
+        public List<XTGG> LookXTGG()
+        {
+            return new GGService().LookXTGG();
+        }
 
         //删除公告
         public int DelGG(int GGId)
         {
             return new GGService().DelGG(GGId);
+        }
+
+        //删除系统公告
+        public int DelXTGG(int GGId)
+        {
+            return new GGService().DelXTGG(GGId);
+        }
+
+        //发布公告
+        public int fabuXTGG(XTGG gg)
+        {
+            return new GGService().fabuXTGG(gg);
         }
     }
 }

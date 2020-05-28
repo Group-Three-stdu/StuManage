@@ -37,8 +37,10 @@ namespace DAL
                 stu.StuAdd = result["StuAdd"].ToString();
                 stu.ClassId = result["ClassId"].ToString();
                 stu.StuHonor = result["StuHonor"].ToString();
-                stu.Major = result["MajorName"].ToString();
-                stu.College = result["CollegeName"].ToString();
+                stu.College = result["College"].ToString();
+                stu.Major = result["Major"].ToString();
+                stu.MajorName = result["MajorName"].ToString();
+                stu.CollegeName = result["CollegeName"].ToString();
                 stu.StuState = result["StuState"].ToString();
                 stu.Punish = result["Punish"].ToString();
                 stu.PoliticalStatus = result["PoliticalStatus"].ToString();
@@ -134,7 +136,7 @@ namespace DAL
                     StuId = Convert.ToInt32(result["StuId"]),
                     StuName = result["StuName"].ToString(),
                     StuSex = result["StuSex"].ToString(),
-                    StuBirth = Convert.ToDateTime(result["StuBirth"]).ToString ("yyyy-MM-dd"),
+                    StuBirth = Convert.ToDateTime(result["StuBirth"]).ToString("yyyy-MM-dd"),
                     StuNoId = result["StuNoId"].ToString(),
                     StuPhoneNum = result["StuPhoneNum"].ToString(),
                     StuAdd = result["StuAdd"].ToString(),
@@ -143,6 +145,8 @@ namespace DAL
                     Major = result["Major"].ToString(),
                     College = result["College"].ToString(),
                     StuState = result["StuState"].ToString(),
+                    MajorName = result["MajorName"].ToString(),
+                    CollegeName = result["CollegeName"].ToString(),
                     Punish = result["Punish"].ToString(),
                     PoliticalStatus = result["PoliticalStatus"].ToString()
                 });
@@ -181,6 +185,8 @@ namespace DAL
                     StuHonor = result["StuHonor"].ToString(),
                     Major = result["Major"].ToString(),
                     College = result["College"].ToString(),
+                    MajorName = result["MajorName"].ToString(),
+                    CollegeName = result["CollegeName"].ToString(),
                     StuState = result["StuState"].ToString(),
                     Punish = result["Punish"].ToString(),
                     PoliticalStatus = result["PoliticalStatus"].ToString()
@@ -220,6 +226,8 @@ namespace DAL
                     StuHonor = result["StuHonor"].ToString(),
                     Major = result["Major"].ToString(),
                     College = result["College"].ToString(),
+                    MajorName = result["MajorName"].ToString(),
+                    CollegeName = result["CollegeName"].ToString(),
                     StuState = result["StuState"].ToString(),
                     Punish = result["Punish"].ToString(),
                     PoliticalStatus = result["PoliticalStatus"].ToString()
@@ -259,6 +267,8 @@ namespace DAL
                     StuHonor = result["StuHonor"].ToString(),
                     Major = result["Major"].ToString(),
                     College = result["College"].ToString(),
+                    MajorName = result["MajorName"].ToString(),
+                    CollegeName = result["CollegeName"].ToString(),
                     StuState = result["StuState"].ToString(),
                     Punish = result["Punish"].ToString(),
                     PoliticalStatus = result["PoliticalStatus"].ToString()
@@ -299,6 +309,8 @@ namespace DAL
                     StuHonor = result["StuHonor"].ToString(),
                     Major = result["Major"].ToString(),
                     College = result["College"].ToString(),
+                    MajorName = result["MajorName"].ToString(),
+                    CollegeName = result["CollegeName"].ToString(),
                     StuState = result["StuState"].ToString(),
                     Punish = result["Punish"].ToString(),
                     PoliticalStatus = result["PoliticalStatus"].ToString()

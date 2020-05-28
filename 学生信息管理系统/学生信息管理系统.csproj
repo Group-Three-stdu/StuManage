@@ -134,6 +134,8 @@
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
     <Content Include="GG\fabu_gg.aspx" />
+    <Content Include="GG\fabu_xtgg.aspx" />
+    <Content Include="GG\guanli_gg.aspx" />
     <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\HwCheck.aspx" />
     <Content Include="homework\HwDetails.aspx" />
@@ -846,6 +848,7 @@
     <Content Include="StudentsInfo\guanli_bangongshi.aspx" />
     <Content Include="StudentsInfo\guanli_jiaowuchu.aspx" />
     <Content Include="StudentsInfo\guanli_sys.aspx" />
+    <Content Include="StudentsInfo\index副本.aspx" />
     <Content Include="StudentsInfo\index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_index.aspx" />
     <Content Include="StudentsInfo\jiaowuchu_stuperinfo.aspx" />
@@ -969,6 +972,20 @@
     </Compile>
     <Compile Include="GG\fabu_gg.aspx.designer.cs">
       <DependentUpon>fabu_gg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GG\fabu_xtgg.aspx.cs">
+      <DependentUpon>fabu_xtgg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GG\fabu_xtgg.aspx.designer.cs">
+      <DependentUpon>fabu_xtgg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GG\guanli_gg.aspx.cs">
+      <DependentUpon>guanli_gg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GG\guanli_gg.aspx.designer.cs">
+      <DependentUpon>guanli_gg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1196,9 +1213,16 @@
     <Compile Include="StudentsInfo\guanli_sys.aspx.designer.cs">
       <DependentUpon>guanli_sys.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StudentsInfo\index副本.aspx.cs">
+      <DependentUpon>index副本.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="StudentsInfo\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\jiaowuchu_index.aspx.cs">
       <DependentUpon>jiaowuchu_index.aspx</DependentUpon>

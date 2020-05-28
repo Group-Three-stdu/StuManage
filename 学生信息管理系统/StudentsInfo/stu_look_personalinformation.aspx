@@ -56,64 +56,16 @@
     <div>
         <div class="earn">
             以下为您的个人信息请核实，如有不正确请及时联系学生处进行修改
-            <asp:LinkButton ID="LinkButton1" runat="server">立即联系</asp:LinkButton>
         </div>
         <div class="box">
-            <%--<asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
-                <HeaderTemplate>
-                    <table>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <tr>
-                            <th colspan="5">XX大学学籍信息表</th>
-                    </tr>
-                    <tr>
-                        <th width="15%">学号</th><td width="25%"><%#Eval("StuId") %></td>
-                        <th width="15%">姓名</th><td width="25%"><%#Eval("StuName") %></td>
-                        <th rowspan="3" colspan="2">照片</th>
-                    </tr>
-                    <tr>
-                        <th>性别</th><td><%#Eval("StuSex") %></td>
-                        <th>出生日期</th><td><%#Eval("StuBirth") %></td>
-                    </tr>
-                    <tr>
-                        <th>身份证号</th><td><%#Eval("StuNoId") %></td>
-                        <th>联系电话</th><td><%#Eval("StuPhoneNum") %></td>
-                    </tr>
-                    <tr>
-                        <th>家庭住址</th><td><%#Eval("StuAdd") %></td>
-                        <th>学院</th><td colspan="2"> <%#Eval("ClassId") %></td>
-                    </tr>
-                    <tr>
-                        <th>专业</th><td><%#Eval("StuHonor") %></td>
-                        <th>班级</th><td colspan="2"><%#Eval("Major") %></td>
-                    </tr>
-                    <tr>
-                        <th>政治面貌</th><td><%#Eval("College") %></td>
-                        <th>状态</th><td colspan="2"><%#Eval("StuState") %></td>
-                    </tr>
-                    <tr>
-                        <th>荣誉</th><td colspan="4"><%#Eval("Punish") %></td>
-                    </tr>
-                    <tr>
-                        <th>惩处</th><td colspan="4"><%#Eval("PoliticalStatus") %></td>
-                    </tr>
-                    <tr>
-                        <th>备注</th><td colspan="4"><%#Eval("StuId") %></td>
-                    </tr>
-                    </ItemTemplate>
-                    <FooterTemplate>
-                    </table>
-                </FooterTemplate>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:StulnfoConnectionString %>" SelectCommand="SELECT * FROM [Students]"></asp:SqlDataSource>--%>
-            <table>
+            <table style="width:80%">
                 <tr>
-                    <th colspan="5">XX大学学籍信息表</th>
+                    <th colspan="5">个人信息</th>
                     
                 </tr>
                 <tr>
-                    <th width="15%">学号</th><td width="25%"><asp:Label ID="StuId" runat="server" Text=""></asp:Label></td>
-                    <th width="15%">姓名</th><td width="25%"><asp:Label ID="StuName" runat="server" Text=""></asp:Label></td>
+                    <th>学号</th><td ><asp:Label ID="StuId" runat="server" Text=""></asp:Label></td>
+                    <th >姓名</th><td><asp:Label ID="StuName" runat="server" Text=""></asp:Label></td>
                     <th rowspan="3" colspan="2">照片</th>
                 </tr>
                 <tr>
@@ -147,6 +99,7 @@
                 </tr>
             </table>
         </div>
+        
         <div class="btn">
             <asp:LinkButton ID="LinkButton2" CssClass="lbbtn" runat="server">打印本页</asp:LinkButton>
             <asp:LinkButton ID="LinkButton3" CssClass="lbbtn" runat="server">打印学籍证明</asp:LinkButton>

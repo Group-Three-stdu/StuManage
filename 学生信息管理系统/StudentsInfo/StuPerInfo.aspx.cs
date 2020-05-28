@@ -13,20 +13,52 @@ namespace 学生信息管理系统.StudentsInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                int stuId = ((Model.Login)Session["CurrentUser"]).UserName;
+                Students stu = new StudentManage().QueryStuById(stuId);
+                this.Id.Text = stu.StuId.ToString();
+                Name.Text = stu.StuName.ToString();
+                Sex.Text = stu.StuSex.ToString();
+                Birth.Text = stu.StuBirth.ToString();
+                Add.Text = stu.StuAdd.ToString();
+                Stupun.Text = stu.Punish.ToString();
+                Pho.Text = stu.StuPhoneNum.ToString();
+                Stuhonor.Text = stu.StuHonor.ToString();
+                ColName.Text = stu.CollegeName.ToString();
+                Maj.Text = stu.MajorName.ToString();
+                ClassId.Text = stu.ClassId.ToString();
+                IdNo.Text = stu.StuNoId.ToString();
+                StupoState.Text = stu.PoliticalStatus.ToString();
+                CollegeID.Text = stu.College.ToString();
+                Major.Text = stu.Major.ToString();
+            }    
+        }
 
-            int stuId = ((Model.Login)Session["CurrentUser"]).UserName;
-            Students stu = new StudentManage().QueryStuById(stuId);
-            StuId.Text = stu.StuId.ToString();
-            StuName.Text = stu.StuName.ToString();
-            StuSex.Text = stu.StuSex.ToString();
-            StuBirth.Text = stu.StuBirth.ToString();
-            StuAdd.Text = stu.StuAdd.ToString();
-            pun.Text = stu.Punish.ToString();
-            StuPho.Text = stu.StuPhoneNum.ToString();
-            honor.Text = stu.StuHonor.ToString();
-            Col.Text = stu.College.ToString();
-            Major.Text = stu.Major.ToString();
-            Class.Text = stu.ClassId.ToString();
+        protected void btn_sub_Click(object sender, EventArgs e)
+        {
+            Students stu = new Students()
+            {
+                StuId = ((Model.Login)Session["CurrentUser"]).UserName,
+                StuName = Name.Text.Trim(),
+                StuSex = Sex.Text.Trim(),
+                StuBirth = Birth.Text.Trim(),
+                Punish = Stupun.Text.Trim(),
+                StuHonor = Stuhonor.Text.Trim(),
+                StuPhoneNum = Pho.Text.Trim(),
+                StuNoId = IdNo.Text.Trim(),
+                StuState = StupoState.Text.Trim(),
+                ClassId = ClassId.Text.Trim(),
+                StuAdd = Add.Text.Trim(),
+                College = CollegeID.Text.Trim(),
+                Major = Major.Text.Trim(),
+                PoliticalStatus = StupoState.Text.Trim()
+            };
+            int res = new StudentManage().UpdateStudentById(stu);
+            if (res > 0)
+                Response.Write("<script>alert('修改成功')</script>");
+            else
+                Response.Write("<script>alert('修改失败')</script>");
         }
     }
 }
