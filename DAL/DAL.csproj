@@ -133,6 +133,7 @@
     <Compile Include="queryStudentService.cs" />
     <Compile Include="ScoreService.cs" />
     <Compile Include="StudentService.cs" />
+    <Compile Include="TeaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Model\Model.csproj">

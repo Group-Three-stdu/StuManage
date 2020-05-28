@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Model
 {
-    class Teacher
+    public class Teacher
     {
         public int TeaId { set; get; }
         public string TeaName { set; get; }
@@ -20,5 +20,8 @@ namespace Model
         public string TeaHonor { set; get; }
         public string Office { set; get; }
         public string PoliticalStatus { set; get; }
+        public string College { set; get; }
+
+        public string CollegeName { set; get; }
     }
 }

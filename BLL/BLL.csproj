@@ -131,6 +131,7 @@
     <Compile Include="queryManage.cs" />
     <Compile Include="ScoreManage.cs" />
     <Compile Include="StudentManage.cs" />
+    <Compile Include="TeaManage.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

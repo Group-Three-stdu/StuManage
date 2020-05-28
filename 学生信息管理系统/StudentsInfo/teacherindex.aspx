@@ -78,7 +78,7 @@
                 <div><i class="iconfont icon-huanzheyilan"></i>基本信息</div>
                     <ul class="sub">
                         <li>
-                            <a href="" runat="server" target="right">
+                            <a href="~/StudentsInfo/teainfo.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
                                 个人信息
                             </a>

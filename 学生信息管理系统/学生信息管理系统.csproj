@@ -877,6 +877,7 @@
     <Content Include="StudentsInfo\StuPerInfo.aspx" />
     <Content Include="StudentsInfo\stu_index.aspx" />
     <Content Include="StudentsInfo\teacherindex.aspx" />
+    <Content Include="StudentsInfo\teainfo.aspx" />
     <Content Include="StudentsInfo\xueshengchu_index.aspx" />
     <Content Include="StudentsInfo\xueshengchu_stupersonnalinformation.aspx" />
     <Content Include="resource\ckeditor\CHANGES.md" />
@@ -1321,6 +1322,13 @@
     </Compile>
     <Compile Include="StudentsInfo\teacherindex.aspx.designer.cs">
       <DependentUpon>teacherindex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentsInfo\teainfo.aspx.cs">
+      <DependentUpon>teainfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentsInfo\teainfo.aspx.designer.cs">
+      <DependentUpon>teainfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentsInfo\xueshengchu_index.aspx.cs">
       <DependentUpon>xueshengchu_index.aspx</DependentUpon>
