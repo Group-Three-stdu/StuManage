@@ -151,5 +151,16 @@ namespace DAL
             };
             return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
         }
+
+        public DateTime queryEndTime(int KQId)
+        {
+            string sql = "select EndTime from KQ where KQId = @KQId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@KQId",KQId)
+            };
+            DateTime EndTime = Convert.ToDateTime(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+            return EndTime;
+        }
     }
 }

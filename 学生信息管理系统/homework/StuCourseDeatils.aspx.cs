@@ -50,7 +50,7 @@ namespace 学生信息管理系统.homework
             int HwId = Convert.ToInt32(((Button)sender).CommandArgument);
             Response.Redirect("~/homework/zuoye_tijiao.aspx/?HwId=" + HwId);
         }
-
+        //签到
         protected void Button3_Click(object sender, EventArgs e)
         {
             int KQId = Convert.ToInt32(((Button)sender).CommandArgument);
@@ -60,13 +60,11 @@ namespace 学生信息管理系统.homework
             if(result==1)
             {
                 Response.Write("<script>window.alert('签到成功！');</script>");
-                //Label lb = DataList2.Items[0].FindControl("Label1") as Label;
-                //lb.Text = "已签到";
-                
             }
-                
-            if(result!=1)
+            if(result==-1)
                 Response.Write("<script>window.alert('请勿重复签到！');</script>");
+            if(result==-2)
+                Response.Write("<script>window.alert('签到超时！');</script>");
         }
 
         //已完成作业查看
