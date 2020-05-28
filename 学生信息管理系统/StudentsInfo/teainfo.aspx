@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StuPerInfo.aspx.cs" Inherits="学生信息管理系统.StudentsInfo.StuPerInfo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="teainfo.aspx.cs" Inherits="学生信息管理系统.StudentsInfo.teainfo" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>学生查看个人信息</title>
+    <title>教师个人信息</title>
     <style>
         .box {
             margin:0 auto;
@@ -53,8 +53,7 @@
             $('#btn_alter').hide();
             $('#Add').css('border', 'solid 1px black');
             $('#Pho').css('border', 'solid 1px black');
-            $('#Add').removeAttr("readonly");
-            $('#Pho').removeAttr("readonly");
+            $('#Office').css('border', 'solid 1px black');
         }
     </script>
     <form id="form1" runat="server">
@@ -69,9 +68,9 @@
                     
                     </tr>
                     <tr>
-                        <th >学号</th><td ><asp:TextBox ID="Id" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
+                        <th >编号</th><td ><asp:TextBox ID="TeaId" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
                         <th >姓名</th><td><asp:TextBox ID="Name" runat="server" Text="" BorderWidth="0px" ReadOnly="True" Width="80%"></asp:TextBox></td>
-                        <th rowspan="4" colspan="3" style="width:80px;height:100%; padding:0">
+                        <th rowspan="4" colspan="3" style="width:11%;padding:0">
                             <asp:Image ID="Image1" runat="server" Width="100%" />
                     </tr>
                     <tr>
@@ -83,23 +82,22 @@
                         <th>联系电话</th><td><asp:TextBox ID="Pho" runat="server" Text="" BorderWidth="0px"   Width="80%"></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <th>班级</th><td colspan="1"><asp:TextBox ID="ClassId" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
                         <th>学院</th><td colspan="1"><asp:TextBox ID="ColName" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"  Width="80%"></asp:TextBox></td>
+                        <th>办公室</th><td><asp:TextBox ID="Office" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <th>专业</th><td><asp:TextBox ID="Maj" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
-                        <th>家庭住址</th><td><asp:TextBox ID="Add" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
-                    
+                        <th>职称</th><td><asp:TextBox ID="Job" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
+                        <th>学历</th><td><asp:TextBox ID="Education" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
                     </tr>
                     <tr>
                         <th>政治面貌</th><td><asp:TextBox ID="StupoState" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
                         <th>状态</th><td colspan="2"><asp:TextBox ID="Stustate" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <th>荣誉</th><td colspan="4"><asp:TextBox ID="Stuhonor" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
+                         <th>家庭住址</th><td colspan="4"><asp:TextBox ID="Add" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <th>惩处</th><td colspan="4"><asp:TextBox ID="Stupun" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
+                       <th>荣誉</th><td colspan="4"><asp:TextBox ID="Honor" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>
                     </tr>
                     <tr>
                         <th>备注</th><td colspan="4"><asp:TextBox ID="StuPS" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
@@ -118,3 +116,4 @@
     </form>
 </body>
 </html>
+

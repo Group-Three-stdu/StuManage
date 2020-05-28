@@ -10,7 +10,7 @@
 namespace 学生信息管理系统.StudentsInfo {
     
     
-    public partial class StuPerInfo {
+    public partial class teainfo {
         
         /// <summary>
         /// form1 控件。
@@ -22,13 +22,13 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Id 控件。
+        /// TeaId 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Id;
+        protected global::System.Web.UI.WebControls.TextBox TeaId;
         
         /// <summary>
         /// Name 控件。
@@ -85,15 +85,6 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.WebControls.TextBox Pho;
         
         /// <summary>
-        /// ClassId 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ClassId;
-        
-        /// <summary>
         /// ColName 控件。
         /// </summary>
         /// <remarks>
@@ -103,22 +94,31 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.WebControls.TextBox ColName;
         
         /// <summary>
-        /// Maj 控件。
+        /// Office 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Maj;
+        protected global::System.Web.UI.WebControls.TextBox Office;
         
         /// <summary>
-        /// Add 控件。
+        /// Job 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Add;
+        protected global::System.Web.UI.WebControls.TextBox Job;
+        
+        /// <summary>
+        /// Education 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Education;
         
         /// <summary>
         /// StupoState 控件。
@@ -139,22 +139,22 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.WebControls.TextBox Stustate;
         
         /// <summary>
-        /// Stuhonor 控件。
+        /// Add 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Stuhonor;
+        protected global::System.Web.UI.WebControls.TextBox Add;
         
         /// <summary>
-        /// Stupun 控件。
+        /// Honor 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Stupun;
+        protected global::System.Web.UI.WebControls.TextBox Honor;
         
         /// <summary>
         /// StuPS 控件。
