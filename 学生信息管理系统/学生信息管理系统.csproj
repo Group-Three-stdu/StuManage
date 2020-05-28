@@ -156,6 +156,14 @@
     <Content Include="image\logo_bottom.png" />
     <Content Include="image\logo_right.png" />
     <Content Include="image\school.jpg" />
+    <Content Include="image\teacher\10003.jpg" />
+    <Content Include="image\students\20173696.jpg" />
+    <Content Include="image\teacher\10006.jpg" />
+    <Content Include="image\teacher\10007.jpg" />
+    <Content Include="image\teacher\10008.jpg" />
+    <Content Include="image\teacher\10009.jpg" />
+    <Content Include="image\students\20173703.jpg" />
+    <Content Include="image\students\20173697.jpg" />
     <Content Include="js\code.js" />
     <Content Include="js\My97DatePicker\calendar.js" />
     <Content Include="js\My97DatePicker\config.js" />

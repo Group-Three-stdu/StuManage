@@ -13,6 +13,7 @@ namespace 学生信息管理系统.StudentsInfo
         {
             lb_user.Text = ((Model.Login)Session["CurrentUser"]).StuName.ToString();
             lb_time.Text = DateTime.Now.ToString();
+            head.ImageUrl = "~/image/teacher/"+ ((Model.Login)Session["CurrentUser"]).UserName.ToString() +".jpg";
         }
     }
 }

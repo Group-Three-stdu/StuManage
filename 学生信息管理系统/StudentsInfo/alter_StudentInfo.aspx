@@ -68,7 +68,7 @@
                     <tr>
                         <th >学号</th><td ><asp:TextBox ID="Id" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
                         <th >姓名</th><td><asp:TextBox ID="Name" runat="server" Text="" BorderWidth="0px"  Width="80%"></asp:TextBox></td>
-                        <th rowspan="4" colspan="3" style="width:11%">照片</th>
+                        <th rowspan="4" colspan="3" style="width:11%"><asp:Image ID="Image1" runat="server" Width="100%" /></th>
                     </tr>
                     <tr>
                         <th>性别</th><td><asp:TextBox ID="Sex" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2"></asp:TextBox></td>
@@ -85,7 +85,6 @@
                     <tr>
                         <th>专业</th><td><asp:TextBox ID="Maj" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
                         <th>家庭住址</th><td><asp:TextBox ID="Add" runat="server" Text="" BorderWidth="0px" ></asp:TextBox></td>
-                    
                     </tr>
                     <tr>
                         <th>政治面貌</th><td><asp:TextBox ID="StupoState" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ></asp:TextBox></td>

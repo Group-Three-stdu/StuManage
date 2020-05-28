@@ -40,6 +40,41 @@ namespace 学生信息管理系统.StudentsInfo
 
         protected void btn_sub_Click(object sender, EventArgs e)
         {
+            int StuId = Convert.ToInt32(Id.Text.Trim());
+            if (!fulStuImage.HasFile)
+            {
+                ltaMsg.Text = "<script type='text/javascript'>alert('请选择图片!')</script>";
+                return;
+            }
+            //判断文件大小
+            double theMaxphotoSize = Convert.ToDouble(System.Configuration.ConfigurationManager.AppSettings["theMaxphotoSize"]) / 1024;
+            double fileSize = fulStuImage.FileContent.Length / (1024 * 1024);
+            if (fileSize > theMaxphotoSize)
+            {
+                ltaMsg.Text = "<script type='text/javascript'>alert('文件图片不能超过" + theMaxphotoSize + "MB')</script>";
+                return;
+            }
+            //判断文件后缀名
+            string filename = fulStuImage.FileName.ToLower();
+            filename = filename.Substring(filename.LastIndexOf("."));
+            if (filename != ".jpg")
+            {
+                ltaMsg.Text = "<script type='text/javascript'>alert('图片后缀名必须为jpg')</script>";
+                return;
+            }
+            //更改文件名
+            filename = Convert.ToString(StuId + ".jpg");
+            //获取文件路径
+            string filepath = Server.MapPath("~/Image/students");
+            try
+            {
+                fulStuImage.SaveAs(filepath + "/" + filename);
+            }
+            catch (Exception ex)
+            {
+                ltaMsg.Text = "<script type='text/javascript'>alert('头像上传失败： " + ex.Message + "')</script>";
+            }
+
             Students stu = new Students()
             {
                 StuId = Convert.ToInt32(Id.Text.Trim()),
@@ -96,6 +131,11 @@ namespace 学生信息管理系统.StudentsInfo
             ddlclass.DataTextField = "ClassId";
             ddlclass.DataBind();
             ddlclass.Items.Insert(0, new ListItem("请选择", ""));
+        }
+
+        protected void btnUpLoadImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,7 +30,7 @@
     <div>
         <div class="header">
             <div class="logo">
-                <img alt="img" runat="server" src="image/touxiang.jpg" />
+                <asp:Image ID="head" runat="server" />
             </div>
             <div class="title">
                 <a runat="server" href="">学生管理系统</a>

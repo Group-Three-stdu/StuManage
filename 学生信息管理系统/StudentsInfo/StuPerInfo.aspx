@@ -71,7 +71,8 @@
                     <tr>
                         <th >学号</th><td ><asp:TextBox ID="Id" runat="server" Text="" BorderWidth="0px" ReadOnly="True"></asp:TextBox></td>
                         <th >姓名</th><td><asp:TextBox ID="Name" runat="server" Text="" BorderWidth="0px" ReadOnly="True" Width="80%"></asp:TextBox></td>
-                        <th rowspan="4" colspan="3" style="width:11%">照片</th>
+                        <th rowspan="4" colspan="3" style="width:11%;padding:0">
+                            <asp:Image ID="Image1" runat="server" Width="100%" />
                     </tr>
                     <tr>
                         <th>性别</th><td><asp:TextBox ID="Sex" runat="server" Text="" BorderWidth="0px" BackColor="#f2f2f2" ReadOnly="True"></asp:TextBox></td>

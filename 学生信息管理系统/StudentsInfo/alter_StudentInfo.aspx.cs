@@ -32,6 +32,7 @@ namespace 学生信息管理系统.StudentsInfo
                 StupoState.Text = stu.PoliticalStatus.ToString();
                 CollegeID.Text = stu.College.ToString();
                 Major.Text = stu.Major.ToString();
+                Image1.ImageUrl = "~/image/students/" + stuId + ".jpg";
             }
         }
 
