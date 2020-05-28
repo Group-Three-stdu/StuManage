@@ -43,10 +43,21 @@ namespace BLL
             return new StudentService().queryStu(StuId, StuName, ClassId, College, Major);
         }
 
+        //辅导员姓名模糊查询
+        public List<Students> FDYqueryStudentByStuName(string stuName, string classId)
+        {
+            return new StudentService().FDYqueryStudentByStuName(stuName, classId);
+        }
+
         //通过姓名查询
         public List<Students> QueryStuByName(string Name)
         {
             return new StudentService().queryStuByName(Name);
+        }
+
+        public List<Students> FDYqueryStudentByStuId(int stuId, string classId)
+        {
+            return new StudentService().FDYqueryStudentByStuId(stuId, classId);
         }
 
         /// <summary>
@@ -90,6 +101,12 @@ namespace BLL
         public List<Students> TeaqueryStudentByClassId(int CourseId,string ClassId)
         {
             return new StudentService().TeaqueryStudentByClassId(CourseId ,ClassId);
+        }
+
+        //查询某个班所有学生
+        public List<Students> queryStudentByClassId(string ClassId)
+        {
+            return new StudentService().queryStudentByClassId(ClassId);
         }
     }
 }

@@ -95,18 +95,11 @@
                      <div style="color:#666"><i class="iconfont icon-kecheng"></i>学生信息</div>
                     <ul class="sub">
                         <li>
-                            <a id="A2" href="college_lookstu.aspx" runat="server" target="right">
+                            <a id="A2" href="~/Class/MyClass.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>
-                                学籍信息
+                                我的班级
                             </a>
-                        </li>
-                        <li>
-                            <a id="A3" href="" runat="server" target="right">
-                                <i class="iconfont icon-wenjuantiaocha"></i>
-                                成绩信息
-                            </a>
-                        </li>
-                        
+                        </li>                               
                     </ul>
                 </li>
            

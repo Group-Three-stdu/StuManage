@@ -31,7 +31,7 @@ namespace 学生信息管理系统
                 ddlmajor.DataBind();
                 ddlmajor.Items.Insert(0, new ListItem("请选择", ""));
                 //班级列表
-                List<Class> clalist = new queryManage().querAllCla(" ", " ");
+                List<Model.Class> clalist = new queryManage().querAllCla(" ", " ");
                 ddlclass.DataSource = clalist;
                 ddlclass.DataTextField = "ClassId";
                 ddlclass.DataBind();
@@ -72,7 +72,7 @@ namespace 学生信息管理系统
             ddlmajor.DataBind();
             ddlmajor.Items.Insert(0, new ListItem("请选择", ""));
             //班级下拉框联动
-            List<Class> clalist = new queryManage().querAllCla(collegeId, " ");
+            List<Model.Class> clalist = new queryManage().querAllCla(collegeId, " ");
             ddlclass.DataSource = clalist;
             ddlclass.DataTextField = "ClassId";
             ddlclass.DataBind();
@@ -88,7 +88,7 @@ namespace 学生信息管理系统
             Repeater1.DataSource = stuList;
             Repeater1.DataBind();
             //班级下拉框联动
-            List<Class> clalist = new queryManage().querAllCla(collegeId, majorId);
+            List<Model.Class> clalist = new queryManage().querAllCla(collegeId, majorId);
             ddlclass.DataSource = clalist;
             ddlclass.DataTextField = "ClassId";
             ddlclass.DataBind();

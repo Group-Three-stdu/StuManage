@@ -49,6 +49,63 @@ namespace DAL
         }
 
         /// <summary>
+        /// 辅导员通过学号查询
+        /// </summary>
+        /// <param name="stuId"></param>
+        /// <param name="classId"></param>
+        /// <returns></returns>
+        public List<Students> FDYqueryStudentByStuId(int StuId, string classId)
+        {
+            string sql = "select Students.StuId,StuName,ClassId,StuPhoneNum from Students where ClassId=@ClassId  and StuId=@StuId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@ClassId",classId),
+                 new SqlParameter("@StuId",StuId)
+            };
+            List<Students> stuList = new List<Students>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                stuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    ClassId = result["ClassId"].ToString(),
+                    StuPhoneNum = result["StuPhoneNum"].ToString()
+                });
+            }
+            return stuList;
+        }
+
+        /// <summary>
+        /// 辅导员通过姓名模糊查询
+        /// </summary>
+        /// <param name="stuName"></param>
+        /// <param name="classId"></param>
+        /// <returns></returns>
+        public List<Students> FDYqueryStudentByStuName(string stuName, string classId)
+        {
+            string sql = "select Students.StuId,StuName,ClassId,StuPhoneNum from Students where ClassId=@ClassId  and StuName Like  '%" + stuName + "%'";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@ClassId",classId)
+            };
+            List<Students> stuList = new List<Students>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                stuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    ClassId = result["ClassId"].ToString(),
+                    StuPhoneNum = result["StuPhoneNum"].ToString()
+                });
+            }
+            return stuList;
+        }
+
+        /// <summary>
         /// 查询某一课程的所有学生
         /// </summary>
         /// <param name="courseId"></param>
@@ -433,13 +490,36 @@ namespace DAL
             return stuList;
         }
 
-        //教师按学号查询某门课程的学生
+        //教师通过学号查找学生
         public List<Students> TeaqueryStudentByStuId(int StuId)
         {
             string sql = "select StuId,StuName,ClassId,StuPhoneNum from Students where StuId = @StuId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@StuId",StuId)
+            };
+            List<Students> stuList = new List<Students>();
+            SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (result.Read())
+            {
+                stuList.Add(new Students()
+                {
+                    StuId = Convert.ToInt32(result["StuId"]),
+                    StuName = result["StuName"].ToString(),
+                    ClassId = result["ClassId"].ToString(),
+                    StuPhoneNum = result["StuPhoneNum"].ToString()
+                });
+            }
+            return stuList;
+        }
+
+        //查看某个班级的所有学生
+        public List<Students> queryStudentByClassId(string ClassId)
+        {
+            string sql = "select StuId,StuName,ClassId,StuPhoneNum from Students where ClassId = @ClassId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@ClassId",ClassId)
             };
             List<Students> stuList = new List<Students>();
             SqlDataReader result = new Helper.SQLHelper().queryAllResult(sql, param, false);

@@ -10,5 +10,9 @@ namespace Model
         public string ClassId { set; get; }
         public string majorId { set; get; }
         public string collegId { set; get; }
+        public int fudaoyuan { set; get; }
+
+        public string MajorName { set; get; }
+        public string CollegeName { set; get; }
     }
 }

@@ -447,5 +447,30 @@ namespace DAL
             }
             return SeasonList;
         }
+
+        //查看辅导员的班级
+        public List<Class> queryFDYClass(int FDYID)
+        {
+            string sql = "select classId,Major,College,fudaoyuan,MajorName,CollegeName from V_Class where fudaoyuan = @FDYID";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@FDYID",FDYID)
+            };
+            List<Class> clalist = new List<Class>();
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (res.Read())
+            {
+                clalist.Add(new Class()
+                {
+                    ClassId = res["classId"].ToString(),
+                    majorId = res["Major"].ToString(),
+                    collegId = res["College"].ToString(),
+                    fudaoyuan = Convert.ToInt32(res["fudaoyuan"]),
+                    MajorName = res["MajorName"].ToString(),
+                    CollegeName = res["CollegeName"].ToString()
+                });
+            }
+            return clalist;
+        }
     }
 }

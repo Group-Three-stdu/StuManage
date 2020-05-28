@@ -28,5 +28,7 @@ namespace Model
         public DateTime Time { set; get; }//提交时间
         public int HwNum { set; get; }//作业情况
         public int KqNum { set; get; }//考勤情况
+        public int GKNum { set; get; }//挂科数目
+        public int YXNum { set; get; }//优秀科目数
     }
 }

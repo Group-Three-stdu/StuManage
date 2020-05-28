@@ -129,5 +129,17 @@ namespace BLL
         {
             return new ScoreService().ChangeScore(sc);
         }
+
+        //查询挂科数
+        public int queryGKNum(int StuId)
+        {
+            return new ScoreService().queryGKNum(StuId);
+        }
+
+        //查询优秀科数
+        public int queryYXNum(int StuId)
+        {
+            return new ScoreService().queryYXNum(StuId);
+        }
     }
 }

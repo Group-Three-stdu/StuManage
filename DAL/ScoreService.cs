@@ -330,6 +330,28 @@ namespace DAL
             };
             return new Helper.SQLHelper().update(sql, param, false);
         }
+        
+        //查询挂科数
+        public int queryGKNum(int StuId)
+        {
+            string sql = "select count(*) from Score where StuId=@StuId and FinalScore<60";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
+
+        //查询优秀科数
+        public int queryYXNum(int StuId)
+        {
+            string sql = "select count(*) from Score where StuId=@StuId and FinalScore>60";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@StuId",StuId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
     }
 }
 

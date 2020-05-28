@@ -21,7 +21,7 @@ namespace 学生信息管理系统.homework
                 StuNum = new CourseManege().QueryStuNum(CourseId);
                 List<Model.Class> clalist = new CourseManege().queryClassByCourseId(CourseId);
                 string ClassId;
-                foreach (Class Class in clalist)
+                foreach (Model.Class Class in clalist)
                 {
                     ClassId = Class.ClassId;
                     ddlclass.Items.Add(ClassId);

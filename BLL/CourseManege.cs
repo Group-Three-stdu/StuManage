@@ -209,5 +209,11 @@ namespace BLL
         {
             return new CourseService().querySeason(StuId);
         }
+
+        //查看辅导员的班级
+        public List<Class> queryFDYClass(int FDYID)
+        {
+            return new CourseService().queryFDYClass(FDYID);
+        }
     }
 }

@@ -51,8 +51,8 @@ namespace 学生信息管理系统.StudentsInfo
 
                 //班级列表
                 string classid;
-                List<Class> clalist = new queryManage().querAllCla(" ", " ");
-                foreach (Class c in clalist)
+                List<Model.Class> clalist = new queryManage().querAllCla(" ", " ");
+                foreach (Model.Class c in clalist)
                 {
                     classid = c.ClassId;
                     ddlclass.Items.Add(classid);
