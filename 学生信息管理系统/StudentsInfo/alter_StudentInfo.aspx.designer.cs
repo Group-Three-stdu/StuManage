@@ -22,156 +22,165 @@ namespace 学生信息管理系统.StudentsInfo {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// txt_stuid 控件。
+        /// Id 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_stuid;
+        protected global::System.Web.UI.WebControls.TextBox Id;
         
         /// <summary>
-        /// txt_stuname 控件。
+        /// Name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_stuname;
+        protected global::System.Web.UI.WebControls.TextBox Name;
         
         /// <summary>
-        /// txt_sex 控件。
+        /// Sex 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_sex;
+        protected global::System.Web.UI.WebControls.TextBox Sex;
         
         /// <summary>
-        /// txt_birth 控件。
+        /// Birth 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_birth;
+        protected global::System.Web.UI.WebControls.TextBox Birth;
         
         /// <summary>
-        /// txt_noid 控件。
+        /// IdNo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_noid;
+        protected global::System.Web.UI.WebControls.TextBox IdNo;
         
         /// <summary>
-        /// txt_phone 控件。
+        /// Pho 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_phone;
+        protected global::System.Web.UI.WebControls.TextBox Pho;
         
         /// <summary>
-        /// txt_address 控件。
+        /// ClassId 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_address;
+        protected global::System.Web.UI.WebControls.TextBox ClassId;
         
         /// <summary>
-        /// txt_xueyuan 控件。
+        /// ColName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_xueyuan;
+        protected global::System.Web.UI.WebControls.TextBox ColName;
         
         /// <summary>
-        /// txt_major 控件。
+        /// Maj 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_major;
+        protected global::System.Web.UI.WebControls.TextBox Maj;
         
         /// <summary>
-        /// txt_class 控件。
+        /// Add 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_class;
+        protected global::System.Web.UI.WebControls.TextBox Add;
         
         /// <summary>
-        /// txt_mianmao 控件。
+        /// StupoState 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_mianmao;
+        protected global::System.Web.UI.WebControls.TextBox StupoState;
         
         /// <summary>
-        /// txt_zhuangtai 控件。
+        /// Stustate 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_zhuangtai;
+        protected global::System.Web.UI.WebControls.TextBox Stustate;
         
         /// <summary>
-        /// txt_honor 控件。
+        /// Stuhonor 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_honor;
+        protected global::System.Web.UI.WebControls.TextBox Stuhonor;
         
         /// <summary>
-        /// txt_punish 控件。
+        /// Stupun 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_punish;
+        protected global::System.Web.UI.WebControls.TextBox Stupun;
         
         /// <summary>
-        /// txt_ps 控件。
+        /// StuPS 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ps;
+        protected global::System.Web.UI.WebControls.TextBox StuPS;
         
         /// <summary>
-        /// btn_save 控件。
+        /// btn_sub 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_save;
+        protected global::System.Web.UI.WebControls.LinkButton btn_sub;
         
         /// <summary>
-        /// Literal1 控件。
+        /// CollegeID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Literal1;
+        protected global::System.Web.UI.WebControls.Label CollegeID;
+        
+        /// <summary>
+        /// Major 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Major;
     }
 }

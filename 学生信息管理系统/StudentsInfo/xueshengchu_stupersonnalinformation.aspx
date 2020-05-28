@@ -61,8 +61,6 @@
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;"><%#Eval("StuPhoneNum") %></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;"><%#Eval("StuNoId") %></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:30px;">
-                            <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#Eval("StuId","~/StudentsInfo/look_StudentInfo.aspx?StuId={0}") %>'
-                runat="server" ForeColor="Blue">查看</asp:HyperLink>
                             <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#Eval("StuId","~/StudentsInfo/alter_StudentInfo.aspx?StuId={0}") %>'
                 runat="server" ForeColor="Blue">编辑</asp:HyperLink>
                             <asp:HyperLink ID="HyperLink3" NavigateUrl='<%#Eval("StuId","~/StudentsInfo/?StuId={0}") %>'
