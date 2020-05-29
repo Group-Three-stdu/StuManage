@@ -22,7 +22,7 @@
                     <table width="100%">
                         <tbody>
                             <tr>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">选课编号</th>                             
+                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">课程编号</th>                             
                               <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">课程名称</th>
                               <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">开课学期</th>
                               <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">开课学院</th>
@@ -41,7 +41,7 @@
                 <ItemTemplate>
                     <tr>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
-                            <%# Eval("Selected_courseid")%></td>                        
+                            <%# Eval("CourseID")%></td>                        
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("CourseName")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">

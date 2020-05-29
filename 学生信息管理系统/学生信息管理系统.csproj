@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -135,6 +136,7 @@
     <Content Include="css\command.css" />
     <Content Include="css\login.css" />
     <Content Include="css\StyleSheet.css" />
+    <Content Include="ErrorPage.html" />
     <Content Include="GG\fabu_gg.aspx" />
     <Content Include="GG\fabu_xtgg.aspx" />
     <Content Include="GG\guanli_gg.aspx" />
@@ -872,6 +874,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="StudentsInfo\look_StudentInfo.aspx" />
+    <Content Include="NoAccess.html" />
+    <Content Include="NoFound.html" />
     <Content Include="StudentsInfo\StuPerInfo.aspx" />
     <Content Include="StudentsInfo\stu_alterpwd.aspx" />
     <Content Include="StudentsInfo\stu_index.aspx" />
@@ -903,6 +907,8 @@
     <Content Include="resource\ckfinder\userfiles\.htaccess" />
     <Content Include="Handler\setRatio.ashx" />
     <Content Include="Handler\TeaToExcel.ashx" />
+    <None Include="Properties\PublishProfiles\Student.pubxml" />
+    <None Include="Properties\PublishProfiles\StuManage.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -914,7 +920,6 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="StudentsInfo\1.aspx" />
     <Content Include="StudentsInfo\stu_look_personalinformation.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config">
@@ -1289,10 +1294,6 @@
     <Compile Include="StudentsInfo\StuPerInfo.aspx.designer.cs">
       <DependentUpon>StuPerInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="StudentsInfo\1.aspx.cs">
-      <DependentUpon>1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="StudentsInfo\stu_alterpwd.aspx.cs">
       <DependentUpon>stu_alterpwd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1364,6 +1365,24 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

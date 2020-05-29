@@ -333,7 +333,7 @@ namespace DAL
         //查看已选课程（全）
         public List<CourseMana> queryCourseInfoByStuId (int StuId)
         {
-            string sql = "SELECT StuId,TeaName, CourseID, Season, courseproperty, Xuefen, CourseName, CollegeName FROM V_course2 where StuId=@StuId";
+            string sql = "SELECT StuId,TeaName, CourseID, Season, courseproperty, Xuefen, CourseName, CollegeName,CourseAdd FROM V_course2 where StuId=@StuId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@StuId",StuId)
@@ -343,14 +343,15 @@ namespace DAL
             while (result.Read())
             {
                 courselist.Add(new CourseMana()
-                { 
+                {
                     CourseID = Convert.ToInt32(result["CourseID"]),
                     CourseName = result["CourseName"].ToString(),
                     Xuefen = float.Parse(result["Xuefen"].ToString()),
                     TeaName = result["TeaName"].ToString(),
                     courseproperty = result["courseproperty"].ToString(),
                     Season = result["Season"].ToString(),
-                    CollegeName = result["CollegeName"].ToString()
+                    CollegeName = result["CollegeName"].ToString(),
+                    CourseAdd = result["CourseAdd"].ToString()
                 });
             }
             return courselist;
