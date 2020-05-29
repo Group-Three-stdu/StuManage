@@ -22,14 +22,15 @@
                     <table width="100%">
                         <tbody>
                             <tr>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">课程编号</th>                             
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">课程名称</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">开课学期</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">开课学院</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">任课教师</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">学分</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">性质</th>
-                              <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">上课地点</th>
+                              <th style="width:70px;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">课程编号</th>                             
+                              <th style="width:12%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">课程名称</th>
+                              <th style="width:12%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">开课学期</th>
+                              <th style="width:10%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">开课学院</th>
+                              <th style="width:12%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">任课教师</th>
+                              <th style="width:10%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">学分</th>
+                              <th style="width:12%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="10%">性质</th>
+                              <th style="width:10%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">上课地点</th>
+                                <th style="width:15%;text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="15%">上课时间</th>
                               <th style="text-align:center;background-color:#ccc;border-bottom:1px solid #ccc;" width="20%">操作</th>
                             </tr>
                 </HeaderTemplate>
@@ -54,8 +55,10 @@
                             <%# Eval("Xuefen")%></td>                 
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                             <%# Eval("courseproperty")%></td>
-                        <td style="text-align:center;background-color:#f5f5f5;height:20px;">
+                        <td style="text-align:center;width:30px;background-color:#f5f5f5;height:20px;">
                             <%# Eval("CourseAdd")%></td>
+                        <td style="text-align:center;width:30px;background-color:#f5f5f5;height:20px;">
+                            <%# Eval("Time")%></td>
                         <td style="text-align:center;background-color:#f5f5f5;height:20px;">
                              <asp:LinkButton ID="btn_Del" CommandArgument='<%#Eval("CourseId")%>' OnClientClick="return confirm('确认删除该课程么？')" OnClick="btn_Del_Click"
                 runat="server" ForeColor="Blue">删除</asp:LinkButton>
