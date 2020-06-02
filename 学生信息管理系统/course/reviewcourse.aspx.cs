@@ -13,7 +13,12 @@ namespace 学生信息管理系统.course
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                int state = new CourseManege().queryCourseState();
+                if (state != 1)
+                    Response.Write("<script type='text/javascript'>alert('请先开启选课！');history.go(-1)</script>");
+            }
         }
         //查看全部课程
         protected void Button1_Click(object sender, EventArgs e)

@@ -13,6 +13,12 @@ namespace 学生信息管理系统.Score
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                int state = new CourseManege().queryCourseState();
+                if (state != 1)
+                    Response.Write("<script type='text/javascript'>alert('成绩录入未开启！');history.go(-2)</script>");
+            }
             int TeaId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
             List<CourseMes> courseList = new CourseManege().queryTeaCourse(TeaId);
             DataList1.DataSource = courseList;

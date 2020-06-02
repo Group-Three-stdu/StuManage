@@ -13,7 +13,12 @@ namespace 学生信息管理系统.course
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (!IsPostBack)
+            {
+                int state = new CourseManege().queryCourseState();
+                if (state != 1)
+                    Response.Write("<script type='text/javascript'>alert('增加课程尚未开启！');history.go(-1)</script>");
+            }
         }
 
         protected void btn_save_Click(object sender, EventArgs e)

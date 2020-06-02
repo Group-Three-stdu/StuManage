@@ -531,5 +531,26 @@ namespace DAL
             };
             return float.Parse(new Helper.SQLHelper().QuerySingleResult(sql, param, false).ToString());
         }
+
+        //查询选课状态
+        public int queryCourseState()
+        {
+            string sql = "select state from State";
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, false));
+        }
+
+        //开启选课
+        public int StartCourse()
+        {
+            string sql = "update State set state = 1 ";
+            return new Helper.SQLHelper().update(sql, false);
+        }
+
+        //关闭选课
+        public int StopCourse()
+        {
+            string sql = "update State set state = 0 ";
+            return new Helper.SQLHelper().update(sql, false);
+        }
     }
 }

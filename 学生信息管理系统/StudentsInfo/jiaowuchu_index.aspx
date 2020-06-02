@@ -80,6 +80,12 @@
                 <li class="one">
                      <div><i class="iconfont icon-kecheng"></i>课程管理</div>
                     <ul class="sub">
+                         <li>
+                            <a id="A1" href="~/course/coursestate.aspx" runat="server" target="right">
+                                <i class="iconfont icon-wenjuantiaocha"></i>
+                                开启选课
+                            </a>
+                        </li>
                         <li>
                             <a id="A2" href="~/course/reviewcourse.aspx" runat="server" target="right">
                                 <i class="iconfont icon-wenjuantiaocha"></i>

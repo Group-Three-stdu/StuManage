@@ -125,6 +125,7 @@
     <Content Include="Class\ClassDetails.aspx" />
     <Content Include="Class\ClassScore.aspx" />
     <Content Include="course\addcourse.aspx" />
+    <Content Include="course\coursestate.aspx" />
     <Content Include="course\lookcourse.aspx" />
     <Content Include="course\MyCourse.aspx" />
     <Content Include="course\paike.aspx" />
@@ -947,6 +948,13 @@
     </Compile>
     <Compile Include="course\addcourse.aspx.designer.cs">
       <DependentUpon>addcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="course\coursestate.aspx.cs">
+      <DependentUpon>coursestate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="course\coursestate.aspx.designer.cs">
+      <DependentUpon>coursestate.aspx</DependentUpon>
     </Compile>
     <Compile Include="course\lookcourse.aspx.cs">
       <DependentUpon>lookcourse.aspx</DependentUpon>

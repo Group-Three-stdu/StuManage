@@ -229,5 +229,23 @@ namespace BLL
         {
             return new CourseService().queryCourseInfoByClassId(ClassId);
         }
+
+        //查询选课状态
+        public int queryCourseState()
+        {
+            return new CourseService().queryCourseState();
+        }
+
+        //开启选课
+        public int StartCourse()
+        {
+            return new CourseService().StartCourse();
+        }
+
+        //关闭选课
+        public int StopCourse()
+        {
+            return new CourseService().StopCourse();
+        }
     }
 }
