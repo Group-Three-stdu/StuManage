@@ -15,7 +15,7 @@
 
         <div class="login-pic" style="border-radius:10px;">
             <img runat="server" src="~/image/logo1.png" style="width:26%;border-radius:10px;"/>
-            <img runat="server" src="~/image/logo_right.png" style="width:75%;height:80px;margin-left:-12%;margin-bottom:15px;"/>
+            <img runat="server" src="~/image/logo_right.png" style="width:75%;height:80px;margin-left:-10%;margin-bottom:15px;"/>
             <br />
             <img runat="server" src="~/image/logo_bott.png" style="width:100%;height:120px; margin-top:20px;"/>
 
