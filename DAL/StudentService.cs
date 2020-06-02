@@ -571,5 +571,16 @@ namespace DAL
             };
             return new Helper.SQLHelper().update(sql, param, false);
         }
+
+        //查询学生人数
+        public int queryStuNumByClassId(string ClassId)
+        {
+            string sql = "select count(*) from Students where ClassId = @ClassId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@ClassId",ClassId)
+            };
+            return Convert.ToInt32(new Helper.SQLHelper().QuerySingleResult(sql, param, false));
+        }
     }
 }

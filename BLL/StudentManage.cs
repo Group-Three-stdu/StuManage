@@ -112,5 +112,11 @@ namespace BLL
         {
             return new StudentService().queryStudentByClassId(ClassId);
         }
+
+        //查询学生人数
+        public int queryStuNumByClassId(string ClassId)
+        {
+            return new StudentService().queryStuNumByClassId(ClassId);
+        }
     }
 }

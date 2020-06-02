@@ -908,6 +908,7 @@
     <Content Include="resource\ckfinder\userfiles\.htaccess" />
     <Content Include="Handler\setRatio.ashx" />
     <Content Include="Handler\TeaToExcel.ashx" />
+    <Content Include="Handler\FDYToExcel.ashx" />
     <None Include="Properties\PublishProfiles\Student.pubxml" />
     <None Include="Properties\PublishProfiles\StuManage.pubxml" />
     <None Include="Web.Debug.config">
@@ -1028,6 +1029,9 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\FDYToExcel.ashx.cs">
+      <DependentUpon>FDYToExcel.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handler\setRatio.ashx.cs">
       <DependentUpon>setRatio.ashx</DependentUpon>

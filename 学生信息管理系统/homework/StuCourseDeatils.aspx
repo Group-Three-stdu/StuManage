@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StuCourseDeatils.aspx.cs" Inherits="学生信息管理系统.homework.StuCourseDeatils" EnableEventValidation="false" %>
+﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StuCourseDeatils.aspx.cs" Inherits="学生信息管理系统.homework.StuCourseDeatils" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -142,8 +142,8 @@
         </div>
 
         <div  id="HwInfo" style="display:none;">       
-             <div class="box" style="display:inline-block;margin-top:10px; vertical-align: top;" >
-                <button type="button"  class="btn btn-danger" style="border-radius: 0;width:20px; height:100px; margin:10px;writing-mode:vertical-rl; line-height:0px;"  onclick="unfinished()" >未完成作业</button><br />
+             <div class="box" style="display:inline-block;margin-top:10px; vertical-align: top" >
+                <button type="button"  class="btn btn-danger" style="border-radius: 0;width:20px; height:100px; margin:10px;writing-mode:vertical-rl; line-height:0px;" onclick="unfinished()" >未完成作业</button><br />
                 <button type="button" class="btn btn-success" style="border-radius: 0;width:20px; height:100px; margin:10px;writing-mode:vertical-rl; line-height:0px;" onclick="finished()" >已完成作业</button><br />
                 <button type="button" class="btn btn-warning" style="border-radius: 0;width:20px; height:100px; margin:10px;writing-mode:vertical-rl; line-height:0px;" onclick="checked()" >已批阅作业</button><br />
             </div>     

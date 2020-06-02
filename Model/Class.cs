@@ -14,5 +14,6 @@ namespace Model
 
         public string MajorName { set; get; }
         public string CollegeName { set; get; }
+        public int StuNum { set; get; }
     }
 }

@@ -24,7 +24,7 @@
                         <div style="margin-right:20px; margin-top:10px;">
                             <div style:"width:80px"><%# Eval("MajorName")%></div>     
                             <div style:"width:80px"><%# Eval("CollegeName")%></div>  
-                            <div style:"width:80px"> 班级人数：</div>                
+                            <div style:"width:80px"> 班级人数：<%# Eval("StuNum")%></div>                
                         </div>
                     </div>             
             <br />                    

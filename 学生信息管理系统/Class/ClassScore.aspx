@@ -19,7 +19,6 @@
                 <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询"  />
                 学号：<asp:TextBox ID="txt_StuId" runat="server" class="input"></asp:TextBox>
                 <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询"/>
-                 <asp:Button ID="ToExcel" runat="server" Text="导出到excel"  />
             </div>
              <div>
               <asp:Repeater ID="Repeater1" runat="server">

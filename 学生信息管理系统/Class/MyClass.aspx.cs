@@ -15,6 +15,8 @@ namespace 学生信息管理系统.Score
         {
             int FDYId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
             List<Model.Class> courseList = new CourseManege().queryFDYClass(FDYId);
+            foreach (Model.Class cla in courseList)
+                cla.StuNum = new StudentManage().queryStuNumByClassId(cla.ClassId);
             DataList1.DataSource = courseList;
             DataList1.DataBind();
         }

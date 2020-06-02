@@ -57,7 +57,7 @@
                 <asp:Button ID="btn_searchstu" runat="server" class="btn" Text="查询" OnClick="btn_searchstu_Click" />
                 学号：<asp:TextBox ID="txt_StuId" runat="server" class="input"></asp:TextBox>
                 <asp:Button ID="btn_SearchStuId" runat="server" class="btn" Text="查询" Onclick ="btn_SearchStuId_Click"/>
-                 <asp:Button ID="ToExcel" runat="server" Text="导出到excel"  />
+                 <asp:Button ID="ToExcel" runat="server" Text="导出到excel" OnClick="ToExcel_Click"  />
             </div>
              <div>
               <asp:Repeater ID="Repeater1" runat="server">
@@ -98,8 +98,8 @@
                     <div style="background-color:#FFF5EE; height:130px;text-align:right; ">
                         <div style="margin-right:20px; margin-top:10px;">
                             <div style:"width:80px">教师：<%# Eval("TeaName")%></div> 
-                            <div style:"width:80px">学院：<%# Eval("CollegeName")%> </div>
-                            <div style:"width:80px">学期：<%# Eval("Season")%> </div>
+                            <div style:"width:80px">学院：<%# Eval("CollegeName")%></div>
+                            <div style:"width:80px">学期：<%# Eval("Season")%></div>
                         </div>             
                     <div class="style2" style="height: 51px;  ">
                         <asp:Button ID="Button2" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#ff9966;" Text="详情" Width="82px" BorderStyle="None" 

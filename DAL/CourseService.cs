@@ -475,7 +475,7 @@ namespace DAL
         //查看某一班级的所有课程
         public List<CourseMana> queryCourseInfoByClassId(string ClassId)
         {
-            string sql = "SELECT CourseID, CourseName,Season,TeaName FROM V_fudaoyuancourse where ClassID=@ClassId";
+            string sql = "SELECT distinct CourseID, CourseName,Season,TeaName FROM V_fudaoyuancourse where ClassID=@ClassId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@ClassId",ClassId)

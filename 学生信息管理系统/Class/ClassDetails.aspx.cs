@@ -63,5 +63,11 @@ namespace 学生信息管理系统.Class
             string ClassId = Convert.ToString(Request.Params["ClassId"]);
             Response.Redirect("~/Class/ClassScore.aspx?CourseId=" + CourseId+"&ClassId="+ClassId);
         }
+
+        protected void ToExcel_Click(object sender, EventArgs e)
+        {
+            string ClassId = Convert.ToString(Request.Params["ClassId"]);
+            Response.Redirect("~/Handler/FDYToExcel.ashx?ClassId=" + ClassId );
+        }
     }
 }
