@@ -83,7 +83,9 @@
             document.getElementById('checked').style.display = "block";
         }
     </script>
-    
+         <div id="courseinfo">
+            <h3><asp:Literal ID="coursename" runat="server"></asp:Literal></h3>
+        </div>
         <div class="box" >
             <button id="Button1" class="btn btn-info"  onclick="GG()" style="height:32px; font-size:18px;line-height:30px;" >课程公告</button>
             <button id="Button2" class="btn btn-info"  onclick="HwInfo()" style="height:32px; font-size:18px;line-height:30px;" >查看作业信息</button>
@@ -91,6 +93,7 @@
         </div>
     <hr />
     <form id="form1" runat="server">       
+       <asp:ScriptManager ID="ScriptManager1" runat="server" enablepartialrendering="true"></asp:ScriptManager>
         <div id="GG">
              <div>
               <asp:Repeater ID="Repeater3" runat="server">

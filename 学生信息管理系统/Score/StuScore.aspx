@@ -20,7 +20,7 @@
                         </asp:DropDownList>
                 课程名：<asp:TextBox ID="txt_name" style="display:inline-block" runat="server" CssClass="form-control" Width="20%" class="input"></asp:TextBox>
                 <asp:Button ID="btn_searchstu" runat="server" class="btn btn-info" Text="查询" OnClick="btn_searchstu_Click" />              
-                 <asp:Button ID="ToExcel" CssClass="btn btn-info" runat="server" Text="导出到excel"/>
+                 <asp:Button ID="ToExcel" CssClass="btn btn-info" runat="server" Text="导出到excel" OnClick="ToExcel_Click"/>
             </div>
             <div>
               <asp:Repeater ID="Repeater1" runat="server">

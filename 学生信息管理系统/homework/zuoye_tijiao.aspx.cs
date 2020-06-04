@@ -37,7 +37,7 @@ namespace 学生信息管理系统.homework
             };
             int result = new HomeworkManage().SubmitHw(ans);
             if(result>0)
-                Response.Write("<script>window.alert('作业已提交！');</script>");
+                Response.Write("<script>window.alert('作业已提交！');history.go(-2)</script>");
             else if (result == -1)
                 Response.Write("<script>window.alert('请勿重复提交！');</script>");
             else

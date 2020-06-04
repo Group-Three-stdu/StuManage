@@ -16,7 +16,7 @@
         <div class="col-md-12">
       <h4 class="">操作提示：<asp:Literal ID="StuId" runat="server"></asp:Literal><asp:Literal ID="StuName" runat="server"></asp:Literal>以下为您的的选课，如有问题请与教务部门联系
             </h4>           
-            
+            <span>当前已选学分：</span><asp:Label ID="point" runat="server" Text="Label"></asp:Label>
         </div>
          <asp:Repeater ID="Repeater1" runat="server" >
                 <HeaderTemplate>

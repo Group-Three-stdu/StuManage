@@ -24,7 +24,7 @@
             姓名：<asp:TextBox ID="txt_name" CssClass="form-control" Width="10%" Height="25px" style="display:inline-block;padding-top:0px" runat="server" class="input"></asp:TextBox>
             <asp:Button ID="btn_searchstu" runat="server" Height="25px" class="btn btn-info" Text="查询" OnClick="btn_searchstu_Click" />
             学号：<asp:TextBox ID="txt_StuId" CssClass="form-control" Width="10%" Height="25px" style="display:inline-block;padding-top:0px" runat="server" class="input"></asp:TextBox>
-            <asp:Button ID="btn_SearchStuId" runat="server" Height="25px" class="btn btn-info" Text="查询"  />
+            <asp:Button ID="btn_SearchStuId" runat="server" Height="25px" Font-Size="14px" class="btn btn-info" Text="查询"  />
         </div>
         <div class="content">
             <div>
@@ -42,7 +42,7 @@
                             <th class="auto-style1 text-center">班级</th>
                             <th class="auto-style1 text-center">考试成绩</th>
                             <th class="auto-style1 text-center">平时成绩</th>
-                            <th class="auto-style1 text-center">期末成绩</th>
+                            <th class="auto-style1 text-center">最终成绩</th>
                         </tr>
                 </HeaderTemplate>
                 <ItemTemplate>
@@ -59,7 +59,7 @@
                     </table>
                 </FooterTemplate>
             </asp:Repeater>
-            <asp:Button ID="Button2" runat="server" CssClass="btn btn-info" Text="提交" OnClick="Button2_Click" />
+            <asp:Button ID="Button2" runat="server" CssClass="btn btn-info" Font-Size="14px" Text="提交" OnClick="Button2_Click" />
             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
         </div>
     </form>

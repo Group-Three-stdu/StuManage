@@ -247,5 +247,11 @@ namespace BLL
         {
             return new CourseService().StopCourse();
         }
+
+        //查询已选学分
+        public float queryPoint(int StuId)
+        {
+            return new CourseService().CalPoint(StuId);
+        }
     }
 }

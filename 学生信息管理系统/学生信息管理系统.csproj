@@ -122,6 +122,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ckeditor\ckeditor.js" />
     <Content Include="Class\ClassDetails.aspx" />
     <Content Include="Class\ClassScore.aspx" />
     <Content Include="course\addcourse.aspx" />
@@ -909,6 +910,23 @@
     <Content Include="Handler\setRatio.ashx" />
     <Content Include="Handler\TeaToExcel.ashx" />
     <Content Include="Handler\FDYToExcel.ashx" />
+    <Content Include="Handler\StuToExcel.ashx" />
+    <Content Include="ckeditor\CHANGES.md" />
+    <Content Include="ckeditor\LICENSE.md" />
+    <Content Include="ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="ckeditor\plugins\scayt\README.md" />
+    <Content Include="ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="ckeditor\plugins\wsc\README.md" />
+    <Content Include="ckeditor\README.md" />
+    <Content Include="ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <None Include="Properties\PublishProfiles\Student.pubxml" />
     <None Include="Properties\PublishProfiles\StuManage.pubxml" />
     <None Include="Web.Debug.config">
@@ -1035,6 +1053,9 @@
     </Compile>
     <Compile Include="Handler\setRatio.ashx.cs">
       <DependentUpon>setRatio.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\StuToExcel.ashx.cs">
+      <DependentUpon>StuToExcel.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handler\TeaToExcel.ashx.cs">
       <DependentUpon>TeaToExcel.ashx</DependentUpon>

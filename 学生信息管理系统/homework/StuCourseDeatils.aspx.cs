@@ -13,36 +13,41 @@ namespace 学生信息管理系统.homework
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int StuId = ((Model.Login)Session["CurrentUser"]).UserName;
-            int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
-            //绑定未完成作业
-            List<Homework> ufhkList = new HomeworkManage().queryUnfinishedHw(CourseId,StuId);
-            DataList1.DataSource = ufhkList;
-            DataList1.DataBind();
-            //绑定已完成作业
-            List<Homework> fhkList = new HomeworkManage().queryfinishedHw(CourseId, StuId);
-            DataList3.DataSource = fhkList;
-            DataList3.DataBind();
-            //绑定已审批作业
-            List<Homework> chkList = new HomeworkManage().queryfinishedHw(CourseId, StuId);
-            DataList4.DataSource = chkList;
-            DataList4.DataBind();
-            //绑定考勤
-            List<KQ> KqList = new KqManage().queryAllKq(CourseId);
-            foreach(KQ kq in KqList)
+            if (!IsPostBack)
             {
-                int State = new KqManage().HasChecked(StuId, kq.KQId);
-                if (State > 0)
-                    kq.state = "已签到";
-                else
-                    kq.state = "<span style='color:red;'>未签到<span>";
+                int StuId = ((Model.Login)Session["CurrentUser"]).UserName;
+                int CourseId = Convert.ToInt32(Request.Params["CourseId"]);
+                coursename.Text = (new CourseManege().queryCourseById(CourseId)).CourseName;
+                //绑定未完成作业
+                List<Homework> ufhkList = new HomeworkManage().queryUnfinishedHw(CourseId, StuId);
+                DataList1.DataSource = ufhkList;
+                DataList1.DataBind();
+                //绑定已完成作业
+                List<Homework> fhkList = new HomeworkManage().queryfinishedHw(CourseId, StuId);
+                DataList3.DataSource = fhkList;
+                DataList3.DataBind();
+                //绑定已审批作业
+                List<Homework> chkList = new HomeworkManage().queryfinishedHw(CourseId, StuId);
+                DataList4.DataSource = chkList;
+                DataList4.DataBind();
+                //绑定考勤
+                List<KQ> KqList = new KqManage().queryAllKq(CourseId);
+                foreach (KQ kq in KqList)
+                {
+                    int State = new KqManage().HasChecked(StuId, kq.KQId);
+                    if (State > 0)
+                        kq.state = "已签到";
+                    else
+                        kq.state = "<span style='color:red;'>未签到<span>";
+                }
+                DataList2.DataSource = KqList;
+                DataList2.DataBind();
+                //绑定公告
+                List<JXGG> gglist = new GGManage().LookJXGG(CourseId);
+                Repeater3.DataSource = gglist;
+                Repeater3.DataBind();
             }
-            DataList2.DataSource = KqList;
-            DataList2.DataBind();
-            //绑定公告
-            List<JXGG> gglist = new GGManage().LookJXGG(CourseId);
-            Repeater3.DataSource = gglist;
-            Repeater3.DataBind();
+           
         }
 
         protected void Button2_Click(object sender, EventArgs e)

@@ -57,5 +57,12 @@ namespace 学生信息管理系统.Score
                 Repeater1.DataBind();
             }
         }
+
+        protected void ToExcel_Click(object sender, EventArgs e)
+        {
+            int StuId = Convert.ToInt32(((Model.Login)Session["CurrentUser"]).UserName);
+            string StuName = ((Model.Login)Session["CurrentUser"]).StuName.ToString();
+            Response.Redirect("~/Handler/StuToExcel.ashx?StuId=" + StuId+ "&StuName="+ StuName);
+        }
     }
 }

@@ -17,6 +17,8 @@ namespace 学生信息管理系统.StudentsInfo
             List<CourseMana> courlist = new CourseManege().queryAllCourseByStuId(StuId);
             Repeater1.DataSource = courlist;
             Repeater1.DataBind();
+            float Point = new CourseManege().queryPoint(StuId);
+            point.Text = Point.ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
