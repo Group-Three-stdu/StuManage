@@ -36,6 +36,29 @@ namespace DAL
             return gglist;
         }
 
+        //查看公告详细信息
+        public XTGG queryDetail(int GGId)
+        {
+            string sql = "select Id ,GGHead,GGContent,GGauthor,GGdateTime from XTGG where Id = @GGId";
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@GGId",GGId)
+            };
+            XTGG gg = null;
+            SqlDataReader res = new Helper.SQLHelper().queryAllResult(sql, param, false);
+            while (res.Read())
+            {
+                gg = new XTGG()
+                {
+                    GGHead = res["GGHead"].ToString(),
+                    GGcontent = res["GGContent"].ToString(),
+                    GGauthor = res["GGauthor"].ToString(),
+                    GGdateTime = Convert.ToDateTime(res["GGdateTime"])
+                };
+            }
+            return gg;
+        }
+
         //删除系统公告
         public int DelXTGG(int GGId)
         {

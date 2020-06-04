@@ -141,6 +141,7 @@
     <Content Include="ErrorPage.html" />
     <Content Include="GG\fabu_gg.aspx" />
     <Content Include="GG\fabu_xtgg.aspx" />
+    <Content Include="GG\GGDetail.aspx" />
     <Content Include="GG\guanli_gg.aspx" />
     <Content Include="homework\fabu_zuoye.aspx" />
     <Content Include="homework\HwCheck.aspx" />
@@ -1037,6 +1038,13 @@
     </Compile>
     <Compile Include="GG\fabu_xtgg.aspx.designer.cs">
       <DependentUpon>fabu_xtgg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GG\GGDetail.aspx.cs">
+      <DependentUpon>GGDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GG\GGDetail.aspx.designer.cs">
+      <DependentUpon>GGDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="GG\guanli_gg.aspx.cs">
       <DependentUpon>guanli_gg.aspx</DependentUpon>

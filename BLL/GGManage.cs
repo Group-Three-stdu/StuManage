@@ -44,5 +44,10 @@ namespace BLL
         {
             return new GGService().fabuXTGG(gg);
         }
+        //查看详细信息
+        public XTGG queryDetail(int GGId)
+        {
+            return new GGService().queryDetail(GGId);
+        }
     }
 }

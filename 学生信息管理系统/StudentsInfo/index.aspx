@@ -43,8 +43,8 @@
                              <td><%# Eval("GGHead")%></td>
                              <td><%# Eval("GGauthor")%></td>
                             <td><%# Eval("GGdateTime")%></td>
-                        <td><asp:LinkButton ID="LinkButton2" CommandName="past" CommandArgument='<%# Eval("GGcontent")%>' data-toggle="modal" data-target="#exampleModal" runat="server" 
-                            OnClientClick='<%#Eval("GGcontent", "show(\"{0}\")")%>' >查看详情</asp:LinkButton></td>
+                        <td><asp:LinkButton ID="LinkButton2" CommandName="past" CommandArgument='<%# Eval("GGId")%>'
+                            runat="server" OnClick="LinkButton2_Click">查看详情</asp:LinkButton></td>
                     </tr>
                 </ItemTemplate>
                 <FooterTemplate>

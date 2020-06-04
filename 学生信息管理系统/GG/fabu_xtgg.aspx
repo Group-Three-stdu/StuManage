@@ -18,7 +18,14 @@
         <div class="GGContent">
             <p>公告内容</p>
             <asp:TextBox name="editor1" id="editor1" rows="10" cols="80" runat="server" Height="203px" TextMode="MultiLine" Width="1062px"></asp:TextBox>
-            
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace('editor1', {
+                    filebrowserBrowseUrl: '/resource/ckfinder/ckfinder.html',
+                    filebrowserUploadUrl: '/resource/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files'
+                });
+            </script>
         </div>
         <div class="btn">
             <asp:Button ID="btn_submit" runat="server" Text="发布" OnClick="btn_submit_Click" />
