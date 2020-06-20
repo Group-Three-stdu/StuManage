@@ -20,15 +20,14 @@
                 <div style="box-shadow:2px 2px 1px rgba(128, 128, 128,0.5);width:280px;height:182px;background-color:#F4F4F4; margin: 10px 10px" >
                     
                     <h1><span style=""> <%# Eval("ClassId")%></span></h1>
-                    <div style="background-color:#FFF5EE; height:50px;text-align:right; ">
+                    <div style="background-color:#FFF5EE; height:70px;text-align:right; ">
                         <div style="margin-right:20px; margin-top:10px;">
                             <div style:"width:80px"><%# Eval("MajorName")%></div>     
                             <div style:"width:80px"><%# Eval("CollegeName")%></div>  
                             <div style:"width:80px"> 班级人数：<%# Eval("StuNum")%></div>                
                         </div>
-                    </div>             
-            <br />                    
-            <div class="style2" style="height: 51px;  ">
+                    </div>                                 
+            <div  style="height:40px;  ">
                 <asp:Button ID="Button2" runat="server"  Font-Size="Medium" Height="32px" style="text-align: center;background-color:#ff9966;" Text="查看详情" Width="82px" BorderStyle="None" 
                     CommandArgument='<%#Eval("ClassId")%>' OnClick="Button2_Click"  />
                 

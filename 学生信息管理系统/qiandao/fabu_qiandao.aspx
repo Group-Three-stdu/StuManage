@@ -72,7 +72,7 @@
     <form id="form1" runat="server">
     <div>
         <div style="width:430px; background-color:#ACDCE4; height: 176px;">
-            <span class="auto-style2">课程名：</span><asp:Label  ID="Label2" runat="server" Text="" style="font-size: large; font-family: 楷体">python</asp:Label>
+            <span class="auto-style2">课程名：</span><asp:Label  ID="Label2" runat="server" Text="" style="font-size: large; font-family: 楷体"></asp:Label>
             <br />
             <br />
             <span class="auto-style2">设置签到时间</span>：<asp:TextBox ID="TextBox1" runat="server" Width="85px" Height="30px"></asp:TextBox><span class="auto-style3">分钟</span>
@@ -87,7 +87,7 @@
         <asp:Button ID="Button1" runat="server" Text="发布" OnClick="Button1_Click" BackColor="#ECD4EC" BorderColor="White" BorderStyle="Ridge" CssClass="srow" Width="143px" Font-Names="楷体" Font-Size="X-Large" />
         </div>
         <br />
-       
+      <asp:Button ID="btn_back" runat="server" Text="返回"  OnClientClick="javascript:window.history.go(-2);" />
        
     </div>
     

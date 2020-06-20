@@ -11,7 +11,7 @@ namespace 学生信息管理系统.StudentsInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lb_time.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
         }
     }
 }

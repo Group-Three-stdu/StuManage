@@ -38,6 +38,7 @@ namespace DAL.Helper
             {
                 //writeLog("在调用public int update(string sql, SqlParameter[] param, bool isStoreProcedure)时出现错误" + ex.Message);
                 return -1;
+                throw ex;
             }
             finally
             {

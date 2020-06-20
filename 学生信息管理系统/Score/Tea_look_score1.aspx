@@ -61,7 +61,7 @@
                         <td class="table-bordered" style="text-align:center;"><%# Eval("MatchScore")%></td>
                         <td class="table-bordered" style="text-align:center;"><%# Eval("FinalScore")%></td>
                         <td class="table-bordered" style="text-align:center;">
-                            <asp:LinkButton ID="btnChange" CommandArgument='<%#Eval("StuId")%>'  runat="server" OnClick="btnChange_Click">详情</asp:LinkButton>
+                            <asp:LinkButton ID="btnChange" CommandArgument='<%#Eval("StuId")%>'  runat="server" OnClick="btnChange_Click">修改</asp:LinkButton>
                         </td>                        
                     </tr>
                 </ItemTemplate>
@@ -77,7 +77,7 @@
                 </ContentTemplate>
         </asp:UpdatePanel>
         </div>
-        <asp:Button ID="Button1" runat="server" BackColor="#C8C5F5" Font-Names="新宋体" Font-Size="X-Large" Text="打印" />
+        <asp:Button ID="btn_back" runat="server" Text="返回"  OnClientClick="javascript:window.history.go(-1);" />
         </form>
    </body>
 </html>

@@ -13,7 +13,6 @@ namespace 学生信息管理系统.StudentsInfo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int count = 5;
             //lb_count.Text="共有"+"&nbsp;"+count+"&nbsp;" + "条数据";
             if (!IsPostBack)
             {

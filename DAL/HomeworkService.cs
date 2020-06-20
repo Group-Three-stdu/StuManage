@@ -319,7 +319,7 @@ namespace DAL
         // 查询已完成但未审批的作业
         public List<Homework> queryfinishedHw(int CourseId, int StuId)
         {
-            string sql = "select Homework.HwId,StartTime,EndTime,HwContent,CourseId,HwHead,Answer,Time from Homework join Answer_Stu on Homework.HwId = Answer_Stu.HwId where HwState = 'F' and CourseId = @CourseId and StuId = @StuId";
+            string sql = "select Homework.HwId,StartTime,EndTime,HwContent,CourseId,HwHead,Answer,Time from Homework join Answer_Stu on Homework.HwId = Answer_Stu.HwId where HwState = 'W' and CourseId = @CourseId and StuId = @StuId";
             SqlParameter[] param = new SqlParameter[]
             {
                 new SqlParameter("@CourseId",CourseId),

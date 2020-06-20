@@ -66,5 +66,10 @@ namespace 学生信息管理系统.Score
                 Response.Write("<script>alert('修改失败！');</script>");
             }
         }
+
+        protected void btn_back_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

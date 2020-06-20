@@ -30,7 +30,7 @@
         </div>
         <div class="btn">
             <asp:Button ID="btn_change" CssClass="btn btn-info" runat="server" Text="确认修改" OnClick="btn_change_Click"/>&nbsp; &nbsp; &nbsp; &nbsp;
-            <asp:Button ID="btn_back" runat="server" Text="返回" />
+            <asp:Button ID="btn_back" CssClass="btn btn-info" runat="server" Text="返回"  OnClientClick="javascript:window.history.go(-1);" />
         </div>
     </div>
     </form>

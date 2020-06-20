@@ -27,7 +27,7 @@ namespace 学生信息管理系统.homework
                 DataList3.DataSource = fhkList;
                 DataList3.DataBind();
                 //绑定已审批作业
-                List<Homework> chkList = new HomeworkManage().queryfinishedHw(CourseId, StuId);
+                List<Homework> chkList = new HomeworkManage().querycheckedHw(CourseId, StuId);
                 DataList4.DataSource = chkList;
                 DataList4.DataBind();
                 //绑定考勤

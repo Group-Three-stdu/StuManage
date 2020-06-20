@@ -68,6 +68,7 @@
                 </FooterTemplate>
             </asp:Repeater>
         </div>
+        <asp:Button ID="btn_back" runat="server" Text="返回"  OnClientClick="javascript:window.history.go(-1);" />
     </div>
     </form>
 </body>

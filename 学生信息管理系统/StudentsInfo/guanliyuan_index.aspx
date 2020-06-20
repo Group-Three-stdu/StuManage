@@ -64,7 +64,7 @@
         &nbsp;
             <span class="iconfont icon-guanli"></span>
             <i style="line-height:30px;font-style:normal;font-weight:800;color:#666"> 当前用户：</i> 系统管理员<span class="iconfont icon-shijian"></span><i style="line-height:30px;font-style:normal;font-weight:800;color:#666">当前时间：</i>
-            <asp:Label ID="lb_time" runat="server" class="lb" Text="54654456"></asp:Label>
+            <asp:Label ID="lb_time" runat="server" class="lb"></asp:Label>
         </div>
         <div class="left-nav">
             <div class="title">

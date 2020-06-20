@@ -80,5 +80,10 @@ namespace 学生信息管理系统.Score
             int StuId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
             Response.Redirect("~/Score/ChangeScore.aspx/?CourseId=" + CourseId + "&StuId=" + StuId);
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

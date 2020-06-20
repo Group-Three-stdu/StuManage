@@ -13,7 +13,7 @@ namespace 学生信息管理系统.qiandao
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label2.Text = Request.Params["CourseName"].ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace 学生信息管理系统.qiandao
             };
             int result = new KqManage().publishAttendance(kq);
             if(result>0)
-                Response.Write("<script>window.alert('发布成功！');</script>");
+                Response.Write("<script>window.alert('发布成功！');history.go(-2)</script>");
         }
     }
 }

@@ -27,5 +27,11 @@ namespace 学生信息管理系统.GG
             else
                 Response.Write("<script>window.alert('删除失败！');</script>");
         }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            int GGId = Convert.ToInt32(((LinkButton)sender).CommandArgument);
+            Response.Redirect("~/GG/GGDetail.aspx/?GGId=" + GGId);
+        }
     }
 }
